@@ -1,0 +1,199 @@
+<Tasks ID="535" Name="万圣节A计划" AwardMsg="恭喜你获得兔萝卜鞋、2000摩尔豆！" AwardBean="2000" >
+	<Step ID="1" >
+	
+		<EnterMap MapID="204" >
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="npc_10001" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />	
+			<!-- 这里需要movie1的最后一帧 -->
+			<Action Cmd="PLAY_MOVIE" Param="1000" Name="movie_1000" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10001" Face="正常" Msg="快看！快看！天空中闪过一道好漂亮的彩色极光呀！不知道是哪里来的呢？" Option="嗯，我也看见啦！" />
+				<Talk NpcID="10000" Face="正常" Msg="我也看到啦！好漂亮的一道光。不过这大白天，应该不可能是流星吧？" Option="白天怎么可能会看到流星啊！" />
+				<Talk NpcID="10000" Face="疑惑" Msg="不过这道光好熟悉呀，好像在哪儿见过……是在哪儿呢？" Option="五颜六色的光？" />
+				<Talk NpcID="10001" Face="正常" Msg="BIBO~~BIBO~~天使之树！！！天使之树发出的光就是像这样的！" Option="对！简直一模一样！" />
+				<Talk NpcID="10000" Face="疑惑" Msg="刚刚不是还有一股浓浓的黑色烟雾吗？不好，难道是天使之树遭到了什么破坏？还是庄园里又有什么事情发生了……拉仔，咱们赶快去四处看看吧！" Option="对，先去庄园其它地方探探情况。" />
+			</Action>		
+			<Action Cmd="DELETE_MOVIE" Param="movie_1000" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="npc_10001" Visible="1" />
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+			<Action Cmd="GO_MAP" MapID="9" MapType="0" />	
+		</EnterMap>	
+	</Step>		
+		
+	<Step ID="2" >	
+		<EnterMap MapID="9" >
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10050" Face="焦急" Msg="乐乐，你来的正好，刚才不知道从哪儿窜出了一个黑影，把我的草舍弄得乱七八糟。" Option="(⊙_⊙)啊？" />
+				<Talk NpcID="10050" Face="焦急" Msg="它出现之后，草舍里的小动物都因受到惊吓，而也变得狂躁不安起来。有的还冲出栅栏，跑了出去，不知道会不会破坏到庄稼，甚至伤到其他小摩尔。" Option="伤到其他小摩尔，事情可就严重了啊！" />
+				<Talk NpcID="10000" Face="正常" Msg="尤尤姐姐别担心，我和拉仔一定会保护好大家的安全的。你先把草舍收拾一下，逃走的动物就让我和拉仔帮你找回来吧！" Option="尤尤你别伤心了，我们会查出原因的！" />
+				<Talk NpcID="10001" Face="正常" Msg="BIBO~~BIBO~~尤尤姐姐，你放心，我跟主人一定帮你找回逃走的小动物！" Option="恶魔岛究竟在哪儿啊？这么神秘~~~" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />	
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />  
+			<!-- 这里要打开猎人小屋的游戏，现在用以前的游戏替换一下 -->
+			<Action Cmd="ACT_EVENT" Param="openHuntGame" /><!-- 抛事件 -->
+			<Action Cmd="ADD_EVENT" Param="PigGameOver" />
+			<Action Cmd="PLAY_MOVIE" Param="2000" Name="movie_2000" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="正常" Msg="尤尤姐姐，你看是不是所有逃走的小动物都找回来了？" Option="一个都不能少啊~~~" />
+				<Talk NpcID="10050" Face="正常" Msg="乐乐，真是谢谢你了！所有的小动物都找回来了，一个都不少！它们刚刚肯定是被吓坏了，现在都躲在栅栏里一动不动的。" Option="可恶的黑影，到底是谁！！！" />
+				<Talk NpcID="10000" Face="疑惑" Msg="看来这一定是那个黑影捣的鬼，说不定还与刚才的黑色浓烟有关。拉仔，我们得加快步伐了，快去其他地方瞧瞧！" Option="说不定其他地方也受到了影响……" />
+				<Talk NpcID="10001" Face="正常" Msg="遵命！主人！" Option="赶快出发！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2000" />	
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />	
+			<Action Cmd="GO_MAP" MapID="10" MapType="0" />	
+		</EnterMap>	
+	</Step>	
+	
+		<!-- 下面是点击【现在就去】的按钮实现 -->
+	<Step ID="3" >
+		<EnterMap MapID="9" >	
+			<Action Cmd="ACT_EVENT" Param="openHuntGame" /><!-- 抛事件 -->
+			<Action Cmd="ADD_EVENT" Param="PigGameOver" />
+			<Action Cmd="PLAY_MOVIE" Param="2000" Name="movie_2000" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="正常" Msg="尤尤姐姐，你看是不是所有逃走的小动物都找回来了？" Option="一个都不能少啊~~~" />
+				<Talk NpcID="10050" Face="正常" Msg="乐乐，真是谢谢你了！所有的小动物都找回来了，一个都不少！它们刚刚肯定是被吓坏了，现在都躲在栅栏里一动不动的。" Option="可恶的黑影，到底是谁！！！" />
+				<Talk NpcID="10000" Face="疑惑" Msg="看来这一定是那个黑影捣的鬼，说不定还与刚才的黑色浓烟有关。拉仔，我们得加快步伐了，快去其他地方瞧瞧！" Option="说不定其他地方也受到了影响……" />
+				<Talk NpcID="10001" Face="正常" Msg="遵命！主人！" Option="赶快出发！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2000" />	
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />	
+			<Action Cmd="GO_MAP" MapID="10" MapType="0" />	
+		</EnterMap>		
+	</Step>
+	
+	<Step ID="4" >
+		<EnterMap MapID="10" >
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10022" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />	
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10041" Face="焦急" Msg="救命啊，乐乐，快想办法把我们放下来吧！" Option="⊙﹏⊙" />
+				<Talk NpcID="10000" Face="正常" Msg="梅森别担心，我马上就来救你们下来！" Option="别担心！一定就你们下来！" />
+			</Action>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="正常" Msg="难道只要碰到闪光的小圆球，藤蔓就会缩小，最后变回种子吗？" Option="对！应该是这样的！" />
+				<Talk NpcID="10000" Face="正常" Msg="{$username}，你也一起来帮忙吧！" Option="好的！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10041" Face="焦急" Msg="乐乐，你来的可真是时候，刚才真是太惊险啦！我这农场里不知道怎么了，突然一阵狂风大作，黑压压的浓烟滚滚而来……" Option="梅森，你也看到啦？" />
+				<Talk NpcID="10041" Face="焦急" Msg="我珍藏的宝贵种子也被洒了一地，紧接着这些接触到土壤的种子就开始疯狂的快速成长，之后……就是你们刚来的时候看到的那一幕了……" Option="刚刚真是太惊险了啊！" />
+				<Talk NpcID="10000" Face="正常" Msg="还有那个可疑的黑色背影……庄园里这些奇怪事情肯定跟他有关系！" Option="对！肯定是他！" />
+				<Talk NpcID="10041" Face="疑惑" Msg="难道庄园的其它地方也都同样发生了奇怪的事情？" Option="对！我们刚从尤尤姐姐那儿过来！" />
+				<Talk NpcID="10000" Face="正常" Msg="对，不知道还有哪些地方也遭遇了什么奇怪的事情呢！必须马上去跟菩提大伯汇报这个事情。" Option="事不宜迟，现在就去！" />
+			</Action>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10022" Visible="1" />
+			<Action Cmd="SET_BUFFER" Panel="5" Step="5" />	
+			<Action Cmd="GO_MAP" MapID="53" MapType="0" />	
+		</EnterMap>	
+	</Step>	
+	
+	
+	<Step ID="5" >
+		<EnterMap MapID="53" >
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10007" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10008" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="焦急" Msg="大伯不好了，出事啦！刚刚刮了一阵大风，还有一阵黑压压的浓烟向庄园袭来。之后，之后……" Option="不着急，慢慢说！" />
+				<Talk NpcID="10000" Face="焦急" Msg="之后就是庄园的各个地方都发生了奇奇怪怪的事情，害得大家现在都提心吊胆的。" Option="(＞﹏＜)~~~" />
+				<Talk NpcID="10007" Face="正常" Msg="我跟么么公主，还有丫丽就正式在讨论这个事情呢！她们刚刚也看到了，正在像我汇报具体情况呢！" Option="对！一定要保护天使之树！" />
+			</Action>		
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />	
+			<!-- 这里要弹出一个系统提示框，到时候要自己做一个面板的哦！ -->
+			
+			<!-- 这里还需要movie6的最后一帧 -->
+			<Action Cmd="PLAY_MOVIE" Param="6000" Name="movie_6000" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10002" Face="正常" Msg="相信大家也都看到了这些奇怪现象了吧！这到底是怎么一回事呢？" Option="好多奇怪的事……" />
+				<Talk NpcID="10000" Face="疑惑" Msg="而且只要是黑影的所到之处，都会留下几个黑色的猫爪印！" Option="有种不好的预感……" />
+				<Talk NpcID="10009" Face="正常" Msg="啊！万圣节不是快到了吗？该不会是庄园里的那个有关于黑猫的恐怖传说又开始应验了吧？？？" Option="万圣节的黑猫！！！" />
+				<Talk NpcID="10000" Face="疑惑" Msg="每年万圣节前后，都会发生许多奇奇怪怪的事情，今年也不例外……难道那个可疑的黑影就是那只黑猫？？？" Option="难道真是黑猫现身了？？？" />
+				<Talk NpcID="10007" Face="正常" Msg="其实，还有一件事，大家都不知道！我觉得还是先暂时不对外宣扬，怕会引起庄园里更大的恐慌。" Option="什么事？什么事？" />
+				<Talk NpcID="10007" Face="正常" Msg="大家一定要保守秘密，不能让更多的人知道！就在刚刚那一阵黑色浓烟过后，天使之树也莫名消失不见了！！！" Option="啊！！！天使之树？？？" />
+				<Talk NpcID="10000" Face="正常" Msg="啊！看来的我推测是正确的！我就说刚刚那道极光看起来很熟悉嘛！" Option="这……只是你瞎猜的吧？乐乐……" />
+				<Talk NpcID="10007" Face="正常" Msg="现在的情况是越来越复杂了！不知道是不是万圣节的黑猫诅咒又开始了，我们可怜的捷克王子……" Option="黑影难道是捷克王子变的黑猫？" />
+				<Talk NpcID="10002" Face="悲伤" Msg="哥哥……我相信哥哥不会这样做的，更不可能偷走我们的天使之树……" Option="这个……也不好说呢……" />
+				<Talk NpcID="10000" Face="正常" Msg="就在这里胡乱猜测也不是办法，当务之急，是我们先去城堡书房确认一下，捷克王子是不是还在。" Option="哇！乐乐的侦探思维越来越缜密了哟！" />
+				<Talk NpcID="10009" Face="正常" Msg="对！先不管其他的，先去城堡书房探探情况把！" Option="GO! GO! GO!" />
+			</Action>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_6000" />	
+			<Action Cmd="SET_BUFFER" Panel="6" Step="6" />
+			<Action Cmd="GO_MAP" MapID="32" MapType="0" />	
+		</EnterMap>	
+	</Step>
+	
+	<Step ID="6" >
+		<EnterMap MapID="32" >
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10036" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_7" />
+			<!-- 弹出一块面板，上面是撕掉的半张纸 -->
+			<Action Cmd="PLAY_MOVIE" Param="888888" Name="movie_888888" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_888888" />
+			<Action Cmd="PLAY_MOVIE" Param="7000" Name="movie_7000" IsBg="1"/>
+			<!-- 这里还需要movie7的最后一帧 -->
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="正常" Msg="城堡书房里，怎么会有恶魔岛专用的便签纸？？？刚才的黑影和猫爪印又是……" Option="这都神马情况啊！好混乱……" />
+				<Talk NpcID="10007" Face="疑惑" Msg="恶魔岛？黑色猫爪印？可疑的半张便签纸……这一切仿佛有着某种神秘的联系……" Option="什么联系呢？" />
+				<Talk NpcID="10009" Face="正常" Msg="听说捷克王子变成黑猫之后，是完全没有自我意识的，难道……难道真的是捷克王子？可他跟恶魔岛又有什么关系呢？" Option="？？？" />
+				<Talk NpcID="10000" Face="正常" Msg="难道捷克王子跟恶魔岛也勾结起来了？？？" Option="啊！不是吧！" />
+				<Talk NpcID="10002" Face="悲伤" Msg="不会的！哥哥才不会跟恶魔岛勾结！绝对不可能！" Option="嗯！公主，我也相信你说的！" />
+				<Talk NpcID="10007" Face="正常" Msg="好了！这都只是大家的推测而已！现在的情况是我在明，敌在暗！我们要根据现有的证据和线索，赶紧理清思路，想好对策才行！" Option="还是大伯考虑的周到！" />
+				<Talk NpcID="10007" Face="正常" Msg="现在唯一能肯定的就是，这所有的事情，一定跟恶魔岛有关系！而庄园里我们知道的跟恶魔岛有紧密联系的……那就只有库拉了！" Option="啊！刚才居然没人怀疑库拉！" />
+				<Talk NpcID="10000" Face="正常" Msg="嗯！姜果然还是老的辣啊！我们大家居然都把库拉这个重要角色给忽略掉了！" Option="乐乐又是马后炮……" />
+				<Talk NpcID="10007" Face="正常" Msg="万圣节也快到了，当然也不排除黑猫诅咒的威胁。但是天使之树也莫名消失了，这个肯定就跟库拉脱不了干系！我们现在赶紧去库拉城堡，看能不能发现新的线索！" Option="事不宜迟，出发！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_7000" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10036" Visible="1" />
+			<Action Cmd="SET_BUFFER" Panel="7" Step="7" />
+			<Action Cmd="GO_MAP" MapID="240" MapType="0" />	
+		</EnterMap>
+	</Step>
+	
+	<Step ID="7" >
+		<EnterMap MapID="240" >
+			<!-- 这里场景中没人，问lili吧 -->
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="正常" Msg="大家小心！库拉的城堡里有黑暗天使在守卫着，千万不要被发现了！" Option="对，一定要提高警惕！" />
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="10000" Name="movie_10000" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_10000" />
+			<!-- 这里打开本周我新做的小游戏，是原子结构的那个 -->
+			<Action Cmd="SET_BUFFER" Panel="8" Step="8" />
+			<Action Cmd="OPEN_PANEL" Param="BallGame" /> 
+		</EnterMap>
+	</Step>
+		
+	<Step ID="8" >
+		<SubmitScore ModuleID="10047" MinScore="1" LoseMsg="  小摩尔没有消除所有的球，需要重新试试嘛！" >
+			<!-- 暂时先用这个9号地图代替一下，到时候可是要跳到新场景的 -->
+			<Action Cmd="GO_MAP" MapID="326" MapType="0" />	
+			<Action Cmd="PLAY_MOVIE" Param="8" Name="movie_8" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10004" Face="悲伤" Msg="大家不要害怕，这座城堡里除了我们，没有其他人了。" Option="库拉和黑暗天使呢？" />
+				<Talk NpcID="10004" Face="悲伤" Msg="不知道主人去哪儿了，我一回到城堡里，没发现一个黑暗天使，主人也不在……" Option="什么？%￥@#……" />
+				<Talk NpcID="10007" Face="正常" Msg="现在事情才是真的越来越扑朔迷离了……" Option="(⊙_⊙)？" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_8" />
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />	
+			<Action Cmd="OVER" />
+		</SubmitScore>			
+	</Step>	
+</Tasks>

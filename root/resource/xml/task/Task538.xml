@@ -1,0 +1,194 @@
+<Tasks ID="538" Name="么么的浪漫回忆" AwardMsg="恭喜你获得10个皇家骑士果实具、2000摩尔豆！" AwardBean="2000" >
+	<Step ID="1" >
+	
+		<EnterMap MapID="110" >
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10002" Face="开心" Msg="玛丽，我又梦见那个英俊的摩尔了！还是那样的情景，还是那样关切的眼神……" Option="公主最近都会做同一个梦吗？" />
+				<Talk NpcID="10002" Face="开心" Msg="梦里面的他好帅，金黄色的头发，蓝色的皮肤，一身盔甲，一袭战袍，一举一动都透着一种难以言说的高贵气质。" Option="哇，真的这么帅吗？" />
+				<Talk NpcID="10002" Face="开心" Msg="最重要的是他每次都能救我于危难之中，总是在我最需要的时候出现……" Option="咦，这个人好熟悉……" />
+				<Talk NpcID="10057" Face="正常" Msg="那是当然，公主是他最重要的人，他的使命就是保护公主殿下你。所以只要公主有难，他当然会第一时间出现在公主的身边。" Option="看来玛丽已经知道他是谁了。" />
+				<Talk NpcID="10002" Face="疑惑" Msg="听你这么说，好像你跟他认识一样……他难道也住在这摩尔城堡里吗？那为什么我只记得他的样子，却想不起他叫什么名字呢？" Option="公主，你真的不记得了吗？" />
+				<Talk NpcID="10057" Face="正常" Msg="公主，你真的想不起他叫什么名字了吗？他可是跟你从小一起长大的呀！" Option="青梅竹马呀！" />
+			</Action>	
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10057" Face="正常" Msg="乐乐、丫丽，是你们来了呀！真是很谢谢你们，经常来看望公主。" Option="大家可都很关心么么公主的呢。" />
+				<Talk NpcID="10000" Face="正常" Msg="刚刚公主怎么感觉看到我有点失望的样子呢？是不是公主不想看见我？" Option="这个……" />
+				<Talk NpcID="10057" Face="正常" Msg="乐乐，你可千万别误会。事情其实是这样的……" Option="？？？" />
+			</Action>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10057" Face="正常" Msg="公主最近经常做同一个梦，梦里还会出现一个我们大家都很熟悉的人。可惜公主只记得他长什么样，却不记得他叫什么名字了。" Option="玛丽你就别卖关子了……" />
+				<Talk NpcID="10009" Face="正常" Msg="公主恢复记忆啦？那个我们都很熟悉的人是谁呢？" Option="(⊙_⊙)？" />
+				<Talk NpcID="10057" Face="正常" Msg="金色头发，蓝色皮肤，一袭骑士盔甲，一件红色战袍……这除了瑞琪团长，还能有谁？而且瑞琪跟公主从小一起长大的，公主能记得他，这也是很有可能的。" Option="我们的瑞琪团长。" />
+				<Talk NpcID="10057" Face="正常" Msg="刚刚么么公主一定是看到乐乐也是蓝色皮肤，以为是瑞琪团长，结果走近一看……唉，大失所望啊。" Option="这样说，乐乐可要伤心了哟！" />
+				<Talk NpcID="10057" Face="正常" Msg="可是公主的记忆断断续续的，她现在连瑞琪团长的名字也不记得了，就算真的瑞琪团长出现，她也只当他是个大英雄。以前浪漫温馨的回忆，公主还是都不记得了。" Option="这可怎么办才好呢？" />
+				<Talk NpcID="10000" Face="正常" Msg="O(∩_∩)o 哈哈，我有个办法！" Option="什么办法？" />
+			</Action>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />	
+			<!--这里要弹出一个面板，到时候等美术好了，我再加上去哦-->
+			<Action Cmd="PLAY_MOVIE" Param="999" Name="movie_999" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_999" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="正常" Msg="怎么样？我这个办法不错吧！事不宜迟，大家现在就分头去准备。玛丽，你就负责把公主带到约好的地点。" Option="对，赶快分头行动。" />
+				<Talk NpcID="10057" Face="正常" Msg="好！就这么办，反正现在也只能什么办法都试一试。虽然这个办法……" Option="呃……" />
+			</Action>	
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+			<Action Cmd="GO_MAP" MapID="237" MapType="0" />	
+		</EnterMap>	
+	</Step>	
+	
+	<Step ID="2" >	
+		<EnterMap MapID="110" >
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10057" Face="正常" Msg="公主最近经常做同一个梦，梦里还会出现一个我们大家都很熟悉的人。可惜公主只记得他长什么样，却不记得他叫什么名字了。" Option="玛丽你就别卖关子了……" />
+				<Talk NpcID="10009" Face="正常" Msg="公主恢复记忆啦？那个我们都很熟悉的人是谁呢？" Option="(⊙_⊙)？" />
+				<Talk NpcID="10057" Face="正常" Msg="金色头发，蓝色皮肤，一袭骑士盔甲，一件红色战袍……这除了瑞琪团长，还能有谁？而且瑞琪跟公主从小一起长大的，公主能记得他，这也是很有可能的。" Option="我们的瑞琪团长。" />
+				<Talk NpcID="10057" Face="正常" Msg="刚刚么么公主一定是看到乐乐也是蓝色皮肤，以为是瑞琪团长，结果走近一看……唉，大失所望啊。" Option="这样说，乐乐可要伤心了哟！" />
+				<Talk NpcID="10057" Face="正常" Msg="可是公主的记忆断断续续的，她现在连瑞琪团长的名字也不记得了，就算真的瑞琪团长出现，她也只当他是个大英雄。以前浪漫温馨的回忆，公主还是都不记得了。" Option="这可怎么办才好呢？" />
+				<Talk NpcID="10000" Face="正常" Msg="O(∩_∩)o 哈哈，我有个办法！" Option="什么办法？" />
+			</Action>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />	
+			<!--这里要弹出一个面板，到时候等美术好了，我再加上去哦-->
+			<Action Cmd="PLAY_MOVIE" Param="999" Name="movie_999" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_999" />	
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="正常" Msg="怎么样？我这个办法不错吧！事不宜迟，大家现在就分头去准备。玛丽，你就负责把公主带到约好的地点。" Option="对，赶快分头行动。" />
+				<Talk NpcID="10057" Face="正常" Msg="好！就这么办，反正现在也只能什么办法都试一试。虽然这个办法……" Option="呃……" />
+			</Action>	
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+			<Action Cmd="GO_MAP" MapID="237" MapType="0" />	
+		</EnterMap>	
+	</Step>	
+		
+	
+	<Step ID="3" >	
+		<EnterMap MapID="237" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10145" Face="正常" Msg="{$username}，你来的正好少少已经帮我变装得差不多了，就差最关键的蓝色皮肤了。这个，你可以一起来帮忙吗？" Option="变装完了？可你就只戴了一顶假发呀！" />
+				<Talk NpcID="10145" Face="正常" Msg="我这是瑞琪团长的居家休闲装，不用穿盔甲的！戴个假发，换种皮肤就OK啦！" Option="啊？这样也可以？？？" />
+				<Talk NpcID="10145" Face="正常" Msg="变装是次要的，吃才是最主要的啊！" Option="多多！都什么时候了，还只想着吃！" />
+				<Talk NpcID="10145" Face="正常" Msg="哎呀，{$username}我说的吃，是瑞琪团长最喜欢吃的东西！么么公主跟他从小一起长大，怎么会不记得瑞琪团长最爱吃的是什么呢？" Option="嗯，听起来好像也有点道理。" />
+				<Talk NpcID="10145" Face="正常" Msg="而且吃烛光晚餐是最浪漫的事情之一了，我肯定能打动么么公主，让她恢复记忆的！" Option="希望如此啊！" />
+				<Talk NpcID="10145" Face="正常" Msg=" 哈哈，这都是乐乐的主意，我只是负责执行而已。当然，我还给这个计划取了一个相当深度的名字——“瑞琪变装之美食计”！" Option="呃……还是跟吃有关系。" />
+			</Action>	
+			<!-- 这里打开我做的那个交互，现在是用替换的，到时候换上去 -->
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />
+			<Action Cmd="OPEN_PANEL" Param="MolePainter3" /> 
+		</EnterMap>	
+	</Step>	
+	
+	<Step ID="4" >
+		<SubmitScore ModuleID="10051" MinScore="1" LoseMsg="  很抱歉，你好像没有选对颜色哦！" >
+			<Action Cmd="SAY" >
+					<Talk NpcID="10146" Face="正常" Msg="哇！{$username}简直太完美了！我像不像真正的瑞琪团长啊？" Option="这个……怎么总觉得哪里不对劲呢？" />
+					<Talk NpcID="10146" Face="正常" Msg="哎呀，英雄人物都是这么帅的！{$username}，你只是一时没还没看习惯而已。时间不早了，我得先去找么么公主了。" Option="这一身蓝，怎么看着就这么别扭啊！" />
+			</Action>
+			<Action Cmd="SET_BUFFER" Panel="5" Step="5" />
+			<Action Cmd="GO_MAP" MapID="110" MapType="0" />	
+		</SubmitScore>			
+	</Step>	
+	
+	<Step ID="5" >	
+		<EnterMap MapID="110" >
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10057" Face="正常" Msg="这……乐乐的这个办法也太不靠谱了吧！这一看就是布多多这个吃货！再说，瑞琪团长的品味也不至于这么差吧？全身蓝皮肤还穿一条蓝色的背带裤？？？" Option="就说看着别扭，原来问题出在这里！" />
+				<Talk NpcID="10002" Face="正常" Msg="玛丽，这是谁啊？他跟我们认识吗？怎么看上去好饿的样子。我们……怎么会有品味这么差的朋友？天啊！他居然还穿跟自己肤色一样颜色的背带裤！" Option="呃……美食计宣告失败！" />
+				<Talk NpcID="10057" Face="正常" Msg="公主，这……可能是他没有多余的衣服了吧，所以只能穿这一条背带裤。看他的样子，应该好几天没东西吃了，就让他慢慢吃，我们先去其他地方看看。" Option="嗯，好的。" />
+			</Action>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			<Action Cmd="SET_BUFFER" Panel="6" Step="6" />
+			<Action Cmd="GO_MAP" MapID="238" MapType="0" />
+		</EnterMap>	
+	</Step>
+	
+	<Step ID="6" >	
+		<EnterMap MapID="238" >
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10009" Visible="0" />    
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			<Action Cmd="PLAY_MOVIE" Param="4000" Name="movie_4000" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10009" Face="正常" Msg="{$username}，真是太谢谢你了，这个头盔真是太大啦！时间有限，只找到这一套稍微合适一点了。不过除了头盔，其他都还好。" Option="不过，比多多的变装简直好120倍了！" />
+				<Talk NpcID="10009" Face="正常" Msg="可是我待会儿要去的地方可是摩尔拉雅山顶，穿着这不合身的厚重盔甲，还要跟公主一起去滑雪……" Option="穿着盔甲？然后滑雪？" />
+				<Talk NpcID="10009" Face="正常" Msg="啊！都是乐乐给我想的这个主意啦，说什么滑雪是最浪漫的事情了，浪漫总离不开风花雪月。我看是瑞琪变装之“苦肉计”还差不多，可苦了我了！" Option="瑞琪变装之“苦肉计”？" />
+				<Talk NpcID="10009" Face="正常" Msg="时间不早了，玛丽肯定早都带着么么公主去到摩尔拉雅山顶了，{$username}，我们也赶快过去吧！" Option="好的，走吧，我扶着你点儿。" />
+			</Action>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_4000" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10009" Visible="1" /> 
+			<Action Cmd="SET_BUFFER" Panel="7" Step="7" />
+			<Action Cmd="GO_MAP" MapID="37" MapType="0" />
+		</EnterMap>	
+	</Step>
+	
+	<Step ID="7" >	
+		<EnterMap MapID="37" >
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10002" Face="悲伤" Msg="怎么会是你？怎么不是梦里的那个人？你不是那个……那个叫丫丽的小摩尔吗？" Option="公主，你记起丫丽了？" />
+				<Talk NpcID="10147" Face="正常" Msg="公主，你记得我了吗？你知道我是从哪儿来的吗？" Option="难道么么记得以前的事了？" />
+				<Talk NpcID="10002" Face="悲伤" Msg="我怎么知道你从哪里来，是最近你们经常来看我，我知道你叫丫丽，我们见面也有好多次了吧！" Option="呃……原来是这样。" />
+				<Talk NpcID="10147" Face="正常" Msg="好吧，么么公主，你暂时不记得我也没关系。总有一天，你会想起我们在一起的点点滴滴的。" Option="\(^o^)/" />
+				<Talk NpcID="10002" Face="悲伤" Msg="可是，我梦见的那个人呢？他究竟是谁？他又在哪儿？" Option="⊙﹏⊙么么公主……" />
+			</Action>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />	
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10045" Face="正常" Msg="公主殿下，你还记得我是谁吗？" Option="这个瑞琪是……真的吗？？？" />
+				<Talk NpcID="10002" Face="正常" Msg="你……你……你看起来很眼熟，我们像是很早就认识了。" Option="公主，再好好想想！" />
+				<Talk NpcID="10045" Face="正常" Msg="我敬爱的公主殿下，我有东西给你看！" Option="什么东西？" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_7" />
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			<Action Cmd="PLAY_MOVIE" Param="7000" Name="movie_7000" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10045" Face="正常" Msg="我敬爱的公主殿下，难道你也不记得我们曾经最喜欢在雪山顶堆雪人、滑雪了吗？" Option="这是摩乐乐还是真瑞琪啊？" />
+				<Talk NpcID="10002" Face="正常" Msg="堆雪人、滑雪？有吗？" Option="(＞﹏＜)~~~" />
+				<Talk NpcID="10045" Face="正常" Msg="跟我来！" Option="去哪里？" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_7000" />
+			<!--这里要打开一个滑雪的小游戏			-->
+			<Action Cmd="SET_BUFFER" Panel="8" Step="8" />
+		</EnterMap>	
+	</Step>
+	
+	<Step ID="8" >	
+		<EnterMap MapID="37" >
+			<Action Cmd="ACT_EVENT" Param="openHuntGame" /><!-- 抛事件 -->
+		</EnterMap>	
+		
+		<EnterMap MapID="100001" >
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />
+			<Action Cmd="PLAY_MOVIE" Param="7000" Name="movie_7000" IsBg="1"/>	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10147" Face="正常" Msg="玛丽，乐乐的办法还真有用，不知道公主现在是不是记起了瑞琪团长。" Option="乐乐的办法还不错嘛！" />
+				<Talk NpcID="10057" Face="正常" Msg="看公主跟我们的这位“瑞琪”相处的很愉快啊！不知道公主是否回忆起了什么。" Option="去哪里？" />
+				<Talk NpcID="10045" Face="正常" Msg="我敬爱的公主殿下，保护您是我与生俱来的使命，现在你安全了，我也该走了！" Option="乐乐还真演的一套一套的……" />
+			</Action>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_7000" />
+			<Action Cmd="PLAY_MOVIE" Param="8" Name="movie_8" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="开心" Msg="我这一招变装计之情景重现还成功吧？公主一定会想起来的！" Option="乐乐，你是怎么做到的啊？" />
+				<Talk NpcID="10000" Face="开心" Msg="(*^__^*) 嘻嘻，这个嘛……保密！现在该做的都做了，只希望么么公主能恢复记忆，也不枉费我们大家的一番努力！" Option="公主到底能不能记起以前的事呢？" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_8" />
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />	
+			<Action Cmd="OVER" />
+		</EnterMap>
+	</Step>
+	
+</Tasks>

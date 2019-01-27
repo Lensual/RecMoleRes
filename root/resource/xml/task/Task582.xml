@@ -1,0 +1,166 @@
+<Tasks ID="582" Name="迷雾之地" AwardMsg="恭喜你获得尤瑞克战靴，10个经验果实！" AwardBean="" >
+
+	<!-- 遗忘田园  -->
+	<Step ID="1" TarMapID="329">
+		<EnterMap MapID="329">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1" hideBg="1"/>	
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="开心" Msg="好棒！小水车终于被我们修好了！" Option="像崭新的一样，真是不容易啊！"/>
+				<Talk NpcID="10009" Face="正常" Msg="现在小水车还能咕噜噜地转动，比我们刚看到时更好，要是尤瑞克老爷爷知道了一定会很开心的！" Option="可是都好些天没见到尤瑞克老爷爷了！ "/>
+				<Talk NpcID="10000" Face="焦急" Msg="他不会还在生我们气吧？这个小水车对于他来说好像非常珍贵的样子。其实……不就是一个小水车嘛，为什么……" Option="我也觉得很奇怪o(╯□╰)o"/>
+				<Talk NpcID="10009" Face="惊讶" Msg="咦？你们快看，那个小水车一闪一闪的，怎么回事？" Option="哇~小水车发光了！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1" hideBg="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+<!-- 			<Action Cmd="GO_MAP" MapID="1" MapType="0" /> -->
+		</EnterMap>	
+	</Step>
+	
+	
+	<!-- 遗忘田园  -->
+	<Step ID="2" TarMapID="329">
+		<EnterMap MapID="329">
+			<Action Cmd="OPEN_PANEL" Param="Task582Panel" ClearMap="1"/>
+			<Action Cmd="ADD_EVENT" Param="task582PanelOver"/>
+			
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+			<Action Cmd="GO_MAP" MapID="330" MapType="0" />
+		</EnterMap>
+	</Step>
+	
+	<!-- 过去的遗忘田园-->
+	<Step ID="3" TarMapID="330">
+		<EnterMap MapID="330">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="惊讶" Msg="发生了什么事？我们这是……到哪儿了？" Option="怎么觉得像是在遗忘田园……看，那不是小水车么！"/>
+				<Talk NpcID="10009" Face="惊讶" Msg="这里是有点像遗忘田园，但又有点不像……哎呀，我也说不清楚……" Option="对了，迷雾！我们之前在遗忘田园看到的迷雾没了！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="惊讶" Msg="这，这不是尤瑞克老爷爷吗？哦，不对，应该是年轻版的尤瑞克，额，老爷爷……" Option="难道说……我们被小水车带回到了过去？"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			<Action Cmd="PLAY_MOVIE" Param="15" Name="movie_15" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_15" />
+			
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />
+		</EnterMap>
+	</Step>
+	
+	<!-- 过去的遗忘田园-->
+	<Step ID="4" TarMapID="330">
+		<EnterMap MapID="330">
+			<Action Cmd="OPEN_PANEL" Param="Task582Panel" ClearMap="0"/>
+			<Action Cmd="ADD_EVENT" Param="task582PanelOver"/>
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="惊讶" Msg="咦？怎么转来转去，还是在遗忘田园？但是刚刚那个年轻的老爷爷不见了……" Option="快看，老爷爷的妻子还在！ "/>
+				<Talk NpcID="10010" Face="正常" Msg="怎么就剩她一个人了？老爷爷去哪里了？" Option="走，我们去问问！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10196" Face="正常" Msg="咦？你们是谁？好像没见过你们呢。……噢，请原谅我，主要是，平时这里都见不到别人。" Option="我见过你，你是尤瑞克老爷爷的妻子。"/>
+				<Talk NpcID="10196" Face="正常" Msg="哈哈，老爷爷？我从来没听过别人这样叫他。不过这倒是个有趣的称呼，等他回来，我也要逗逗他。" Option="回来？请问他去哪儿了？"/>
+				<Talk NpcID="10196" Face="正常" Msg="他……他去了黑森林。前些日子，王国传来消息，黑森林里黑龙入侵，我亲爱的丈夫，也应征前往黑森林抵御黑龙了。" Option="哇！尤瑞克老爷爷太英勇啦！"/>
+				<Talk NpcID="10196" Face="正常" Msg="（嘴角扬起一抹微笑）是呀，这也正是他吸引我的地方。他临走的时候告诉我，说他一定会平安回来，他还要和小水车一起唱歌给我听。" Option="真是太浪漫了，他一定会平安回来的！"/>
+				<Talk NpcID="10196" Face="正常" Msg="我天天都会来小水车这里写日记，等我的日记写满了，他一定就回来了。噢，我还得把今天的日记写完，下次再和你们聊噢！" Option="嗯，好的！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_7" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="8" Name="movie_8" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_8" />
+			<Action Cmd="SET_BUFFER" Panel="5" Step="5" />
+		</EnterMap>
+	</Step>
+	
+	
+	<!-- 过去的遗忘田园-->
+	<Step ID="5" TarMapID="330">
+		<EnterMap MapID="330">
+			<Action Cmd="OPEN_PANEL" Param="Task582Panel" ClearMap="0"/>
+			<Action Cmd="ADD_EVENT" Param="task582PanelOver"/>
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			
+			<Action Cmd="PLAY_MOVIE" Param="9" Name="movie_9" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="惊讶" Msg="呀！快看，那边有个人晕倒了！" Option="我们赶紧过去看看！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_9" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="10" Name="movie_10" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10195" Face="悲伤" Msg="我，我这是怎么了……（看看四周）不，不，我要回家去，我还要去找我的卡罗拉……可是，可是我却回不去了……" Option="回不去了？怎么回事？"/>
+				<Talk NpcID="10195" Face="悲伤" Msg="这些迷雾……我不知道这里怎么会有这些迷雾……它挡住我的去路，我试了无数次，可每次我走进迷雾，最终又回到了原点……上天，为什么不让我去见我的卡罗拉……" Option="天啊，怎么会变成这样……"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_10" />
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			
+			<Action Cmd="SET_BUFFER" Panel="6" Step="6" />
+			<Action Cmd="GO_MAP" MapID="329" MapType="0" />
+		</EnterMap>
+	</Step>
+	
+		<!-- 遗忘田园-->
+	<Step ID="6" TarMapID="329">
+		<EnterMap MapID="329">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			
+			<Action Cmd="PLAY_MOVIE" Param="11" Name="movie_11" IsBg="1" IsFullScreen="1" hideBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10063" Face="正常" Msg="{$username}，你们去哪儿啦？我找你们好半天！" Option="咦？汤米？！难道我们回到现实了？"/>
+				<Talk NpcID="10000" Face="正常" Msg="汤米，我们发现了一个秘密，原来尤瑞克老爷爷的家在这片迷雾的后面。他的妻子在那等着他。先不和你说了，我们得去雾后面看看！" Option="嗯！我们去找找老爷爷的妻子！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_11" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="12" Name="movie_12" IsBg="1" IsFullScreen="1" hideBg="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_12" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="13" Name="movie_13" IsBg="1" IsFullScreen="1" hideBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10063" Face="疑惑" Msg="你……你们怎么都变成了这样？" Option="天啊，我们也绕回了原点。年轻尤瑞克爷爷说得没错！"/>
+				<Talk NpcID="10000" Face="惊讶" Msg="哇~你们怎么都变黑了？天，我好像也一样……我们只是在迷雾中走了一圈，怎么就变成了这样？" Option="啊啊啊~怎么办，被毁容了！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_13" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="14" Name="movie_14" IsBg="1" IsFullScreen="1" hideBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="开心" Msg="太好了，终于恢复原样了！" Option="还好，还好，不用做黑摩尔了！"/>
+				<Talk NpcID="10009" Face="正常" Msg="尤瑞克老爷爷，希望您不要介意，我们已经知道了您和您妻子的故事——具体的会跟您慢慢解释，不过，我们很希望能帮您穿过这片迷雾，让您能再见到您的妻子！" Option="是呀！"/>
+				<Talk NpcID="10192" Face="正常" Msg="谢谢你们的心意，可是，我已经试了30年了，依然找不到办法……" Option="不怕，我们有办法！"/>
+				<Talk NpcID="10000" Face="开心" Msg="对，大卫可是摩尔庄园伟大的发明家哦！我们可以找他想想办法，再加上我们这群小摩尔，一定会找到办法的！" Option="嗯，嗯，嘿嘿~"/>
+				<Talk NpcID="10192" Face="正常" Msg="谢，谢谢你们……虽然不知道结果会怎样，但还是谢谢你们。我的卡罗拉，我今生还能再见到你吗……" Option="爷爷放心，一定行的！"/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_14" />
+			
+			<Action Cmd="TASK_SHOW_SELF" Hide="0"/>
+			<Action Cmd="OVER"  MapID="330"/>
+		</EnterMap>
+	</Step>
+</Tasks>

@@ -1,0 +1,80 @@
+<Tasks ID="634" Name="激战！扣扣海贼团" AwardMsg="恭喜你获得清凉桌和2个跳舞兰种子。" AwardBean="">
+	<Step ID="1" TarMapID="47">
+		<EnterMap MapID="47">
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10269" Face="悲伤" Msg="主人，主人在哪里？" Option="咦？你是谁家的小拉姆呀？"/>
+				<Talk NpcID="10269" Face="正常" Msg="主人说他会来接我的~我害怕~你陪我等他好嘛？" Option="好呀~"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1"/>
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2"/>
+		</EnterMap>
+	</Step>
+	<Step ID="2" TarMapID="47">
+		<EnterMap MapID="47">
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10264" Face="疑惑" Msg="咦？这个小拉姆是不是库拉的拉姆呢？" Option="对哟，你提醒我了~要不要找库拉来问问~说不定是呢~"/>
+				<Talk NpcID="10264" Face="正常" Msg="小拉姆，你叫什么名字呀？" Option="....."/>
+				<Talk NpcID="10269" Face="悲伤" Msg="我叫小豆豆~主人说好来接我，也没有来~" Option="....."/>
+				<Talk NpcID="10264" Face="正常" Msg="小豆豆不哭，姐姐帮你找主人好不好？" Option="....."/>
+				<Talk NpcID="10269" Face="正常" Msg="好~谢谢姐姐~" Option="....."/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2"/>
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3"/>
+		</EnterMap>	
+	</Step>
+	<Step ID="3" TarMapID="47">
+		<EnterMap MapID="47">
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10264" Face="焦急" Msg="库拉，不要，小豆豆还那么小！" Option="....."/>
+				<Talk NpcID="10003" Face="无聊" Msg="她是已经死掉的拉姆，不要拦着我！你们不要命了吗？" Option="库拉，真的没有其他办法了吗？"/>
+				<Talk NpcID="10003" Face="无聊" Msg="怎么都那么多废话！还好我找到了5点！总算可以来一场像样的战斗了！" Option="....."/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4"/>
+		</EnterMap>
+	</Step>
+	<Step ID="4" TarMapID="47">
+		<EnterMap MapID="47">
+			<Action Cmd="OPEN_PANEL" Param="Task634GamePanel" ClearMap="1" Data = "0"/>
+			<Action Cmd="ADD_EVENT" Param="Task634GamepanelOver"/>
+			<Action Cmd="SET_BUFFER" Panel="5" Step="5"/>
+		</EnterMap>	
+	</Step>
+	<Step ID="5" TarMapID="47">
+		<EnterMap MapID="47">
+			<Action Cmd="PLAY_MOVIE" Param="104" Name="movie_104" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_104"/>
+			<Action Cmd="PLAY_MOVIE" Param="105" Name="movie_105" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_105"/>
+			<Action Cmd="SET_BUFFER" Panel="6" Step="6"/>
+		</EnterMap>
+	</Step>
+	<Step ID="6" TarMapID="47">
+		<EnterMap MapID="47">
+			<Action Cmd="SAY">
+				<Talk NpcID="10264" Face="悲伤" Msg="小豆豆真可怜~" Option="是呀，我可不要我的小拉姆孤零零的一个人~"/>
+				<Talk NpcID="10003" Face="无聊" Msg="好啦好啦！可喜可贺的是我的5点在开幕式上被找到啦~" Option="5点？"/>
+				<Talk NpcID="10003" Face="正常" Msg="是呀，这小子在烟花台上睡懒觉，看着比以前更黑了……" Option="....."/>
+				<Talk NpcID="10264" Face="正常" Msg="那是不是可以把我的体质变回来了？" Option="....."/>
+				<Talk NpcID="10003" Face="失望" Msg="这……我会努力的……" Option="....."/>
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="106" Name="movie_106" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_106"/>
+			<Action Cmd="OVER"/>
+		</EnterMap>
+	</Step>
+</Tasks>
+

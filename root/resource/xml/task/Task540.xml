@@ -1,0 +1,211 @@
+<Tasks ID="540" Name="记忆水晶球" AwardMsg="恭喜你获得白色记忆泡泡、紫色记忆泡泡、2000摩尔豆" AwardBean="2000" >     
+	<Step ID="1" >
+	
+		<EnterMap MapID="17" >
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10042" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10057" Face="正常" Msg="公主为了答谢大家最近的关心和照顾，特地亲自下厨，准备宴请大家。" Option="么么公主……会做饭？？？"/>
+				<Talk NpcID="10057" Face="正常" Msg="我通知了大家要盛装出席的。特别是摩乐乐，听说公主要亲自下厨宴请大家，很是高兴。" Option="盛装？糟糕，我都好几天没换衣服了。" />
+				<Talk NpcID="10057" Face="正常" Msg="乐乐还说会有惊喜带给么么公主，不知道他又想到了什么好玩的东西。" Option="乐乐还真是有心……" />
+				<Talk NpcID="10042" Face="正常" Msg="玛丽，你放心。公主亲自下厨宴请大家，他们一定会按时出席的。" Option="有好吃的，能不来么？！" />
+				<Talk NpcID="10002" Face="开心" Msg="玛丽，大家什么时候能来呀？我为他们准备的大餐就快要完成啦！" Option="这么快就煮好了？能吃吗？" />
+				<Talk NpcID="10057" Face="正常" Msg="公主，应该……应该马上就到了。只是这菜……能上桌了吗？" Option="我也很担心这菜……能不能吃啊？" />
+				<Talk NpcID="10002" Face="开心" Msg="当然啦！我可是研究了好久才完成的哦！相信他们一定会喜欢。玛丽，你去看看大家来了没。尼克，你来帮我把菜摆桌上了吧。" Option="希望比我想象中的好吃！" />
+				<Talk NpcID="10042" Face="正常" Msg="公主，我来上菜吧，你先坐下休息休息。" Option="哇，好丰盛啊！公主辛苦啦！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1"/>	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10002" Face="开心" Msg="哇！你怎么来了？那天在山顶，都还没来得及跟你说声“谢谢”，你就不见了！" Option="⊙﹏⊙"/>
+				<Talk NpcID="10002" Face="开心" Msg="没想到今天宴请大家，英勇的骑士你居然也来了。" Option="这可是公主第一次亲自下厨做的。" />
+				<Talk NpcID="10057" Face="正常" Msg=" 摩乐乐……这就是你的盛装打扮？" Option="乐乐干嘛还穿这样啊？！" />
+				<Talk NpcID="10000" Face="开心" Msg=" 我知道么么公主如果再见到这个人，肯定会很高兴的。而且公主亲自下厨宴请大家，我当然要闪亮登场啊！" Option="原来只为博公主一笑……" />
+				<Talk NpcID="10000" Face="开心" Msg=" 丫丽和多多、少少他们还在家里精心打扮自己呢，我就自己先过来了！" Option="是先来给公主送惊喜的么？" />
+				<Talk NpcID="10057" Face="正常" Msg=" 可你打扮成这样，公主也不知道你就是摩乐乐了，真是……聪明反被聪明误啊！" Option="啊，对哦！公主肯定还以为你是……" />
+				<Talk NpcID="10000" Face="悲伤" Msg=" 但是你没看见么么公主开心的样子吗？现在最重要的是只要么么公主开心，至于公主认不认得出是我……那……那不重要的……" Option="乐乐……" />
+				<Talk NpcID="10000" Face="正常" Msg=" 看见么么公主开心，我们大家也就开心了！你说是吧，玛丽？" Option="呜呜~~乐乐你真好……" />
+				<Talk NpcID="10057" Face="正常" Msg=" 那待会儿你可千万别露馅儿了。既然你然先来了，就快去尝尝公主的手艺吧！" Option="先到先得，看来乐乐是早有准备嘛。" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />	
+			<Action Cmd="SET_BUFFER" Panel="2"/>
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			<Action Cmd="PLAY_MOVIE" Param="3000" Name="movie_3000" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="焦急" Msg="么么公主，你这苦瓜……你难道不记得我摩乐乐最怕吃苦瓜了吗？" Option="呃……"/>
+				<Talk NpcID="10000" Face="焦急" Msg="玛丽，你知道我最怕吃苦瓜了，都不及时帮我解围！" Option="这个……" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3000" />
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1"/>	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10002" Face="悲伤" Msg="摩乐乐……怎么是你！你的头发是假的？？？" Option="这……怎么解释好呢？"/>
+				<Talk NpcID="10002" Face="悲伤" Msg="难道上次在雪山顶见到的也是你吗？是吗？就是你对不对？" Option="呃……公主……"/>
+				<Talk NpcID="10002" Face="悲伤" Msg="玛丽，原来你们一直都知道是他装扮的！" Option="公主，我们也是不想让你失望。" />
+				<Talk NpcID="10002" Face="悲伤" Msg="你们合伙起来欺骗我！你们太坏了！" Option="我们不是故意的，么么公主！"/>
+				<Talk NpcID="10002" Face="悲伤" Msg="我再也不想再见到你们了！" Option="么么公主，我们不是有意骗你的。"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />
+<!--下面要打开一个面板，那个熊猫在哭的面板！到时候等美术好了替换上去就好了！-->
+			<Action Cmd="PLAY_MOVIE" Param="999" Name="movie_999" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_999" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10042" Visible="1" />
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+			<Action Cmd="GO_MAP" MapID="110" MapType="0" />	
+		</EnterMap>
+	</Step>
+	
+	<Step ID="2" >	
+		<EnterMap MapID="17" >
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10042" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			<Action Cmd="PLAY_MOVIE" Param="3000" Name="movie_3000"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="正常" Msg="么么公主，你这苦瓜……你难道不记得我摩乐乐最怕吃苦瓜了吗？" Option="呃……"/>
+				<Talk NpcID="10000" Face="正常" Msg="玛丽，你知道我最怕吃苦瓜了，都不及时帮我解围！" Option="这个……" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3000" />
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1"/>	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10002" Face="悲伤" Msg="摩乐乐……怎么是你！你的头发是假的？？？" Option="这……怎么解释好呢？"/>
+				<Talk NpcID="10002" Face="悲伤" Msg="难道上次在雪山顶见到的也是你吗？是吗？就是你对不对？" Option="呃……公主……"/>
+				<Talk NpcID="10002" Face="悲伤" Msg="玛丽，原来你们一直都知道是他装扮的！" Option="公主，我们也是不想让你失望。" />
+				<Talk NpcID="10002" Face="悲伤" Msg="你们合伙起来欺骗我！你们太坏了！" Option="我们不是故意的，么么公主！"/>
+				<Talk NpcID="10002" Face="悲伤" Msg="难道上次在雪山顶见到的也是你吗？是吗？就是你对不对？" Option="呃……公主……" />
+				<Talk NpcID="10002" Face="悲伤" Msg="我再也不想再见到你们了！" Option="么么公主，我们不是有意骗你的。"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />
+<!--下面要打开一个面板，那个熊猫在哭的面板！到时候等美术好了替换上去就好了！-->
+			<Action Cmd="PLAY_MOVIE" Param="999" Name="movie_999" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_999" />
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10042" Visible="1" />
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+			<Action Cmd="GO_MAP" MapID="110" MapType="0" />	
+		</EnterMap>
+	</Step>
+	
+	<Step ID="3" >	
+		<EnterMap MapID="110" >
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />
+			<Action Cmd="SET_BUFFER" Panel="100" Step="100" />
+			<Action Cmd="GO_MAP" MapID="37" MapType="0" />	
+		</EnterMap>		
+	</Step>
+	
+	<Step ID="100" >	
+		<EnterMap MapID="37" >	
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10057" Face="悲伤" Msg="公主你醒醒啊！公主我是玛丽！" Option="么么公主你快醒醒啊！"/>
+				<Talk NpcID="10000" Face="悲伤" Msg="公主，都是我不好，不该假扮瑞琪欺骗你的，你快醒醒啊！" Option="(⊙_⊙)，乐乐……" />
+				<Talk NpcID="10057" Face="悲伤" Msg="到底发生什么事了呢？公主为什么会昏迷不醒，还全身散发着黑色的雾气……" Option="黑色雾气……"/>
+				<Talk NpcID="10000" Face="惊讶" Msg="难道……难道之前库拉说的话是真的？" Option="什么话？" />
+				<Talk NpcID="10000" Face="惊讶" Msg="库拉说黑暗力量侵入了公主体内，会把公主所有美好的回忆全都夺走，公主就只能悲伤度日……" Option="库拉这个恶法师！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_7" />	
+			<Action Cmd="PLAY_MOVIE" Param="8" Name="movie_8" IsBg="1"/>	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10148" Face="正常" Msg="你们是来救这位姑娘的吧？我之前见过你们。" Option="嗯，我们是这位姑娘的朋友。"/>
+				<Talk NpcID="10057" Face="正常" Msg="请问你是？" Option="我是雪山顶的雪精灵" />
+				<Talk NpcID="10057" Face="正常" Msg="那你是一直在这雪山顶？你知道我们公主为什么会昏迷不醒吗？" Option="对，你知道发生什么事了吗？"/>
+				<Talk NpcID="10148" Face="正常" Msg="我正想告诉你们，有关这位昏迷的姑娘的事情。" Option="快说说，到底怎么了。" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_8" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="0" />
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10148" Face="正常" Msg="其他3颗水晶球都散落在了庄园的不同角落，希望你们能尽快找回。水晶球一旦破碎，记忆泡泡就会消失的。" Option="啊！时间紧迫啊！"/>
+				<Talk NpcID="10000" Face="正常" Msg="{$username}，我要跟玛丽先把么么公主送回城堡里，找水晶球的事，就先交给你了！" Option="我一定会把水晶球全部找到的！" />
+				<Talk NpcID="10148" Face="正常" Msg="{$username}，我跟你一起去！" Option="嗯，好！"/>
+			</Action>
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />
+			<Action Cmd="OPEN_TASK_PANEL" />	
+		</EnterMap>	
+	</Step>
+	
+	<Step ID="4" >
+		<!--天空树   204	-->
+		<EnterMap MapID="204" Bit="1">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />
+			<Action Cmd="PLAY_MOVIE" Param="9" Name="movie_9" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_9" />	
+			<Action Cmd="ALERT" Param="  蓝色水晶球已经找到啦！" Face="开心" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="0" />
+			<Action Cmd="SET_BIT" Param="1" />
+		</EnterMap>	
+		
+		<!--城堡书房    32-->
+		<EnterMap MapID="32" Bit="2">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />
+			<Action Cmd="PLAY_MOVIE" Param="10" Name="movie_10" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_10" />	
+			<Action Cmd="ALERT" Param="  红色水晶球已经找到啦！" Face="开心" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="0" />
+			<Action Cmd="SET_BIT" Param="2" />
+		</EnterMap>	
+		
+		<!-- 拉姆世界丛林  121-->
+		<EnterMap MapID="121" Bit="3">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />
+			<Action Cmd="PLAY_MOVIE" Param="11" Name="movie_11" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_11" />	
+			<Action Cmd="ALERT" Param="  金色水晶球已经找到啦！" Face="开心" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="0" />
+			<Action Cmd="SET_BIT" Param="3" />
+		</EnterMap>	
+		
+		<Test Bits="1,2,3" >
+			<In>
+				<Action Cmd="ALERT" Param="收集完成了，现在可以去么么公主卧室看看哦！" Face="开心" />
+				<Action Cmd="SET_BUFFER" Panel="6" Step="6" />
+				<Action Cmd="GO_MAP" MapID="110" MapType="0" />
+			</In>
+			<Out>
+				<Action Cmd="OPEN_TASK_PANEL" />
+			</Out>
+		</Test>
+	</Step>
+	
+	<Step ID="5" >
+		<NowTrigger>
+			<Action Cmd="ALERT" Param="收集完成了，现在可以去么么公主卧室看看哦！" Face="开心" />
+			<!-- 点击收集完成按钮，跳到拉姆学院 -->
+			<Action Cmd="SET_BUFFER" Panel="6" Step="6" />
+			<Action Cmd="GO_MAP" MapID="110" MapType="0" />
+		</NowTrigger>
+	</Step>
+	
+	<Step ID="6" >	
+		<EnterMap MapID="110" >
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="疑惑" Msg="怎么会这样呢？为什么只有2颗水晶球亮了？" Option="怎么有的亮，有的没亮呢？"/>
+				<Talk NpcID="10148" Face="正常" Msg="糟糕！难道是……" Option="难道是什么？" />
+				<Talk NpcID="10148" Face="正常" Msg="难道是记忆泡泡没被封印完全？因为当时情况紧急，记忆泡泡肯定飞走了一些。" Option="那现在可怎么办啊？"/>
+			</Action>
+<!--打开自己做的面板2	三个水晶球的面板		-->
+			<Action Cmd="OPEN_PANEL" Param="LuRotateBalls" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10148" Face="正常" Msg="只有以上的3个任务都完成，才有可能开启剩下3颗记忆水晶球。" Option="真是一波三折啊！" />
+				<Talk NpcID="10148" Face="正常" Msg="而且水晶球的封印结界也是有期限的，要是不能尽快点亮水晶球，记忆泡泡同样也会消失掉的！" Option="啊！！！那还不赶紧出发！"/>
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />
+			<Action Cmd="OVER" />	
+		</EnterMap>	
+	</Step>
+</Tasks>

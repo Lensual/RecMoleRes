@@ -1,0 +1,68 @@
+<Tasks ID="523" Name="KFC教师节" AwardMsg="恭喜你获得KFC店员帽、KFC店员鞋！" AwardBean="14400" >
+	<Step ID="1" >
+	
+		<EnterMap MapID="109" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10002" Face="焦急" Msg="最近玛丽经常在晚上偷偷溜出城堡，在天亮前又偷偷回来。听说丫丽、菩提大伯他们的拉姆最近也常常夜游……" Option="一定有什么秘密！" />
+				<Talk NpcID="10002" Face="焦急" Msg="秘密？不会是危险的事吧？" Option="别着急，先观察一下吧！" />
+				<Talk NpcID="10002" Face="焦急" Msg="{$username}，你愿意帮助我查清真相吗？" Option="看我的！" />
+			</Action>
+ 			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+ 			<Action Cmd="GO_MAP" MapID="110" MapType="0" />	
+ 		</EnterMap>	
+	</Step>			
+	
+	<Step ID="2" >
+		<EnterMap MapID="110" >
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10002" Face="正常" Msg="玛丽那么晚怎么还出去呢?{$username},我们跟去看看吧！" Option="嗯，好的！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+			<Action Cmd="GO_MAP" MapID="109" MapType="0" />
+		</EnterMap>	
+	</Step>	
+	
+	<Step ID="3" >
+		<EnterMap MapID="109" >
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="npc_10057" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="npc_10002" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10057" Face="正常" Msg="这次好多啦~~~大家再排一遍吧！这个节目会在教师节献给庄园的老师们哦~" Option="（教师节献歌？）" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10002" Face="开心" Msg="原来大家在为练习合唱呀！害我好担心~" Option="教师节？" />
+				<Talk NpcID="10057" Face="正常" Msg="么么公主~对不起，我不是故意瞒着你的，教师节快到了，小拉姆们希望通过自己的歌声来向庄园的老师们致敬！" Option="原来是这样！" />
+				<Talk NpcID="10002" Face="正常" Msg="哇~！你们太棒了！让我们来举办一场教师节餐会，让我们的老师度过一个更丰富的教师节吧！！" Option="大家都想到一起了！" />
+				<Talk NpcID="10002" Face="开心" Msg="最重要的是食物的准备哦~我们或许可以找奇奇帮忙~！" Option="Let's go!" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="npc_10057" Visible="1" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="npc_10002" Visible="1" />
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />
+			<Action Cmd="GO_MAP" MapID="203" MapType="0" />
+		</EnterMap>	
+	</Step>	
+	
+	<Step ID="4" >
+		<EnterMap MapID="203" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10043" Face="正常" Msg="教师节餐会？真是个好主意！我可以提供小摩尔最喜欢的餐会食物哦！" Option="（⊙o⊙ )哇！谢谢奇奇！" />
+				<Talk NpcID="10043" Face="正常" Msg="但有一个问题哦~~这次教师节餐会将邀请很多摩尔参加吧，奇奇可忙不过来呢。" Option="我愿意帮忙" />
+				<Talk NpcID="10043" Face="正常" Msg="太好了！{$username}，为了保证餐会当天不会出错，我准备了试炼哦！你愿意为最爱的老师参加餐会的试炼吗？" Option="为了老师，参加试炼！" />
+				<Talk NpcID="10043" Face="正常" Msg="奇奇准备了教师节餐会的店员装，集满全套就有绚丽动作！还有教师节神秘礼物哦！送给通过试炼的幸运小摩尔 (*^__^*) " Option="哇！双重好礼呢！" />
+			</Action>
+			<Action Cmd="OPEN_PANEL" Param="SuperclerkGame" IsStopSound="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10043" Face="正常" Msg="哇！好厉害！这样餐会就可以顺利进行啦！谢谢你，小摩尔O(∩_∩)O！" Option="嘿嘿~" />
+				<Talk NpcID="10043" Face="正常" Msg="下周就是正式餐会咯，一定要准时到岗哦！还有更多好玩的游戏和丰厚的礼品，千万别错过哦！" Option="一定来！" />
+			</Action>
+			<Action Cmd="OPEN_PANEL" Param="ChouJiang" /> 
+			<Action Cmd="OVER" />
+		</EnterMap>	
+	</Step>	
+</Tasks>

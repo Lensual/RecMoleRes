@@ -1,0 +1,73 @@
+<Tasks ID="652" Name="神秘音符乱入" AwardMsg="恭喜你获得小屋道具1个绿色糖果盒、1个粉色糖果盒满和10000摩尔豆。" AwardBean="">
+	<Step ID="1" TarMapID="42">
+		<EnterMap MapID="42">
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10013" Face="生气" Msg="肯定就是你，就是你把小摩尔们都吓坏了，才不来花婶小摊上玩了……" Option="……"/>
+				<Talk NpcID="10011" Face="悲伤" Msg="就是，肯定是你，弄得哥哥一直睡不醒，我今天好不容易才让他半睡半醒的吃进去点东西……" Option="……"/>
+				<Talk NpcID="10021" Face="正常" Msg="大家稍微让点位置给我，大新闻啊，庄园出现这么奇异的生物，竟然还能自己发光……快让我多拍几张……" Option="……那个……"/>
+				<Talk NpcID="10013" Face="生气" Msg="{$username}，你来的正是时候，快来看看这个长得像魔鬼一样的小东西，真该让克劳神父来净化一下……" Option="花婶别那么激动了，让我看看它……"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1"/>
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			<Action Cmd="JUMP_TASK_UI" Param="(⊙o⊙)…什么情况？天空树那边怎么了？快去看看，乐乐和拉仔他们不会有事吧！"/>
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2"/>
+			<Action Cmd="GO_MAP" MapID="204" MapType="0"/>
+		</EnterMap>
+	</Step>
+	<Step ID="2" TarMapID="204">
+		<EnterMap MapID="204">
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10001" Face="正常" Msg="{$username}，你来看呀！草丛里有个怪物！！ " Option="怪物？"/>
+				<Talk NpcID="10001" Face="正常" Msg="刚才从天而降一道金光，然后主人就晕倒在这里，从他旁边跑开一只脏兮兮的小东西，我现在把它堵在草丛里，不让它出来！！" Option="咦？难道是刚才那个小东西？让我看看……"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2"/>
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			<Action Cmd="SAY">
+				<Talk NpcID="10287" Face="惊讶" Msg="C~~~~~~~~~C~~~~~~~~~~~~~" Option="别怕别怕，我们不会伤害你的！"/>
+				<Talk NpcID="10001" Face="正常" Msg="要是你害主人我也不会放过你的 ╭(╯^╰)╮" Option="不会的啦，你看它那么可怜的样子"/>
+				<Talk NpcID="10288" Face="生气" Msg="CCCCCCCCCCCCCC~~~~~~~~~~~~~~~~" Option="(⊙o⊙)…你是不是只会说C？别生气了，不会伤害你的~我叫你小C好嘛？"/>
+				<Talk NpcID="10287" Face="疑惑" Msg="C？？？CC？" Option="恩，我会跟你做朋友，放心（自言自语：是刚才那只哎……好神奇，会变啊）"/>
+			</Action>
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3"/>
+		</EnterMap>
+	</Step>
+	<Step ID="3" TarMapID="204">
+		<EnterMap MapID="204">
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10000" Face="疑惑" Msg="你认识我吗？" Option="乐乐，我跟你说哦，刚才乐乐侠来了……"/>
+				<Talk NpcID="10000" Face="惊讶" Msg="真的啊！好可惜啊，又没看到他" Option="还有这只……不知道名字，就叫它小C好了，我刚才看到乐乐侠把它抱走了……"/>
+				<Talk NpcID="10000" Face="开心" Msg="是吗？小不点，乐乐侠抱过你吗？" Option="……"/>
+				<Talk NpcID="10287" Face="开心" Msg="C~~~C~~~C~~~" Option="在乐乐旁边，小C真可爱~"/>
+				<Talk NpcID="10000" Face="开心" Msg="好啦，那我们就是好朋友了，好朋友之间要有共同的秘密，你有什么秘密要告诉我的吗？" Option="乐乐，小C不会说话……"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3"/>
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4"/>
+			<Action Cmd="JUMP_TASK_UI" Param="小C这是要带我们去哪里呢？跟去看看吧！"/>
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4"/>
+			<Action Cmd="GO_MAP" MapID="237" MapType="0"/>
+		</EnterMap>	
+	</Step>
+	<Step ID="4" TarMapID="237">
+		<EnterMap MapID="237">
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10011" Face="正常" Msg="你来干嘛？你这个小妖怪……" Option="布少少，别激动，它不坏的……"/>
+				<Talk NpcID="10000" Face="正常" Msg="小C很可爱的，布少少，不要欺负它！" Option="是呢，小C，你带我们来这里做什么呀？"/>
+				<Talk NpcID="10011" Face="正常" Msg="我才不信呢，哼~" Option="好了啦，看着看着……"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />
+			<Action Cmd="OVER"/>
+		</EnterMap>	
+	</Step>	
+</Tasks>
+

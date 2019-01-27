@@ -1,0 +1,30 @@
+<Tasks ID="527" Name="服装店新来小助手" AwardMsg="恭喜你获得红色图钉椅子、200摩尔豆" AwardBean="161121$0" >
+	<Step ID="1" >
+	
+		<EnterMap MapID="20" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10027" Face="开心" Msg="亲爱的{$username}，好久都没来服装店逛逛了！" Option="是呀，西索姐姐最近在忙什么呢？" />
+				<Talk NpcID="10027" Face="开心" Msg="我呀，最近忙着给摩尔大学赶制新校服。这不，我还请了一个小助手来帮忙呢！你来的正巧，我给你介绍一下他吧。" Option="服装店来新助手了吗？欢迎欢迎！" />
+				<Talk NpcID="10027" Face="开心" Msg="他叫迷你星，之前一直在帮忙收集摩尔时尚里玩家的投稿，并负责组织每个月的摩尔时尚小设计师比赛。" Option="原来小设计师大赛就是迷你星在组织！" />
+				<Talk NpcID="10027" Face="开心" Msg="对呀，现在他来做我的小助理，不过还是会负责收集和整理大家的作品。以后想要投稿的小设计师就可以直接到服装店找我的小助手迷你星啦！" Option="这下玩家想要投稿可方便多啦！" />
+				<Talk NpcID="10027" Face="开心" Msg="{$username}，你还想知道关于他的什么事，就直接去问他本人吧！我要继续赶制校服了！" Option="嗯，好的，西索姐姐，你先忙吧！" />
+			</Action>
+ 			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+ 		</EnterMap>	
+	</Step>			
+	
+	<Step ID="2" >
+		<NPC ID="10133" Option="服装店新来小助手" >
+				<Action Cmd="SAY" >
+					<Talk NpcID="10133" Face="正常" Msg="你一定就是{$username}了吧，我听西索姐姐说起过你！我以后就是服装店里的小助手了，有什么事情也可以找我帮忙哦！" Option="早就听说过迷你星了！很高兴认识你！" />
+					<Talk NpcID="10133" Face="正常" Msg="呵呵，我也很高兴认识你！希望你以后也来报名参加我们摩尔时尚每个月举办的小设计师装扮设计大赛！" Option="比赛的具体流程是怎样的呢？" />
+					<Talk NpcID="10133" Face="正常" Msg="我们每个月都有一个设计主题，大家就根据这个主题，发挥想象，设计出相应的时尚装扮，并把作品提交给我。最后会由我来做一个统计和整理。" Option="那选出的优秀作品会有奖励吗？" />
+					<Talk NpcID="10133" Face="正常" Msg="这是当然！作品整理好后，我会交由西索姐姐审核、筛选。最后选出的优秀作品可以登上摩尔时尚，成为大家都能拥有的时尚装扮。相应的设计师也可得到丰厚的奖励了哟！" Option="哇！听起来很有诱惑力哦！" />
+					<Talk NpcID="10133" Face="正常" Msg="呵呵，想知道具体的小设计师炼成方式，可以参见摩尔时尚，里面就有详细介绍哦！" Option="好的，我这就去看看摩尔时尚！" />
+				</Action>
+			<Action Cmd="ACT_EVENT" Param="openMoleFaBook" />
+			<Action Cmd="ADD_EVENT" Param="closeDressPanel" /> 
+			<Action Cmd="OVER" />	
+		</NPC>
+	</Step>	
+</Tasks>

@@ -1,0 +1,53 @@
+<Tasks ID="653" Name="第三乐章：妖魔舞曲" AwardMsg="恭喜你获得2个黑森林奇异果种子,1只牧场动物马上满分和10000摩尔豆。" AwardBean="">
+	<Step ID="1" TarMapID="109">
+		<EnterMap MapID="109">
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10287" Face="正常" Msg="CCCCCCCCCC~~~" Option="小C你太厉害了！！"/>
+				<Talk NpcID="10000" Face="开心" Msg="对吧对吧，我的小C最厉害了！！" Option="……"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1"/>
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			<Action Cmd="SAY">
+				<Talk NpcID="10000" Face="正常" Msg="这里为什么有那么多音符撒在地上啊？" Option="就是不知道啊，音符里还跑出怪物来……好吓人"/>
+				<Talk NpcID="10000" Face="正常" Msg="有小C在，不用害怕了~庄园里昏睡的摩尔们都让小C唤醒了呢！" Option="恩，可是我有点担心公主，一大早花婶叫醒我，说她梦到公主被拐走了……"/>
+				<Talk NpcID="10000" Face="疑惑" Msg="恩？花婶？" Option="是啊，我看她很担心的样子，就来花园，结果花园里一堆音符乱糟糟的。"/>
+				<Talk NpcID="10000" Face="生气" Msg="而且音符都能幻化出怪物了，真的蛮危险的……" Option="我们去找找公主吧！"/>
+			</Action>
+			<Action Cmd="JUMP_TASK_UI" Param="城堡露天花园没有看到公主的踪迹，公主去了哪里？不会有危险吧！去她房间里找找看。"/>
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2"/>
+			<Action Cmd="GO_MAP" MapID="110" MapType="0"/>
+		</EnterMap>
+	</Step>
+	<Step ID="2" TarMapID="110">
+		<EnterMap MapID="110">
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10000" Face="生气" Msg="呛死我了，什么东西啊？ " Option="好像就是刚才那个音符变的东西……好恐怖啊……"/>
+				<Talk NpcID="10000" Face="生气" Msg="这回公主真的有危险了的感觉……到哪里去了呢？ " Option="刚才还有些黑色音符往公主的密室方向的，我们要不要去看看？"/>
+				<Talk NpcID="10000" Face="生气" Msg="恩好！" Option="……"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2"/>
+			<Action Cmd="JUMP_TASK_UI" Param="公主没有在卧室里，卧室里弥漫了黑色的烟雾，感觉好像有坏人来过的样子，公主到底去了哪里？是不是躲在密室里？"/>
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3"/>
+			<Action Cmd="GO_MAP" MapID="111" MapType="0"/>
+		</EnterMap>
+	</Step>
+	<Step ID="3" TarMapID="111">
+		<EnterMap MapID="111">
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3"/>
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />
+			<Action Cmd="PLAY_MOVIE" Param="200" Name="movie_200" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_200" />
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />
+			<Action Cmd="OVER"/>
+		</EnterMap>	
+	</Step>
+</Tasks>
+

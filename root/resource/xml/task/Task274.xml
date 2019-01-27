@@ -1,0 +1,7 @@
+<Tasks ID="482" Name="我想成为健康营养师" >
+	<Step ID="1" >
+		<NPC ID="10026" Option="关于健康营养师！" >
+			<Action Cmd="ACT_EVENT" Param="checkTask274" />
+		</NPC>
+	</Step>
+</Tasks>

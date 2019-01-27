@@ -1,0 +1,102 @@
+	<Tasks ID="609" Name="美味的谢礼" AwardMsg="恭喜你获得2个经验药剂（小）、我要吃鱼！" AwardBean="" >
+
+	<!-- 猫的夜市 -->
+	<Step ID="1" TarMapID="350">
+		<EnterMap MapID="350">
+<!-- 			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10232" Visible="0" /> -->
+<!-- 			<Action Cmd="TASK_SHOW_SELF" Hide="1"/> -->
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10232" Face="正常" Msg="555555……我的塔罗牌少了！好桑感！" Option="仔细找一定会找到的！"/>
+				<Talk NpcID="10232" Face="正常" Msg="万一找不到肿么办呢？" Option="不会的啦！"/>
+				<Talk NpcID="10232" Face="正常" Msg="二蛋！那你快帮我找找看吧！" Option="额，好的！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10232" Face="正常" Msg="真的咩？你真的找到了咩？" Option="恩，这不是在我手上了嘛！"/>
+				<Talk NpcID="10232" Face="正常" Msg="哇~~你好腻害啊！！！" Option="嘿嘿，举手之劳吧！"/>
+				<Talk NpcID="10232" Face="正常" Msg="二蛋，你帮我找回了塔罗牌，我真的是特别非常十分的谢谢你啊！" Option="额……不  不用这么客气的！"/>
+				<Talk NpcID="10232" Face="正常" Msg="为了感谢你，就让黑猫先森带你去外面集市上品尝我们这里最富有特色的美味吧！" Option=""/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="1000" Name="movie_1000" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_1000" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+<!-- 			<Action Cmd="GO_MAP" MapID="350" MapType="0" /> -->
+		</EnterMap>	
+	</Step>
+	
+	<!-- 猫的夜市 -->
+	<Step ID="2" TarMapID="350">
+		<EnterMap MapID="350">
+<!-- 			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10233" Visible="0" /> -->
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10233" Face="正常" Msg="集市上的东西有很多，看的眼花缭乱了吧！" Option="是啊，很丰富呢！好吃的在哪里？"/>
+				<Talk NpcID="10233" Face="正常" Msg="你怎么就知道吃！" Option="嘻嘻~没有啦，就是比较好奇你们喵世界的美食是啥。样。"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10233" Face="正常" Msg="不……不要吃！！！" Option="啊？不要我吃？难道你舍不得？"/>
+				<Talk NpcID="10233" Face="正常" Msg="不是我舍不得，是………………" Option="到底是什么呀，不要吞吞吐吐的啊！"/>
+				<Talk NpcID="10233" Face="正常" Msg="因为……因为……" Option="你到底说不说，不说我就要吃啦！"/>
+				<Talk NpcID="10233" Face="正常" Msg="好吧，为了不让你成为第二个我，我就把真相告诉你吧。" Option="赶紧的！"/>
+				<Talk NpcID="10233" Face="正常" Msg="其实……我也是个摩尔。" Option="什么？我没听错吧，你不是喵星人嘛？"/>
+				<Talk NpcID="10233" Face="正常" Msg="我就是吃了我手上拿的这个东西，才变成喵星人的。" Option="这不是喵喵公主为了答谢我，让你给我吃的美味食物嘛？"/>
+				<Talk NpcID="10233" Face="正常" Msg="其实这一切都是喵喵公主布的局！" Option="局？什么局？我怎么听的糊里糊涂的。"/>
+				<Talk NpcID="10233" Face="正常" Msg="喵喵公主故意让我把你引过来，然后故意把塔罗牌弄丢让你找到。" Option="这……………………"/>
+				<Talk NpcID="10233" Face="正常" Msg="然后好找个理由答谢你，让你吃下这个能把你从摩尔变成喵星人的食物。" Option="听起来好可怕的样子！还好你阻止了我，不然后果不堪设想啊！"/>
+				<Talk NpcID="10233" Face="正常" Msg="所以，以后要能抵制住这莫名而来的好事儿！" Option="可是……喵喵公主为什么要这样呢？"/>
+				<Talk NpcID="10233" Face="正常" Msg="因为她想壮大喵喵国度，所以想要把更多的摩尔变成喵星人。" Option="啊啊啊~~~我要回去把这件事告诉捷克王子。"/>
+				<Talk NpcID="10233" Face="正常" Msg="恩，趁公主还没发现，你快点走吧！" Option="恩，你要多保重啊！"/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="1001" Name="movie_1001" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_1001" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+			<Action Cmd="GO_MAP" MapID="32" MapType="0" />
+		</EnterMap>	
+	</Step>
+	
+	<!-- 城堡书房 -->
+	<Step ID="3" TarMapID="32">
+		<EnterMap MapID="32">
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10036" Visible="0" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10036" Face="正常" Msg="{$username}，你可终于回来啦！" Option="你知道嘛，我刚才居然进入了喵的国度！"/>
+				<Talk NpcID="10036" Face="正常" Msg="喵的国度？这是什么地方？" Option="这个地方全部都是喵星人。"/>
+				<Talk NpcID="10036" Face="正常" Msg="喵星人？？？？" Option="就是刚才偷走钥匙的那只喵，他就是喵星人。"/>
+				<Talk NpcID="10036" Face="正常" Msg="啊？你不是在开玩笑吧！" Option="我很认真的好嘛，你看我像在开玩笑嘛！"/>
+				<Talk NpcID="10036" Face="正常" Msg="那你快把发生的事情告诉我。" Option="事情是这样的…………"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10036" Face="正常" Msg="听了你说的事情，我怎么有种似曾相识的感觉呢！" Option="似曾相识？难道……"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10036" Visible="1" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="0"/>
+			<Action Cmd="OVER"/>
+		</EnterMap>	
+	</Step>
+</Tasks>

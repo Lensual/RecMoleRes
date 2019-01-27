@@ -1,0 +1,97 @@
+<Tasks ID="670" Name="真王觉醒" AwardMsg="恭喜你获得2个兔兔壁灯（小屋装饰）2颗蝴蝶梦（家园种子）1万摩尔豆哦！" AwardBean="">
+	<Step ID="1" TarMapID="15">
+		<EnterMap MapID="15">
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10047" Face="开心" Msg="{$username}你来了呀？这几天在忙什么呢？都没看到你。" Option="没什么，瞎忙活……这里布置的好漂亮呀！"/>
+				<Talk NpcID="10047" Face="开心" Msg="那当然，公主要继位，这可是大事！对了，今天来找我是有什么事？" Option="我是来帮忙的。还有，我有点紧张！"/>
+				<Talk NpcID="10047" Face="开心" Msg="是公主要继位，你紧张什么？" Option="我这不是怕有意外吗……"/>
+				<Talk NpcID="10047" Face="焦急" Msg="别说不吉利的话。我已经飞鸽传书让瑞琪回来了。" Option="哇！瑞琪要回来了？"/>
+				<Talk NpcID="10047" Face="焦急" Msg="是的。公主能否顺利继位，全看她的真王力量能否觉醒。在觉醒过程中如果被打扰，就只能再等一年了。" Option=""/>
+				<Talk NpcID="10047" Face="正常" Msg="有瑞琪护着我才比较放心。" Option="这么严重啊……我更紧张了。"/>
+				<Talk NpcID="10047" Face="开心" Msg="好了，别说这些了。你有时间的话，就帮我去西索那里看看，公主的礼服是不是都准备好了。" Option="包在我身上！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1"/>
+			<Action Cmd="JUMP_TASK_UI" Param="去服装店找西索，问问公主的礼服准备得怎么样了"/>
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2"/>
+			<Action Cmd="GO_MAP" MapID="20" MapType="0"/>
+		</EnterMap>
+	</Step>
+		<Step ID="2" TarMapID="20">
+		<EnterMap MapID="20">			
+		    <Action Cmd="SAY">
+				<Talk NpcID="10027" Face="正常" Msg="{$username}你怎么来我这儿了？" Option="洛克行政官叫我来问问，公主的礼服准备好了吗？"/>
+				<Talk NpcID="10027" Face="正常" Msg="我办事，需要操心吗？现在就给你看看！" Option="好呀好呀，好期待！"/>
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			  <Action Cmd="SAY">
+				<Talk NpcID="10027" Face="开心" Msg="怎么样，漂亮吧！" Option="是呀是呀，好美哦！公主穿上一定更美！"/>
+				<Talk NpcID="10027" Face="开心" Msg="那是！公主天生丽质，穿什么都美！" Option="我去告诉行政官，西索你继续忙。"/>
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101"/>
+			<Action Cmd="JUMP_TASK_UI" Param="公主继位之日到了，赶紧去城堡大厅，见证这历史性的一刻！"/>
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3"/>
+			<Action Cmd="GO_MAP" MapID="15" MapType="0"/>
+		</EnterMap>	
+	</Step>
+	<Step ID="3" TarMapID="15">
+		<EnterMap MapID="15">			
+		    <Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4"/>
+			<Action Cmd="GO_MAP" MapID="15" MapType="0"/>
+		</EnterMap>	
+	</Step>
+	<Step ID="4" TarMapID="15">
+		<EnterMap MapID="15">
+			<Action Cmd="PLAY_MOVIE"  Param="4" Name="movie_4" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4"/>
+			<Action Cmd="PLAY_MOVIE"  Param="104" Name="movie_104" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_104"/>
+			<Action Cmd="SET_BUFFER" Panel="5" Step="5"/>
+			<Action Cmd="GO_MAP" MapID="15" MapType="0"/>
+		</EnterMap>
+	</Step>
+	<Step ID="5" TarMapID="15">
+		<EnterMap MapID="15">
+			<Action Cmd="PLAY_MOVIE"  Param="5" Name="movie_5" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_5"/>
+			<Action Cmd="PLAY_MOVIE"  Param="105" Name="movie_105" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_105"/>
+			<Action Cmd="PLAY_MOVIE"  Param="6" Name="movie_6" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_6"/>
+			<Action Cmd="SET_BUFFER" Panel="6" Step="6"/>
+			<Action Cmd="GO_MAP" MapID="15" MapType="0"/>
+		</EnterMap>
+	</Step>
+	<Step ID="6" TarMapID="15">
+		<EnterMap MapID="15">
+			<Action Cmd="PLAY_MOVIE"  Param="106" Name="movie_106" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_106"/>
+			<Action Cmd="PLAY_MOVIE"  Param="107" Name="movie_107" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_107"/>
+			<Action Cmd="PLAY_MOVIE"  Param="7" Name="movie_7" IsBg="1" IsFullScreen="1"/>
+			 <Action Cmd="SAY">
+				<Talk NpcID="10047" Face="正常" Msg="公主完全觉醒了！继位仪式很成功！她应该是力量耗费太多，才昏睡过去的。" Option="是嘛。真是太好了……"/>
+				<Talk NpcID="10047" Face="疑惑" Msg="{$username}你怎么哭了？" Option="我是太高兴了才哭的……"/>
+				<Talk NpcID="10045" Face="正常" Msg="弗兰契斯科呢？你们看见了吗？" Option="她逃走了。"/>
+				<Talk NpcID="10047" Face="开心" Msg="这些先不去操心了，现在最重要的是等公主醒了好好给她过生日！" Option="好的，我这就去准备。"/>
+				<Talk NpcID="10216" Face="正常" Msg="我也来帮忙，顺便庆祝我终于回来了！" Option="好叻！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_7"/>
+			<Action Cmd="PLAY_MOVIE"  Param="108" Name="movie_108" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_108"/>
+			<Action Cmd="OVER"/>
+		</EnterMap>
+	</Step>
+</Tasks>
+
+

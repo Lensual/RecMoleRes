@@ -1,0 +1,28 @@
+<Tasks ID="546" Name="【天使园】天使园大升级" AwardMsg="恭喜你获得天使宝宝、2000摩尔豆！" AwardBean="2000" >
+	<Step ID="1" TarMapID="50004">
+		<EnterMap MapID="50004" >
+<!--			<Action Cmd="TASK_SHOW_SELF" Hide="1" />-->
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10153" Face="正常" Msg="就像河水汇入海洋，群星围绕太阳，新生的天使树孕育出了全新的天使，我就是其中的一只，我叫迪迪拉。" Option="哇！之前培育的天使树成功啦！" />
+				<Talk NpcID="10153" Face="正常" Msg="感谢你对天使树的帮助，现在这颗新生的天使树还在生长阶段，所以，新天使园中的很多功能还没健全。" Option="我能帮什么忙呢？" />
+				<Talk NpcID="10153" Face="正常" Msg="你可以每天来给天使树浇灌一次，帮助他更快的成长，顺便也会有意外的惊喜哦。" Option="没问题，包在我身上！" />
+				<Talk NpcID="10153" Face="正常" Msg="那么，先让我介绍一下新天使园的情况给你吧！" Option="我都有点等不及啦~~" />
+			</Action>	
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsFullScreen="1"/>	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10153" Face="正常" Msg="天使园的功能将随着天使树的成长在今后逐步开放。另外，天使的成长也与以前有了很大的不同。" Option="现在要怎么获得天使呢？" />
+				<Talk NpcID="10153" Face="正常" Msg="首先，你需要获得天使宝宝，然后在孵化室里将它孵化成天使，才能获得新天使，孵化过程中，天使宝宝可是会有很多要求的，你满足了它的要求，就能获得更高的成长。" Option="那，天使宝宝从哪获得呢？" />
+				<Talk NpcID="10153" Face="正常" Msg="天使宝宝可以通过相关的任务或者活动来获得，今后，还可以从战斗或者天使商店中获得哦！" Option="那天使怎么练级呢？" />
+				<Talk NpcID="10153" Face="正常" Msg="你可以在“天使”界面，点击“培养”按钮，对应的天使就自动进入天使园修炼了，每小时可以获得一定的经验。" Option="太棒了，我好想现在就有一只啊！" />
+				<Talk NpcID="10153" Face="正常" Msg="那我就满足你这个愿望，给你一只我的天使宝宝吧！" Option="我一定好好照顾它！！！" />
+			</Action>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+<!--			<Action Cmd="TASK_SHOW_SELF" Hide="0" />	-->
+<!--			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />-->
+<!--			<Action Cmd="GO_MAP" MapID="110" MapType="0" />	-->
+			<Action Cmd="OVER" />	
+		</EnterMap>	
+	</Step>	
+</Tasks>

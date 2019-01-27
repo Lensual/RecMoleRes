@@ -1,0 +1,63 @@
+<Tasks ID="506" Name="第二轮除菌保卫战" AwardMsg="摆摆种子、1000摩尔豆" AwardBean="1353211$0" >
+	<Step ID="1" >
+		<EnterMap MapID="8" >
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10093" Face="正常" Msg="恩…恩…这些细菌原来是这样的…必须要这样才能彻底解决它们吧……" Option="我来了！" />
+				<Talk NpcID="10093" Face="正常" Msg="你来啦！我终于找到那些顽固细菌的踪迹了！它们现在已经逃往海之迷城了，你愿意与我一起去消灭它们吗？" Option="那当然啦!" /> 
+				<Talk NpcID="10093" Face="正常" Msg="我先去准备准备，我们在海之迷城汇合！我会在那里建造一个强大的汰渍除菌室。有了汰渍除菌室，与细菌激战后的你们将可以立刻恢复能量。你愿意帮助我吗？" Option="必须的！" />
+				<Talk NpcID="10093" Face="正常" Msg="这次让它们无路可逃，一举歼灭它们的时候到了！" Option="我这就赶去！" />
+			</Action>
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+			<Action Cmd="GO_MAP" MapID="252" MapType="0" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+		</EnterMap>	
+	</Step>			
+	
+	<Step ID="2" >
+		<EnterMap MapID="252" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10093" Face="正常" Msg="来的正好！原来它们正在那里偷偷的聚集，如果让它们全部都聚集成功，必定会危害到更多的小摩尔！" Option="一起消灭它们！" />
+			</Action>
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />	
+			<Action Cmd="OPEN_PANEL" Param="TaiziGame" />
+		</EnterMap>			
+	</Step>	
+	
+	<Step ID="3" >
+		<SubmitScore ModuleID="10019" MinScore="1" LoseMsg="很遗憾你没有消灭所有的细菌哦，和妈妈一起再努力一次吧！" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10093" Face="正常" Msg="看它们往哪里逃跑，这次它们已经穷途末路了！" Option="胜利了！！！…." />
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />	
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10093" Face="正常" Msg="可恶！没想到这些细菌的繁殖能力这么强，难道是在水中的关系吗？" Option="那我们该怎么办？" />
+				<Talk NpcID="10093" Face="正常" Msg="我们快使用汰渍除菌室回复能量。（这也是我建造汰渍除菌室的目的）" Option="汰渍除菌室？" />
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />	
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10093" Face="正常" Msg="能量恢复啦！我们再试一次，一定要彻底消灭它们！" Option="全力以赴！" />
+			</Action>
+				<Action Cmd="SET_BUFFER" Panel="4" Step="4" />
+			<Action Cmd="OPEN_PANEL" Param="TaiziGame" />
+		
+		</SubmitScore>
+	</Step>	
+	
+	<Step ID="4" >
+		<SubmitScore ModuleID="10019" MinScore="1" LoseMsg="很遗憾你没有消灭所有的细菌哦，和妈妈一起再努力一次吧！" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10093" Face="正常" Msg="呼呼，终于解决掉它们了，但是我们还不能掉以轻心！麻烦你下周把大家召集过来，我要给大伙进行一个体检，确保庄园小摩尔的健康！" Option="我这就去告诉大伙！" />
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />	
+			<Action Cmd="OVER" />
+		</SubmitScore>
+	</Step>
+					
+					
+</Tasks>

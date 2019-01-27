@@ -1,0 +1,54 @@
+<Tasks ID="646" Name="公主变身记" AwardMsg="恭喜你获得1个柴郡猫，2棵菠萝树苗和10000摩尔豆。" AwardBean="">
+	<Step ID="1" TarMapID="110">
+		<EnterMap MapID="110">
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10002" Face="悲伤" Msg="这就是喜欢上一个人的感觉吗？有些心痛，有些不安……" Option="公主，你当心身体呢，庄园六周年那么开心的日子，别想太多啦！"/>
+				<Talk NpcID="10002" Face="悲伤" Msg="我不知道为什么开始讨厌摩尔这胖乎乎的身体，我不知道为什么开始觉得我必须像我心爱的蒙斯特一样优雅，才能被他接受。亲爱的小摩尔，你告诉我，我应该怎么办？" Option="公主，无论什么时候，你都是最最完美的。"/>
+				<Talk NpcID="10002" Face="悲伤" Msg="可是，我觉得自己不够完美，不够完美，不够完美，我一定要让自己变得完美！！！" Option="公主，你别去啊……"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1"/>
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2"/>
+		</EnterMap>
+	</Step>
+	<Step ID="2" TarMapID="110">
+		<EnterMap MapID="110">
+			<Action Cmd="OPEN_PANEL" Param="Task646GamePanel" ClearMap="1" Data = "0"/>
+			<Action Cmd="ADD_EVENT" Param="Task646GameOver"/>
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3"/>
+		</EnterMap>
+	</Step>
+	<Step ID="3" TarMapID="110">
+		<EnterMap MapID="110">
+			<Action Cmd="PLAY_MOVIE" Param="201" Name="movie_201" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_201"/>
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			<Action Cmd="JUMP_TASK_UI" Param="   呜啊，好痛苦啊，被这个奇怪的黑烟卷进去竟然是这么奇怪的感觉，快点结束吧……"/>
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4"/>
+			<Action Cmd="GO_MAP" MapID="337" MapType="0"/>
+		</EnterMap>	
+	</Step>
+	<Step ID="4" TarMapID="337">
+		<EnterMap MapID="337">
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10002" Face="疑惑" Msg="你怎么来了？你不应该跟来……" Option="公主，我要保护你！乐乐也会来的！"/>
+				<Talk NpcID="10002" Face="悲伤" Msg="我没事，我很快会回到城堡的……" Option="公主，你在做什么？她是谁？"/>
+				<Talk NpcID="10283" Face="正常" Msg="(*^__^*) 嘻嘻……我是蘑菇巫女小萌，你是谁？我可以实现你的愿望哟，只要你付出同样的代价。" Option="我的愿望就是停止这一切"/>
+				<Talk NpcID="10283" Face="正常" Msg="咦？停止？你是时间停止？(*^__^*) 嘻嘻……小萌做不来哟！另外说一个试试？" Option="不要伤害公主！！！！！"/>
+				<Talk NpcID="10283" Face="正常" Msg="小萌怎么会伤害公主呢？小萌是实现公主的愿望的！来来来，公主，喝下这杯美味的毒汁，你就可以蜕变为你想要的样子。" Option="毒汁！！！！公主！！！！不要呀！！！！"/>
+				<Talk NpcID="10002" Face="悲伤" Msg="不要阻止我，我必须喝下它，才能变得完美~" Option="......."/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2"/>
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102"/>
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_103"/>
+			<Action Cmd="OVER"/>
+		</EnterMap>	
+	</Step>			
+</Tasks>
+

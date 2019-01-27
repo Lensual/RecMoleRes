@@ -1,0 +1,44 @@
+<Tasks ID="520" Name="保罗与箩丝的婚礼" AwardMsg="恭喜你参加了保罗王子和箩丝公主的婚礼。获得心心相印22枚 ，幸运杨桃1个！" >
+	<Step ID="1" >
+		<EnterMap MapID="317" >
+			<Action Cmd="PLAY_MOVIE" Param="10" Name="movie_10" />
+		
+			<Action Cmd="SAY" >
+				<Talk NpcID="10123" Face="正常" Msg="又缝一年七夕时，来鸢尾仙堡见证真爱的善男信女真是络绎不绝。" Option="好热闹啊！" />
+				<Talk NpcID="10123" Face="正常" Msg="这次有一对特别的新人要在这里举办婚礼，他们就是海妖国的王子，和人鱼国的公主。" Option="我是也保罗王子邀请来的！" />
+				<Talk NpcID="10123" Face="正常" Msg="他们的婚礼马上就要开始了，请在场的客人们站好，不要随便走动啦！" Option="好啊！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_10" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="1_1" Name="movie_1_1" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_1_1" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />
+			
+			<Action Cmd="OVER" />
+		</EnterMap>
+	</Step>	
+</Tasks>

@@ -1,0 +1,213 @@
+<Tasks ID="658" Name="伟大的登月计划" AwardMsg="恭喜你获得1个光明鸡蛋布丁（摩灵），2个紫薯月饼（小屋装饰），10000摩尔豆。" AwardBean="">
+	<Step ID="1" TarMapID="27">
+		<EnterMap MapID="27">
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10016" Face="正常" Msg="{$username}，你好！" Option="大卫，你怎么一直在转来转去啊？"/>
+				<Talk NpcID="10016" Face="正常" Msg="公主的伟大计划要靠我来实现，去其他地方玩吧，不要影响大发明家的思路。" Option="我其实是想来帮忙的！"/>
+				<Talk NpcID="10016" Face="开心" Msg="帮忙？哈哈哈，小脑瓜子倒是转的很快啊！" Option="嘻嘻，就是看你着急的样子，想看看我是不是能帮上什么啦！"/>
+				<Talk NpcID="10016" Face="正常" Msg="我还正好有个事情需要帮忙呢，大发明家总是要有称手的工具，平常一直用的那把扳手找不到了，你能帮我找到吗？" Option="会在哪里呢？"/>
+				<Talk NpcID="10016" Face="正常" Msg="会不会落在梅森哪里？还是被汤米无意中带走了？你帮我去找找吧！" Option="好咯！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1"/>
+			
+			
+			<Action Cmd="JUMP_TASK_UI" Param="大卫的扳手不知所踪，弄得大发明家各种不安，让我们帮他去找一找吧！先去问问梅森好了！"/>
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2"/>
+			<Action Cmd="GO_MAP" MapID="56" MapType="0"/>
+		</EnterMap>
+	</Step>
+	<Step ID="2" TarMapID="56">
+		<EnterMap MapID="56">			
+		    <Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+		    <Action Cmd="SAY">
+				<Talk NpcID="10041" Face="正常" Msg="{$username}，快来快来，看看我今年的第一批种子，真是太棒了！" Option="厄……完全看不出区别啊……"/>
+				<Talk NpcID="10041" Face="正常" Msg="你看这颗粒的形状和饱满度……" Option="梅森梅森，我是来帮大卫跑腿的！"/>
+				<Talk NpcID="10041" Face="疑惑" Msg="大卫？我这两天几乎都没和他见面，一阵风似的来吃饭，吃了又一阵风似的消失，肯定又是在搞大发明，找我做什么？" Option="你有看到大卫的扳手吗？"/>
+				<Talk NpcID="10041" Face="正常" Msg="扳手这种东西，他连睡觉都带着，难道失踪了？" Option="是啊，算了，我再去问问汤米吧！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			
+<!-- 			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1"/> -->
+<!-- 			<Action Cmd="DELETE_MOVIE" Param="movie_100"/> -->
+<!-- 			<Action Cmd="SAY"> -->
+<!-- 				<Talk NpcID="10002" Face="悲伤" Msg="是啊，月光下，哥哥变成的紫色的蝴蝶越飞越高，越飞越高，然后就完全消失不见了……" Option="梦嘛，只是假的呢，说不定就是塞拉王子要来看公主了呢？"/> -->
+<!-- 				<Talk NpcID="10002" Face="疑惑" Msg="真的吗？你不骗我吗？" Option="骗人是小狗……"/> -->
+<!-- 				<Talk NpcID="10002" Face="悲伤" Msg="可是，么么等不了那么久，么么想要见哥哥……我要去找大伯……" Option="找大伯？"/> -->
+<!-- 				<Talk NpcID="10002" Face="悲伤" Msg="大伯什么都知道，他肯定知道哥哥去哪里了……" Option="公主我陪你去吧！"/> -->
+<!-- 			</Action> -->
+			
+			<Action Cmd="JUMP_TASK_UI" Param="梅森说这两天大卫忙得一阵风似得刮来刮去，完全没注意到他有放下过扳手。好吧，我们再去问问汤米好了。"/>
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3"/>
+			<Action Cmd="GO_MAP" MapID="143" MapType="0"/>
+		</EnterMap>	
+	</Step>
+	<Step ID="3" TarMapID="143">
+		<EnterMap MapID="143">			
+		    <Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+		    <Action Cmd="SAY">
+				<Talk NpcID="10063" Face="开心" Msg="{$username},怎么有空来我这做客？是想成为一位伟大的建筑师吗？" Option="（开始遐想）成为伟大的建筑师好像也不错哎~"/>
+				<Talk NpcID="10063" Face="开心" Msg="是啊，你看，我为公主生日在设计一个全新的建筑。今年，汤米一定要大出风头，让公主过个开心的生日。恩，这个地方可以找贝塔来帮忙，弄些飞行装置……" Option="（猛然惊醒）汤米，不对不对，我是帮大卫来跑腿的……"/>
+				<Talk NpcID="10063" Face="疑惑" Msg="大卫？他不是这两天忙的要死吗？要造个什么登月机器的。" Option="是啊，可是他找不到自己的扳手了。"/>
+				<Talk NpcID="10063" Face="疑惑" Msg="除了那把扳手，什么都可以丢的大卫竟然丢了扳手？如果我看到一定会注意到的！" Option="他还说是不是被你带走了呢。"/>
+				<Talk NpcID="10063" Face="疑惑" Msg="也许在我们睡觉的小屋里吧，他几乎所有的时间都在实验室，除了睡觉，去小屋看看吧！" Option="只有这样了。"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			
+			<Action Cmd="JUMP_TASK_UI" Param="大卫除了睡觉的时候，其他时候都在实验室呆着。汤米觉得如果扳手不在实验室里，应该就在小屋里吧！我们去找找吧！"/>
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4"/>
+			<Action Cmd="GO_MAP" MapID="105" MapType="0"/>
+		</EnterMap>	
+	</Step>
+	<Step ID="4" TarMapID="105">
+		<EnterMap MapID="105">	
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10000" Face="开心" Msg="{$username},我听说你在帮大卫找扳手，我也来了！" Option="（抓抓头）嘻嘻，你看这个小屋乱的，我都不知道从哪里下手了。"/>
+				<Talk NpcID="10000" Face="开心" Msg="会不会在汤米的安全帽筐子里？" Option="我去翻一翻。"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			<!--场景交互  -->
+			<Action Cmd="PLAY_MOVIE" Param="200" Name="movie_200" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+<!-- 			<Action Cmd="ADD_EVENT" Param="task_movie_658_200finish"></Action> -->
+			<Action Cmd="DELETE_MOVIE" Param="movie_200" />
+			
+<!-- 			<Action Cmd="JUMP_TASK_UI" Param="翻了翻汤米的安全帽筐子，没有看到扳手，继续找找吧！"/> -->
+			<Action Cmd="SET_BUFFER" Panel="5" Step="5"/>
+<!-- 			<Action Cmd="GO_MAP" MapID="105" MapType="0"/> -->
+		</EnterMap>	
+	</Step>
+	<Step ID="5" TarMapID="105">
+		<EnterMap MapID="105">	
+			<Action Cmd="SAY">
+				<Talk NpcID="10000" Face="惊讶" Msg="好多虫子啊……" Option="筐子空空的，没有汤米的扳手啊……"/>
+				<Talk NpcID="10000" Face="正常" Msg="恩……会不会在大卫自己的工具箱里？" Option="再来找一找吧！"/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="201" Name="movie_201" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+<!-- 			<Action Cmd="ADD_EVENT" Param="task_movie_658_201finish"></Action> -->
+			<Action Cmd="DELETE_MOVIE" Param="movie_201" />
+			
+<!-- 			<Action Cmd="JUMP_TASK_UI" Param="找了找大卫的工具箱，也没见到大卫的本命扳手，那个扳手到底跑到哪里去了？"/> -->
+			<Action Cmd="SET_BUFFER" Panel="6" Step="6"/>
+<!-- 			<Action Cmd="GO_MAP" MapID="105" MapType="0"/> -->
+		</EnterMap>	
+	</Step>
+	<Step ID="6" TarMapID="105">
+		<EnterMap MapID="105">	
+			<Action Cmd="SAY">
+				<Talk NpcID="10000" Face="疑惑" Msg="也没有啊，那么一大堆工具里都没有他最喜欢的那把扳手。" Option="还会在哪里呢？我去大卫的床头找找看吧！"/>
+				<Talk NpcID="10000" Face="正常" Msg="我来我来，感觉大卫的地盘总是那么神秘。" Option=""/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10000" Face="疑惑" Msg="喂喂喂，这么高，大卫每天是怎么上去的啊？" Option="咦？大卫有机关的呀，乐乐你不知道吗？"/>
+				<Talk NpcID="10000" Face="疑惑" Msg="机关？" Option="对啊，就是那个大齿轮，我来做给你看！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="202" Name="movie_202" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+<!-- 			<Action Cmd="ADD_EVENT" Param="task_movie_658_201finish"></Action> -->
+			<Action Cmd="DELETE_MOVIE" Param="movie_202" />
+			
+<!-- 			<Action Cmd="JUMP_TASK_UI" Param="大卫有个很厉害的机关呢，转动齿轮就会有一个梯子可以通往他半空中的床，高大上啊！"/> -->
+			<Action Cmd="SET_BUFFER" Panel="7" Step="7"/>
+<!-- 			<Action Cmd="GO_MAP" MapID="105" MapType="0"/> -->
+		</EnterMap>	
+	</Step>
+	<Step ID="7" TarMapID="105">
+		<EnterMap MapID="105">
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10000" Face="开心" Msg="太棒了，找到大卫的扳手了！我们去找他吧！" Option="好咯！说不定可以看一看登月机器呢！"/>
+				<Talk NpcID="10000" Face="开心" Msg="是呀是呀，我期待了好久了！" Option=""/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />
+			
+			
+			<Action Cmd="JUMP_TASK_UI" Param="总算找到大卫的扳手了，去找他吧！也许能看到登月机器第一次的闪亮登场呢！"/>
+			<Action Cmd="SET_BUFFER" Panel="8" Step="8"/>
+			<Action Cmd="GO_MAP" MapID="27" MapType="0"/>
+		</EnterMap>	
+	</Step>
+	<Step ID="8" TarMapID="27">
+		<EnterMap MapID="27">
+			<Action Cmd="SAY">
+				<Talk NpcID="10000" Face="开心" Msg="大卫，我们找到你的扳手了！" Option=""/>
+				<Talk NpcID="10016" Face="正常" Msg="快拿来让我看看！" Option=""/>
+				<Talk NpcID="10000" Face="开心" Msg="呐~" Option=""/>
+				<Talk NpcID="10016" Face="开心" Msg="哈哈哈，我的老伙计，总算找到你了。你们在哪找到的？" Option="就在你床头啊，你一定是忙忘记了！"/>
+				<Talk NpcID="10016" Face="开心" Msg="好了，万事具备，只欠扳手这个东风了！走，我们去足球场！" Option="耶，登月机器，登月机器！好棒好棒！"/>
+			</Action>
+			
+			
+			<Action Cmd="JUMP_TASK_UI" Param="找到扳手的大卫，急不可耐的要奔向摩尔足球场去组装登月机器！好棒啊，我就是第一个看到登月机器的摩尔嘛？哈哈哈！"/>
+			<Action Cmd="SET_BUFFER" Panel="9" Step="9"/>
+			<Action Cmd="GO_MAP" MapID="38" MapType="0"/>
+		</EnterMap>	
+	</Step>
+	<Step ID="9" TarMapID="38">
+		<EnterMap MapID="38">
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			<Action Cmd="SAY">
+				<Talk NpcID="10305" Face="正常" Msg="大卫，你快来看，这里有一组电路好像不大对劲。" Option=""/>
+				<Talk NpcID="10016" Face="疑惑" Msg="恩？哪里？我看看！" Option=""/>
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			<Action Cmd="SAY">
+				<Talk NpcID="10305" Face="疑惑" Msg="你看是不是？每一个组件都有这个问题，没法正常完成对接了！" Option=""/>
+				<Talk NpcID="10016" Face="开心" Msg="哈哈哈，小问题，{$username}，你来，我看看你能不能成为伟大发明家的助手！" Option="咦？"/>
+				<Talk NpcID="10016" Face="开心" Msg="来吧，把这些电路整理一下。" Option="咦？"/>
+			</Action>
+			
+<!-- 			<Action Cmd="JUMP_TASK_UI" Param="电路紊乱啊，好吧，让我们来修复一下紊乱的电路吧！这可是大卫给我们的考验哦！加油！"/> -->
+			<Action Cmd="SET_BUFFER" Panel="10" Step="10"/>
+<!-- 			<Action Cmd="GO_MAP" MapID="38" MapType="0"/> -->
+		</EnterMap>	
+	</Step>
+	<Step ID="10" TarMapID="38">
+		<EnterMap MapID="38">
+			<Action Cmd="OPEN_PANEL" Param="ElectricGamePanel" ClearMap="0"/>
+			<Action Cmd="ADD_EVENT" Param="electricGameOver"></Action>
+			
+<!-- 			<Action Cmd="JUMP_TASK_UI" Param="顺利完整电路整理，你真的很棒！接下来我们看看登月机器对接的盛况吧！"/> -->
+
+			<Action Cmd="SET_BUFFER" Panel="11" Step="11"/>
+			<Action Cmd="ACT_EVENT" Param="refresh38" />
+<!-- 			<Action Cmd="GO_MAP" MapID="38" MapType="0"/> -->
+		</EnterMap>	
+	</Step>
+	<Step ID="11" TarMapID="38">
+		<EnterMap MapID="38">
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />
+			<Action Cmd="SAY">
+				<Talk NpcID="10016" Face="开心" Msg="好了，谁来第一个尝试一下！" Option="我来我来！"/>
+				<Talk NpcID="10305" Face="正常" Msg="我来我来！" Option=""/>
+				<Talk NpcID="10000" Face="开心" Msg="我来我来！" Option=""/>
+				<Talk NpcID="10016" Face="开心" Msg="要不，我们大家一起来？" Option=""/>
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />
+			<Action Cmd="SAY">
+				<Talk NpcID="10305" Face="疑惑" Msg="又怎么了？" Option=""/>
+				<Talk NpcID="10016" Face="疑惑" Msg="让我看看，看看……" Option=""/>
+				<Talk NpcID="10016" Face="正常" Msg="引力计算，正确" Option=""/>
+				<Talk NpcID="10016" Face="正常" Msg="阻力计算，正确" Option=""/>
+				<Talk NpcID="10016" Face="正常" Msg="压力计算，正确" Option=""/>
+				<Talk NpcID="10016" Face="疑惑" Msg="咦？问题出在哪里啊？" Option=""/>
+				<Talk NpcID="10000" Face="正常" Msg="（悄悄说）我们先回去吧！感觉一时半会弄不完了！" Option="恩恩！"/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="104" Name="movie_104" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_104" />
+			
+			<Action Cmd="OVER"/>
+		</EnterMap>	
+	</Step>
+</Tasks>
+
+

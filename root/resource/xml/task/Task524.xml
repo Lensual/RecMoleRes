@@ -1,0 +1,46 @@
+<Tasks ID="500" Name="海妖之围" AwardMsg="恭喜你获得一个男士美瞳、1000摩尔豆。" AwardBean="1000" >
+	<Step ID="1" >
+	
+		<EnterMap MapID="204" >
+			<Action Cmd="ACT_EVENT" Param="closeAllAlert" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10132" Face="开心" Msg="乐乐，这么巧！快看看我今天有什么不一样吗？" Option="丫丽今天心情不错嘛！" />
+				<Talk NpcID="10000" Face="正常" Msg="O(∩_∩)o 哈哈，丫丽，你这是怎么了呢？怎么眼睛都肿成这样了！难道是被人打了？" Option="咦？好像是有点不对劲哦！" />
+				<Talk NpcID="10132" Face="生气" Msg="乐乐！你一点都不懂我！人家这是戴的美瞳！！！庄园里现在可流行了！" Option="丫丽居然也喜欢戴美瞳！" />
+				<Talk NpcID="10000" Face="疑惑" Msg="美瞳？是什么？我怎么不知道……" Option="乐乐，你也太跟不上潮流了吧……" />
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100"  IsFullScreen="1" IsStopSound="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10130" Face="正常" Msg="美瞳啊，是最近流行的眼部装扮！戴上它，可以让你的眼睛又大又亮，电力十足哦！" Option="哇~~~么么公主的眼睛好美啊！" />
+				<Talk NpcID="10132" Face="正常" Msg="还是么么公主你懂我！你的眼睛看上去好美，可是……为我的美瞳就这么奇怪呢？" Option="看来也不是每个人戴着都好看呀！" />
+				<Talk NpcID="10130" Face="正常" Msg="丫丽，你只是没选到一款适合你的美瞳而已！我听说西索姐姐的服装店里，最近又新到了一批好看的美瞳，我们一起去帮你选一副适合你的美瞳吧！" Option="我也想要一副适合自己的美瞳！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+			<Action Cmd="GO_MAP" MapID="20" MapType="0" />	
+		</EnterMap>	
+	</Step>
+	
+	<Step ID="2" >
+			<NPC ID="10027" Option="美瞳潮流新风尚！" >
+				<Action Cmd="SAY" >
+					<Talk NpcID="10027" Face="开心" Msg="么么公主，丫丽，摩乐乐，{$username}，你们怎么都来了呢？欢迎欢迎！该不会你们也是过来挑选美瞳装扮的吧？" Option="西索姐姐店里的美瞳真畅销啊！" />
+					<Talk NpcID="10130" Face="正常" Msg="是呀，西索姐姐，听说最近你的店里又新到了一批美瞳！不过我都已经有好几副不同款的美瞳了，今天我们是特意过来帮丫丽挑选的！" Option="是的是的，顺便我自己也看看！" />
+					<Talk NpcID="10132" Face="正常" Msg="西索姐姐，听么么公主说你这里的美瞳款式最多最好看了，希望能挑到一款适合我的漂亮美瞳吧！" Option="这么多款式里，一定有适合丫丽你的！" />
+					<Talk NpcID="10000" Face="正常" Msg="西索姐姐，快把你新到的美瞳拿出来吧！我也想看看，这神奇的美瞳究竟长什么样！" Option="对对对，快把美瞳拿出来吧！" />
+				</Action>
+				<Action Cmd="ACT_EVENT" Param="gotoDressshop" />
+				<Action Cmd="ADD_EVENT" Param="closeDressPanel" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10027" Face="开心" Msg="怎么样？大家都还满意吗？是不是都挑到自己喜欢的美瞳呢？" Option="嗯，挑到了！挑到了！真好看！" />
+				<Talk NpcID="10130" Face="正常" Msg="丫丽，看吧！你戴上这副新美瞳真好看！眼睛又大又亮！不信你让摩乐乐也看看！" Option="哇！果真跟变了个人似的！" />
+				<Talk NpcID="10000" Face="正常" Msg="哇！丫丽，真的很好看哦！怎么以前就从来没发现你这么女生又可爱的一面呢？" Option="美瞳还真是神奇啊！" />
+				<Talk NpcID="10131" Face="开心" Msg="乐乐，你不是存心拿我开玩笑，故意这样说的吧？哼！你要再敢笑我！就别怪我的流星锤不长眼睛！它可没戴美瞳哦！" Option="戴上美瞳，也依然是暴力女丫丽啊！" />
+				<Talk NpcID="10027" Face="开心" Msg="亲爱的{$username}，也送你一套美瞳体验装吧！赶紧带上试试看吧！" Option="哇！太好了！谢谢西索姐姐！" />
+			</Action>
+			<Action Cmd="OVER" />
+			</NPC>
+	</Step>	
+</Tasks>

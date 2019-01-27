@@ -1,0 +1,27 @@
+<Tasks ID="510" Name="KFC：寻找惊喜！" AwardMsg="恭喜你获得KFC友谊帽" AwardBean="14400" >
+	<Step ID="1" >
+		<EnterMap MapID="203" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10043" Face="正常" Msg="快乐的小摩尔，欢迎光临我的餐厅！这里是充满快乐和欢乐的KFC餐厅" Option="奇奇你好！" />
+				<Talk NpcID="10043" Face="正常" Msg="{$username}，我正等着你呢。这次特意为你准备的4个惊喜已经藏好咯，你要不要找找看呢？你知道吗？ 收集到4个惊喜后，你的神奇小飞鱼就真的能飞啦！" Option="当然啦！" />
+				 <Talk NpcID="10043" Face="正常" Msg="所有的小惊喜藏在餐厅内哦，你快去找找看吧！" Option="我这就去！" />
+			</Action>
+				<Action Cmd="OPEN_PANEL" Param="KFCSearchUi" />                <!-- 此时是找寻5个礼物 -->	
+ 			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+ 		</EnterMap>	
+	</Step>			
+	
+	<Step ID="2" >
+ 		<SubmitScore ModuleID="10023" MinScore="1" LoseMsg="很遗憾你没有找到所有的KFC道具，和妈妈一起再努力一次吧！" >
+ 			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10043" Face="正常" Msg="恩，我看看你找到了什么……有kfc汉堡，拉姆万能药水、KFC活动告知、跳跳布丁！" Option="我眼力不错吧？" />
+				<Talk NpcID="10043" Face="正常" Msg="真厉害，这么快就找齐啦！嘻嘻，作为奖励，快去百宝箱中的坐骑栏看看上周给你的飞鱼吧，本周它可以高高的飞起来了呢！" Option="哇啊，真棒啊！" />
+				<Talk NpcID="10043" Face="正常" Msg="另外，送你一顶友谊帽，戴上它就可以和朋友分享友谊啦！和好友互相点击对方的友谊帽，就可以获得精美礼品哦！" Option="我要马上戴上友谊帽！" />
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2"/>
+ 			<Action Cmd="DELETE_MOVIE" Param="movie_2" />                 <!-- 此时是弹出一个面板 --> 
+			<Action Cmd="OVER" />
+		</SubmitScore>			
+	</Step>	
+</Tasks>

@@ -1,0 +1,65 @@
+<Tasks ID="648" Name="梦醒时分" AwardMsg="恭喜你获得1只肥肥馆的宝石猪,1片家园装饰金叶子和10000摩尔豆。" AwardBean="">
+	<Step ID="1" TarMapID="109">
+		<EnterMap MapID="109">
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10284" Face="正常" Msg="……" Option="公主，还是不能讲话吗？"/>
+				<Talk NpcID="10282" Face="开心" Msg="没事的，这只是暂时现象，只要公主跟我一块去我们木精灵的国度，很快就会好的！" Option="好担心公主啊，上次棋局说公主要献出生命……"/>
+				<Talk NpcID="10282" Face="开心" Msg="公主，我们今天就出发好不好？" Option="今天就出发？大伯也一起去吗？公主怎么能一个人出发？"/>
+				<Talk NpcID="10282" Face="开心" Msg="公主不是一个人啊，有我跟她在一起……" Option="这……"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1"/>
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10000" Face="悲伤" Msg="哎，好担心公主啊~" Option="乐乐，你怎么又躲在角落里？上次在云雾谜桥……"/>
+				<Talk NpcID="10000" Face="悲伤" Msg="嘘~~别说了~~" Option="厄，乐乐还真是心疼公主。"/>
+				<Talk NpcID="10000" Face="悲伤" Msg="我现在只是担心棋局上的预言会成真，不论如何，我都打算一直偷偷跟着公主。" Option="恩，我也一起跟着，他们去哪了？"/>
+				<Talk NpcID="10000" Face="悲伤" Msg="听刚才王子说的，应该是去跟洛克行政官告别了，我们走吧……" Option="恩！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2"/>
+			<Action Cmd="JUMP_TASK_UI" Param="化身精灵，失去红鼻子的么么公主，要跟着蒙斯特王子去什么木精灵的国度？好担心呀，让我们跟着他们吧！"/>
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2"/>
+			<Action Cmd="GO_MAP" MapID="15" MapType="0"/>
+		</EnterMap>
+	</Step>
+	<Step ID="2" TarMapID="15">
+		<EnterMap MapID="15">
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10000" Face="悲伤" Msg="哎，公主都不要带我一起去~" Option="公主好像很不开心啊，是不是又发生什么事了？"/>
+				<Talk NpcID="10000" Face="惊讶" Msg="又发生什么事了？刚才公主不是还很开心？" Option="我们快点跟上吧，希望公主会没事……"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3"/>
+			<Action Cmd="JUMP_TASK_UI" Param="木精灵国度在哪里，不知道能不能跟得上公主他们，他们这是要去哪里呢？"/>
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3"/>
+			<Action Cmd="GO_MAP" MapID="120" MapType="0"/>
+		</EnterMap>
+	</Step>
+	<Step ID="3" TarMapID="120">
+		<EnterMap MapID="120">
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10000" Face="焦急" Msg="还是跟丢了，怎么办啊？公主去了哪里啊？" Option="好奇怪，刚才还看到他们的……难道去了蘑菇森林？"/>
+				<Talk NpcID="10000" Face="焦急" Msg="不会吧，去找那个坏巫女了？不是要去什么木精灵国度吗？" Option="那个地方听也没听说过……"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4"/>
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			<Action Cmd="JUMP_TASK_UI" Param="远处传来呼救的声音，难道是么么公主？哇哦~！乐乐侠登场，快赶去看看！"/>
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4"/>
+			<Action Cmd="GO_MAP" MapID="337" MapType="0"/>
+		</EnterMap>	
+	</Step>
+	<Step ID="4" TarMapID="337">
+		<EnterMap MapID="337">
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101"/>
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102"/>
+			<Action Cmd="OVER"/>
+		</EnterMap>	
+	</Step>			
+</Tasks>
+

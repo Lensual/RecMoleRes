@@ -1,0 +1,142 @@
+﻿<Tasks ID="542" Name="红色回忆" AwardMsg="恭喜你获得红色记忆泡泡、1000摩尔豆！" AwardBean="1000" >     
+	<Step ID="1" TarMapID="327" >
+		<EnterMap MapID="327" >
+			<Action Cmd="SAY" >
+			
+				<Talk NpcID="10047" Face="焦急" Msg="……啊，原来您在这里啊，公主殿下！真是让人担心呢！" Option="（……洛克行政官?）"/>
+				<Talk NpcID="10149" Face="开心" Msg="嗨……洛克叔叔。你看，你看……" Option="（这是么么小时候？）"/>
+				<Talk NpcID="10047" Face="焦急" Msg="真是太任性了！最近城堡里出现了一只诡异的黑猫。大伙儿都很担心公主的安全呢！" Option="（黑猫？）"/>
+				<Talk NpcID="10149" Face="悲伤" Msg="呜呜呜……对不起嘛，洛克叔叔。我、我想哥哥了，所以来看看鸢尾花什么时候开……呜。" Option="（哥哥？难道是……）"/>
+				<Talk NpcID="10047" Face="惊讶" Msg="……鸢尾花？呃……捷克王子？" Option="（……果然）"/>
+				<Talk NpcID="10149" Face="开心" Msg="对啊，昨天么么在梦见捷克哥哥了，他对么么可好了，陪么么玩，还答应么么：当鸢尾花盛开的时候，他就会回到么么身边，再也不离开" Option="（梦中……）"/>
+				<Talk NpcID="10047" Face="悲伤" Msg="唉唉，可怜的孩子……看来是时候告诉你了，其实……" Option="……"/>
+				<Talk NpcID="10047" Face="正常" Msg="……唉，请原谅大家长期以来的善意谎言…………其实，捷克王子殿下他……并没有在海外探险……" Option="（……公主）"/>
+				<Talk NpcID="10149" Face="疑惑" Msg="……咦？" Option="（我想起来了……）"/>
+				<Talk NpcID="10047" Face="悲伤" Msg="很不幸，早在公主出生的那一年，捷克王子就已经宣告失踪，至今下落不明……" Option="（那时候……）"/>
+				<Talk NpcID="10149" Face="惊讶" Msg="不，么么不相信……洛克叔叔！捷克哥哥在哪里失踪？么么要去找他！" Option="（公主还不知道……）"/>
+				<Talk NpcID="10047" Face="惊讶" Msg="噢，请不要冲动，公主殿下。王子失踪的地方叫作黑森林，也就是我们摩尔的禁忌之地。噢，那地方可怕极了……" Option="（喂，洛克叔叔……）"/>
+				<Talk NpcID="10047" Face="正常" Msg="唔，作为您的监护人，我可不能让公主殿下亲身冒险，这件事交给我们大人负责吧……" Option="(……)"/>
+				<Talk NpcID="10149" Face="悲伤" Msg="……不！洛克叔叔，哥哥是么么在世界上唯一的亲人。如果能找回捷克哥哥，么么愿意付出任何代价！" Option="(等，等一下！)"/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+			<Action Cmd="GO_MAP" MapID="111" MapType="0" />	
+		</EnterMap>
+	</Step>
+		
+	<Step ID="2" TarMapID="111" >
+		<EnterMap MapID="111" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10099" Face="正常" Msg="报告！好像是公主留的字条！" Option="……字条"/>
+				<Talk NpcID="10047" Face="惊讶" Msg="……字条？快给我看看！" Option="我有不祥的预感"/>
+				<Talk NpcID="10047" Face="惊讶" Msg="唔……“我出去找哥哥，过几天就回来，请大家别担心——么么。”" Option="啊？我就知道……"/>
+				<Talk NpcID="10047" Face="焦急" Msg="唉唉！那个傻孩子！我真该死！真不应该告诉她那些往事！" Option="洛克先生……"/>
+				<Talk NpcID="10047" Face="焦急" Msg="快，全体骑士出动，目标——黑森林！一定要保证公主平安归来！" Option="黑森林……"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />		
+			
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+			<Action Cmd="GO_MAP" MapID="151" MapType="0" />	
+		</EnterMap>	
+	</Step>
+	
+	<Step ID="3" TarMapID="151" >	
+		<EnterMap MapID="151" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10149" Face="悲伤" Msg="是你啊？呜呜呜，好烦哦……么么、么么好像迷路了呢。" Option="太好了！这不是么么吗！"/>
+				<Talk NpcID="10149" Face="悲伤" Msg="好冷……好饿……呜呜，这是到底什么地方……么么想回家……" Option="这里应该是……"/>
+			</Action>
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10151" Face="正常" Msg="喀喀喀。这里是黑森林的深处，传说中的禁忌之地，摩尔王族的毁灭深渊，亲爱的……公主……" Option="……这家伙？"/>
+				<Talk NpcID="10149" Face="悲伤" Msg="……你、你是谁？怎么知道我是谁……" Option="等等……"/>
+				<Talk NpcID="10151" Face="正常" Msg="我是谁并不重要，重要的是……这里是当年捷克王子失踪的地方……" Option="这个声音……好熟悉的……"/>
+				<Talk NpcID="10149" Face="惊讶" Msg="啊！？小、小哥哥，你、你认识我的捷克哥哥吗？！" Option="么么别上当！"/>
+				<Talk NpcID="10151" Face="正常" Msg="哼，当然认识，而且还很熟。那家伙火红色的皮肤，棕色头发， 哦，对了，还最喜欢鸢尾花……" Option="……咦？他怎么会？"/>
+				<Talk NpcID="10149" Face="惊讶" Msg="对，就是鸢尾花！哇！" Option="……"/>
+				<Talk NpcID="10151" Face="正常" Msg="你的捷克哥哥曾对你说，当鸢尾花重新开放的时候，他就会回到你的身边，再也不分离……" Option="……鸢尾花？"/>
+				<Talk NpcID="10149" Face="悲伤" Msg="呀，你、你怎么知道的？你知道我的捷克哥哥在哪儿吗？么么……真的好想他！" Option="不要听他的，么么！"/>
+				<Talk NpcID="10151" Face="正常" Msg="哼，实现任何愿望，都必须付出相同的代价。你……愿意为见哥哥而付出代价吗？" Option="代价……难道是？！"/>
+				<Talk NpcID="10149" Face="悲伤" Msg="嗯！要是能让捷克哥哥回来，么么愿意付出任何代价！" Option="喂，等、等一下！"/>
+				<Talk NpcID="10151" Face="正常" Msg="很好，很好，代价很简单……只要付出一点点……灵魂……" Option="呀，住手！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10047" Face="愤怒" Msg="呼、呼……幸亏{$username}沿途留下了标记，不然……骑士们，拿下这个坏家伙！" Option="别放走他！"/>
+				<Talk NpcID="10151" Face="正常" Msg="……哼，算你们走运！" Option="……"/>
+				<Talk NpcID="10151" Face="正常" Msg="可惜……寂寞的种子已经埋入她的心灵深处，忧郁之藤迟早会死死缠绕可怜的灵魂之根……" Option="……忧郁之藤？难道！？"/>
+				<Talk NpcID="10151" Face="正常" Msg="喀喀喀，让我们拭目以待……" Option="……可恶！别想跑！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_7" />
+			
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />
+			<Action Cmd="GO_MAP" MapID="120" MapType="0" />	
+		</EnterMap>
+	</Step>
+	
+	<Step ID="4" TarMapID="120" >
+		<EnterMap MapID="120" >
+			<Action Cmd="PLAY_MOVIE" Param="8" Name="movie_8" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10033" Face="正常" Msg="……可怜的小捷克，总是这么不小心，这次要不是我来的及时，你的小命可就保不住啦。" Option="哈哈魔法师，你好……"/>
+				<Talk NpcID="10152" Face="悲伤" Msg="喵……呜呜……" Option="捷克王子，你不要急吧？"/>
+				<Talk NpcID="10033" Face="正常" Msg="嗯？你知道……它的身份？" Option="嗯，是的……"/>
+				<Talk NpcID="10152" Face="悲伤" Msg="那真是太好了，喵……没错，我就是失踪的捷克，曾经的摩尔王子……" Option="捷克王子，你为什么……"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_8" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1" IsStopSound="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10152" Face="悲伤" Msg="……对了喵，{$username}，能帮我个忙吗？" Option="哦，请尽管说。"/>
+				<Talk NpcID="10152" Face="悲伤" Msg="呜……我非常担心么么再去做傻事，能不能请你暂时变成我的样子，代替我这个不称职的哥哥，去安慰一下那个孤独的孩子……" Option="……我愿意。"/>
+				<Talk NpcID="10033" Face="正常" Msg="啊哈，就知道你会答应！那么，说变就变——妈咪妈咪哄，哈哈变变变！" Option="嗯？这……"/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="9" Name="movie_9" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_9" />
+			
+			<Action Cmd="SET_BUFFER" Panel="5" Step="5" />
+			<Action Cmd="GO_MAP" MapID="327" MapType="0" />	
+		</EnterMap>	
+	</Step>
+	
+	<Step ID="5" TarMapID="327" >
+		<EnterMap MapID="327" >
+			<Action Cmd="PLAY_MOVIE" Param="10" Name="movie_10" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_10" />
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10149" Face="惊讶" Msg="呀！你是……哥哥？！捷克哥哥！" Option="（么么……）"/>
+				<Talk NpcID="10149" Face="悲伤" Msg="呜，真是捷克哥哥！我是么么！太好了……太好了！呜！" Option="（……）"/>
+				<Talk NpcID="10149" Face="悲伤" Msg="呜……今天、今天么么去找哥哥了……走啊走，一直走进黑森林里面……" Option="（呜，可怜的么么……）"/>
+				<Talk NpcID="10149" Face="悲伤" Msg="哥哥，你为什么不说话？是生么么的气吗？" Option="（唉，我还是保持沉默吧……）"/>
+				<Talk NpcID="10149" Face="悲伤" Msg="以后么么会乖乖听话，不会再任性！请不要不理么么，捷克哥哥！呜呜……" Option="（唉……）"/>
+				<Talk NpcID="10149" Face="悲伤" Msg="么么从小就没有爸爸妈妈，哥哥也一直没有陪在么么身边……么么、么么真的好孤单！！！" Option="（么么……）"/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="11" Name="movie_11" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_11" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			
+			<Action Cmd="OVER" MapID="110" MapType="0" />	
+		</EnterMap>	
+	</Step>
+</Tasks>

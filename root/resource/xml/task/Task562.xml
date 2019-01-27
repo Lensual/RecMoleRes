@@ -1,0 +1,70 @@
+<Tasks ID="562" Name="寻找阿福号！" AwardMsg="恭喜你获得10个经验果实，5个融合石！" AwardBean="" >
+	<!-- 开心农场  -->
+	<Step ID="1" TarMapID="10">
+		<EnterMap MapID="10">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10022" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="sheep" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10162" Face="正常" Msg="羊羊同学，看见了吗？大家对我们是多么的热情，看见我们是有多么的激动！" Option="你确定不是被你吓的？"/>
+				<Talk NpcID="10163" Face="正常" Msg="难道你看不出来大家是在害怕你吗？长得一副对不起玩家的样子，还戴朵大红花出来招摇过市！" Option="继续"/>
+				<Talk NpcID="10162" Face="正常" Msg="羊羊同学，你这样说就不对了，像我们这种来自北方的狼——那与生俱来的魅力，可是从内心散发出来的。" Option="继续"/>
+				<Talk NpcID="10163" Face="正常" Msg="二愣子一个，别再这儿给我丢人了，看你把别人都吓成什么样了，还不赶快道歉！" Option="继续"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+		</EnterMap>
+	</Step>
+	
+	<Step ID="2" TarMapID="10">
+		<EnterMap MapID="10">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10022" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="sheep" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10163" Face="正常" Msg="我是灰羊羊，他是喜狼狼，这是我们第一次来到摩尔庄园。" Option="继续"/>
+				<Talk NpcID="10163" Face="正常" Msg="别害怕，他虽然长得一副狼样，但心里却比小绵羊还小绵羊，活脱脱就一只披着狼皮的羊而已。" Option="继续"/>
+				<Talk NpcID="10163" Face="正常" Msg="听说每到快过年的时候，庄园里都会有一艘东方来的大船，叫阿福号，上面有好多玩的、好吃的、新奇古怪的东西……" Option="继续"/>
+				<Talk NpcID="10162" Face="正常" Msg="O(∩_∩)o 哈哈，羊羊同学特别想看看这艘有名的东方大船，开开眼界。所以，硬是要叫我陪他一起来瞅瞅。" Option="继续"/>
+				<Talk NpcID="10163" Face="正常" Msg="什么嘛！明明是你说想来，硬要拖着我陪你一起来看的！" Option="继续"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+			<Action Cmd="GO_MAP" MapID="8" MapType="0" />
+		</EnterMap>
+	</Step>
+	
+	<!-- 神秘湖 -->
+	<Step ID="3" TarMapID="8">
+		<EnterMap MapID="8">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="fish" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10163" Face="正常" Msg="我说你能消停点不？人家好好的雕像都被你吓跑了！" Option="继续"/>
+				<Talk NpcID="10162" Face="正常" Msg="羊羊同学，出来玩嘛，开心点。再说，难得放寒假，你别这么严肃嘛！你看我：牙好，胃口好，吃嘛嘛香，心情舒畅，身体倍儿棒！" Option="继续"/>
+				<Talk NpcID="10163" Face="正常" Msg="你到底是狼，还是猪啊？都懒得说你了，就只顾着看其他的了，阿福号在哪儿呢？连个影子都没瞧见。" Option="继续"/>
+				<Talk NpcID="10162" Face="正常" Msg="肯定是我们来早了，阿福号估计还没到，等等吧！羊羊同学，快看快看，这海滩还可以钓鱼……要不咱也来钓钓鱼，正好打发打发时间？" Option="继续"/>
+				<Talk NpcID="10162" Face="正常" Msg="哈哈，我们还可以在海滩来个自助烤鱼，我正好肚子饿了！羊羊同学，你闻道烤鱼的香味了么？" Option="继续"/>
+				<Talk NpcID="10163" Face="正常" Msg="你说我是怎么跟这只又傻又笨的狼成为同学的呢？" Option="继续"/>
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="fish" Visible="1" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="0"/>
+			<Action Cmd="OVER" />
+		</EnterMap>
+	</Step>
+</Tasks>
+
+

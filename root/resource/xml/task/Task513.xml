@@ -1,0 +1,61 @@
+<Tasks ID="513" Name="海妖骑士的邀请" AwardMsg="恭喜你获得番茄茄、2000摩尔豆！" AwardBean="2000" >
+	<Step ID="1" >
+		<EnterMap MapID="61" >
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" />
+ 			<Action Cmd="DELETE_MOVIE" Param="movie_1" /> 
+			
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1"  />
+ 			<Action Cmd="DELETE_MOVIE" Param="movie_2" /> 
+ 			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10099" Face="惊讶" Msg="刚刚出现的不是库拉吗？莫非他……" Option="他怎么了？" />
+				<Talk NpcID="10099" Face="惊讶" Msg="最近前哨站有一批兄弟离奇失踪，我怀疑很可能和库拉有关！他嘴里还碎碎念着什么金色鸢尾花……不行，得赶紧把此事上报捷克王子！" Option="我帮你去转告捷克王子！" />
+			</Action>
+ 			
+			<Action Cmd="SET_BUFFER" Step="2" Panel="2" />
+			
+			<Action Cmd="GO_MAP" MapID="32" MapType="0" />
+		</EnterMap>			
+	</Step>	
+	
+	<Step ID="2" >
+		<NPC ID="10036" Option="海妖骑士的邀请" >
+		
+			<Action Cmd="SAY" >
+				<Talk NpcID="10036" Face="正常" Msg="{$username}，你说刚才库拉出现在了前哨站？" Option="恩恩，骑士们都看见了！" />
+				<Talk NpcID="10036" Face="正常" Msg="看来库拉真的在打金色鸢尾花的主意……" Option="恩，千万不能让库拉得逞！" />
+				<Talk NpcID="10036" Face="正常" Msg="咦？{$username}，你也知道金色鸢尾花的秘密？" Option="是毛毛头酋长告诉我的！" />
+				<Talk NpcID="10036" Face="正常" Msg="恩，我们必须得阻止库拉！不过金色鸢尾花被存放在被魔法保护的无边海中央，那里不仅船只无法航行，就连飞龙都不能在无边海上空飞行！" Option="就没有办法可以过去吗？" />
+				<Talk NpcID="10036" Face="正常" Msg="据说海妖鱼由于体质特殊，是唯一可以穿越无边海的生物。我已派骑士筹建了训练营，{$username}，你想跟我一起去参观吗？" Option="哇！太荣幸了，快走吧！" />
+			</Action>
+			
+			<Action Cmd="SET_BUFFER" Step="3" Panel="3" />
+			
+			<Action Cmd="GO_MAP" MapID="151" MapType="0" />
+		</NPC>
+	</Step>	
+	
+	<Step ID="3" >
+		<EnterMap MapID="151" >
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" />
+ 			<Action Cmd="DELETE_MOVIE" Param="movie_3" /> 
+			
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" />
+ 			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10036" Face="正常" Msg="{$username}，你是否愿意成为海妖骑士，和我们一起并肩战斗？" Option="哇！我要加入海妖骑士！" />
+			</Action>
+			
+ 			<Action Cmd="DELETE_MOVIE" Param="movie_4" /> 
+ 			
+			<Action Cmd="OPEN_PANEL" Param="SirenKnightGetClothPanel" />
+ 			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10036" Face="正常" Msg="在海妖馆的冒险模式里可以锻炼海妖鱼的能力，随着冒险次数的增多，你的海妖骑士等级也会提升，可以获得更高阶的骑士服。现在要不要试着进行一次训练？" Option="恩，开始冒险吧！" />
+			</Action>
+			
+			<Action Cmd="OVER" MapID="271" />
+		</EnterMap>			
+	</Step>	
+	
+</Tasks>

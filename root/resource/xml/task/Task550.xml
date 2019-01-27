@@ -1,0 +1,190 @@
+<Tasks ID="550" Name="圣诞奇遇记之冒险篇" AwardMsg="恭喜你获得1个飞行系天使宝宝、1个水系天使宝宝、5颗融合石！" AwardBean="" >
+	<!-- 城堡大厅 -->
+	<Step ID="1" TarMapID="15">
+		<NPC ID="10047" Option="圣诞奇遇记之激斗篇！">
+			<!-- 
+			<EnterMap MapID="15" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />
+			<Action Cmd="PLAY_MOVIE" Param="0" Name="movie_0" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_0" /> 
+				<Action Cmd="ADD_EVENT" Param="task550GoOne" />		
+			<Action Cmd="SAY" >
+				<Talk NpcID="10047" Face="生气" Msg="战斗吧！少年" Option="圣诞奇遇记之激斗篇！" />
+			</Action>
+			-->
+			
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1"/>		
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />	
+			
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1"/>		
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />	
+		
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="正常" Msg="一切都以安排妥当了，为了不打草惊蛇，我没有调动守卫庄园的骑士，而是抽调了一大半前哨站的兵力来埋伏。" Option="未雨绸缪，总是好的。" />
+				<Talk NpcID="10047" Face="正常" Msg="嗯~~~黑森林现在相对还比较平静，抽调前哨站的兵力，是最明智的做法。" Option="这倒不失为一个万全之策。" />
+				<Talk NpcID="10047" Face="正常" Msg="而且这样一来，守护皇宫的骑士也不会被分散掉，如果真有什么事情，保护公主和庄园的子民们才是最重要的。" Option="嗯，我也是这样想滴。" />
+				<Talk NpcID="10007" Face="正常" Msg="说得没错，现在就让我们静观其变。不管这个零是什么来头，他跟库拉之间又有什么不可告人的阴谋诡计，我们都能以不变应万变！" Option="哈哈~接下来就只等敌人出招啦！" />
+				<Talk NpcID="10047" Face="正常" Msg="敌不动，我不动！在没有出现什么风吹草动之前，我们都还是一切照旧。菩提，你就回学院教导处等消息吧，我也继续处理日常事物。" Option="那我也继续在庄园里逛逛，去玩喽！" />
+			</Action>
+			
+		
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1"/>		
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />	
+	
+			
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />	
+			<Action Cmd="GO_MAP" MapID="80" MapType="0" />	
+		</NPC>
+	</Step>	
+	
+	<!-- 尼尔拉塔 -->
+	<Step ID="2" TarMapID="80" >
+		<EnterMap MapID="80" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />
+						
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1"/>	
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="焦急" Msg="彩虹瀑布？糟糕，那是去到力量之泉的必经之路。" Option="难道敌人开始行动了？"/>
+				<Talk NpcID="10047" Face="焦急" Msg="两个埋伏地点附近都有情况！看来他们已经开始行动了！赶紧通知所有骑士，进入一级戒备状态。" Option="还好，我们事先就有埋伏的！"/>
+				<Talk NpcID="10007" Face="焦急" Msg="洛克，看来咱们必须分头行动了！这里交给你，我得赶去彩虹瀑布看看情况！" Option="分头行动，各个击破！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+			<Action Cmd="GO_MAP" MapID="42" MapType="0" />	
+		</EnterMap>	
+	</Step>
+	
+	<!-- 彩虹瀑布 -->
+	<Step ID="3" TarMapID="42" >
+		<EnterMap MapID="42" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+		
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" />	
+				 	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="生气" Msg="又是黑暗天使！这事果然跟恶魔岛有关！" Option="恶魔岛？"/>
+				<Talk NpcID="10007" Face="生气" Msg="你们来庄园里搞破坏，到底有什么阴谋！回去告诉你们管事的，只要有我菩提在的一天，恶魔岛就别想打庄园的任何主意！" Option="零难道是恶魔岛派来的？"/>
+				<Talk NpcID="10157" Face="正常" Msg="哈哈哈~~~真可笑，你这个身经百战的菩提老头儿还不是中了我们团长的计啦！哈哈哈哈……" Option="中计？明明是你们中计了好吧！"/>
+				<Talk NpcID="10157" Face="正常" Msg="真是一群愚昧的摩尔！反正你们逃不出这彩虹瀑布了，就不妨告诉你吧。古德摩.零，就是我们大名鼎鼎的暗黑军团团长！" Option="果然没猜错！零是恶魔岛的人！"/>
+				<Talk NpcID="10157" Face="正常" Msg="现在你跟洛克已经被我们分隔在两地了，就等着我们团长攻占了前哨站之后，再来把你们各个击破吧！" Option="…… ……竟然盗用我的台词！可恶！"/>
+			</Action>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+		
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1"/>	 	 
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="焦急" Msg="我们都中计啦！敌人的目标根本不是这里！而是前哨站！北方最重要的一个军事要塞！庄园跟跟黑森林连通最重要的一道防线！" Option="传说中的声东击西？？？？"/>
+				<Talk NpcID="10007" Face="焦急" Msg="好一招声东击西！看来这个零还真是不简单啊！" Option="额滴神呀！36计都流传到恶魔岛上了！"/>
+				<Talk NpcID="10007" Face="焦急" Msg="现在最重要的就是赶快离开这里，跟洛克汇合。然后赶紧去前哨站！{$username}，你有什么好的对策吗？" Option="容我想想吧~~好歹偶也看过几天兵法！"/>
+				<Talk NpcID="10007" Face="焦急" Msg="大家也都一起想想办法呀！也不知道现在前哨站情况怎么样了！o(︶︿︶)o 唉，都怪我，居然还抽调了一大半兵力出来！ " Option="要怪就怪那个零，简直太奸诈了！ "/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			
+		
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />	
+			
+			<Action Cmd="PLAY_MOVIE" Param="106" Name="movie_106" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_106" />	
+			
+			<Action Cmd="ACT_EVENT" Param="Task550_OpenPiaoliu" />
+				
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />	
+			<!--  <Action Cmd="GO_MAP" MapID="31" MapType="0" />-->	
+		</EnterMap>	
+	</Step>
+	<!-- SMC基地 -->
+	<Step ID="4" TarMapID="31" >
+		<EnterMap MapID="31" >
+			<!-- <Action Cmd="OPEN_PANEL" Param="OperPlanPanel" Data="1"	/>-->	
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>		
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />	
+			
+			<!-- 全屏交互>  -->	
+			<Action Cmd="OPEN_PANEL" Param="SearchLockePanel" IsShowOthersMole="1"/> 
+			<Action Cmd="ADD_EVENT" Param="task550Go" />	
+			
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsFullScreen="1" />		
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />	
+			
+			<Action Cmd="SET_BUFFER" Panel="5" Step="5" />	
+			<Action Cmd="GO_MAP" MapID="61" MapType="0" />	
+		</EnterMap>	
+	</Step>
+	
+	<!-- 前哨站 -->
+	<Step ID="5" TarMapID="61" >
+		<EnterMap MapID="61" IsStopSound="1">		
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_0" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_1" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_2" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_3" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_4" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="bgLevel" ResName="knight_0" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="bgLevel" ResName="knight_3" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="bgLevel" ResName="knight_4" Visible="0" />
+			
+			<!-- <Action Cmd="PLAY_MOVIE" Param="11" Name="movie_11" IsBg="1" IsFullScreen="0" IsStopSound="0" IsShowOthersMole="1" /> -->
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" IsBg="1" IsFullScreen="1" IsShowOthersMole="1" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10154" Face="开心" Msg="哈哈哈~~愚蠢的摩尔，本团长只是略施小计，就让你们溃不成军啦！看来当年叱咤风云的菩提老头儿已经不行了啊！" Option="高富帅，你别太得意了！哼！"/>
+				<Talk NpcID="10029" Face="正常" Msg="哪里来的什么团长？还妄想让摩尔庄园的皇家骑士团溃不成军，简直笑话！菩提大伯早已部署好了一切，你们还不赶快投降！" Option="呃~部署好了一切？包括中敌人的计？"/>
+				<Talk NpcID="10154" Face="开心" Msg="部署好了一切？？？哈哈哈~~~简直笑掉我大牙了！那个菩提老头儿和你们的洛克行政官现在都自身难保了，哪还有时间管你们这些虾兵蟹将！" Option="别太得意！你的诡计已经被识破了！"/>
+				<Talk NpcID="10154" Face="开心" Msg="就凭你们现在的兵力，根本不是我暗黑军团的对手！赶紧乖乖束手就擒吧！只要求求我，说不定还我还会放过你们哦……哈哈哈哈~~" Option="援兵一到，看你还笑得出来吗？"/>
+				<Talk NpcID="10099" Face="惊讶" Msg="恶法师库拉跟恶魔岛也是一伙的！弗兰克团长……这可怎么办？" Option="~~~腹背受敌啊！"/>
+				<Talk NpcID="10029" Face="正常" Msg="大家别自乱阵脚，不过就是又多了一个恶魔法师而已！不管怎么样，我们一定要死守前哨站，直到援兵的到来！" Option="等我，我已经在去搬救兵的途中了！！！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_7" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="8" Name="movie_8" IsBg="1" IsFullScreen="1" IsShowOthersMole="0" IsStopSound="0"/>	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10003" Face="生气" Msg="此路是我开，此树是我栽，要想打此过，留下买路财！" Option="恶魔岛的货币也是摩尔豆？！"/>
+				<Talk NpcID="10003" Face="生气" Msg="你这个毛头小子，我忍你很久了！早就看你不顺眼了！高傲自大的家伙！今天竟然还敢在我库拉的地盘上造势！" Option="庄园是大家的，不是谁一个人的。"/>
+				<Talk NpcID="10154" Face="正常" Msg="好你个库拉，竟敢用这样的口吻跟我零说话！你可别忘了你跟恶魔岛的约定！" Option="约定？今生的约定还是前世的？？？"/>
+				<Talk NpcID="10003" Face="生气" Msg="别以为我与你们恶魔岛有约在先，我就不敢动你了！哼~毛头小子，对长辈一点礼貌都没有！我今天就来教训教训你！" Option="库拉是来搅局的，还是来帮忙的啊？"/>
+				<Talk NpcID="10003" Face="生气" Msg="你们都给我听清楚，摩尔庄园是我库拉的地盘！在这里，从来都只有我库拉一人可以任意妄为，其他人都得给我靠边站！！！" Option="我都说了多少遍了，庄园是大家的！！！"/>
+				<Talk NpcID="10003" Face="生气" Msg="零，你以为你聪明绝顶，可你在庄园里的一举一动都在我的监视之中。你的这招声东击西，在我库拉出生的时候就会了！" Option="库拉君，要帮忙就赶紧，别自恋了吧！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_8" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsBg="1" IsFullScreen="1" IsStopSound="0"/>		
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />	
+			
+			<Action Cmd="PLAY_MOVIE" Param="10" Name="movie_10" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10003" Face="焦急" Msg="刚刚发生什么事了？明明有只好凶恶的骷髅龙朝我们猛冲过来……" Option="对~~我看见了，库拉你没事吧？"/>
+				<Talk NpcID="10029" Face="正常" Msg="好像有谁为我们挡住了那只凶神恶煞的骷髅龙。啊！一定是皇家骑士团的援兵到了！一定是援兵到了！" Option="援兵？我这不是还正在去搬救兵么？"/>
+				<Talk NpcID="10004" Face="悲伤" Msg="BIBO~~~BIBO~~~" Option="骰子？！哪里冒出来的骰子？？？"/>
+				<Talk NpcID="10003" Face="焦急" Msg="这声音是……" Option="没错，是你的骰子，被你嫌弃的骰子！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_10" />
+			 
+			<Action Cmd="PLAY_MOVIE" Param="9" Name="movie_9" IsFullScreen="1" IsBg="1" IsStopSound="0" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_9" />
+			
+			<Action Cmd="DELETE_MOVIE" Param="movie_11" />
+			<Action Cmd="SET_BUFFER" Panel="6" Step="6" />
+			<!--<Action Cmd="GO_MAP" MapID="61" MapType="0" />	-->
+		</EnterMap>	
+	</Step>
+	
+	<!-- 前哨站 抢救骰子-->
+	<Step ID="6" TarMapID="61" >
+		<EnterMap MapID="61" >		
+		<!-- 交互面板 抢救骰子-->
+		
+		<Action Cmd="OPEN_PANEL" Param="RescueLumaPanel"/> 
+		<Action Cmd="ADD_EVENT" Param="task550LamuGo" />	
+		
+		<Action Cmd="PLAY_MOVIE" Param="104" Name="movie_104" IsBg="1" IsFullScreen="1" IsStopSound="1"/>		
+		<Action Cmd="DELETE_MOVIE" Param="movie_104" />	
+			
+		<Action Cmd="PLAY_MOVIE" Param="105" Name="movie_105" IsBg="1" IsFullScreen="1"/>		
+		<Action Cmd="DELETE_MOVIE" Param="movie_105" />	
+		
+		<Action Cmd="OVER" />
+		</EnterMap>	
+	</Step>
+</Tasks>

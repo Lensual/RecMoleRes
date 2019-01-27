@@ -1,0 +1,79 @@
+<Tasks ID="494" Name="太渍系列：2敌菌大排查" AwardMsg="恭喜你获得1只食人花花、1000摩尔豆。" AwardBean="0" >
+	<Step ID="1" >
+		<EnterMap MapID="240" >
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10020" Face="焦急" Msg="这次情况比较特殊，庄园里从来没见过，库拉看上去依然很不舒服呀。连我最新配制的万能注射剂都没用！" Option="⊙0⊙不会是那个“禽流感”吧？" />
+				<Talk NpcID="10004" Face="悲伤" Msg="主人…你不会就这样丢下我，一个人驾鹤西归了吧 T_T " Option="骰子别灰心啊，我们都会帮你的。" />
+				<Talk NpcID="10020" Face="正常" Msg="对了，我最近认识了个“新朋友”，他叫汰渍除菌小精灵，是卫生与衣物除菌方面的专家，或许他有办法！" Option="“新朋友？”" />
+				<Talk NpcID="10020" Face="正常" Msg="他昨天刚下船，现在在神秘湖码头，你们搀扶库拉一起过去吧！" Option="过去看看吧！" />
+			</Action>
+			
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+			<Action Cmd="GO_MAP" MapID="176" MapType="0" />
+		</EnterMap>	
+	</Step>
+	
+	<Step ID="2" >
+		<EnterMap MapID="176" >
+		<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10020" Face="焦急" Msg=" 你好，汰渍除菌小精灵，我件事情想请你帮一下忙，这里有个病人，吃药打针都不行呢。" Option="⊙_⊙ 原来他就是安迪的朋友！" />
+				<Talk NpcID="10093" Face="正常" Msg="没问题,我看一下，让我检查一下……" Option="给他打一针，嘿嘿^.^!" />
+				<Talk NpcID="10093" Face="正常" Msg="……我探测到了你的朋友身上有很多有害的敌菌…他吃坏东西了吗？还是很久没洗澡？" Option="( ⊙ o ⊙ )什么?！）" />
+				<Talk NpcID="10004" Face="悲伤" Msg="我主人平时干净的很，这么大一个城堡，他用魔法打扫的一尘不染。而且他自己经常洗手，洗澡也用除菌产品，衣服我也天天都给他洗呢。" Option="是啊，敌菌藏在哪里呢？" />
+				<Talk NpcID="10020" Face="正常" Msg=" 别担心，汰渍除菌小精灵可是卫生和衣物除菌方面的专家哦！我们赶紧去库拉家进行一次搜查吧！" Option="好的！去看看吧！" />
+			</Action>
+			<Action Cmd="GO_MAP" MapID="240" MapType="0" />
+				<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+		</EnterMap>
+	</Step>
+	
+	<Step ID="3" >
+		<EnterMap MapID="240" >
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10020" Face="正常" Msg="汰渍除菌小精灵，你让我把这些东西拿出来，给我们看什么呀！" Option="？？？" />
+				<Talk NpcID="10093" Face="正常" Msg="请仔细看，这些东西都被敌菌侵袭过，{$username}，你能帮我把所有细菌都找出来吗？" Option="……好！" />
+			</Action>
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />
+			<Action Cmd="OPEN_PANEL" Param="TidePanel" />
+		</EnterMap>
+	</Step>	
+	
+	
+	<Step ID="4" >
+			<SubmitScore ModuleID="10014" MinScore="1" LoseMsg="小摩尔没能解开谜题哦！需要重新试试吗？" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10093" Face="正常" Msg="找到他们了！" Option="好多有害菌…@_@!" />
+				<Talk NpcID="10003" Face="正常" Msg="原来是这些坏家伙捣的鬼！" Option="（=。= 坏还是你坏！）" />
+			</Action>	
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			<Action Cmd="SAY" >
+  			    <Talk NpcID="10093" Face="正常" Msg="不用担心，区区衣物细菌，让我消灭他们！" Option="......" />
+  			 </Action>   
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10003" Face="正常" Msg="感觉好多了~哈哈。我体内的魔法又在涌动了！" Option="你可不要做坏事呀！" />
+				<Talk NpcID="10004" Face="开心" Msg="谢谢，汰渍除菌小精灵！谢谢你{$username}" Option="助人为乐！" />
+				<Talk NpcID="10093" Face="正常" Msg="不客气，举手之劳。这次敌菌军团比较强大，我已经用自己的力量帮助库拉稳定下来，接来下我得想想对付他们的办法，这需要点时间……" Option="知道了。" />
+				<Talk NpcID="10093" Face="正常" Msg="另外，提醒小摩尔们跟拉姆们：除了经常洗洗澡保持干净之外，衣服上也含有很多细菌，也需要经常除菌哦。小摩尔们跟拉姆们可得记住啦！" Option="恩，恩，知道了。" />
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />
+			
+			<Action Cmd="OVER" />
+		</SubmitScore>
+		
+	</Step>
+			
+	
+</Tasks>	
+	

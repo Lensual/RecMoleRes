@@ -1,0 +1,185 @@
+<!-- 100,101,102,103,104,106是代替的，后面更新上去 -->
+<Tasks ID="515" Name="榕树大冒险" AwardMsg="恭喜你获得星星公主裙、2000摩尔豆！" AwardBean="2000" >
+	<Step ID="1" >
+		<EnterMap MapID="301" >
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />			
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1"/>
+				<Action Cmd="SAY" >
+				<Talk NpcID="10116" Face="正常" Msg="发生了什么事？！" Option="前情回顾" />
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10116" Face="正常" Msg="刚刚是什么东西飞过？这么大个影子！一百个毛毛头加起来都没这么大！" Option="不是真的有怪物来了吧？( ⊙ o ⊙ )" />
+				<Talk NpcID="10113" Face="正常" Msg="放心，荆棘丛林可是我的地盘，不用怕！走，我带你们去别处玩去！" Option="不行，我还得去找金色鸢尾花……" />
+				<Talk NpcID="10113" Face="正常" Msg="金色鸢尾花这么重要吗？哎，好吧，那等你找到金色鸢尾花过后，一定要回来找我玩哦！" Option="嗯！不过我都还不知道该往哪儿找……" />
+				<Talk NpcID="10116" Face="正常" Msg="别担心！跟我一起回去问问爸爸，爸爸可厉害了，他一定有办法！" Option="那好，还是去问问毛毛头酋长！" />
+			</Action>										
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			<Action Cmd="GO_MAP" MapID="305" MapType="0" />				
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+		</EnterMap>	
+	</Step>			
+	
+	<Step ID="2" >
+		<NPC ID="10115" Option="榕树大冒险"  >
+			<!-- 和上周一样，也是要戴了毛毛头翻译头套，才能和毛毛头酋长对话 -->			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10115" Face="正常" Msg="金色鸢尾花……嗯，照火神大人的提示来看，金色鸢尾花所处的方向，应该是黑森林东边的东边。" Option="黑森林东边的东边？" />
+				<Talk NpcID="10115" Face="正常" Msg="没错，一直往东走。穿过我身后的树洞，可以到达摩姆神像，那儿有一棵千年榕树，或许它可以给你进一步的提示！" Option="啊，谢谢酋长！我现在就去摩姆神像！" />
+			</Action>
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+			<Action Cmd="OPEN_TASK_PANEL" />
+							
+		</NPC>	
+	</Step>	
+	
+	<Step ID="3" >  
+		<EnterMap MapID="305" >
+			<!-- 这里屏蔽了之前的跳地图的树洞，换成做交互才能过去 -->
+			<Action Cmd="SET_BUFFER" Panel="3" Step="4" />
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsMouseDisable="1"/>
+			<!-- 这里需要玩家做随机穿树洞的小交互，穿成功了可以到达摩姆神像场景 -->						
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+		</EnterMap>
+	</Step>
+	
+	<Step ID="4" >
+		<EnterMap MapID="306" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1"/>			
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="0" />	
+				<Action Cmd="SET_BUFFER" Panel="4" Step="5" />	
+			<Action Cmd="OPEN_TASK_PANEL" />
+		
+			<!-- 下面需要玩家进行场景中解谜石像的交互，成功后，可以到达榕树外场景 -->									
+		</EnterMap>		
+	</Step>
+	
+	<Step ID="5" >
+		<EnterMap MapID="307" >
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10114" Face="正常" Msg="（啊……是小摩尔！不行，我得保持淡定，不能让他认出我来！）你，你是谁？为什么会在这里！" Option="你又是谁呀？" />
+				<Talk NpcID="10114" Face="开心" Msg="（太好了，嘻嘻，看来他并没认出我是谁……）" Option="咦？你怎么不说话？" />
+				<Talk NpcID="10114" Face="正常" Msg="哦，没，没，我只是在思考，怎样才能进到树洞里去。树洞被这只贪睡的小动物，哦，不，应该是大动物，给挡住了。" Option="所以得想办法把它弄醒呀！" />
+				<Talk NpcID="10114" Face="正常" Msg="我试了好半天，可它还是一动不动，怎么办呢！" Option="出来探险，这点江湖经验都没有哪行？" />
+				<Talk NpcID="10114" Face="正常" Msg="难道……你有办法？" Option="看我的！额……我先来研究研究！" />
+			</Action>				
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />
+			<Action Cmd="SET_BUFFER" Panel="6"/>
+			<!-- 下面需要玩家进行唤醒鸡的场景交互，榕树精灵醒了过后离开 -->						
+		</EnterMap>	
+	</Step>	
+	
+	<!--这个是地图中的，注意！！！ 
+	<Step ID="6" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10114" Face="开心" Msg="哇！你真厉害！这下我们可以进入树洞了！" Option="里面说不定很危险哦，你不怕吗？" />
+				<Talk NpcID="10114" Face="正常" Msg="当然不怕！我就是专门为了探险而来！我要为保卫庄园尽一份力！好啦，得抓紧时间，我们走吧！" Option="你也生活在庄园吗？喂，等等，你慢点呀" />
+			</Action>			
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_7" />
+			<Action Cmd="SET_BUFFER" Panel="6" Step="7" />													
+	</Step>		
+	 -->
+
+	<Step ID="7" >
+		<EnterMap MapID="308" >
+			<Action Cmd="PLAY_MOVIE" Param="8" Name="movie_8" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10114" Face="开心" Msg="天啊，原来树洞里是这样一片天地，真是太美妙啦！比摩尔城堡还美！" Option="你去过摩尔城堡？" />
+				<Talk NpcID="10114" Face="正常" Msg="噢，没，没……我听说过而已。不说城堡了，我们还是专心欣赏树洞里的风景吧！" Option="你自己慢慢欣赏，我还有要事要办！" />
+				<Talk NpcID="10114" Face="正常" Msg="我也有要事要办呢！我的直觉告诉我，我们得先在树洞里打探一番！" Option="这是当然！" />
+				<Talk NpcID="10114" Face="开心" Msg="那我们来比赛吧，看谁先找到线索！" Option="好吧……我也四处打探一下！" />	
+			</Action>			
+			<Action Cmd="DELETE_MOVIE" Param="movie_8" />
+			<Action Cmd="PLAY_MOVIE" Param="9" Name="movie_9" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_9" />		
+			<Action Cmd="SET_BUFFER" Panel="8" Step="7" />				
+			<Action Cmd="GO_MAP" MapID="309" MapType="0" />	
+			<!--</> 
+			下面需要玩家自己进入榕树密室(ID:309)，找到木精灵（对于没有木精灵帽的玩家，还需要从木精灵处获得木精灵帽）											
+			完成这个步骤后才能进入step 8  panel 9 -->											
+		</EnterMap>			
+	</Step>	
+
+	<Step ID="8" >
+		<EnterMap MapID="310" >		
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />												
+			<Action Cmd="PLAY_MOVIE" Param="10" Name="movie_10" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_10" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="0" />
+			
+			
+			<!-- 下面需要玩家进行场景交互，唤醒菲尼克斯，唤醒后，提交得分
+				<Action Cmd="SET_BUFFER" Panel="9" Step="9" />		
+			 -->									
+						
+		</EnterMap>
+	</Step>
+	
+	<Step ID="9" >
+		<EnterMap MapID="310" >
+		<!-- 隐藏掉那只小鸟 -->
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="Bird_mc" Visible="0" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />
+			<Action Cmd="PLAY_MOVIE" Param="11" Name="movie_11" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_11" />
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsFullScreen="1" IsStopSound="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			<Action Cmd="PLAY_MOVIE" Param="12" Name="movie_12" IsBg="1"/>
+			<Action Cmd="TASK_SHOW_SELF" Hide="0" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10114" Face="开心" Msg="怎么样，我吹的曲子不赖吧？" Option="哇~你怎么这么厉害！" />
+				<Talk NpcID="10114" Face="正常" Msg="是嘟噜噜教我的，它说这是黑森林里一首古老的曲子，要是遇到什么危险，就用树叶来吹奏这首曲子。没想到这么管用！" Option="多亏你救了我……" />
+				<Talk NpcID="10114" Face="正常" Msg="不用谢！出来探险，当然得互相帮助呢！不过，你对这位，嗯，鸟先生，做了什么，它这样袭击你？" Option="我没做什么呀，只是把它叫醒了而已" />
+				<Talk NpcID="10117" Face="正常" Msg="请叫我菲尼克斯，谢谢！" Option="好吧，菲尼克斯……你好！" />	
+				<Talk NpcID="10114" Face="正常" Msg="菲尼克斯，你刚才……额，我是说，你现在的样子，似乎和刚才很不一样，究竟是发生了什么事呀？" Option="对呀，刚才像是中了魔咒一样……" />
+				<Talk NpcID="10117" Face="正常" Msg="哎，说起来，都是因为前几天来的那个奇怪的法师……" Option="奇怪的法师？" />	
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10117" Face="悲伤" Msg="我在这黑森林里住了这么多年，从来没受过这样的气！太伤心了！所以刚才看到你的红鼻子，我就忍不住袭击你了……" Option="可怜的菲尼克斯……" />	
+				<Talk NpcID="10117" Face="悲伤" Msg="更丢脸的是，我那幅囧样，还没来得及躲起来，就被别人发现了……最近怎么这么多人找我问路，哎……" Option="别人？是谁呢？" />	
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10117" Face="正常" Msg="说起来，我都还忘了看看他们留给我的那张请柬呢。现在正好看看！" Option="好呀！" />	
+			</Action>														
+			<Action Cmd="DELETE_MOVIE" Param="movie_12" />
+			<Action Cmd="PLAY_MOVIE" Param="13" Name="movie_13" IsBg="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="106" Name="movie_106" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_106" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10117" Face="正常" Msg="保罗？箩丝？他们俩的名字听起来好奇怪……还是菲尼克斯好听啊，哈哈哈~" Option="哇！保罗王子和人鱼公主要结婚了！" />	
+				<Talk NpcID="10114" Face="正常" Msg="说不定到时候我们也能去参加呢！不过，话说回来，袭击菲尼克斯的那个恶法师是怎么回事呢？难道又是库拉？" Option="咦？你也知道库拉？" />
+				<Talk NpcID="10114" Face="正常" Msg="噢，不，不，听说过，听说过而已！看来，我们也得去迷雾沼泽那边打探下！" Option="嗯！菲尼克斯，你能带我们去吗？" />				
+				<Talk NpcID="10117" Face="正常" Msg="想让我带你们去，得看你们是不是木精灵的朋友！你有木精灵帽吗？" Option="木精灵帽？我有呢！" />	
+				<Talk NpcID="10117" Face="正常" Msg="噢，原来你是木精灵的朋友！来，快坐到我背上来。" Option="好呀，谢谢你！" />	
+				<Talk NpcID="10117" Face="正常" Msg="对了，为避免你不习惯高空飞行，还是先让你练习练习下如何驾驶我吧！" Option="嗯，好的！" />	
+			</Action>							
+			<Action Cmd="DELETE_MOVIE" Param="movie_13" />	
+				<!-- 显示隐藏掉那只小鸟 -->
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="Bird_mc" Visible="1" />
+			<Action Cmd="SET_BUFFER" Panel="10"/>
+			<!--<Action Cmd="SET_BUFFER" Panel="10" Step="10" />	
+			<Action Cmd="OPEN_PANEL" Param="驾驶菲尼克斯的游戏" />  -->							
+		</EnterMap>
+	</Step>			
+	
+	<Step ID="10" >
+		<EnterMap MapID="312" >
+			<Action Cmd="PLAY_MOVIE" Param="104" Name="movie_104" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_104" />	
+			<Action Cmd="PLAY_MOVIE" Param="105" Name="movie_105" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_105" />	
+			<Action Cmd="OVER" />																																		
+		</EnterMap>
+	</Step>		
+		
+</Tasks>

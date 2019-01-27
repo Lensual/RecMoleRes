@@ -1,0 +1,95 @@
+<Tasks ID="557" Name="太空来的喵星人！" AwardMsg="恭喜你获得5个经验果实，5个融合石！" AwardBean="" >
+	<!-- 布多多布少少房间 -->
+	<Step ID="1" TarMapID="237">
+<!-- 		<NPC ID="10010" Option="太空来的喵星人！"> -->
+		<EnterMap MapID="237" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="buttonLevel" ResName="npc_10010" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="buttonLevel" ResName="npc_10011" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="0" Name="movie_0" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_0" />
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1"/>	
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10011" Face="正常" Msg="{$username}，你不会也是来看那只喵星人的吧？" Option="咦，你怎么知道的？"/>
+				<Talk NpcID="10011" Face="正常" Msg="瞧，这里的所有小摩尔，都是过来看那只喵星人的。你……应该是第2013个好奇此事的小摩尔了。" Option="2013？这个数字听着怎么好耳熟呢？"/>
+				<Talk NpcID="10011" Face="正常" Msg="快进来吧，布多多正在跟大家讲我们遇到喵星人的惊险故事呢！ " Option="看把大家听得一惊一乍的样子。"/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />	
+<!-- 			<Action Cmd="GO_MAP" MapID="237" MapType="0" /> -->
+		</EnterMap>
+	</Step>
+	
+	<!-- 布多多布少少房间 -->
+	<Step ID="2" TarMapID="237">
+		<EnterMap MapID="237">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />	
+			<Action Cmd="SET_ATTRIBUTE" Level="buttonLevel" ResName="npc_10010" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="buttonLevel" ResName="npc_10011" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1"/>	
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10011" Face="正常" Msg="其实我跟布多多当时还是很害怕，但一想到么么公主和丫丽两个女孩子的安全，我们马上就像打了鸡血一样的，什么也不怕了！" Option="这种英雄救美的事情，我怎么就一次都没遇到过呢？"/>
+				<Talk NpcID="10010" Face="正常" Msg="你们是不知道，当时的情况别提有多危险了。" Option="快给我们讲讲吧！"/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			<Action Cmd="PLAY_MOVIE" Param="101(2)" Name="movie_101(2)" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101(2)" />
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10010" Face="正常" Msg="我们费了好大的力气，才把喵星人降服了！" Option="多多、少少什么时候变这么勇敢了？"/>
+				<Talk NpcID="10011" Face="正常" Msg="我们一直都很勇敢的，只是没有机会表现罢了！" Option="赶快把你们抓到的喵星人牵出来溜溜吧！好想看，好想看……"/>
+				<Talk NpcID="10011" Face="正常" Msg="这……今天大家来的可真不是时候，这只喵星人已经被送到皇宫的秘密基地去了。" Option="秘密基地？专门搞外星生物研究？"/>
+				<Talk NpcID="10010" Face="正常" Msg="这我们就不知道了，你得去问问么么公主，她肯定知道。" Option="哇哈哈，我也好期待碰到一次外太空来的生物呀！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />	
+			<Action Cmd="GO_MAP" MapID="110" MapType="0" />
+		</EnterMap>
+	</Step>
+	
+	<!-- 么么的卧室 -->
+	<Step ID="3" TarMapID="110">
+		<EnterMap MapID="110 ">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1"/>	
+			
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10002" Face="焦急" Msg="我知道零在前哨站外面建立了恶魔基地，本来我们是打算偷偷溜去前哨站打探情况。" Option="然后遇到了一只“穷凶极恶”的喵星人？"/>
+				<Talk NpcID="10002" Face="开心" Msg="可谁知在粒粒小广场却遇到了一只从树上摔下来的小猫咪，看它好像很可怜的样子，就先把它抱回皇宫了。" Option="⊙﹏⊙‖∣……"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			          
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10002" Face="疑惑" Msg="{$username}，刚刚你们说的那个什么“穷凶极恶”的喵星人又是怎么回事呢？" Option="没什么事了。"/>
+				<Talk NpcID="10009" Face="正常" Msg="一定是有人又在吹牛皮、说大话了。这下可糗大咯！么么公主，我们继续来给小猫咪装扮吧！" Option="这牛皮还吹的不小！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="0"/>
+			<Action Cmd="OPEN_PANEL" Param="TaskCatAlienGame" /> 
+		</EnterMap>
+	</Step>
+				
+	<Step ID="4" >	
+		<SubmitScore ModuleID="10073" MinScore="1" LoseMsg="　　你还没有完成化妆，需要继续试么？" >
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="0"/>
+			<Action Cmd="OVER" />
+		</SubmitScore>
+	</Step>
+</Tasks>

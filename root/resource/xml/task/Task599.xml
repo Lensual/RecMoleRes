@@ -1,0 +1,112 @@
+<Tasks ID="599" Name="艾莲娜的真意" AwardMsg="恭喜你获得100个火神纹章、狐狸面具、艾莲娜的日记！" AwardBean="" >
+
+	<!-- 永夜哨站  -->
+	<Step ID="1" TarMapID="342">
+		<NPC ID="10213" Option="艾莲娜的真意"  MapID="" >
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10213" Face="悲伤" Msg="自从艾莲娜被黑魔法师掳走后，我一直都被噩梦所困扰。每每深夜惊醒，都会回想起我可怜的女儿，就这样被带去了不知道多远的远方。" Option=""/>
+				<Talk NpcID="10213" Face="悲伤" Msg="比起女神之泪的遗失，更让我悲伤的是，我失去了最宝贝的女儿，她的欢笑依然留在我的脑海，但身为父亲却不能好好保护她！" Option=""/>
+				<Talk NpcID="10213" Face="悲伤" Msg="每天每天都沉浸在悲痛中，我已经无法将火神庆典继续准备下去了……{$username}，我该怎么办？" Option=""/>
+			</Action>
+			
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10197" Face="惊讶" Msg="小火马，你怎么在这里？" Option=""/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10213" Face="正常" Msg="小火马好像是要我们跟着它走，{$username}，我们追上去吧！" Option=""/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			<Action Cmd="GO_MAP" MapID="339" MapType="0" />
+		</NPC>
+			
+		<EnterMap MapID="339">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10197" Face="惊讶" Msg="小火马跑哪里去了？" Option=""/>
+				<Talk NpcID="10213" Face="正常" Msg="看地上着火的脚印，这就是线索！" Option=""/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			
+			<Action Cmd="ALERT" Param="找到了艾莲娜火神杯日记第1、2页！" Face="开心" />
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10213" Face="正常" Msg="这……这是艾莲娜的笔迹！里面记录了火神杯期间发生的事情。难道火马要给我们看这个？走，我们继续追！" Option=""/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />
+			<Action Cmd="GO_MAP" MapID="337" MapType="0" />
+		</EnterMap>
+			
+		<EnterMap MapID="337">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="200" Name="movie_200" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="DELETE_MOVIE" Param="movie_200" />
+			
+			<Action Cmd="ALERT" Param="找到了艾莲娜火神杯日记第3、4页！" Face="开心" />
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10213" Face="正常" Msg="果然如此，看来继续追着火马下去，一定能找到更多！{$username}，走吧！" Option=""/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />
+			<Action Cmd="GO_MAP" MapID="341" MapType="0" />
+		</EnterMap>
+		
+		<EnterMap MapID="341">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10215" Face="正常" Msg="我让火马引导你们来，是想告诉你们一件事。" Option=""/>
+				<Talk NpcID="10215" Face="正常" Msg="2年前，我进入了休眠，并有可能永远休眠下去的时候，{$username}，你带来的一颗火种将我唤醒。而这颗火种，蕴含着时之女神的魔力。" Option=""/>
+				<Talk NpcID="10215" Face="正常" Msg="这是否是时之女神对我怠惰的提醒呢，我急忙催醒火山，让滚滚岩浆重新如血液般流动！而在那时，我见到了一位背着萤火虫灯的女孩，并从她身上感受到了熟悉的力量。" Option=""/>
+				<Talk NpcID="10215" Face="正常" Msg="当你跳上岩石拯救她的时候，那股力量凝聚在了那个落入岩浆的护身符上，在岩浆中诞生了这匹火马。" Option=""/>
+				<Talk NpcID="10197" Face="疑惑" Msg="您是说，这匹火马是艾莲娜呼唤出来的？" Option=""/>
+				<Talk NpcID="10215" Face="正常" Msg="正是如此。将这匹马当做女神之泪的馈赠吧。愿它能让你们记起，女神之泪的真意。" Option="艾莲娜的……真意？"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_7" />
+			
+			<Action Cmd="ALERT" Param="找到了艾莲娜火神杯日记第5、6页！" Face="开心" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="1000" Name="movie_1000" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="DELETE_MOVIE" Param="movie_1000" />
+			
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+			<Action Cmd="GO_MAP" MapID="342" MapType="0" />
+		</EnterMap>	
+	</Step>
+	
+	
+	<!-- 永夜哨站 -->
+	<Step ID="2" TarMapID="342">
+		<NPC ID="10213" Option="艾莲娜的真意"  MapID="" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="0"/>
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10213" Face="正常" Msg="{$username}，我这一路上，把艾莲娜的日记看了一遍又一遍……她是真心希望摩利亚和摩尔庄园的摩尔们，能幸福快乐地生活下去。" Option=""/>
+				<Talk NpcID="10213" Face="正常" Msg="我想，如果让火神庆典停止举办了，艾莲娜一定会因为大家的脸上失去笑容，而责怪我这个当父亲的吧。" Option=""/>
+				<Talk NpcID="10213" Face="正常" Msg="正是因为在这种时候，我们才应该举办盛大的庆典，鼓舞大家，不要为失去的感到惋惜，要珍惜现在拥有的一切，也要相信自己的双手能创造一切！" Option=""/>
+				<Talk NpcID="10213" Face="正常" Msg="{$username}，谢谢你让我这个当父亲的明白了女儿的真意。这本艾莲娜的日记本，就送给你吧！" Option=""/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			
+			<Action Cmd="TASK_SHOW_SELF" Hide="0"/>
+			<Action Cmd="OVER" />
+		</NPC>
+	</Step>
+</Tasks>

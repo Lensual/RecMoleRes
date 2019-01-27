@@ -1,0 +1,135 @@
+<Tasks ID="528" Name="“威尼斯人”之旅" AwardMsg="恭喜你获得香蕉鱼裙、2000摩尔豆!" AwardBean="2000" >
+	<Step ID="1" >
+	
+		<EnterMap MapID="50001" >       
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />   
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsFullScreen="1" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="0" />
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+			<Action Cmd="GO_MAP" MapID="239" MapType="0" />		
+		</EnterMap>		
+	</Step>			
+	
+	<Step ID="2" >
+		<EnterMap MapID="239" >
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10000" Visible="0" /> 
+			<Action Cmd="PLAY_MOVIE" Param="20" Name="movie_20" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="正常" Msg="哇哦~{$username}，你是说保罗王子和人鱼公主从国外寄来了明信片？来，给我也看看呢！" Option="嗯，好呀~" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_20" />
+				<Action Cmd="TASK_SHOW_SELF" Hide="1" />
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10009" Face="正常" Msg="乐乐，{$username}，你们在这儿干嘛呢！明天要交作业了，都写完了吗？" Option="嘻嘻，给你们看个好东西！" />
+				<Talk NpcID="10009" Face="正常" Msg="什么好东西呀？哇！这是——保罗王子和人鱼公主寄来的明信片？" Option="是呀，他们去环游世界度蜜月呢！" />
+				<Talk NpcID="10010" Face="正常" Msg="咦？这地方……看起来好眼熟呀，我觉得我在哪里见过！" Option="见过？在哪儿见的？书上吧？" />
+				<Talk NpcID="10010" Face="正常" Msg="才不是呢！就在粒粒小广场那边。前两天我路过时，看见那里在搞装修，那建筑的样子，就跟明信片上的一模一样。你们要是不信，我们一起去粒粒小广场看看！" Option="好啊，反正上课还早，我们就去看看！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />	
+				<Action Cmd="TASK_SHOW_SELF" Hide="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10000" Visible="1" />  
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+			<Action Cmd="GO_MAP" MapID="47" MapType="0" />	
+		</EnterMap>		
+	</Step>
+	
+	<Step ID="3" >
+		<EnterMap MapID="47" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="惊讶" Msg="哇~~多多说得果然没错，真的跟明信片上的景色一模一样呢！可是，粒粒小广场怎么变成这样了？" Option="我们还一直都没发现呢！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />	
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10127" Face="正常" Msg="嗨，同学们！没想到你们自己提前过来了，那看来我们可以提早进行实践课了！" Option="实践课？在这里吗？" />
+				<Talk NpcID="10127" Face="正常" Msg="没错！你们眼前所看到的，正是我这些天的劳动成果。我仿照澳门威尼斯人酒店，在粒粒小广场搭建了一个酒店模拟场景，怎么样，还不错吧？" Option="岂止不错，简直太棒了！" />
+				<Talk NpcID="10127" Face="正常" Msg="作为一个酒店管理人员，不亲身体验豪华酒店的氛围是万万不行的！所以，大家都去体验体验威尼斯人酒店的风情吧！完了我们再回教室上课。" Option="炸花校长真是太好了！" />
+				<Talk NpcID="10127" Face="正常" Msg="待会儿你们还可以去体验下威尼斯的特色交通工具——贡多拉。不过，我先来考考你们，嘿嘿~" Option="哦？考我们什么呢？" />
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsFullScreen="1" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10127" Face="正常" Msg="没错，贡多拉是威尼斯一种独具特色的船，在澳门的威尼斯人酒店里也可以体验到，当然，今天它也出现在了我们庄园。接下来，就由你们自己去体验咯！" Option="嗯，好的！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />	
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="正常" Msg="哇~是魔术呢！{$username}，咱们去玩一玩吧！" Option="好呀，我也喜欢魔术！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_7" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="0" />
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />
+			<Action Cmd="OPEN_PANEL" Param="VeniceMaginner" /> 																			
+		</EnterMap>	
+	</Step>
+	
+	<Step ID="4" >
+ 		<SubmitScore ModuleID="10039" MinScore="-1" LoseMsg="很遗憾你没有识破魔术师的伎俩，继续努力！" >
+ 		<!-- 无法完成，-1找barlow -->
+			<Action Cmd="SAY" >
+				<Talk NpcID="10009" Face="正常" Msg="这威尼斯人酒店还挺有意思的呢！{$username}，咱们再去体验下炸花校长说的那个“贡多拉”船吧！" Option="嗯，好呀~" />
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="8" Name="movie_8" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_8" />
+			<Action Cmd="SET_BUFFER" Panel="5" Step="5" />
+			<Action Cmd="OPEN_PANEL" Param="WaterTaxiGame" /> 
+		</SubmitScore>			
+	</Step>	
+		
+	<Step ID="5" >
+		<SubmitScore ModuleID="10040" MinScore="1" LoseMsg="小摩尔没能在游戏中获得10分以上，要重新试试么？" > 
+ 			<Action Cmd="TASK_SHOW_SELF" Hide="1" />
+ 			<Action Cmd="PLAY_MOVIE" Param="9" Name="movie_9" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10127" Face="正常" Msg="好咯，虽然我很想让同学们再多体验下，不过现在，我们该回教室上课啦！" Option="啊，好吧" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_9" />
+				<Action Cmd="TASK_SHOW_SELF" Hide="0" />	
+			<Action Cmd="SET_BUFFER" Panel="6" Step="6" />
+			<Action Cmd="GO_MAP" MapID="321" MapType="0" />		
+		</SubmitScore>			
+	</Step>	
+	
+	<Step ID="6" >
+ 		<EnterMap MapID="321" >
+ 			<Action Cmd="TASK_SHOW_SELF" Hide="1" />
+			<Action Cmd="PLAY_MOVIE" Param="10" Name="movie_10" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10127" Face="正常" Msg="同学们，今天体验了威尼斯人酒店，大家感觉怎么样呀？" Option="非常不错呢，是一个很有特色的地方！" />
+				<Talk NpcID="10127" Face="正常" Msg="没错，小摩尔刚刚提到了非常重要的一点——特色！现在各种豪华酒店层出不穷，能否做出自己的特色，直接决定了酒店的命运。" Option="嗯……确实如此！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_10" />
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsFullScreen="1" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />
+			<Action Cmd="PLAY_MOVIE" Param="11" Name="movie_11" IsBg="1"/>
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10127" Face="正常" Msg="看来少少同学实在是很困，那么我们就来动一动吧。少少，你来扮演酒店的工作人员，其他小摩尔来当酒店的客人吧！" Option="哈哈，好呀~" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_11" />
+			<Action Cmd="PLAY_MOVIE" Param="12" Name="movie_12" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_12" />
+			<Action Cmd="PLAY_MOVIE" Param="104" Name="movie_104" IsFullScreen="1" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_104" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="npc_10127" Visible="1" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="0" />
+			<Action Cmd="OVER" />
+		</EnterMap>	
+	</Step>	
+	
+	
+</Tasks>
+
+
+

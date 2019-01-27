@@ -1,0 +1,34 @@
+<Tasks ID="631" Name="女神伊莉丝" AwardMsg="恭喜你获得家园装饰马年剪纸，2个金橘。" AwardBean="">
+	<Step ID="1" TarMapID="360">
+		<EnterMap MapID="360">
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10260" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="sbwocao" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10260" Face="悲伤" Msg="骰子，你在哪里？骰子，快回来吧~~~~~" Option="库拉，骰子还是没有找到吗？"/>
+				<Talk NpcID="10260" Face="悲伤" Msg="骰子，好像永远都凑不齐了~" Option="神都走了，库拉你就别守在这里了~"/>
+				<Talk NpcID="10260" Face="悲伤" Msg="就是因为神都走啊~~~~~~彩虹桥不能再传送到任何想要去的地方了啊~~~~~~再也看不到我的伊莉丝女神了啊~~~~~" Option="咦？不是找骰子的吗？难道除了那三个神还有一个叫伊莉丝的女神？？？"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1"/>
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			<Action Cmd="SAY">
+				<Talk NpcID="10260" Face="感动" Msg="我跟你说呀，那一天，我在拉姆学院附近寻找骰子的分身……（以下略去一万字细节描写，那天的阳光，那天的空气，那天的花香，那天的鸟叫等等）" Option="库拉，女神到底是谁啊？"/>
+				<Talk NpcID="10260" Face="感动" Msg="那天那个到处逃跑的影子一定是骰子，是骰子来帮我和我的女神相遇了！" Option="啊？"/>
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			<Action Cmd="SAY">
+				<Talk NpcID="10260" Face="感动" Msg="是不是？是不是？虽然骰子没有找到……" Option="(⊙o⊙)…库拉的春天?"/>
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10260" Visible="1" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="sbwocao" Visible="1" />
+			<Action Cmd="OVER"/>
+		</EnterMap>
+	</Step>
+	
+	
+	
+</Tasks>

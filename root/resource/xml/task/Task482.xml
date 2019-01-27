@@ -1,0 +1,63 @@
+<Tasks ID="482" Name="最无辜的坏蛋" AwardMsg="恭喜你获得5个羊毛、5个棉花、5个茧。" AwardBean="0" >
+	<Step ID="1" >
+		<NPC ID="10012" Option="最无辜的坏蛋" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10012" Face="正常" Msg="{$username}，小乖的BIBO小助手出毛病了，恐怕以后都不能再使用了！" Option="啊？出了什么事？" />
+				<Talk NpcID="10018" Face="正常" Msg="呜呜，我也不知道，今天起来，就发现BIBO小助手被人给弄坏了~" Option="是谁干的坏事呢！" />
+				<Talk NpcID="10012" Face="正常" Msg="好像兔兔主编那边也遇到了一些麻烦，（玩家昵称），你去兔兔主编那里看看呢！" Option="好，我这就去！" />
+			</Action>
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+			<Action Cmd="GO_MAP" MapID="45" MapType="0" />
+		</NPC>
+	</Step>
+	
+	<Step ID="2" >
+		<NPC ID="10015" Option="最无辜的坏蛋" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10015" Face="正常" Msg="啊？好多东西都被破坏了？我们先来查查凶手藏在哪里。" Option="好的！" />
+			</Action>
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+			<Action Cmd="OPEN_PANEL" Param="Task460SeeCluePanel" />
+		</NPC>
+	</Step>
+	
+	<Step ID="3" >
+		<SubmitScore ModuleID="10001" MinScore="1" LoseMsg="你失败了！" >
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10016" Face="正常" Msg="啊？好多东西都被破坏了？我们先来查查凶手藏在哪里。" Option="恩！" />
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10016" Face="正常" Msg="好哇，原来是骰子干的好事！说，你为什么要把庄园里的那些东西给破坏掉？" Option="骰子是个坏蛋！" />
+				<Talk NpcID="10016" Face="正常" Msg="我，我不是故意的~我只是想在主人生日之前为他准备一件新衣服。到处找材料，不小心把那些东西弄坏了的……" Option="额……真的吗？" />
+				<Talk NpcID="10017" Face="正常" Msg="可惜我材料还是没找齐，这可怎么办嘛~谁能帮帮我呀！" Option="看来骰子还真不是故意的！" />
+				<Talk NpcID="10017" Face="正常" Msg="小摩尔你们能帮帮我吗？帮我一起为主人做一件生日新衣服，等6月1日主人生日时，我一定送超级拉姆报答你！" Option="恩，好吧，帮你一起搜集材料做衣服！" />
+				<Talk NpcID="10017" Face="正常" Msg="好耶~主人有新衣服咯，嘻嘻~6月1日我一定会送小摩尔超级拉姆的！" Option="嗯，好吧！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			<Action Cmd="OVER" />
+		</SubmitScore>
+	</Step>
+	
+	<Step ID="3" >
+		<SubmitScore ModuleID="10001" MinScore="1" LoseMsg="你失败了！" >
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10016" Face="正常" Msg="啊？好多东西都被破坏了？我们先来查查凶手藏在哪里。" Option="恩！" />
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10016" Face="正常" Msg="好哇，原来是骰子干的好事！说，你为什么要把庄园里的那些东西给破坏掉？" Option="骰子是个坏蛋！" />
+				<Talk NpcID="10016" Face="正常" Msg="我，我不是故意的~我只是想在主人生日之前为他准备一件新衣服。到处找材料，不小心把那些东西弄坏了的……" Option="额……真的吗？" />
+				<Talk NpcID="10017" Face="正常" Msg="可惜我材料还是没找齐，这可怎么办嘛~谁能帮帮我呀！" Option="看来骰子还真不是故意的！" />
+				<Talk NpcID="10017" Face="正常" Msg="小摩尔你们能帮帮我吗？帮我一起为主人做一件生日新衣服，等6月1日主人生日时，我一定送超级拉姆报答你！" Option="恩，好吧，帮你一起搜集材料做衣服！" />
+				<Talk NpcID="10017" Face="正常" Msg="好耶~主人有新衣服咯，嘻嘻~6月1日我一定会送小摩尔超级拉姆的！" Option="嗯，好吧！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			<Action Cmd="OVER" MapID="38" MapType="0"  />
+		</SubmitScore>
+	</Step>
+</Tasks>

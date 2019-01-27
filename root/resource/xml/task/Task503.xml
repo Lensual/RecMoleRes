@@ -1,0 +1,57 @@
+<Tasks ID="499" Name="迷失的海底乐园" AwardMsg="恭喜你完成了“迷失的海底乐园”！" AwardBean="1000" >
+	<Step ID="1" >
+		<EnterMap MapID="255" >
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10097" Face="正常" Msg="海底乐园站到站，请乘客从右边车门下车！" Option="龙王丸号真快！" />
+				<Talk NpcID="10097" Face="开心" Msg="那是当然，老夫的车技海底第一!你们速速下车！俺还要去拉下一波游客！" Option="好呀好呀！迫不及待了！" />
+				<Talk NpcID="10098" Face="开心" Msg="等等！{$username}" Option="还有什么事？" />
+				<Talk NpcID="10098" Face="开心" Msg="给你一本“乐园纪念明信片”！这可是我的私藏哦，一般人我可不给他！" Option="乐园纪念明信片！？" />
+				<Talk NpcID="10098" Face="开心" Msg="玩游乐设施有一定几率会点亮地图上的区域，全部点亮，就可以去海底管理员那兑换超萌的章鱼王头套啦！" Option="⊙o⊙这么给力！！！？" />
+				<Talk NpcID="10098" Face="开心" Msg="是啊，哈哈，我们既然是好朋友，这个肯定要告诉你啦！！咻咻~" Option="那等下我怎么回去呢！？" />
+				<Talk NpcID="10098" Face="开心" Msg="我先下车啦！！！哈哈！你等下来找我哦！我送你一把好玩的超级无敌大水枪！" Option="矮油，还有礼物啊~" />
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+			<Action Cmd="GO_MAP" MapID="256" MapType="0" />
+		</EnterMap>
+	</Step>
+	
+	<Step ID="2" >
+		<EnterMap MapID="256" >
+			<Action Cmd="SET_BUFFER" Panel="2" Step="3" />
+			<Action Cmd="OPEN_PANEL" Param="HappySummerPanel" Data="4" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+		</EnterMap>
+	</Step>
+	
+	<Step ID="3" >
+		<NPC ID="10101" Option="关于乐园明信片" >
+		
+		</NPC>
+		
+		<Test Bits="1" >
+			<In>
+				<Action Cmd="SAY" >
+					<Talk NpcID="10101" Face="正常" Msg="恭喜你,{$username}，获得了海洋娱乐协会送出的章鱼王头套！" Option="拆开看看！" />
+				</Action>
+				
+				<Action Cmd="OVER" />
+			</In>
+			
+			<Out>
+				<Action Cmd="SAY" >
+					<Talk NpcID="10101" Face="正常" Msg="想要获得章鱼王头套吗！？那就把明信片上的区域全部点亮吧！！！" Option="我要，我要！" />
+					<Talk NpcID="10101" Face="开心" Msg="呵呵，朋友，你的地图卡还没全部点亮哦！" Option="我再去试一下!" />
+				</Action>
+			</Out>
+		</Test>
+	</Step>
+</Tasks>

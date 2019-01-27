@@ -1,0 +1,58 @@
+<Tasks ID="505" Name="最炫超拉风" AwardMsg="恭喜你获得30冰泉宝贝参与积分" AwardBean="1351398" >
+	<Step ID="1" >
+		<EnterMap MapID="42" >
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3"/>
+				
+			<Action Cmd="SAY" >
+				<Talk NpcID="10102" Face="正常" Msg="荷叶罗裙一色裁，芙蓉向脸两边开。清风捎却沁脾香，荷花仙子踏莲来。" Option="最炫超拉风" />
+				<Talk NpcID="10102" Face="正常" Msg="{$username}，我们又见面了。" Option="( ⊙o⊙ )哇，神仙姐姐好！" />
+				<Talk NpcID="10102" Face="正常" Msg="这次你的运气很好，我感应到海妖国秘宝之一：步步生莲坐骑将要重现天日，说不定你能有缘得到它！" Option="步步生莲坐骑？" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />	
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />	
+			<!--步步生莲的全屏动画  -->
+			<Action Cmd="SAY" >
+				<Talk NpcID="10102" Face="正常" Msg="光阴流转间，海妖王后也仙逝了。而自此之后，步步生莲坐骑便被深藏于海妖宝藏之中，成为了海妖国的传说。" Option="真的有海妖宝藏吗？" />
+				<Talk NpcID="10102" Face="正常" Msg="嗯，海妖宝藏历来是海妖一族的秘传禁地，所以一直颇为隐秘。不过近日我感应到海妖宝藏频频出现异动，想必不久之后或许会重现天日。" Option="哇，我也要去海妖宝藏探险！" />
+				<Talk NpcID="10102" Face="正常" Msg="呵呵，有决心有勇气是好事情。若你能得到七色莲叶，等到7月28日海妖宝藏结界变弱之时，或许你将有机会获得步步生莲坐骑。" Option="怎样才能得到七色莲叶呢？" />
+				<Talk NpcID="10102" Face="正常" Msg="七色莲叶原是极难寻见的传说中的植物。不过……" Option="不过怎么了？" />
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />
+			<!-- 荷花仙子头上出现冒泡动画 -->	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10102" Face="正常" Msg="事情的经过就是这样 -_-|||，你去海底冰泉管理员帕帕囧那看看，或许能得到七色莲叶。" Option="好的 -_-|||" />
+			</Action>
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+			<Action Cmd="GO_MAP" MapID="259" MapType="0" />			
+		</EnterMap>	
+	</Step>
+	
+	<Step ID="2" >
+		<EnterMap MapID="259" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10105" Face="正常" Msg="这位客官，要洗冰泉吗？" Option="你知道七色莲叶吗？" />
+				<Talk NpcID="10105" Face="正常" Msg="看你一脸很想要的表情，想要吗？真的想要吗？如果你在冰泉活动的参与积分达到50，我就给你吧~" Option="怎么获得冰泉参与积分？" />
+			</Action>
+				<Action Cmd="OPEN_PANEL" Param="HappySummerPanel" Data="2"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10105" Face="正常" Msg="别说我小气，我这宝贝数量有限，就只能先换给超级拉姆了。好了，又有客人来了，我要先去忙了，等你冰泉的参与积分到50的时候再来跟我换七色莲叶吧！" Option="嗯，我一定会努力的！" />
+			</Action>	
+				<!-- 打开冰泉积分面板
+				<Action Cmd="OPEN_PANEL" Param="SuperLahmIntroPanel" Data="2"/>	
+			 打开怎样获得魅力值的说明面板 			
+			<Action Cmd="OPEN_PANEL" Param="SuperLahmIntroPanel" Data="1"/>	
+			 
+			 打开超级拉姆特权升级面板 -->
+			 <Action Cmd="PLAY_MOVIE" Param="8" Name="movie_8" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_8" />	
+			<Action Cmd="OPEN_PANEL" Param="DazzlePanel2" />
+			<Action Cmd="OVER" />
+		</EnterMap>	
+	</Step>
+	
+	
+</Tasks>

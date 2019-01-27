@@ -1,0 +1,101 @@
+<Tasks ID="640" Name="转动的命运之轮" AwardMsg="恭喜你获得1个小屋玩偶爱精灵莓可和1只牧场动物哒哒鸟。" AwardBean="">
+	<Step ID="1" TarMapID="364">
+		<EnterMap MapID="364">
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10273" Face="正常" Msg="来自未来的小摩尔，欢迎你来到勇士的国度……" Option="咦？王子呢？坏坏呢？那个假装可怜的家伙呢？"/>
+				<Talk NpcID="10273" Face="正常" Msg="命运之轮已经启动，时空钥匙和时空之门已经相遇" Option="美女姐姐，你是谁啊？不要说奇怪的话，我听不懂"/>
+				<Talk NpcID="10273" Face="正常" Msg="我是时之女神贝尔丹蒂，你的王子和那个叫做坏坏的小生命他们安然无恙。" Option="他们没有一起过来的吗？"/>
+				<Talk NpcID="10273" Face="正常" Msg="是的……" Option="那我……"/>
+				<Talk NpcID="10273" Face="正常" Msg="你需要去逆转命运之轮，拯救摩尔世界！" Option="那个……女神大人，我觉得自己只是个普通的摩尔，这个……"/>
+				<Talk NpcID="10273" Face="正常" Msg="偶然就是必然，必然就是偶然，你是被选中的勇士。请去完成你的使命！" Option="女神大人……"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1"/>
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2"/>
+			<Action Cmd="JUMP_TASK_UI" Param="    时之女神大大，小摩尔想要回家，女神大大是要把我送去哪里啊？哇，金光好刺眼……"/>
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2"/>
+			<Action Cmd="GO_MAP" MapID="365" MapType="0"/>
+		</EnterMap>
+	</Step>
+	<Step ID="2" TarMapID="365">
+		<EnterMap MapID="365">
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3"/>
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />
+			<Action Cmd="JUMP_TASK_UI" Param="    皮皮克克是个奇怪的人哎~这是要拉着我去哪里？喂！"/>
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3"/>
+			<Action Cmd="GO_MAP" MapID="368" MapType="0"/>
+		</EnterMap>	
+	</Step>
+	<Step ID="3" TarMapID="368">
+		<EnterMap MapID="368">
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10274" Face="正常" Msg="村长，村长，勇士来了！" Option="喂，我不是勇士"/>
+				<Talk NpcID="10275" Face="正常" Msg="恩恩，我们可算把你盼来了！勇士啊，请你一定要拯救我们，拯救整个摩尔的世界！" Option="村长爷爷，我可以知道是什么情况吗？"/>
+				<Talk NpcID="10275" Face="正常" Msg="你还记得你是怎么来的吗？" Option="就是……"/>
+				<Talk NpcID="10275" Face="正常" Msg="恩，很好，你果然知道时空之门和时空钥匙的秘密，一定是你不会错了！" Option="你们都不能好好说话吗？什么是时空之门和时空钥匙啊？"/>
+				<Talk NpcID="10275" Face="正常" Msg="哈哈哈哈，小家伙，原来你不知道《勇士之书》就是时空之门啊！" Option="哦~~~~~~~~~就是那本书啊~快给我讲讲"/>
+				<Talk NpcID="10275" Face="正常" Msg="那就听我慢慢讲！" Option="....."/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4"/>
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />
+			<Action Cmd="PLAY_MOVIE" Param="104" Name="movie_104" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_104"/>
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4"/>
+		</EnterMap>
+	</Step>
+	<Step ID="4" TarMapID="368">
+		<EnterMap MapID="368">
+			<Action Cmd="PLAY_MOVIE" Param="200" Name="movie_200" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_200"/>
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_5"/>
+			<Action Cmd="PLAY_MOVIE" Param="105" Name="movie_105" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_105"/>
+			<Action Cmd="JUMP_TASK_UI" Param="    这又是要我去哪里啊？女神，救命啊，王子不是勇士吗？为什么我是勇士啊？喂"/>
+			<Action Cmd="SET_BUFFER" Panel="5" Step="5"/>
+			<Action Cmd="GO_MAP" MapID="369" MapType="0"/>
+		</EnterMap>	
+	</Step>
+	<Step ID="5" TarMapID="369">
+		<EnterMap MapID="369">
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_6"/>
+			<Action Cmd="PLAY_MOVIE" Param="106" Name="movie_106" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_106"/>
+			<Action Cmd="PLAY_MOVIE" Param="201" Name="movie_201" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_201"/>
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_7"/>
+			<Action Cmd="SET_BUFFER" Panel="6" Step="6"/>
+			<Action Cmd="GO_MAP" MapID="370" MapType="0"/>
+		</EnterMap>	
+	</Step>
+	<Step ID="6" TarMapID="370">
+		<EnterMap MapID="370">
+			<Action Cmd="PLAY_MOVIE" Param="8" Name="movie_8" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_8"/>
+			<Action Cmd="PLAY_MOVIE" Param="107" Name="movie_107" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_107"/>
+			<Action Cmd="PLAY_MOVIE" Param="202" Name="movie_202" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_202"/>
+			<Action Cmd="PLAY_MOVIE" Param="9" Name="movie_9" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_9"/>
+			<Action Cmd="PLAY_MOVIE" Param="108" Name="movie_108" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_108"/>
+			<Action Cmd="PLAY_MOVIE" Param="109" Name="movie_109" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_109"/>
+			<Action Cmd="OVER"/>
+		</EnterMap>
+	</Step>
+</Tasks>
+
+

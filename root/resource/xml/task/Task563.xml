@@ -1,0 +1,137 @@
+<Tasks ID="563" Name="年兽出没，请注意" AwardMsg="恭喜你获得3个百变灵石，2000摩尔豆！" AwardBean="" >
+	<!-- 摩尔拉雅滑冰场 -->
+	<Step ID="1" TarMapID="5">
+		<EnterMap MapID="5">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1"/>
+			
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10162" Face="正常" Msg="羊羊同学，说谁呢？把话说清楚，怎么就差别大了。" Option="狼狼同学，你确定要听？"/>
+				<Talk NpcID="10163" Face="正常" Msg="一个是让闻风丧胆的凶猛神兽，一个却是呆头呆脑的二愣子。{$username}，你说这差别还不大吗？" Option="嗯~~~好像是有那么一点点差距。"/>
+				<Talk NpcID="10162" Face="正常" Msg="哼~~~我就不信这个年兽真的有这么厉害，{$username}，你跟羊羊同学在这里等着，我现在就去把年兽给你们抓来！" Option="⊙﹏⊙别冲动！你不害怕，我害怕啊！！！"/>
+				<Talk NpcID="10162" Face="正常" Msg="{$username}，有我在，你放120个心！" Option="@_@就是有你在，才更加不放心啊！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+			<Action Cmd="GO_MAP" MapID="40" MapType="0" />
+		</EnterMap>
+	</Step>
+	
+	<!-- 浆果秘道 -->
+	<Step ID="2" TarMapID="40">
+		<EnterMap MapID="40">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="buttonLevel" ResName="black_mc" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="zhizhuBtn" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1"/>	
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10162" Face="正常" Msg="羊羊同学、{$username}，快救我下来，快救我下来！" Option="o_O谁让你一个人跑那么快……"/>
+				<Talk NpcID="10162" Face="正常" Msg="这是什么地方啊！黑漆嘛呜的一片，害得我被这该死的蜘蛛网给黏住了！" Option="@_@……"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+		</EnterMap>
+	</Step>
+	
+	<!-- 浆果秘道 -->
+	<Step ID="3" TarMapID="40">
+		<EnterMap MapID="40">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="buttonLevel" ResName="black_mc" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="zhizhuBtn" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="200" Name="movie_200" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_200" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />
+			<Action Cmd="GO_MAP" MapID="53" MapType="0" />
+		</EnterMap>
+	</Step>
+	
+	<!-- 学院教导处 -->
+	<Step ID="4" TarMapID="53">
+		<EnterMap MapID="53">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10007" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10008" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" IsBg="1" IsFullScreen="1"/>	
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="正常" Msg="O(∩_∩)o 哈哈~~~{$username}，这么早就来给大伯拜年了啦！还带了新朋友来！" Option="大伯，不好了，师父被妖怪抓走啦！"/>
+				<Talk NpcID="10163" Face="正常" Msg="{$username}，你电视看多了吧！！！是喜狼狼同学被年兽抓走啦！" Option="对对对~~~年兽！年兽！"/>
+				<Talk NpcID="10007" Face="焦急" Msg="什么？年兽！！！" Option="凶巴巴的样子可吓人了！"/>
+				<Talk NpcID="10163" Face="正常" Msg="也不知道喜狼狼同学现在怎么样了，我们还是赶快去救它吧！只怕去晚了……" Option="……o_O凶多吉少。"/>
+				<Talk NpcID="10007" Face="生气" Msg="叫上大家一起，齐心协力，赶走年兽，救出喜狼狼！" Option="这次一定要多带一点鞭炮！！！"/>
+			</Action>
+			
+			<Action Cmd="DELETE_MOVIE" Param="movie_7" />
+			<Action Cmd="SET_BUFFER" Panel="5" Step="5" />
+			<Action Cmd="GO_MAP" MapID="40" MapType="0" />
+		</EnterMap>
+	</Step>
+	
+	<!-- 浆果秘道 -->
+	<Step ID="5" TarMapID="40">
+		<EnterMap MapID="40">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			<Action Cmd="SET_BUFFER" Panel="6" Step="6" />
+			<Action Cmd="GO_MAP" MapID="66" MapType="0" />
+		</EnterMap>
+	</Step>
+	
+	<!-- 阿福号船舱  -->
+	<Step ID="6" TarMapID="66">
+		<EnterMap MapID="66">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="npc_10034" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="topLevel" ResName="npc_10009" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="8" Name="movie_8" IsBg="1" IsFullScreen="1"/>	
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10034" Face="正常" Msg="菩提啊菩提，好久不见啦！" Option="汉青，你都快一年没回庄园了。"/>
+				<Talk NpcID="10007" Face="正常" Msg="嚯嚯嚯~~老朋友，别来无恙啊！本来应该亲自来迎接你的，可谁知有点事给耽误了。" Option="\(^o^)/"/>
+				<Talk NpcID="10034" Face="正常" Msg="么么公主和丫丽已经给我说了，那位新来庄园的朋友怎么样了？" Option="还好，有惊无险……"/>
+				<Talk NpcID="10162" Face="正常" Msg="哇~~~你不会就是汉青吧？阿福号的主人？一看就是东方有钱人啊，拥有这么大一艘船！！！" Option="……"/>
+				<Talk NpcID="10034" Face="正常" Msg="哈哈哈~~~我这船上的东西，都只是一些东方的特产，虽然不是稀世珍宝，但每一件都极具浓厚的东方色彩。" Option="继续"/>
+				<Talk NpcID="10162" Face="正常" Msg="神秘的东方，肯定遍地都是黄金。地大物博的东方国度，真让人向往啊！" Option="贪财鬼，你难道忘了刚刚那个凶猛的年兽了吗？"/>
+				<Talk NpcID="10163" Face="正常" Msg="呆子，别忘了，刚刚差点把你吃掉的年兽，可是来自东方的哦！" Option="(⊙ｏ⊙)"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_8" />
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />
+			<Action Cmd="SET_BUFFER" Panel="7" Step="7" />
+		</EnterMap>
+	</Step>
+	
+	<!-- 阿福号船舱 -->
+	<Step ID="7" TarMapID="66">
+		<EnterMap MapID="66">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="OPEN_PANEL" Param="DischargeFireworks" ClearMap="0"/> 
+			<Action Cmd="ADD_EVENT" Param="task563Discharge" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="104" Name="movie_104" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_104" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="0"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="npc_10034" Visible="1" />
+			<Action Cmd="SET_ATTRIBUTE" Level="topLevel" ResName="npc_10009" Visible="1" />
+			<Action Cmd="OVER" />
+		</EnterMap>
+	</Step>
+</Tasks>

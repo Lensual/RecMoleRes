@@ -1,0 +1,194 @@
+<Tasks ID="536" Name="A计划大揭秘" AwardMsg="恭喜你获得兔萝卜、2000摩尔豆！" AwardBean="2000" >
+	<Step ID="1" >
+	
+		<EnterMap MapID="326" >
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="正常" Msg="大家不要怕！我菩提身经百战，对付这只小黑猫还是绰绰有余的！不过，它好像并不是想攻击大家，好像只是想向我们说明些什么呢？" Option="大伯还是要小心啊！" />
+				<Talk NpcID="10000" Face="疑惑" Msg="可是每个事发现场，都有许多黑猫的脚印，它肯定脱不了干系。它现在跟着我们到了这里，不知道又会发生什么奇怪可怕的事情！" Option="乐乐说的也有道理~~~" />
+				<Talk NpcID="10009" Face="正常" Msg="不要怕！我们这么多人，难道还斗不过一只黑猫吗？我倒要看看它能耍出什么花样来！" Option="丫丽就是丫丽！" />
+				<Talk NpcID="10002" Face="疑惑" Msg="可是这只黑猫怎么看，都不像是搞破坏的罪魁祸首啊！我们还是看看它想干什么再说吧！" Option="对，静观其变~~~" />
+				<Talk NpcID="10009" Face="正常" Msg="反正现在我们也是毫无头绪，不如先看看这只黑猫到底想带我们去哪儿，说不定还能找到一些线索呢。" Option="嗯，反正我们人多，不怕。" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />	
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+			<Action Cmd="GO_MAP" MapID="32" MapType="0" />	
+		</EnterMap>	
+	</Step>		
+		
+	<Step ID="2" >	
+		<EnterMap MapID="32" >
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />	
+			<!-- 弹出一个面板，现在还没做，一哥翻书类似的面板 -->
+			<Action Cmd="PLAY_MOVIE" Param="999" Name="movie_999" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_999" />	
+			<Action Cmd="PLAY_MOVIE" Param="2000" Name="movie_2000" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="生气" Msg="看来之前的推测没有错，果然跟库拉、黑暗天使有关系！这个可恶的库拉！" Option="(⊙_⊙)啊？" />
+				<Talk NpcID="10000" Face="疑惑" Msg="可为什么现场会有猫脚印，谁能保证你们不是一伙的？" Option="这个……" />
+				<Talk NpcID="10009" Face="疑惑" Msg="库拉为什么要来城堡里查找有关万圣节黑猫诅咒的传说呢？他到底想干什么？" Option="？？？" />
+				<Talk NpcID="10007" Face="正常" Msg="小黑猫，既然你发现了库拉和黑暗天使的可疑行径，并跟踪了他们，那你肯定知道他们接下来去了哪里？做了什么？" Option="赶快把你知道的说出来吧！" />
+				<Talk NpcID="10000" Face="正常" Msg="哼~谁知道你们是不是一伙的，别想把责任都推到别人身上。库拉捣鬼，这是肯定的；至于你有没有份参与其中……那就说不清楚了。" Option="(⊙_⊙)?" />
+				<Talk NpcID="10002" Face="悲伤" Msg="乐乐，我相信捷克哥哥不会这样的。虽然他逃脱不了黑猫的诅咒。但是我相信，就算哥哥失去了自我意识而化身成了黑猫，他的内心也是善良的。" Option="善良的么么公主……" />
+				<Talk NpcID="10007" Face="疑惑" Msg="现在不是争论这个的时候，目前最重要的，还是搞清楚库拉和黑暗天使到底有什么阴谋！他们究竟想利用“黑猫的诅咒”做什么呢？" Option="就是嘛！我也这样想的！" />
+				<Talk NpcID="10009" Face="正常" Msg="对，不管黑猫是好是坏，请大家放心，有我保护大家！先调查清楚库拉的阴谋比较重要！" Option="丫丽，大家的安危可都交给你了！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2000" />
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />	
+			<Action Cmd="GO_MAP" MapID="9" MapType="0" />	
+		</EnterMap>	
+	</Step>	
+	
+	<Step ID="3" >
+		<EnterMap MapID="9" >	
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />	
+			<Action Cmd="PLAY_MOVIE" Param="3000" Name="movie_3000" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="疑惑" Msg="之后我跟拉仔就出现了，看见一只黑猫的影子……难道，那个黑影就是小黑猫你？" Option="照这样来看，应该是它……" />
+				<Talk NpcID="10009" Face="正常" Msg="他有没有说谎，问问尤尤姐姐就知道了！最开始如果尤尤姐姐看到的是两只黑猫，那就说明他没撒谎；如果不是……" Option="如果不是，那他就是在撒谎！！！" />
+				<Talk NpcID="10007" Face="正常" Msg="对，先问问尤尤，看看当时发生的事情，是不是像小黑猫说的这样。" Option="尤尤姐姐应该还记得当时的情形。" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3000" />
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10050" Face="正常" Msg="大家都在呢，找我有什么事情吗？最近庄园里发生的怪事太多了，大家还是不要经常出来走动啊！" Option="我们有丫丽，不怕！" />
+				<Talk NpcID="10009" Face="正常" Msg="尤尤姐姐，我们来就是想搞清楚为什么庄园最近多了这么多奇怪的事情。你还记得那天发生在阳光牧场里的怪事吗？" Option="能跟我们详细说说吗？" />
+				<Talk NpcID="10050" Face="焦急" Msg="我那天可被吓坏了，就看见有黑影在农场里。“唰唰唰”几下功夫，就把我的农场弄得鸡飞狗跳的了……" Option="尤尤姐姐应该还记得当时的情形。" />
+				<Talk NpcID="10009" Face="正常" Msg="那你看清楚了有几个黑影没？是不是黑猫的影子？" Option="对！这才是关键啊！" />
+				<Talk NpcID="10050" Face="焦急" Msg="这……我倒是没注意，当时太混乱了，而且黑影移动的很快，根本看不清楚有几个。不过是猫的影子这倒是可以肯定的，因为牧场里留下了不少猫爪印！" Option="@_@……" />
+				<Talk NpcID="10000" Face="正常" Msg="尤尤姐姐记不清楚了没关系，不是还有梅森和阿七吗？他们肯定知道，我们赶快去开心农场问问他们不就清楚了嘛。" Option="万一他们也没看清楚呢？？？" />
+				<Talk NpcID="10007" Face="正常" Msg="小黑猫如果是在撒谎，谎言迟早会被揭穿的！既然大家都来到了事发现场，那我们就再四处看看，说不定还能找到一些线索。" Option="哇，最喜欢侦探破案神马的了！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />
+			<!-- 打开大家来找茬的游戏 -->	
+			<Action Cmd="OPEN_PANEL" Param="SmallSpyPanel" />	
+		</EnterMap>		
+	</Step>
+	
+	<Step ID="4" >
+		<SubmitScore ModuleID="10050" MinScore="1" LoseMsg="小摩尔，你还没找到5个关键线索哦！继续加油！" >
+			<!-- 场景中没人 -->
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="正常" Msg="{$username}，真是太谢谢你了！找到了这么重要的线索！" Option="(*^__^*) 嘻嘻，应该的！" />
+				<Talk NpcID="10007" Face="正常" Msg="现在我们再去开心农场找找线索吧！说不定还会有更大的收获。" Option="嗯，好的。" />
+			</Action>
+			<Action Cmd="SET_BUFFER" Panel="5" Step="5" />
+			<Action Cmd="GO_MAP" MapID="10" MapType="0" />																						
+		</SubmitScore>
+	</Step>	
+	
+	
+	<Step ID="5" >
+		<EnterMap MapID="10" >
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />	
+			<!-- movie5的最后一帧 -->
+			<Action Cmd="PLAY_MOVIE" Param="5000" Name="movie_5000" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="正常" Msg="我跟拉仔来到农场的时候，梅森和阿七就已经被悬挂在半空中了。" Option="那有黑影闪过吗？" />
+				<Talk NpcID="10000" Face="正常" Msg="不过只我们只看到一个黑猫的影子，没有两个。" Option="再跟梅森确认一下！" />
+				<Talk NpcID="10009" Face="正常" Msg="梅森跟阿七，一共两双眼睛，应该看清楚了的，问问便知道真相。哼~~~小黑猫的谎言就快被揭穿了！" Option="哇，紧张时刻啊！" />
+			</Action>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_5000" />
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10041" Face="正常" Msg="乐乐，你们怎么来了呀？大家也都在。" Option="来找你问问之前发生的事情……" />
+				<Talk NpcID="10000" Face="正常" Msg="我们找到了关于之前庄园频频发生怪事的重要线索。但还有一点小疑问需要问问你和阿七。" Option="乐乐还颇有小侦探的风采啊！" />
+				<Talk NpcID="10041" Face="焦急" Msg="上次我跟阿七正在农场里忙活着，不知道哪里刮来一阵风，只见两个黑影唰的一下从我眼前闪过……" Option="你确定看清楚了吗？" />
+				<Talk NpcID="10000" Face="正常" Msg="你确定是两个黑影？看清楚了，是两只黑猫的影子吗？" Option="是两只黑猫的影子吗？" />
+				<Talk NpcID="10041" Face="焦急" Msg="是不是黑猫这倒是没注意，不过我肯定是有两个黑影，其中的一个还会吐闪电，我和阿七都看见了的！" Option="吐闪电？怎么这么像……" />
+				<Talk NpcID="10022" Face="正常" Msg="对的~对的！现在想想那两只黑影还真有点像黑猫的样子，不过有点丑陋就是了。而且我在农场里也发现了猫脚印。" Option="现在是八九不离十可以得出结论了！" />
+				<Talk NpcID="10009" Face="正常" Msg="{$username}，你怎么看呢？你觉得谁的嫌疑最大？" Option="我觉得吧……" />
+			</Action>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />
+			<Action Cmd="SET_BUFFER" Panel="6" Step="6" />
+			<!-- 打开一个"谜底抢险猜"面板 -->	
+			<Action Cmd="OPEN_PANEL" Param="GuessAnswerPanel" Data ="1"/>
+		</EnterMap>	
+	</Step>
+	
+	<Step ID="6" >
+		<SubmitScore ModuleID="10048" MinScore="1" LoseMsg="小摩尔，有猜到么！" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="正常" Msg="从现在掌握的线索推推测，小黑猫说的应该是事实，它没有撒谎的可能性比较大。看来，这一切都是库拉和黑暗天使的阴谋！" Option="库拉！库拉！又是库拉！" />
+				<Talk NpcID="10007" Face="正常" Msg="这样一来，之前发生的所有事情也都说得过去了。" Option="比如……" />
+				<Talk NpcID="10007" Face="正常" Msg="库拉再聪明，也有疏忽的时候啊！害他露出马脚的，竟然是他身边的黑暗天使。" Option="这就叫百密一疏啊！" />
+				<Talk NpcID="10000" Face="正常" Msg="可现在还有谜团没解开……" Option="(＞﹏＜)~~~" />
+				
+				<Talk NpcID="10007" Face="疑惑" Msg="是城堡书房里，为什么会有打斗的痕迹吗？还有那半张掉落的便签纸，以及我们在阳光牧场找到的那五张小纸片，对吧？" Option="哇……分析的好到位啊！" />
+				<Talk NpcID="10009" Face="疑惑" Msg="这样看来，小黑猫还是没有完全洗脱嫌疑……" Option="嗯……就差这最关键的一步啦。" />
+				<Talk NpcID="10002" Face="正常" Msg="我相信它，一定是清白的！" Option="公主……" />
+				<Talk NpcID="10007" Face="正常" Msg="大家放心吧，最后的谜底很快就能解开啦！我们现在就去城堡书房吧！既然有打斗过的痕迹，就肯定会留下蛛丝马迹，大家一定要小心留意四周！" Option="最后谜底，即将揭晓。" />
+			</Action>
+			<Action Cmd="SET_BUFFER" Panel="7" Step="7" />
+			<Action Cmd="GO_MAP" MapID="32" MapType="0" />																						
+		</SubmitScore>
+	</Step>
+	
+	<Step ID="7" >
+		<EnterMap MapID="32" >
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_7" />
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />	
+			<!-- movie7的最后一帧 -->	
+			<Action Cmd="PLAY_MOVIE" Param="7000" Name="movie_7000" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="正常" Msg="库拉和黑暗天使竟然还想毁了城堡书房！真是岂有此理！" Option="太过分了！" />
+				<Talk NpcID="10000" Face="正常" Msg="现在看来……其实捷克王子变成的那只黑猫一直在帮助我们。" Option="呜呜呜~~~原来如此……" />
+				<Talk NpcID="10009" Face="正常" Msg="原来是我们错怪它了，都是库拉嫁祸给它的！没有它的指引，我们肯定找不到这些线索，说不定我们还毫无头绪的到处找黑猫呢。" Option="这次，还真多亏了它。" />
+				<Talk NpcID="10000" Face="正常" Msg="可……那半张纸条呢？还有找到的5块小纸片……" Option="对呀，这个谜底还没解开。" />
+			</Action>
+				<Action Cmd="DELETE_MOVIE" Param="movie_7000" />
+			<Action Cmd="PLAY_MOVIE" Param="8" Name="movie_8" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10002" Face="正常" Msg="大家快看！捷克王子，捷克王子在这里！" Option="啊！捷克王子恢复摩尔形象了吗？" />
+				<Talk NpcID="10036" Face="正常" Msg="相信大家现在都已经有结论了吧——到底谁才是真正的阴谋策划者！" Option="嗯……………………" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_8" />
+			<!-- 打开谜底抢先猜面板 -->
+			<Action Cmd="SET_BUFFER" Panel="8" Step="8" />
+			<Action Cmd="OPEN_PANEL" Param="GuessAnswerPanel"/>
+		</EnterMap>
+	</Step>
+	
+	<Step ID="8" >
+		<SubmitScore ModuleID="10048" MinScore="1" LoseMsg="小摩尔，你还没找到5个关键线索哦！继续加油！" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10036" Face="正常" Msg="虽然每年万圣节，我都逃不过黑猫的诅咒……可是我也不想给大家，给庄园带来危机，我只想大家能好好过一个万圣节。" Option="呜呜呜~我们的捷克王子……" />
+				<Talk NpcID="10007" Face="正常" Msg="捷克王子回来就好了！现在总算是虚惊一场，大家都平安无事！" Option="对，捷克王子不用担心。" />
+				<Talk NpcID="10000" Face="正常" Msg="只是还有这个纸条……" Option="对！还恶魔岛专用便签嘞……" />
+				<Talk NpcID="10036" Face="正常" Msg="如果我猜测的没错，那5块小纸片，应该就是纸条的另一半！只要我们把它拼凑起来，就应该知道纸条上的秘密了。" Option="事不宜迟，开始吧！" />
+			</Action>
+			<Action Cmd="SET_BUFFER" Panel="9" Step="9" />
+			<!-- 打开拼图的面板交互 -->
+			<Action Cmd="OPEN_PANEL" Param="SpainGhostPanel" />	
+		</SubmitScore>
+	</Step>
+		
+	<Step ID="9" >
+		<SubmitScore ModuleID="10049" MinScore="1" LoseMsg="小摩尔，你还没找到5个关键线索哦！继续加油！" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10036" Face="正常" Msg="好个库拉！竟然想利用黑猫的诅咒，来完成他的万圣节A计划！" Option="简直太可恶了！" />
+				<Talk NpcID="10007" Face="正常" Msg="好在大家齐心协力，成功破坏了库拉的阴谋！" Option="众志成城，战胜库拉！" />
+				<Talk NpcID="10002" Face="正常" Msg="太好了，现在终于真像大白了！哥哥，我就相信你肯定不会破坏庄园，更不会伤害大家的！我……我……" Option="看来公主的坚持是对的！" />
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="9" Name="movie_9" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_9" />
+			<Action Cmd="PLAY_MOVIE" Param="104" Name="movie_104" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_104" />		
+			<Action Cmd="PLAY_MOVIE" Param="105" Name="movie_105" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_105" />
+			<Action Cmd="OVER" />																			
+		</SubmitScore>
+	</Step>	
+</Tasks>

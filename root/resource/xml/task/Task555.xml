@@ -1,0 +1,70 @@
+<Tasks ID="555" Name="天使上" AwardMsg="恭喜你获得5个经验果实,5个蓝色水晶" AwardBean="" >
+	<!-- 新天使园  -->
+	<Step ID="1" TarMapID="50004">
+		<EnterMap MapID="50004" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsShowOthersMole="0" IsFullScreen="1"/>	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10153" Face="正常" Msg="就像河水汇入海洋，群星围绕太阳，新生的天使树孕育出了全新的天使，我就是其中的一只，我叫迪迪拉。" Option="你好呀~迪迪拉！" />
+				<Talk NpcID="10007" Face="开心" Msg="我们的新天使园总算是重建得差不多了，要想打败零的暗黑军团，还要靠我们的天使啊！" Option="新天使园一派生机勃勃的景象！" />
+				<Talk NpcID="10153" Face="正常" Msg="多亏有小摩尔们的帮忙，每天都来为天使园的生命精华补充能量，生命精华才能源源不断地为天使园提供正能量。" Option="天使宝宝们也能快快长大。" />
+				<Talk NpcID="10002" Face="焦急" Msg="只可惜身为公主，不能私自离开皇宫。唉~我都不能每天来天使园为生命精华补充能量。" Option="么么公主你现在不是来到天使园了吗？" />
+				<Talk NpcID="10007" Face="开心" Msg="么么，今天二叔不是带你来了吗？快跟{$username}一起去看看我们的新天使吧！" Option="\(^o^)/" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />	
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />		
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+		</EnterMap>	
+	</Step>	
+	
+	<!-- 新天使园  -->
+	<Step ID="2" TarMapID="50004">
+		<EnterMap MapID="50004" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />	
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsShowOthersMole="0" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />			
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+		</EnterMap>	
+	</Step>
+	
+	<!-- 新天使园  -->
+	<Step ID="3" TarMapID="50004">
+		<EnterMap MapID="50004" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />	
+			<!-- 打开如下交互面板。 -->
+			<Action Cmd="PLAY_MOVIE" Param="10" Name="movie_10" IsBg="1" IsShowOthersMole="0" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_10" />	
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1"/>		
+			<Action Cmd="SAY" >
+				<Talk NpcID="10002" Face="惊讶" Msg="哇~孵化室真神奇！才一会儿功夫，一只如此可爱，又热情似火的小天使就孵化出来了！" Option="天使宝宝都要先放在孵化室里孵化哦！" />
+				<Talk NpcID="10153" Face="开心" Msg="风风火火的小火鸡，从小就热情洋溢，活力十足，一心梦想成为百鸟之王！" Option="啊哦~火鸡变凤凰！" />
+				<Talk NpcID="10007" Face="开心" Msg="每只天使都有自己存在的独特价值和意义！焕然一新的天使园，一定会给庄园带来新希望的！" Option="新年新希望，天使棒棒棒！" />
+			</Action>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />								
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />
+		</EnterMap>	
+	</Step>
+	
+	<!-- 新天使园 -->
+	<Step ID="4" TarMapID="50004" >
+		<EnterMap MapID="50004" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />		
+			<Action Cmd="SAY" >
+				<Talk NpcID="10002" Face="疑惑" Msg="天使们都怎么了？怎么突然都变得这么躁动不安起来？" Option="性格活泼、好动而已啦！" />
+				<Talk NpcID="10007" Face="疑惑" Msg="大家似乎感觉到了什么，快看远处聚集起来的黑色烟雾，这不像是暴风雨前夕黑压压的乌云！" Option="哇~年纪大了，远视眼就是好使啊！" />
+				<Talk NpcID="10153" Face="焦急" Msg="庄园里的黑暗力量正在不断聚集，而且这种感应越来越强烈了。" Option="怎么越看越像是从前哨站方向传来的呢？" />
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsShowOthersMole="0" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />	
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsShowOthersMole="0" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />		
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsBg="1" IsShowOthersMole="0" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />	
+			<Action Cmd="TASK_SHOW_SELF" Hide="0" />	
+			<Action Cmd="OVER" />
+		</EnterMap>	
+	</Step>
+</Tasks>

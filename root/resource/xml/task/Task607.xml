@@ -1,0 +1,145 @@
+	<Tasks ID="607" Name="占星师的预言" AwardMsg="恭喜你获得2个经验药剂（小）、两面都是胶！" AwardBean="" >
+
+	<!-- 城堡书房 -->
+	<Step ID="1" TarMapID="32">
+		<NPC ID="10036" Option="占星师的预言"  >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10036" Face="正常" Msg="{$username}，多亏你帮我整理了那么多书籍。最近我开始重新阅读那些书，里面记载了好多珍贵的回忆呀！" Option="我也很喜欢读书~"/>
+				<Talk NpcID="10036" Face="正常" Msg="莎士摩亚的风波真是吓死我了，还好有你的帮忙！" Option="这是我应该做的"/>
+				<Talk NpcID="10036" Face="正常" Msg="不过，我时常在想，如果能预见到未来的危险，那岂不是可以早些做好应对的准备了吗？" Option="对呀，有谁能预见未来呢？"/>
+				<Talk NpcID="10036" Face="正常" Msg="恩……虽然尼尔拉大法师就可以啦，但我总觉得一直去打扰他不太好。对了，{$username}要不要试试占星术呢？" Option="占星术？"/>
+				<Talk NpcID="10036" Face="正常" Msg="还记得吗？在鸢尾仙堡的后庭，有一位神秘占星师。她也能预知未来，通晓过去呢！" Option="不会是骗人的吧？"/>
+				<Talk NpcID="10036" Face="正常" Msg="想知道是不是真的，就亲自去验证一下吧！" Option="我现在就去！"/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="1000" Name="movie_1000" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_1000" />
+			
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+			<Action Cmd="GO_MAP" MapID="319" MapType="0" />
+		</NPC>	
+	</Step>
+	
+	<!-- 仙堡后庭 -->
+	<Step ID="2" TarMapID="319">
+		<NPC ID="10129" Option="占星师的预言"  >
+		
+			<Action Cmd="SAY" >
+				<Talk NpcID="10129" Face="正常" Msg="我等你很久了，{$username}，闪烁的仙后星座早就告诉我，你今天会来。" Option="神神叨叨的，你不会是骗我吧！"/>
+				<Talk NpcID="10129" Face="正常" Msg="占星术是占卜中十分古老的一种，通过观察星象可以知道许许多多事情，无论是过去，还是未来。" Option="你怎么证明自己能预见未来？"/>
+				<Talk NpcID="10129" Face="正常" Msg="呵呵，通过水晶球中的星星，我已经看见了，摩尔城堡门口的招财使者即将离开。" Option="骗人！他怎么会忽然走掉？"/>
+				<Talk NpcID="10129" Face="正常" Msg="是不是真的，亲自去见证一下如何？" Option=""/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="1001" Name="movie_1001" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_1001" />
+			
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+			<Action Cmd="GO_MAP" MapID="1" MapType="0" />
+		</NPC>	
+	</Step>
+	
+	<!-- 	摩尔城堡 -->
+	<Step ID="3" TarMapID="1">
+		<EnterMap MapID="1">
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="cat_mc" Visible="0" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10205" Face="正常" Msg="喵？{$username}，好久不见啊，你是来找老夫换好东西的吗？" Option="不不，我听说你要走……"/>
+				<Talk NpcID="10205" Face="正常" Msg="哎，最近不太景气，总是被骂黑商，货也进不到，好评也很少，生意越来越难做啦。" Option=""/>
+				<Talk NpcID="10205" Face="正常" Msg="喵，是时候要离开庄园啦……" Option="虽然你是很黑，但离别总会舍不得"/>
+				<Talk NpcID="10205" Face="正常" Msg="喵！称赞老夫两句又不会怎样！（碎碎念）再见了，别想老夫！" Option="…………"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			
+			<Action Cmd="TASK_SHOW_SELF" Hide="0"/>
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="1002" Name="movie_1002" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_1002" />
+			
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />
+			<Action Cmd="GO_MAP" MapID="319" MapType="0" />
+		</EnterMap>	
+	</Step>
+	
+	
+	<!-- 	仙堡后庭 -->
+	<Step ID="4" TarMapID="319">
+		<NPC ID="10129" Option="占星师的预言"  >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10129" Face="正常" Msg="亲眼所见，应该可以相信我了吧。" Option="对不起，我之前怀疑了您！"/>
+				<Talk NpcID="10129" Face="正常" Msg="呵呵，在我眼中，为了追查真相而努力奔走的你，非常了不起。" Option="嘿嘿……占卜也很了不起啊！"/>
+				<Talk NpcID="10129" Face="正常" Msg="也没有什么啦，这世间有很多很多占卜的方法，听说最近在庄园里渐渐流行开了呢。	" Option="到底有哪些占卜呢？"/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10129" Face="正常" Msg="这些占卜都可以在庄园里找到哦！" Option="太棒了，我一定要一个一个试过来"/>
+				<Talk NpcID="10129" Face="正常" Msg="一旦占卜出了结果，只要做好准备，一定会事事化险为夷。" Option="您能不能预测一下我的未来呢？"/>
+				<Talk NpcID="10129" Face="正常" Msg="预测你的未来？呵呵，乐意之至，请等我一下。	" Option=""/>
+				<Talk NpcID="10129" Face="正常" Msg="（神秘占星师凝望着手中的水晶球）" Option=""/>
+				<Talk NpcID="10129" Face="正常" Msg="呵呵，未来的一个月内，请你一定要留意“猫”。" Option="难道……是捷克王子？"/>
+				<Talk NpcID="10129" Face="正常" Msg="和那个虽然也有关系，但并不是指那位王子本身。	" Option="呃~~不明觉厉~~~"/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="1003" Name="movie_1003" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_1003" />
+			
+			<Action Cmd="SET_BUFFER" Panel="5" Step="5" />
+			<Action Cmd="GO_MAP" MapID="120" MapType="0" />
+		</NPC>	
+	</Step>
+	
+	
+	<!-- 	云雾迷桥 -->
+	<Step ID="5" TarMapID="120">
+		<EnterMap MapID="120">
+			
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10197" Face="疑惑" Msg="住手！放开那只小猫！" Option=""/>
+				<Talk NpcID="10160" Face="正常" Msg="哪儿冒出来个打酱油的，这是你的猫？" Option=""/>
+				<Talk NpcID="10197" Face="惊讶" Msg="（糟了，刚才占星师还让我留意猫的。我到底该不该救它呢？）" Option=""/>
+				<Talk NpcID="10160" Face="正常" Msg="吓傻了吗？哈哈哈。" Option=""/>
+				<Talk NpcID="10197" Face="疑惑" Msg="我怎么会怕你们呢？如果你们再欺负这只猫，我就喊附近的骑士团过来！前面可就是前哨战哦！" Option=""/>
+				<Talk NpcID="10160" Face="正常" Msg="你……哼！算你狠！小的们，走了！" Option=""/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10197" Face="正常" Msg="太好了，救下小猫果然是正确的选择啊！" Option=""/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="1004" Name="movie_1004" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_1004" />
+			
+			<Action Cmd="SET_BUFFER" Panel="6" Step="6" />
+			<Action Cmd="GO_MAP" MapID="32" MapType="0" />
+		</EnterMap>	
+	</Step>
+	
+		
+	<!-- 	城堡书房 -->
+	<Step ID="6" TarMapID="32">
+		<NPC ID="10036" Option="占星师的预言"  >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10036" Face="正常" Msg="{$username}，你回来啦，收获如何？" Option="把占星师和救小猫的事情告诉捷克"/>
+				<Talk NpcID="10036" Face="正常" Msg="哈，即使占星师告诫你要留意猫，你还是救下了小猫，难道就不怕会遇上麻烦吗？" Option="难道我就应该坐视不管吗？"/>
+				<Talk NpcID="10036" Face="正常" Msg="不，如果换做我，一定也会像你这么做吧。" Option=""/>
+				<Talk NpcID="10036" Face="惊讶" Msg="咦？总觉得自己以前似乎也做过同样的事啊，是什么时候呢？" Option=""/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			<Action Cmd="OVER"/>
+		</NPC>	
+	</Step>
+</Tasks>

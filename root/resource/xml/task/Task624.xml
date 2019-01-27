@@ -1,0 +1,160 @@
+<Tasks ID="624" Name="激战！扣扣海贼团" AwardMsg="恭喜你获得1个库拉玩偶,2个元素骑士经验药剂（小）" AwardBean="">
+	<Step ID="1" TarMapID="28">
+		<EnterMap MapID="28">
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10009" Face="悲伤" Msg="{$username}，丫丽都不知道怎么办好了~真是不敢相信爸爸会写这样的信给我……" Option="菩提大伯知道了吗？"/>
+				<Talk NpcID="10009" Face="悲伤" Msg="不知道呢，大伯知道一定很生气！他这阵子一直念叨说，今年过年早，汉青老弟一定会早点来跟我下棋……" Option="要不把信给我看看？我不信汉青叔叔真的不想来庄园过年！"/>
+				<Talk NpcID="10009" Face="悲伤" Msg="嗯，你看看吧！" Option="嗯~"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1"/>
+			<Action Cmd="PLAY_MOVIE" Param="200" Name="movie_200" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_200" />
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2"/>
+		</EnterMap>
+	</Step>
+	<Step ID="2" TarMapID="28">
+		<EnterMap MapID="28">
+			<Action Cmd="SAY">
+				<Talk NpcID="10009" Face="悲伤" Msg="你看，爸爸真的要带我走，我不要，我舍不得庄园的小伙伴们！" Option="好奇怪，汉青叔叔每年都是先给大伯写信的啊，难道大伯也已经收到消息了？"/>
+				<Talk NpcID="10252" Face="正常" Msg="没有没有！主人就让我送了一封信！不过……" Option="不过什么？"/>
+				<Talk NpcID="10252" Face="无聊" Msg="没什么没什么……" Option="小笨生，你是一只好拉姆，好拉姆就不能不说实话哟！"/>
+				<Talk NpcID="10252" Face="无聊" Msg="……" Option="快点说，汉青是不是有说过什么？"/>
+				<Talk NpcID="10252" Face="无聊" Msg="主人，嗯……主人只是说要让菩提大伯也看到信！" Option="是吗？你确定？"/>
+				<Talk NpcID="10252" Face="无聊" Msg="哎哟，主人是让我把信交给菩提大伯，然后再让菩提大伯交给丫丽啦！反正我先碰到丫丽啦，就直接给她了嘛！" Option="还有吗？"/>
+				<Talk NpcID="10252" Face="无聊" Msg="还有，还有，主人说无论如何要等到答复，再回去找他啊，所以我不是着急在等答复吗！！！" Option="(⊙o⊙)…这样啊！"/>
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			<Action Cmd="JUMP_TASK_UI" Param="   汉青给丫丽的信要先交到菩提大伯那里？为什么呢？快把信拿去给大伯看看吧！"/>
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3"/>
+			<Action Cmd="GO_MAP" MapID="53" MapType="0"/>
+		</EnterMap>	
+	</Step>
+	<Step ID="3" TarMapID="53">
+		<EnterMap MapID="53">
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10009" Face="正常" Msg="大伯，你快看，爸爸给我的信！" Option="是呀，大伯快看看！"/>
+				<Talk NpcID="10007" Face="正常" Msg="哟，丫丽丫头啊，快来快来，大伯有好吃的！" Option="大伯快点看信！"/>
+				<Talk NpcID="10007" Face="正常" Msg="看信？哎呀，小笨生你来啦，是不是给我带了汉青的信啊？快拿来我看看，活活活，我就知道我的老伙计快来了！" Option="哎哟，大伯，是汉青给丫丽的信啦！"/>
+				<Talk NpcID="10007" Face="疑惑" Msg="给丫丽的信，为什么要交给我？ " Option="汉青交代，一定要交给你，让你转交给丫丽的！是不是呀？小笨生！"/>
+				<Talk NpcID="10252" Face="正常" Msg="是啊，主人是这么说的，大伯" Option="大伯你快看看吧！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3"/>
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10007" Face="疑惑" Msg="不对不对，汉青怎么可能不来庄园过年！一定有问题！" Option="大伯看出有什么问题了吗？"/>
+				<Talk NpcID="10007" Face="灵感" Msg="现在还看不出来，不过，有一件事情大伯看出来了！" Option="大伯什么呀？"/>
+				<Talk NpcID="10007" Face="灵感" Msg="小声点，假装什么事都没有！" Option="哦！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4"/>
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			<Action Cmd="JUMP_TASK_UI" Param="   大家在学院教导处说话，门口竟然有人在偷听，那个黑影看着有些眼熟啊……快去追他！"/>
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4"/>
+			<Action Cmd="GO_MAP" MapID="28" MapType="0"/>
+		</EnterMap>
+	</Step>
+	<Step ID="4" TarMapID="28">
+		<EnterMap MapID="28">
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10009" Face="生气" Msg="哼！这个偷听的坏蛋，跑得倒挺快的，我们追他！" Option="嗯，应该是去交通署方向了，快点！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_5"/>
+			<Action Cmd="SET_BUFFER" Panel="5" Step="5"/>
+			<Action Cmd="GO_MAP" MapID="83" MapType="0"/>
+		</EnterMap>
+	</Step>
+	<Step ID="5" TarMapID="83">
+		<EnterMap MapID="83">
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10009" Face="生气" Msg="真是逃跑速度惊人，被我逮住一定要好好教训他！" Option="他刚才帽子掉下来了，我怎么感觉在哪看到过？"/>
+				<Talk NpcID="10009" Face="疑惑" Msg="嗯？这么说倒真的是哦，好像前不久才看见过啊……" Option="不管了，先追！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_6"/>
+			<Action Cmd="JUMP_TASK_UI" Param="   黑影再次跑了，不过帽子掉了下来，看起来好眼熟啊，会是谁呢？抓住他就知道了！"/>
+			<Action Cmd="SET_BUFFER" Panel="6" Step="6"/>
+			<Action Cmd="GO_MAP" MapID="10" MapType="0"/>
+		</EnterMap>
+	</Step>
+	<Step ID="6" TarMapID="10">
+		<EnterMap MapID="10">
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10009" Face="生气" Msg="好呀，这个坏蛋，你总算体力不支了！！" Option="马上就能抓到他了，丫丽，别停下来，咱们快追！！！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_7" />
+			<Action Cmd="JUMP_TASK_UI" Param="   看来黑影也要跑不动了，马上能抓到他了，再加把劲！！！一口气追上去！"/>
+			<Action Cmd="SET_BUFFER" Panel="7" Step="7"/>
+			<Action Cmd="GO_MAP" MapID="355" MapType="0"/>
+		</EnterMap>
+	</Step>
+	<Step ID="7" TarMapID="355">
+		<EnterMap MapID="355">
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			<Action Cmd="SAY">
+				<Talk NpcID="10009" Face="生气" Msg="小混球蛋蛋，竟然是你！" Option="蛋蛋，你干嘛偷听我们说话？"/>
+				<Talk NpcID="10249" Face="开心" Msg="蛋蛋没有偷听呀……" Option="蛋蛋，卖萌是没有用的！！！"/>
+				<Talk NpcID="10249" Face="开心" Msg="卖萌是什么呀……" Option="快说！是谁派你来的？？"/>
+				<Talk NpcID="10249" Face="开心" Msg="没有谁啊~蛋蛋自己来的呀！" Option="好吧，我不挡着丫丽了……"/>
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="8" Name="movie_8" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10249" Face="伤心" Msg="蛋蛋知道错了，蛋蛋都告诉你们！" Option="嗯，很好，来，老实交代，是谁派你来的？"/>
+				<Talk NpcID="10249" Face="伤心" Msg="你们跟我来吧，船长大人已经准备登岸了！" Option="船长大人？谁？在哪？"/>
+				<Talk NpcID="10249" Face="伤心" Msg="浮冰岛，我带你去！" Option="丫丽，走！我们去见见这个传说中的船长大人！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_8" />
+			<Action Cmd="JUMP_TASK_UI" Param="   偷听的人竟然是蛋蛋，真是太坏了！他口中的船长大人又是谁？让我们去会会他！"/>
+			<Action Cmd="SET_BUFFER" Panel="8" Step="8"/>
+			<Action Cmd="GO_MAP" MapID="356" MapType="0"/>
+		</EnterMap>
+	</Step>
+	<Step ID="8" TarMapID="356">
+		<EnterMap MapID="356">
+			<Action Cmd="PLAY_MOVIE" Param="9" Name="movie_9" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10009" Face="生气" Msg="小混球蛋蛋，快开门" Option="对！快开门！"/>
+				<Talk NpcID="10249" Face="伤心" Msg="我没法开！" Option="蛋蛋最会骗人了！！快点说实话！"/>
+				<Talk NpcID="10249" Face="伤心" Msg="真的不会开，他们不开，我进不去的，看来船长大人不要我了……" Option="就没有什么办法嘛？"/>
+				<Talk NpcID="10249" Face="伤心" Msg="也不是没有办法，这是一道密码门，对上了口令就可以进去！" Option="让我们来试试吧！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_9" />
+			<Action Cmd="SET_BUFFER" Panel="9" Step="9"/>
+		</EnterMap>
+	</Step>	
+	<Step ID="9" TarMapID="356">
+		<EnterMap MapID="356">
+			<Action Cmd="OPEN_PANEL" Param="Task624GamePanel" ClearMap="0"/>
+			<Action Cmd="ADD_EVENT" Param="Task624GamepanelOver"/>
+			<Action Cmd="JUMP_TASK_UI" Param="   海盗船的大门打开了，里面的坏人究竟是谁呢？大家当心咯！"/>
+			<Action Cmd="SET_BUFFER" Panel="10" Step="10"/>
+			<Action Cmd="GO_MAP" MapID="359" MapType="0" />
+		</EnterMap>
+	</Step>
+	<Step ID="10" TarMapID="359">
+		<EnterMap MapID="359">
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />
+			<Action Cmd="SAY">
+				<Talk NpcID="10009" Face="伤心" Msg="爸爸！你怎么会和坏人在一起？" Option="汉青叔叔……"/>
+				<Talk NpcID="10253" Face="正常" Msg="丫丽傻孩子，别哭，来爸爸这边，扣扣船长会原谅你的！" Option="不会吧，汉青叔叔你真的……"/>
+				<Talk NpcID="10009" Face="伤心" Msg="不要不要不要，我不信，我的爸爸不是这样的！你不是我爸爸，你是骗人的！" Option="丫丽别走！"/>
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="10" Name="movie_10" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10254" Face="开心" Msg="汉青老头子，庄园哪里有好东西都指给我扣扣船长看！如果没错，扣扣也不是记仇的人！哈哈哈哈哈哈哈哈！" Option="坏人，庄园不会任你掠夺的！"/>
+				<Talk NpcID="10254" Face="开心" Msg="哈哈哈哈哈哈哈哈！哈哈哈哈哈哈哈哈！" Option="汉青叔叔别听他的，快回来庄园，我们会保护你的！"/>
+				<Talk NpcID="10253" Face="正常" Msg="老大，请原谅我家小鬼头，她不懂事！我给您赔不是！" Option="哎~怎么会这样！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_10" />
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />
+			<Action Cmd="OVER"/>
+		</EnterMap>
+	</Step>	
+</Tasks>

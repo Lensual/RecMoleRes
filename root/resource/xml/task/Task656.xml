@@ -1,0 +1,57 @@
+<Tasks ID="656" Name="火神杯开幕" AwardMsg="恭喜你获得1只怪怪石头猪（肥肥馆）和1万摩尔豆哦！" AwardBean="">
+	<Step ID="1" TarMapID="53">
+		<EnterMap MapID="53">
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10008" Face="失望" Msg="大家都去火神杯了，就留我一个人看家，看家看家，就是我一个人看家，哼！" Option="大伯去哪里了啊？"/>
+				<Talk NpcID="10008" Face="失望" Msg="(ㄒoㄒ)好伤心，大伯带飞飞去火山了，去举行开幕式了~留我看家，都没有拉姆来了，大家都去看火神杯了！" Option="葡萄不哭啦，我带你去吧？"/>
+				<Talk NpcID="10008" Face="开心" Msg="真的吗？葡萄没有听错吧？你真的会带葡萄去吗？" Option="去啊，不过你要快点回来哦，不要被大伯发现！"/>
+				<Talk NpcID="10008" Face="开心" Msg="好耶！" Option=""/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1"/>
+			
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2"/>
+			
+			<Action Cmd="JUMP_TASK_UI" Param="去看火神杯开幕了，想想有些小激动呢！葡萄，你要藏藏好啊，不要给大伯发现咯！嘻嘻~"/>
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2"/>
+			<Action Cmd="GO_MAP" MapID="344" MapType="0"/>
+		</EnterMap>
+	</Step>
+	<Step ID="2" TarMapID="344">
+		<EnterMap MapID="344">			
+		    <Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10198" Face="正常" Msg="{$username}，欢迎加入光明骑士队，我是队长瑞琪！" Option="瑞琪大大，你要不要那么帅啊？"/>
+				<Talk NpcID="10198" Face="正常" Msg="守卫庄园，守卫每一个小摩尔是我的责任和义务！" Option="（心心眼）好赞！好帅！"/>
+				<Talk NpcID="10008" Face="开心" Msg="冷静冷静，还有其他队呢！" Option="其他队？"/>
+				<Talk NpcID="10008" Face="开心" Msg="听大伯说还有暗夜游侠队和爱心公主队呢！" Option="暗夜游侠？难道是RK大大？"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3"/>
+			
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10188" Face="正常" Msg="欢迎加入暗夜游侠队，这次庄园危机，RK定会鼎力相助！" Option="RK也来了！好赞啊！"/>
+				<Talk NpcID="10188" Face="正常" Msg="哈哈哈哈，么么也醒了，多亏了你们找来的小仙草叶片！" Option="公主？"/>
+				<Talk NpcID="10188" Face="正常" Msg="昏迷那么久，希望没有影响公主的敏锐和犀利！" Option="公主也好起来了，太好了！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4"/>
+			
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10002" Face="开心" Msg="么么完全好了，谢谢大家这段时间对么么的帮助！支持么么就加入我的爱心公主队吧！" Option="公主，我们永远支持你！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_5"/>
+			
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			
+			<Action Cmd="OVER"/>
+		</EnterMap>	
+	</Step>
+</Tasks>
+
+

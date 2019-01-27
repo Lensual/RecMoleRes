@@ -1,0 +1,75 @@
+<Tasks ID="632" Name="激战！扣扣海贼团" AwardMsg="恭喜你获得1个家园装饰风筝和1个小屋家具中国风长椅" AwardBean="">
+	<Step ID="1" TarMapID="240">
+		<EnterMap MapID="240">
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10003" Face="感动" Msg="你是来给库拉大魔法师送好消息的吗？我的伊莉丝女神今天又做了什么美好的事情？" Option="库拉，你回家了呀~"/>
+				<Talk NpcID="10003" Face="开心" Msg="企鹅神都逃跑了，彩虹桥也不能每时每刻让我看到我的女神了，我大魔法师库拉当然是回家来看看啊！" Option="(⊙o⊙)……你家里……还好吧……"/>
+				<Talk NpcID="10003" Face="开心" Msg="哈哈哈哈哈，不要以为我不知道你们小摩尔的小把戏，我大魔法师会让你们把我的家具我的房子都拿去卖掉嘛？那些都只是复制品，还好我可爱的2点还在！" Option="2点？"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1"/>
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			<Action Cmd="SAY">
+				<Talk NpcID="10003" Face="开心" Msg="我库拉大魔法师是不是名不虚传？" Option="这……其他的分身呢？"/>
+				<Talk NpcID="10003" Face="失望" Msg="你也不用每次都在我开心的时候都这么打击我吧？" Option="好吧……"/>
+				<Talk NpcID="10003" Face="感动" Msg="我的6点作为定情信物放在女神那里…… " Option="信物？？？请原谅我八卦的心吧，快说快说是怎么回事？"/>
+			</Action>
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2"/>
+		</EnterMap>
+	</Step>
+	<Step ID="2" TarMapID="240">
+		<EnterMap MapID="240">
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3"/>
+		</EnterMap>	
+	</Step>
+	<Step ID="3" TarMapID="240">
+		<EnterMap MapID="240">
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />
+			<Action Cmd="PLAY_MOVIE" Param="104" Name="movie_104" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_104" />
+			<Action Cmd="SAY">
+				<Talk NpcID="10003" Face="开心" Msg="我和我的女神之间是有羁绊的~" Option="库拉，这不算羁绊吧？"/>
+				<Talk NpcID="10003" Face="开心" Msg="总之就是我的女神是离不开我的！" Option="为什么有种绑架了人家的感觉？"/>
+			</Action>
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4"/>
+		</EnterMap>	
+	</Step>
+	<Step ID="4" TarMapID="240">
+		<EnterMap MapID="240">
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2"/>
+			<Action Cmd="PLAY_MOVIE" Param="105" Name="movie_105" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_105"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10003" Face="开心" Msg="哎~女孩子就是这样喜欢粘着~真是没办法~" Option="喂，你已经在往变态的发展了耶！"/>
+				<Talk NpcID="10003" Face="开心" Msg="哈哈哈哈，我去找我的女神聊天咯，你自己玩去吧~" Option="喂~不行，我也要去~"/>
+			</Action>
+			<Action Cmd="JUMP_TASK_UI" Param="   库拉要和伊莉丝见面啊，不行，要跟着去看看，库拉已经完全迷失自己了呀！"/>
+			<Action Cmd="SET_BUFFER" Panel="5" Step="5"/>
+			<Action Cmd="GO_MAP" MapID="362" MapType="0"/>
+		</EnterMap>
+	</Step>
+	<Step ID="5" TarMapID="362">
+		<EnterMap MapID="362">
+		<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10265" Face="开心" Msg="快看快看，我可以像我的偶像一样格斗了！" Option="(⊙o⊙)…"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3"/>
+			<Action Cmd="PLAY_MOVIE" Param="106" Name="movie_106" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_106"/>
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			<Action Cmd="PLAY_MOVIE" Param="107" Name="movie_107" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_107" />
+			<Action Cmd="OVER"/>
+		</EnterMap>
+	</Step>
+</Tasks>
+

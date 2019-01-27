@@ -1,0 +1,113 @@
+	<Tasks ID="611" Name="尤瑞克的辉煌史" AwardMsg="恭喜你获得2个经验药剂（小）、牛叉龙角 ！" AwardBean="" >
+	<!-- 誓言小屋 -->
+	<Step ID="1" TarMapID="331">
+		<EnterMap MapID="331">
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10192" Visible="0" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10192" Face="正常" Msg="唉……你们怎么来啦！" Option="尤瑞克老爷爷，听说您曾经打败过巨龙啊？"/>
+				<Talk NpcID="10192" Face="正常" Msg="想当年，我也是在战场上叱咤风云的人物……" Option="尤瑞克老爷爷，快跟我们说说您当年的打败巨龙的事情吧！！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10192" Face="正常" Msg="想当年，我可是我们骑士队的队长。" Option="哇~~骑士！！！还队长！！！"/>
+				<Talk NpcID="10192" Face="正常" Msg="当时，我们面临的最大的威胁就是一条黑色的巨龙。" Option="黑色……巨龙！听名字就好可怕！！！"/>
+				<Talk NpcID="10192" Face="正常" Msg="没错，那条巨龙威力无比十分庞大，我们和它大战了三百回合还没有将它制服！" Option="然后呢？  "/>
+				<Talk NpcID="10192" Face="正常" Msg="然后就在第三百零一回合的时候，局面突然发生了逆转。" Option="什么逆转？"/>
+				<Talk NpcID="10192" Face="正常" Msg="我用巨剑刺进了巨龙的喉咙，随即使得巨龙无法呼吸，它的战斗力立马衰退了下来。" Option="这不是正好将巨龙打败的好时机嘛！"/>
+				<Talk NpcID="10192" Face="正常" Msg="是的，没错。又经历过几个回合后，巨龙终于被打败了。" Option="哇~~~您这是逆袭的节奏啊！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10192" Face="正常" Msg="哎…………可惜啊！" Option="尤瑞克老爷爷，您叹什么气啊！"/>
+				<Talk NpcID="10192" Face="正常" Msg="岁月是把杀猪刀，在容颜上刻下道道皱纹,令人唏嘘。" Option="尤瑞克老爷爷，您在我们心中永远是英雄！"/>
+				<Talk NpcID="10192" Face="正常" Msg="多亏我当年有个好团长啊！" Option="你的团长是哪位英雄啊？  "/>
+				<Talk NpcID="10192" Face="正常" Msg="就是庄园里的菩提。" Option="原来是菩提大伯。丫丽、摩乐乐我们去找菩提大伯，听听团长当年的故事吧！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="1000" Name="movie_1000" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_1000" />
+			
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+			<Action Cmd="GO_MAP" MapID="53" MapType="0" />
+		</EnterMap>	
+	</Step>
+	
+	<!-- 学院教导处 -->
+	<Step ID="2" TarMapID="53">
+		<EnterMap MapID="53">
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10007" Visible="0" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="正常" Msg="你们怎么来啦？" Option="嘿嘿，我们是来想听听您当年参与对抗巨龙的故事呢。"/>
+				<Talk NpcID="10007" Face="正常" Msg="你们怎么知道？" Option="是听尤瑞克老爷爷说的。"/>
+				<Talk NpcID="10007" Face="正常" Msg="尤瑞克？" Option="恩，他提到您是他当年的团长呢！"/>
+				<Talk NpcID="10007" Face="正常" Msg="是啊，尤瑞克当年也是我手下一名优秀的队长呢！" Option="是啊，打败黑龙的确很厉害呢！"/>
+				<Talk NpcID="10007" Face="正常" Msg="哈哈，看来你们知道的不少嘛！" Option="能和我们说说您当年的发生的故事吗？"/>
+				<Talk NpcID="10007" Face="正常" Msg="这都是些陈年往事了，要回忆起来还真需要点时间啊！" Option="没事没事，您慢慢想慢慢说，我们听着就行。"/>
+				<Talk NpcID="10007" Face="正常" Msg="当年，我们都还很年轻。依稀记得尤瑞克穿着金色铠甲骑着黑马，手拿长枪。" Option="长枪？不是手拿巨剑的嘛？"/>
+				<Talk NpcID="10007" Face="正常" Msg="巨剑？？什么巨剑？？" Option="尤瑞克老爷爷说他是用巨剑刺进黑龙的喉咙的。"/>
+				<Talk NpcID="10007" Face="正常" Msg="我怎么记得是长枪呢？" Option="额……可能尤瑞克老爷爷年纪大了记不清楚了吧。"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="1001" Name="movie_1001" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_1001" />
+			
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+			<Action Cmd="GO_MAP" MapID="15" MapType="0" />
+		</EnterMap>	
+	</Step>
+	
+	<!-- 城堡大厅 -->
+	<Step ID="3" TarMapID="15">
+		<EnterMap MapID="15">
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10047" Visible="0" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10047" Face="正常" Msg="你们来这找我是为了什么事啊？" Option="您知道当年尤瑞克老爷爷打败黑龙的事情吗？"/>
+				<Talk NpcID="10047" Face="正常" Msg="哦，想起来了。这么多年前的事情你要是不提我都快忘记了呢！" Option="嘿嘿，想起来了就好。"/>
+				<Talk NpcID="10047" Face="正常" Msg="怎么啦？有什么事要问我就直说吧！" Option="您知道当年尤瑞克老爷爷是怎么打败黑龙的吗？"/>
+				<Talk NpcID="10047" Face="正常" Msg="听说当年尤瑞克可是骑士队的队长，英姿非凡啊。" Option="哇………………"/>
+				<Talk NpcID="10047" Face="正常" Msg="他身穿金色铠甲那是金光闪闪啊！骑着一匹雪白的千里马，手拿一把巨大的宝剑，真是威风凛凛啊！" Option="雪白的千里马？"/>
+				<Talk NpcID="10047" Face="正常" Msg="是啊，听说当年可是迷倒了不少小姑娘呢！" Option="这…………"/>
+				
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_7" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="8" Name="movie_8" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_8" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />
+			
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10047" Visible="1" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="0"/>
+			<Action Cmd="OVER"/>
+		</EnterMap>	
+	</Step>
+</Tasks>

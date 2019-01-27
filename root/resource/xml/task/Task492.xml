@@ -1,0 +1,42 @@
+<Tasks ID="492" Name="端午节活动" AwardMsg="恭喜你获得了10个海洋之星！" AwardBean="0" >
+	<Step ID="1" >
+		<EnterMap MapID="8" >
+			<Action Cmd="SET_ATTRIBUTE" Level="buttonLevel" ResName="npc_10013" Visible="0" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />	
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1"  />
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			
+			<Action Cmd="SET_ATTRIBUTE" Level="buttonLevel" ResName="npc_10013" Visible="1" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10013" Face="正常" Msg="{$username}，你想不想了解神秘湖背后的故事？作为老顾客，我可以给你打个八折哦！" Option="……（无语中）" />
+				<Talk NpcID="10013" Face="正常" Option="反正不要钱，听听也罢。" Msg="这样吧，作为今天的第一位客人，我就送你一次免费体验的机会，给你免费讲讲关于神秘湖的传闻吧！" />
+				<Talk NpcID="10013" Face="正常" Option="摩尔庄园历史回顾" Msg="{$username}，摩尔庄园的历史，相信你不会陌生吧？不仅庄园里的小摩尔们口口相传，而且城堡的书房里也有明文记载。" />
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1"  />
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10013" Face="正常" Option="-_-||| 花婶，你就直接说事吧！" Msg="据我爷爷的爷爷的爷爷的爷爷……说" />
+				<Talk NpcID="10013" Face="正常" Option="难道大家都没有去湖里救他吗？" Msg="那位英雄等到所有的小摩尔都逃到了神秘湖后，自己才撤离。等他赶到神秘湖的时候，浑身都着火了，只能冲进湖里。但这一去，却再也没有回来……" />
+				<Talk NpcID="10013" Face="正常" Option="真可惜……" Msg="怎么会没有呢？大家发现英雄跳入湖底，很长一段时间都没有出来后，就立刻展开了搜救。但是却再也找不到英雄的踪迹了。" />
+				<Talk NpcID="10013" Face="正常" Option="难道湖水变红和这个传统有关？" Msg="为了纪念他，每年的今天，也就是那位英雄离去的日子——摩尔们都会往神秘湖里投入粽子给鱼儿喂食，希望它们不要去打扰那位英雄的安息。" />
+				<Talk NpcID="10013" Face="正常" Option="好的，我这就去准备！" Msg="我想这很有可能。随着时代变迁，现在已经很少有摩尔遵循端午节的传统了。这次可能是神秘湖显灵，提醒大家不要忘记历史。{$username}，你可以试着包粽子去祭奠下。" />
+			</Action>
+			
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+			<Action Cmd="OPEN_PANEL" Param="FestivalActivaPanel" />
+		</EnterMap>	
+	</Step>
+	
+	<Step ID="2" >
+		<EnterMap MapID="10000" >
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			
+			<Action Cmd="OVER" />
+		</EnterMap>
+	</Step>
+	
+</Tasks>

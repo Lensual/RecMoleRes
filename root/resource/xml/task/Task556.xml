@@ -1,0 +1,183 @@
+<Tasks ID="556" Name="天使xia " AwardMsg="恭喜你获得祥蛇手杖,5个经验果实" AwardBean="" >
+	<!-- 骑士要塞塔顶 -->
+	<Step ID="1" TarMapID="63">
+		<EnterMap MapID="63" >
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_0" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_1" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="book_mc" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="0" Name="movie_0" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_0" />	
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />			
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsShowOthersMole="0" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />				
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsShowOthersMole="0" IsFullScreen="1"/>	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="疑惑" Msg="菩提大伯，你们这坐的是什么神兽啊？怎么从来没见过呢？" Option="这是浴火凤凰，洋气吧！" />
+				<Talk NpcID="10007" Face="正常" Msg="我们的新天使园总算是重建得差不多了，要想打败零的暗黑军团，还要靠我们的天使啊！" Option="我也是第一次见到哦！" />
+			</Action>
+			<!-- 带动画效果的面板 -->
+			<Action Cmd="PLAY_MOVIE" Param="8" Name="movie_8" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_8" />				
+			<Action Cmd="SAY" >
+				<Talk NpcID="10002" Face="生气" Msg="都什么时候啦~~~二叔，你还有空跟摩乐乐讨论这个！赶快看看前哨站发生什么事了！" Option="呀！前哨站不是有情况吗？" />
+				<Talk NpcID="10007" Face="焦急" Msg=" (/ □ \)~~~囧！呵呵，看到我们全新的天使战队，有点小得瑟了！弗兰克，赶紧汇报一下现在的情况！" Option="被炸毁的恶魔基地这么快就恢复了？" />
+			</Action>			
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />		
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />	
+		</EnterMap>	
+	</Step>	
+	
+	<!-- 骑士要塞塔顶 -->	
+	<Step ID="2" TarMapID="63">
+		<EnterMap MapID="63" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_0" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_1" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="book_mc" Visible="0" />	
+			<Action Cmd="PLAY_MOVIE" Param="9" Name="movie_9" IsBg="1" IsFullScreen="1"/>	
+		
+			<Action Cmd="SAY" >
+				<Talk NpcID="10029" Face="焦急" Msg="我们上次的偷袭的确打了他们一个措手不及，但是……" Option="但是什么但是？" />
+				<Talk NpcID="10029" Face="焦急" Msg="但是零发现了是我方突袭恶魔基地后，虽然是暴跳如雷，却并没有即刻攻打前哨站。" Option="那他做什么了？" />
+				<Talk NpcID="10029" Face="焦急" Msg="而是召唤来了更多的黑暗天使和新的小恶魔！本以为偷袭恶魔基地，可以延缓它的建成时间，现在反而是让他们加快了进度！" Option="啊！！！都怪我当时太冲动了，不然零也不会发现是我们。" />
+				<Talk NpcID="10007" Face="正常" Msg=" 小摩尔，零肯定会知道是我们的。不管怎样，我们的目的已经达到了，就算零即刻攻打前哨站，我也有万全之策来应对了！哈哈哈！" Option="什么万全之策？" />
+			</Action>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_9" />			
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />	
+			
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />	
+			<Action Cmd="GO_MAP" MapID="61" MapType="0" />	
+		</EnterMap>	
+	</Step>	
+	
+	<!-- 前哨站  -->
+	<Step ID="3" TarMapID="61">
+		<EnterMap MapID="61" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />	
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_0" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_1" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_2" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_3" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_4" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_5" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="bgLevel" ResName="knight_0" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="bgLevel" ResName="knight_3" Visible="0" />		
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsShowOthersMole="0" IsFullScreen="1"/>	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10002" Face="疑惑" Msg="迪迪拉，怎么只有你一个人？其他天使呢？" Option="不是有“一支”天使战队吗？" />
+				<Talk NpcID="10000" Face="疑惑" Msg="么么公主，这不会真的就是菩提大伯说的“暗黑军团”的克星——“一只”充满正义的天使战队？？？" Option="耳朵拍蚊子去啦？没听见公主刚刚问“其他天使”吗？" />
+				<Talk NpcID="10002" Face="生气" Msg="摩乐乐，都什么时候了！你还有心思开玩笑！二叔说的是“一支天使战队”！“一支一支一支”！听清楚了吗？" Option="呜呜呜~这么大声，能听不清楚吗？" />				
+				<Talk NpcID="10007" Face="焦急" Msg="迪迪拉，是发生什么事了吗？" Option="(⊙ｏ⊙)……" />
+			</Action>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />	
+			
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsShowOthersMole="0" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />											
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />
+		</EnterMap>	
+	</Step>
+	
+	<!-- 前哨站  -->
+	<Step ID="4" TarMapID="61">
+		<EnterMap MapID="61" >
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_0" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_1" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_2" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_3" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_4" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_5" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="bgLevel" ResName="knight_0" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="bgLevel" ResName="knight_3" Visible="0" />		
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />	
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsShowOthersMole="0" IsFullScreen="1"/>	
+
+			<Action Cmd="SAY" >
+				<Talk NpcID="10154" Face="正常" Msg="别以为我不知道，你们偷袭我的基地，无非是想拖延时间，好为你们训练出一支新的天使战队争取时间。" Option="你以为你是十万个为什么啊？什么都知道！" />
+				<Talk NpcID="10154" Face="正常" Msg="从毁掉你们原来的天使园开始，你们重建天使园的一举一动，都在我的监视之下！" Option="吹，你尽管吹吧！" />
+				<Talk NpcID="10000" Face="生气" Msg="零，你要真这么神通广大，怎么还会成为我们的手下败将呢？" Option="还是一个只会说大话的手下败将！" />				
+				<Talk NpcID="10154" Face="正常" Msg="哼~要不是为了水晶琥珀，我才不来这个偏远的小地方呢！还住着一群无知又无趣的无聊摩尔！真是麻烦。" Option="古德摩.零，你简直是太过分了！" />
+				<Talk NpcID="10007" Face="生气" Msg="哼~摩尔庄园可不是你想来就来想走就走的地方！乐乐、{$username}，保护好公主！弗兰克，带领骑士团，准备战斗！" Option="我们时刻准备着！" />				
+			</Action>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />										
+			<Action Cmd="SET_BUFFER" Panel="5" Step="5" />
+		</EnterMap>	
+	</Step>
+	
+	<!-- 前哨站  -->
+	<Step ID="5" TarMapID="61">
+		<EnterMap MapID="61" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_0" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_1" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_2" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_3" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_4" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_5" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="bgLevel" ResName="knight_0" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="bgLevel" ResName="knight_3" Visible="0" />			
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsShowOthersMole="0" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />	
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsBg="1" IsShowOthersMole="0" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />		
+					
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="焦急" Msg="么么，你这是要去哪儿？" Option="你猜？" />
+				<Talk NpcID="10154" Face="开心" Msg="哈哈，你们的小公主已经被我吓跑啦！" Option="才不是嘞！" />
+				<Talk NpcID="10153" Face="正常" Msg="么么公主不会想去找其他天使吧？我也跟过去看看！" Option="迪迪拉，么么公主的安全就暂时先交给你了！" />				
+				<Talk NpcID="10000" Face="焦急" Msg="{$username}，公主既然把守卫前哨站的任务暂时交给我们了，我们就一定要完成任务！不能让么么公主失望！" Option="放心吧！我早就已经准备好了！" />
+				<Talk NpcID="10154" Face="开心" Msg="逃也没有用，暗黑军团已经把前哨站包围了。无知又无趣的摩尔们，接招吧！" Option="打就打，谁怕你！" />	
+							
+			</Action>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />	
+																
+			<Action Cmd="SET_BUFFER" Panel="6" Step="6" />
+		</EnterMap>	
+	</Step>	
+	
+	<!-- 前哨站 玩天使战斗 -->
+	<Step ID="6" TarMapID="61">
+		<EnterMap MapID="61" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />
+			<Action Cmd="ACT_EVENT" Param="Task556_angelPK" />
+			<Action Cmd="ADD_EVENT" Param="task556_getGiftOver" />												
+			<Action Cmd="SET_BUFFER" Panel="7" Step="7" />
+		</EnterMap>	
+	</Step>
+	
+	<!-- 前哨站  -->
+	<Step ID="7" TarMapID="61">
+		<EnterMap MapID="61" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_0" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_1" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_2" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_3" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_4" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_5" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="bgLevel" ResName="knight_0" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="bgLevel" ResName="knight_3" Visible="0" />			
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1" IsShowOthersMole="0" IsFullScreen="1"/>	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="正常" Msg="{$username}，你培养的天使还真是骁勇善战，几下就把那些小恶魔给打败了！" Option="他们个个都身手不凡！" />
+				<Talk NpcID="10000" Face="焦急" Msg="对了，么么公主都去了这么久了，怎么还没回来呢？不会遇到危险吧？" Option="(⊙ｏ⊙)……" />
+			</Action>				
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />	
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" IsBg="1" IsFullScreen="1"/>			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10154" Face="正常" Msg="哼~躲到哪儿去都一样，最后都要成为我恶魔岛的俘虏！" Option="你确定？？？" />
+				<Talk NpcID="10154" Face="正常" Msg="刚刚只是热身赛，我的黑暗天使和小恶魔们还没使出一半的本领呢！所谓的正义天使战队，准备接招吧！" Option="Who怕Who啊！尽管放马过来。！" />
+				<Talk NpcID="10002" Face="生气" Msg="你这个“小地方来的”小恶魔！休想破坏我的庄园！" Option="惹怒了我们的小公主，你完蛋了。" />				
+				<Talk NpcID="10007" Face="生气" Msg="么么！不准任性！赶紧给我回来！！！" Option="么么公主小心啊！！！" />			
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_7" />						
+			<Action Cmd="PLAY_MOVIE" Param="104" Name="movie_104" IsBg="1" IsShowOthersMole="0" IsFullScreen="1" IsStopSound="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_104" />		
+			<Action Cmd="PLAY_MOVIE" Param="105" Name="movie_105" IsBg="1" IsShowOthersMole="0" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_105" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="0" />																	
+			<Action Cmd="OVER" />
+		</EnterMap>	
+	</Step>				
+</Tasks>

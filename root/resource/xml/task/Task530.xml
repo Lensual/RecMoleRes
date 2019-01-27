@@ -1,0 +1,126 @@
+<Tasks ID="530" Name="暴走吧，月饼！" AwardMsg="恭喜你获得香蕉鱼鞋、2000摩尔豆！" AwardBean="2000" >
+	<Step ID="1" >
+	
+		<EnterMap MapID="38" >
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="正常" Msg="{$username}，你怎么这么晚才来！大伯特意为中秋组织的话剧表演呢，嫦娥奔月，正在排演中。" Option="哇哦~谁演的嫦娥呢？" />
+				<Talk NpcID="10010" Face="正常" Msg="嘻嘻，当然是咱们无比美丽的、最最可爱的——么么公主啦！快看，马上嫦娥就要服下仙药奔月啦！" Option="还好没错过精彩环节！" />
+				<Talk NpcID="10007" Face="正常" Msg="哦嚯嚯嚯~为了让咱们“嫦娥仙子”奔月的画面看起来更真实，我还专门准备了一套道具，加上鼓风机鼓风，效果一定不错！" Option="嘻嘻，我也来欣赏欣赏！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />	
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="正常" Msg="大伯，这究竟是怎么回事？么么公主，她怎么真的飞上天了？虽然我很想看嫦娥奔月，但我不想公主真的奔月呀……" Option="会不会再也见不到公主了？T_T" />
+				<Talk NpcID="10007" Face="正常" Msg="大伯向你们保证，剧本里绝对没这样安排的！刚才那阵阴风很可疑，会不会……" Option="呀，你们快看，那边是什么？" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="惊讶" Msg="咦？你是谁呀？在庄园没见过你呢！" Option="长得好像一只月饼( ⊙ o ⊙ )" />
+				<Talk NpcID="10135" Face="正常" Msg="什么叫“长得像”，我本来就是月饼呀！不过，我可不是普通月饼，我是来自鼎鼎大名的月饼岛的——鼎鼎大名的“暴走月饼”！" Option="月饼岛？暴走月饼？" />
+				<Talk NpcID="10135" Face="正常" Msg="别告诉我，你们都没听说过月饼岛哦？！" Option="还真没听说过o(╯□╰)o" />
+				<Talk NpcID="10135" Face="正常" Msg="好吧，就让本姑娘来给你介绍介绍~" Option="嗯，好呀！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />	
+			<Action Cmd="PLAY_MOVIE" Param="20" Name="movie_20" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10135" Face="正常" Msg="刚才，我趁天狗卫兵不注意，偷偷跑掉了。可没想到后来还是被发现了，肯定是因为我差点撞到一位姑娘的缘故！" Option="啊？姑娘？" />
+				<Talk NpcID="10135" Face="正常" Msg="是呀~嘻嘻，那个姑娘很美呢，跟嫦娥姐姐很像，但又不完全一样……" Option="嫦娥？难道是么么公主？" />
+				<Talk NpcID="10000" Face="正常" Msg="难道，么么公主飘到了——月饼岛？！" Option="这下惨了( ⊙ o ⊙ )" />
+				<Talk NpcID="10135" Face="正常" Msg="是呀是呀，那个姑娘一定就是你们的公主，你们会去救她的对吗？所以要帮我们一起打败天狗和黑魔王哦！" Option="可是，我们怎么前往月饼岛呢？" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_20" />	
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10135" Face="正常" Msg="不行，我们得先把这些坏家伙干掉！" Option="它们这么凶巴巴的，我们赤手空拳……" />
+				<Talk NpcID="10135" Face="正常" Msg="我有办法！我先送你们一些普通月饼，一起制造出更多暴走月饼，饼多力量大，就能压制一下这些天狗！" Option="我们该怎么做呢？" />
+				<Talk NpcID="10135" Face="正常" Msg="一会儿你会看到一台微波炉，请点击“开门”按钮打开微波炉，选择“给月饼灌注月光能量”，根据当前可灌注能量的月饼种类，输入所要灌注的数量，就可以把普通月饼变成暴走月饼咯！~" Option="(⊙o⊙)哦" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			<Action Cmd="ACT_EVENT" Param="lingDongXi" /><!-- 抛事件 -->
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+ 			<Action Cmd="OPEN_PANEL" Param="MakeMoonCakePanel" />
+ 		</EnterMap>	
+	</Step>			
+	
+	<Step ID="2" >
+		<SubmitScore ModuleID="10044" MinScore="1" LoseMsg="你还没制作出暴走月饼哦！请重新试试吧！" >
+			<Action Cmd="PLAY_MOVIE" Param="21" Name="movie_21" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10135" Face="正常" Msg="真聪明！成功制作出了暴走月饼。现在，让我们一起用暴走月饼来对付这些天狗吧！" Option="好，让它们尝尝我们的厉害！" />
+			</Action>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_21" />		
+ 			<Action Cmd="OPEN_PANEL" Param="GuardianPortalGame" /> 
+ 			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1"/>
+ 			<Action Cmd="SAY" >
+				<Talk NpcID="10135" Face="正常" Msg="谢谢大家！现在我们赶紧去月饼岛吧！" Option="嗯，好呀！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />
+ 			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />
+ 			<Action Cmd="GO_MAP" MapID="322" MapType="0" />	
+ 		</SubmitScore>
+	</Step>	
+	
+	<Step ID="4" >
+	<EnterMap MapID="322" >
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="正常" Msg="哇，果然公主被抓到这儿来了！公主~~我来救你了！" Option="公主被天狗守着的！" />
+				<Talk NpcID="10135" Face="正常" Msg="这些讨厌的家伙！我们得好好教训下它们！" Option="怎么教训呢？" />
+				<Talk NpcID="10135" Face="正常" Msg="是时候使用我们的秘密武器了！我会提供一些天使给你们，从中选择几只天使来赶走坏蛋吧！" Option="嗯，好的！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />
+			<!-- 打开塔防的游戏 ChristmasAngelData.openGame(88);-->
+			
+			
+			<Action Cmd="ACT_EVENT" Param="openTaFang" />
+			<Action Cmd="SET_BUFFER" Panel="5" /> 
+			
+			<Action Cmd="ADD_EVENT" Param="tdGameOver" /> 
+			
+			 
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10003" Face="正常" Msg="骰子！叫你抓嫦娥，看看你抓的是谁！这不是庄园的么么公主假扮的嘛！你个笨蛋，别以为穿个仙女服就能变成嫦娥~~！真不好看！" Option="⊙﹏⊙b" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_7" />
+			<Action Cmd="PLAY_MOVIE" Param="8" Name="movie_8" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="生气" Msg="库拉！果然又是你捣的鬼！" Option="库拉，你为什么要这么做！" />
+				<Talk NpcID="10003" Face="正常" Msg="啊哈哈哈~为什么？就见不得你们开心的样子，中秋什么的，最讨厌了！我就讨厌看见人家团圆！" Option="真是太坏了！" />
+				<Talk NpcID="10003" Face="正常" Msg="坏？小盆友，我让你们知道什么是真正的坏！嘿嘿嘿~" Option="啊？！你想干什么？" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_8" />
+			<Action Cmd="PLAY_MOVIE" Param="9" Name="movie_9" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10135" Face="正常" Msg="大家小心~~~~" Option="啊~~~" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_9" />
+			<Action Cmd="SET_BUFFER" Panel="6" Step="6" />
+			<Action Cmd="OPEN_PANEL" Param="ShurikenGameTwo" /> 
+ 		</EnterMap>	
+	</Step>	
+	
+	<Step ID="6" >
+		<SubmitScore ModuleID="10042" MinScore="1" LoseMsg="小摩尔没有完成投掷手里剑的任务哦，请继续努力！" >
+				<Action Cmd="PLAY_MOVIE" Param="10" Name="movie_10" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10135" Face="正常" Msg="哼，可恶的大魔王！拜拜~嘿嘿，这下终于清静了！" Option="我们也可以救回么么公主咯！" />
+				<Talk NpcID="10135" Face="正常" Msg="嘻嘻，谢谢你们大家！为了报答你们，可以邀请你们在月饼岛过中秋吗？" Option="好呀！不过我们先得回庄园准备准备~" />
+				<Talk NpcID="10135" Face="正常" Msg="好！我送你们回庄园，不过一定记得要回来哦！" Option="一定O(∩_∩)O" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_10" />
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />	
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />	
+			<Action Cmd="OVER" />
+		</SubmitScore>			
+	</Step>	
+	
+</Tasks>

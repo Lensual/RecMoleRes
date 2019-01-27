@@ -1,0 +1,107 @@
+<Tasks ID="517" Name="鸢尾仙堡的婚礼筹备" AwardMsg="" AwardBean="0" >
+	<Step ID="1" >
+		<NPC ID="10107" Option="婚礼的邀请" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10107" Face="正常" Msg="……鸢尾仙堡怎么走呢？" Option="保罗王子在这里做什么呀？" />
+				<Talk NpcID="10107" Face="正常" Msg="{$username}，你来了啊？你知道鸢尾仙堡怎么去吗？" Option="鸢尾仙堡！我也想知道啊！" />
+				<Talk NpcID="10107" Face="正常" Msg="我在黑森林绕来绕去，怎么也找不到呀！" Option="你不会也是去找金色鸢尾花吧？" />
+				<Talk NpcID="10107" Face="正常" Msg="金色鸢尾花是什么？对了，我要告诉你一个好消息！" Option="好消息？" />
+				<Talk NpcID="10107" Face="正常" Msg="我和箩丝要结婚啦！我们准备在鸢尾仙堡举办婚礼。" Option="⊙o⊙啊？真的啊，恭喜恭喜！！" />
+				<Talk NpcID="10107" Face="正常" Msg="就定在下周，你一定要来呀！顺便带上朋友一起！" Option="为什么要选在鸢尾仙堡举办婚礼？" />
+				<Talk NpcID="10107" Face="正常" Msg="箩丝告诉我，人鱼国的有这样一个传说…" Option="⊙o⊙哦？？" />
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1" />
+ 			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+ 			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10107" Face="正常" Msg="事情就是这样的。所以我现在先来这边做些准备，箩丝随后就到。" Option="王子您一定可以成为一个好丈夫的。" />
+				<Talk NpcID="10107" Face="正常" Msg="谢谢你，对了，能帮我把请贴分发给庄园里的朋友吗？我想邀请大家都来参加！" Option="好呀！" />
+			</Action>
+			
+ 			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+			<Action Cmd="OPEN_TASK_PANEL" />
+ 		</NPC>	
+	</Step>			
+	
+	<Step ID="2" >
+		<NPC ID="10007" Option="婚礼的邀请" Bit="1" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="正常" Msg="嚯嚯嚯嚯，年轻人的婚礼，大伯我是一定不会错过的！帮我转告保罗王子，我一定会去的！" Option="好的！" />
+			</Action>
+			
+			<Action Cmd="SET_BIT" Param="1" />
+			<Action Cmd="OPEN_PANEL" Param="Task517InvitationPanel" />
+		</NPC>
+		<NPC ID="10002" Option="婚礼的邀请" Bit="2" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10002" Face="正常" Msg="保罗和箩丝要结婚了啊？真心祝福他们。好的，我一定会去的，替我谢谢他的邀请。" Option="恩，我会转告他的。" />
+			</Action>
+			
+			<Action Cmd="SET_BIT" Param="2" />
+			<Action Cmd="OPEN_PANEL" Param="Task517InvitationPanel" />
+		</NPC>
+		<NPC ID="10013" Option="婚礼的邀请" Bit="3" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10013" Face="正常" Msg="啊，邀请我这样的美女参加婚礼再合适不过啦。当然我也不能太抢新娘风头，你说是吧？请转告王子殿下，美女我接受邀请。" Option="好的= _=！" />
+			</Action>
+			
+			<Action Cmd="SET_BIT" Param="3" />
+			<Action Cmd="OPEN_PANEL" Param="Task517InvitationPanel" />
+		</NPC>
+		<NPC ID="10009" Option="婚礼的邀请" Bit="4" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10009" Face="正常" Msg="是箩丝公主的婚礼呀，那我肯定要去的！" Option="恩，一定很好玩。" />
+			</Action>
+			
+			<Action Cmd="SET_BIT" Param="4" />
+			<Action Cmd="OPEN_PANEL" Param="Task517InvitationPanel" />
+		</NPC>
+		<NPC ID="10000" Option="婚礼的邀请" Bit="5" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="正常" Msg="哈哈，婚礼这么热闹的事，怎么能少了我摩乐乐呢！" Option="对呀，对呀。" />
+			</Action>
+			
+			<Action Cmd="SET_BIT" Param="5" />
+			<Action Cmd="OPEN_PANEL" Param="Task517InvitationPanel" />
+		</NPC>
+		<NPC ID="10010" Option="婚礼的邀请" Bit="6" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10010" Face="正常" Msg="婚礼上一定有很多很多,非常非常好吃的东西!恩,我和布少少一起去!" Option="一定要和布少少一起来哦！" />
+			</Action>
+			
+			<Action Cmd="SET_BIT" Param="6" />
+			<Action Cmd="OPEN_PANEL" Param="Task517InvitationPanel" />
+		</NPC>
+	</Step>
+	
+	<Step ID="3" >
+		<NPC ID="10107" Option="婚礼的邀请" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10107" Face="正常" Msg="{$username}，哦，是你啊！谢谢你我的朋友。" Option="哪里啊，小事一桩！" />
+				<Talk NpcID="10107" Face="正常" Msg="我这里还有很多请帖，我希望你帮我邀请更多的人来！" Option="好的，乐意为您效劳！" />
+				<Talk NpcID="10107" Face="正常" Msg="对了，我们婚礼上需要很多晚礼服，你看能不能想办法帮我去做一些。当然，你可以用获得的爱心别针来我这来兑换报酬。" Option="爱心别针？" />
+				<Talk NpcID="10107" Face="正常" Msg="是呀，等你随便搜集到一些爱心别针后，我有礼物给你。" Option="我现在就去收集！" />
+			</Action>
+ 			
+ 			<Action Cmd="SET_BUFFER" Panel="3" Step="4" />
+			<Action Cmd="OPEN_PANEL" Param="IrisWeddingPanel" />
+ 		</NPC>
+	</Step>
+	
+	<Step ID="4" >
+		<NPC ID="10107" Option="爱心别针！" >
+			<Action Cmd="ACT_EVENT" Param="Act_Task517_4" />
+		</NPC>
+		
+		<EnterMap MapID="10000" >
+			<Action Cmd="OPEN_PANEL" Param="Task517GetRodePanel" />
+			<Action Cmd="OPEN_PANEL" Param="IrisWeddingPanel" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1" />
+ 			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+ 			
+			<Action Cmd="OVER" />
+ 		</EnterMap>	
+	</Step>		
+</Tasks>

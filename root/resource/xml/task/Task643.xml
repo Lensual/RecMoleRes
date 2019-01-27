@@ -1,0 +1,59 @@
+<Tasks ID="643" Name="最爱是庄园" AwardMsg="恭喜你获得1个爆米花弹簧床、2颗白缎月季种子和1万摩尔豆。" AwardBean="">
+	<Step ID="1" TarMapID="32">
+		<EnterMap MapID="32">
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1"/>
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2"/>
+		</EnterMap>
+	</Step>
+	<Step ID="2" TarMapID="32">
+		<EnterMap MapID="32">
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />
+			<Action Cmd="SAY">
+				<Talk NpcID="10036" Face="疑惑" Msg="恩？这本书好像变得平静了？" Option="恩恩，真是太好了！"/>
+				<Talk NpcID="10036" Face="疑惑" Msg="什么情况？" Option="没什么啦没什么，王子我们是不是已经开始周年庆准备了呀？"/>
+				<Talk NpcID="10036" Face="正常" Msg="还跟我卖关子！说到周年庆，大家都非常担心你，快去跟大家打个招呼说你回来了！看看有没有什么要你帮忙的！" Option="是！王子殿下！"/>
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2"/>
+			<Action Cmd="JUMP_TASK_UI" Param="   王子说大家都想我了，也担心我了，我要去看看大家呢！告诉大家我平平安安的，还偷偷的做了庄园的小英雄，嘻嘻~"/>
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3"/>
+			<Action Cmd="GO_MAP" MapID="15" MapType="0"/>
+		</EnterMap>
+	</Step>
+	<Step ID="3" TarMapID="15">
+		<EnterMap MapID="15">
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10047" Face="开心" Msg="小家伙，你可算回来了，溜到哪里去玩了？粒粒都快急死了！！" Option="(*^__^*) 嘻嘻……没，没去哪，就是睡着了……"/>
+				<Talk NpcID="10047" Face="开心" Msg="开我的玩笑呢？睡觉可以睡三个礼拜？" Option="哎哟，洛克叔叔，不要问了啦~小朋友有小朋友的秘密！"/>
+				<Talk NpcID="10047" Face="开心" Msg="好了好了，你回来了就好，不然粒粒要把庄园翻个底朝天了，快去找她吧！" Option="恩啊！有没有什么要我帮忙的？"/>
+				<Talk NpcID="10047" Face="开心" Msg="这几天庄园忙着装修呢，你记得帮忙哦！" Option="好嘞！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3"/>
+			<Action Cmd="JUMP_TASK_UI" Param="   粒粒好像很担心我哎，会不会是暗恋我啊？去找她咯！"/>
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4"/>
+			<Action Cmd="GO_MAP" MapID="1" MapType="0"/>
+		</EnterMap>	
+	</Step>
+	<Step ID="4" TarMapID="1">
+		<EnterMap MapID="1">
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10012" Face="生气" Msg="大家忙着周年庆装修庄园，都快忙翻了，你说你跑去哪里了？╭(╯^╰)╮" Option=" 哎哟，粒粒，别生气了，我都记得呢……"/>
+				<Talk NpcID="10012" Face="生气" Msg="就是因为你，乐乐的生日都没有过，都忙着找你呢！" Option="( ⊙ o ⊙ )啊！原来粒粒不是暗恋我，是暗恋乐乐……"/>
+				<Talk NpcID="10012" Face="生气" Msg="好了，不要瞎说，快点帮大家一块装修庄园，做蛋糕吧！" Option="恩恩恩！"/>
+				<Talk NpcID="10012" Face="生气" Msg="还有全新的礼服啊！音乐啊！想着就觉得好美好是不是？" Option="是是是！我这就来帮忙！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4"/>
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_103"/>
+			<Action Cmd="OVER"/>
+		</EnterMap>	
+	</Step>
+</Tasks>

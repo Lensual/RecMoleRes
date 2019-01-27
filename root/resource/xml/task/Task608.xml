@@ -1,0 +1,103 @@
+	<Tasks ID="608" Name="喵喵奇遇记" AwardMsg="恭喜你获得2个经验药剂（小）、喵喵趴！" AwardBean="" >
+
+	<!-- 城堡书房 -->
+	<Step ID="1" TarMapID="32">
+		<EnterMap MapID="32">
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10036" Visible="0" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10036" Face="正常" Msg="{$username}，怎么啦，一脸疑惑的？" Option="还记得上回我救下了一只小猫嘛？"/>
+				<Talk NpcID="10036" Face="正常" Msg="你不会还在想着占星师和你说的那些话吧！" Option="恩，所以心里有点点不踏实的说。"/>
+				<Talk NpcID="10036" Face="正常" Msg="额~~你什么时候变的这么纠结啦！" Option="纠结体了有木有！好忧桑……"/>
+				<Talk NpcID="10036" Face="正常" Msg="……你还好吗！" Option="子曾曰过：既来之则安之！"/>
+				<Talk NpcID="10036" Face="正常" Msg="这是管理图书的钥匙，我放在桌子上你帮我保管一下，我出去透透气。" Option="至于吗？出去透透气还把钥匙交给我保管！"/>
+				<Talk NpcID="10036" Face="正常" Msg="万一碰见坏人把钥匙偷走了怎么办？" Option="那倒也是。这钥匙就暂交给我吧！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10036" Face="正常" Msg="这里发生了什么事？怎么到处都是脚印？" Option="刚才一只猫扑过来，把你要我保管的钥匙偷走了！555555~~"/>
+				<Talk NpcID="10036" Face="正常" Msg="猫？什么猫？" Option="就是我上回救的猫。它的速度好快，一下就消失了。"/>
+				<Talk NpcID="10036" Face="正常" Msg="啊啊啊~~这只猫要不要消失的那么快啊，敢不敢留下点痕迹！" Option="这么多脚印难道还不叫痕迹嘛！王子~你要淡定一点！"/>
+				<Talk NpcID="10036" Face="正常" Msg="深呼吸~~~~~~~~~~一定要把钥匙拿回来啊！" Option="只要找到猫脚印，顺着脚印的方向，一定能找到的。"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="200" Name="movie_200" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_200" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="1000" Name="movie_1000" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_1000" />
+			
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+			<Action Cmd="GO_MAP" MapID="350" MapType="0" />
+		</EnterMap>	
+	</Step>
+	
+	<!-- 猫的夜市 -->
+	<Step ID="2" TarMapID="350">
+		<EnterMap MapID="350">
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10233" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10233" Face="正常" Msg="我等你很久了，呵呵呵呵呵呵呵！" Option="额……你是神马物种？"/>
+				<Talk NpcID="10233" Face="正常" Msg="我就是刚刚那只小猫，欢迎来到我们喵的世界。" Option="纳尼！！喵的世界？"/>
+				<Talk NpcID="10233" Face="正常" Msg="我们的喵喵公主很想见你，快去找她吧！" Option="喵喵公主？我要去哪找呢？"/>
+				<Talk NpcID="10233" Face="正常" Msg="你不妨点击旁边与众不同的路灯试试看，或许会有新发现！" Option=""/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="201" Name="movie_201" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_201" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="1001" Name="movie_1001" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_1001" />
+			
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+		</EnterMap>	
+	</Step>
+	
+	<!-- 猫的夜市 -->
+	<Step ID="3" TarMapID="350">
+		<EnterMap MapID="350">
+<!-- 			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10232" Visible="0" /> -->
+<!-- 			<Action Cmd="TASK_SHOW_SELF" Hide="1"/> -->
+			
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10232" Face="正常" Msg="喵~~欢迎来到我们喵的世界！" Option="难道你就是传说中的喵喵公主？"/>
+				<Talk NpcID="10232" Face="正常" Msg="你居然发疑问句？难道从我高贵大气上档次的气质，没让你看粗我就是公主嘛？" Option="失敬失敬，公主真是贵气逼人呐！"/>
+				<Talk NpcID="10232" Face="正常" Msg="你叫什么名字啊？" Option=""/>
+				<Talk NpcID="10232" Face="正常" Msg="STOP！不要说粗来，让我来给你占一下卜，便能得知你的姓与名！" Option="没想到高贵大气上档次的公主还会占卜！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10232" Face="正常" Msg="啊哈！我算粗来嘞！你姓二，单名一个蛋字！" Option="……二……蛋……？？？？"/>
+				<Talk NpcID="10232" Face="正常" Msg="啊哈哈哈，被我说中了对不对？" Option="这么神奇的名字，你能想出来也不容易— —！"/>
+				<Talk NpcID="10232" Face="正常" Msg="让我再来给你占占卜，占什么好捏？啊哈，看你能活多久！" Option="别~别介样！（咦，我怎么说话的口音被这个公主传染了？）"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10232" Face="正常" Msg="啊啊啊啊~~我的牌……快帮我找找啊！" Option="不要着急，我们帮你找！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10232" Face="正常" Msg="还好你们帮我找到了！咦~怎么还少了一张！！！" Option="我们刚才都有仔细找过啊，怎么还会少一张呢？"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_7" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			
+			<Action Cmd="OVER" MapID="32"/>
+		</EnterMap>	
+	</Step>
+</Tasks>

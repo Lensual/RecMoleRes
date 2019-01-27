@@ -1,0 +1,31 @@
+<Tasks ID="519" Name="拜访婚纱小店" AwardMsg="恭喜你获得10个坐骑鱼食、1000摩尔豆！" >
+	<Step ID="1" >
+		<EnterMap MapID="20" >
+			<Action Cmd="SAY" Param="" >
+				<Talk NpcID="10027" Face="开心" Msg="咦，亲爱的{$username}，你来的可真是时候啊！" Option="啊？出了什么事？" />
+				<Talk NpcID="10027" Face="开心" Msg="鸢尾仙堡婚纱小屋你知道吗？听说那里的婚纱材质一流不说，做工、设计方面更是堪称美轮美奂！" Option="能让西索这么夸奖的，肯定不错！" />
+				<Talk NpcID="10027" Face="开心" Msg="鸢尾仙堡婚纱小店新开张，我应该送一份贺礼给爱丽莎……可是……我实在有事走不开。亲爱的{$username}，可否请你带我转送一下呢？" Option="OK！没问题！我顺便也去逛逛！" />
+				<Talk NpcID="10027" Face="开心" Msg="亲爱的{$username}，真是太谢谢你了，还请你跟爱丽莎说，改天我一定亲自前去拜访！" Option="我办事儿，你放心！我这就去！" />
+			</Action>
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+			<Action Cmd="GO_MAP" MapID="317" MapType="0" />				
+		</EnterMap>
+	</Step>	
+	
+	<Step ID="2" >
+		<NPC ID="10122" Option="拜访婚纱小店">
+			<Action Cmd="SAY" Param="">
+				<Talk NpcID="10122" Face="正常" Msg="欢迎来到我们鸢尾仙堡婚纱小屋！" Option="哇！麻豆身上穿的婚纱美呆啦！" />
+				<Talk NpcID="10122" Face="正常" Msg="婚礼以幸福的魔法，将每对新人的命运相连，婚纱用甜蜜的丝线，缝制专属于你们的纪念，请问有什么可以为你服务的呢？" Option="我想看看你们的婚纱！" />
+			</Action>
+			<Action Cmd="OPEN_PANEL" Param="VisitWeddingShop" />	 
+			<Action Cmd="SAY" Param="">
+				<Talk NpcID="10122" Face="正常" Msg="亲爱的{$username}，你对我们的婚纱还满意吗？" Option="啊！光顾着看婚纱，忘了正事了！" />
+				<Talk NpcID="10122" Face="正常" Msg="正事？{$username}，你还有什么事需要我帮忙的吗？" Option="是西索姐姐叫我给你送礼物来的！" />
+				<Talk NpcID="10122" Face="正常" Msg="啊！好精致的小礼物，西索姐姐有心了！小摩尔也谢谢你帮我把礼物送过来！" Option="你太客气了，助人为快乐之本嘛！" />
+				<Talk NpcID="10122" Face="正常" Msg="{$username},有空一定要常来哦！鸢尾仙堡婚纱小屋随时欢迎你的光临！" Option="一定一定！" />
+			</Action>
+			<Action Cmd="OVER" />				
+		</NPC>
+	</Step>	
+</Tasks>

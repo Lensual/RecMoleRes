@@ -1,0 +1,157 @@
+<Tasks ID="500" Name="海妖之围" AwardMsg="恭喜你获得嘟嘟勇士盔甲、2000摩尔豆。" AwardBean="2000" >
+	<Step ID="1" >
+		<EnterMap MapID="255" >
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10097" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="15" Name="movie_15" />	   <!--   movie_15 是加载的捷克王子一行人  -->	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10036" Face="正常" Msg="{$username}，告诉你一个好消息，龙王丸号终于修好了!" Option="前情回顾" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_15" />
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100"  IsFullScreen="1" IsStopSound="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10036" Face="正常" Msg="事不宜迟，咱们赶紧向海妖国中心出发吧！" Option="好，这就出发！" />
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101"  IsFullScreen="1" IsStopSound="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />	
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10097" Visible="1" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10097" Face="正常" Msg="喂，喂~我说，你还真能睡，你的朋友们都已经下车啦！" Option="啊？不是吧！( ⊙ o ⊙ )" />
+				<Talk NpcID="10097" Face="正常" Msg="叫你半天都没醒，他们就先行一步了。下车出去就是海妖国中心，你赶紧去，说不定还能追到他们！" Option="好，我马上就去！"/>
+			</Action>
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+			<Action Cmd="GO_MAP" MapID="258" MapType="0" />				
+		
+		</EnterMap>	
+	</Step>			
+
+	<Step ID="2" >
+		<EnterMap MapID="258" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />		
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10097" Face="正常" Msg="喏，这就是海妖国中心了，快去找找你的朋友们吧！" Option="这么大的地方，我可上哪儿找呀！" />
+				<Talk NpcID="10097" Face="正常" Msg="到处瞅瞅呗~你那些朋友长得那么特别，一眼就能认出！咦~你看那边……" Option="啊？什么东西？"/>
+			</Action>			
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />			
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102"  IsFullScreen="1" IsStopSound="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />	
+			<Action Cmd="PLAY_MOVIE" Param="2_1" Name="movie_2_1" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10097" Face="正常" Msg="怎么会突然肚子疼呢？{$username}，我先走一步啊，再见！" Option="龙大侠，你……" />
+			</Action>			
+			<Action Cmd="DELETE_MOVIE" Param="movie_2_1" />								
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10097" Face="正常" Msg="真倒霉，摔进了垃圾堆，太损我龙大侠的形象了！这幅德行，谁还能认出我堂堂龙大侠！" Option="嗯，我都快认不出了！对了~~有办法了！~" />
+				<Talk NpcID="10097" Face="正常" Msg="办法？什么办法？喂~你别跑呀！" Option="嘘~咱们先回列车再说！"/>
+			</Action>				
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />			
+
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+			<Action Cmd="GO_MAP" MapID="255" MapType="0" />				
+		</EnterMap>		
+	</Step>					
+	
+	<Step ID="3" >
+		<EnterMap MapID="255" >
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10097" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="16" Name="movie_16" />	  <!--   movie_16 是加载的龙大侠头顶冒叹号形象  -->	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10097" Face="正常" Msg="{$username}，你说你想到办法了，是什么办法呀？" Option="能帮我找些衣服吗？我来伪装一下！" />
+				<Talk NpcID="10097" Face="正常" Msg="衣服？我找找看啊……刚好这里还放了些我年轻时的衣服。年轻多好啊，记得我那时候还很苗条……" Option="好，麻烦帮我找找看呢！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_16" />			
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10097" Face="正常" Msg="可真乱啊……{$username}，找到了，但我还真分不清哪件是哪件了……你能帮我整理整理吗？" Option="额……好吧！⊙﹏⊙b" />
+			</Action>			
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />
+			<Action Cmd="PLAY_MOVIE" Param="16_1" Name="movie_16_1" />			
+			<Action Cmd="DELETE_MOVIE" Param="movie_16_1" />								
+			<Action Cmd="OPEN_PANEL" Param="SpinLobsterUi" />														
+		</EnterMap>	
+	</Step>
+
+	<Step ID="4" >
+		<SubmitScore ModuleID="10016" MinScore="1" LoseMsg="还没有把衣服整理好哦！小摩尔要重来一次吗？" >
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" />		
+			<Action Cmd="SAY" >
+				<Talk NpcID="10097" Face="正常" Msg="啊哈，不错，不错~有我龙大侠当年的风范！这回，我想没人能看出你其实是小摩尔了！" Option="这下我可以蒙混过关，解救同伴了！" />
+				<Talk NpcID="10097" Face="正常" Msg="好，快去吧，千万小心！啊~糟糕，我又肚，肚子疼，我就不去了啊……" Option="额……o(╯□╰)o" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />	
+			<Action Cmd="SET_BUFFER" Panel="5" Step="5" />
+			<Action Cmd="GO_MAP" MapID="258" MapType="0" />																						
+		</SubmitScore>
+	</Step>	
+
+	<Step ID="5" >
+		<EnterMap MapID="258" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10104" Face="正常" Msg="这是哪儿冒出来的家伙？" Option="大哥，我来给你加点调料，味道会更好！" />
+			</Action>		
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />			
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="生气" Msg="你……你个坏蛋！你走开，不许往我身上洒调料！" Option="嘘~你说，先撒点什么调料好呢？" />
+			</Action>				
+			<Action Cmd="DELETE_MOVIE" Param="movie_7" />			
+			<Action Cmd="PLAY_MOVIE" Param="8" Name="movie_8" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_8" />			
+			<Action Cmd="SET_BUFFER" Panel="6" Step="6" />
+			<Action Cmd="OPEN_PANEL" Param="RunAwayUi" />																
+		</EnterMap>	
+	</Step>
+
+	<Step ID="6" >
+		<SubmitScore ModuleID="10017" MinScore="1" LoseMsg="哎呀，不小心被抓住了！小摩尔要重来一次吗？" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10104" Face="正常" Msg="我说你到底好了没啊！兄弟们都还等着吃肉呢！" Option="马上好，马上好，这事儿急不得！" />
+				<Talk NpcID="10104" Face="正常" Msg="你倒是快一点呀，大家肚子都要饿扁了……" Option="好，好，我给汤里也加点儿调料就好！" />
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="9" Name="movie_9" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_9" />	
+			<Action Cmd="SET_BUFFER" Panel="7" Step="7" />
+			<Action Cmd="OPEN_PANEL" Param="OctopusEatUi" />																
+		</SubmitScore>
+	</Step>	
+
+	<Step ID="7" >
+		<SubmitScore ModuleID="10018" MinScore="1" LoseMsg="汤还没调好哦！小摩尔要重来一次吗？" >
+			<Action Cmd="PLAY_MOVIE" Param="10" Name="movie_10" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_10" />		
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103"  IsFullScreen="1" IsStopSound="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />		
+			<Action Cmd="PLAY_MOVIE" Param="11" Name="movie_11" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10104" Face="正常" Msg="不错嘛，真香！不过我更想吃肉！" Option="大哥先喝汤，肉马上好，交给小的来办！" />
+				<Talk NpcID="10104" Face="正常" Msg="那好，辛苦你啦！兄弟们，过来喝汤咯！" Option="大哥们好好喝啊~" />
+			</Action>			
+			<Action Cmd="DELETE_MOVIE" Param="movie_11" />	
+			<Action Cmd="PLAY_MOVIE" Param="12" Name="movie_12" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="惊讶" Msg="那些坏蛋……都晕过去了？！{$username}，是你吗？刚才我一看到红鼻子，我就猜想……" Option="当然是我啦！O(∩_∩)O" />
+			</Action>				
+			<Action Cmd="DELETE_MOVIE" Param="movie_12" />
+			<Action Cmd="PLAY_MOVIE" Param="13" Name="movie_13" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10097" Face="正常" Msg="就这小身板还敢跟爷叫板！" Option="哇哦~龙大侠好帅哦！" />
+				<Talk NpcID="10097" Face="正常" Msg="关键时刻，还得我龙大侠出马呀，哈哈哈~" Option="最牛不过龙大侠！" />			
+				<Talk NpcID="10000" Face="惊讶" Msg="{$username}，快过来给我们松绑吧！" Option="哦，好的我来了！" />
+			</Action>				
+			<Action Cmd="DELETE_MOVIE" Param="movie_13" />
+			<Action Cmd="PLAY_MOVIE" Param="18" Name="movie_18" />	  <!--   movie_17 是箭头提示点击柱子给大家松绑  -->	
+			<Action Cmd="DELETE_MOVIE" Param="movie_18" />						
+			<Action Cmd="PLAY_MOVIE" Param="104" Name="movie_104"  IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_104" />	
+			<Action Cmd="OVER" />																	
+		</SubmitScore>
+	</Step>	
+	
+</Tasks>

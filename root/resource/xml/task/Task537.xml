@@ -1,0 +1,43 @@
+<Tasks ID="537" Name="失忆的么么公主" AwardMsg="恭喜你获得10个库拉变身道具、1000摩尔豆！" AwardBean="1000" >
+	<Step ID="1" >
+	
+		<EnterMap MapID="110" >
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10009" Face="正常" Msg="么么公主，早啊！大家一大早就说过来看看你，昨晚休息的还好吗？" Option="么么公主，早！" />
+				<Talk NpcID="10002" Face="疑惑" Msg="玛丽，他们怎么知道我住在这里的呢？" Option="呃……这……" />
+				<Talk NpcID="10057" Face="正常" Msg="大家早啊！还请大家见谅，现在公主就只记得我一个了，好像其他人……公主都不认识了一样。" Option="公主晕倒后，醒过来就……" />
+				<Talk NpcID="10007" Face="正常" Msg="么么晕倒后，醒来就不认识大家了。我想着肯定是最近公主太操心庄园里的事情，太累了，没休息好导致的。还以为公主好好休息一下，应该就没事了……" Option="现在貌似情况不妙啊！" />
+				<Talk NpcID="10000" Face="疑惑" Msg="么么公主为什么会无故晕倒呢？而且醒来后还就不认得大家了？" Option="………………" />
+				<Talk NpcID="10007" Face="正常" Msg="看来公主晕倒，肯定不是因为没休息好的缘故……肯定有什么我们疏忽了的地方。" Option="那是因为什么呢？" />
+				<Talk NpcID="10009" Face="疑惑" Msg="可是，在查出A计划的整个过程中，公主跟我们都是在一起的呀！也没有什么不对劲的地方，那为什么我们没事呢？" Option="为什么其他人没事呢？" />
+				<Talk NpcID="10007" Face="正常" Msg="现在大家好好想想，在我们寻找线索的整个过程中，有没有什么可疑的地方，是跟公主晕倒、失去记忆有关的？" Option="仔细的想想……" />
+			</Action>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="惊讶" Msg="拉仔，这么重要的事情，你怎么不早点说呢？？？都是你，害的公主晕倒了，还失去了记忆！" Option="就是的呀！" />
+				<Talk NpcID="10001" Face="正常" Msg="当时黑色的小藤蔓一眨眼的功夫就不见了，我还以为是自己眼花了呢！而且大家都很关心库拉A计划的事情，我也就没放在心上……" Option="拉仔也别太自责了。" />
+				<Talk NpcID="10007" Face="正常" Msg="拉仔也不是故意的，在当时的情况下没注意也是正常。乐乐你也别埋怨拉仔了。" Option="乐乐别怪拉仔了。" />
+				<Talk NpcID="10009" Face="正常" Msg="大家都别埋怨拉仔了，现在最重要的是弄明白那株黑色的小藤蔓到底是什么？为什么会害的公主失忆？" Option="对，为什么呢？" />
+			</Action>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />	
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1"/>
+				<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="生气" Msg="你个可恶的库拉！你精心策划的A计划已经失败了，你还敢出现在庄园里！" Option="库拉！太可恶了！" />
+				<Talk NpcID="10009" Face="生气" Msg="库拉，你居然还敢出现，就不怕被我用流星锤打得你满地找牙吗？" Option="丫丽，保护公主！" />
+				<Talk NpcID="10000" Face="生气" Msg="库拉，快说！么么公主失忆，是不是也跟你有关！" Option="赶快从实招来！" />
+				<Talk NpcID="10003" Face="开心" Msg="哈哈，就凭你们，也能打败我？简直是个大笑话！还是赶快照顾好你们高贵的公主吧！" Option="哼~~~别得意了你！" />
+				<Talk NpcID="10003" Face="开心" Msg="黑暗力量已经通过那株黑色的小藤蔓侵入到了么么公主的体内。现在她只是不记得大家而已，等过一段时间……" Option="过一段时间会怎么？" />
+				<Talk NpcID="10003" Face="开心" Msg="过一段时间，黑暗力量就会渐渐吞噬她的内心。从前所有幸福美好的回忆，都将被黑暗吞噬，你们活泼开朗的公主，将会失去所有记忆，变得孤僻、悲观……" Option="库拉！你！" />
+				<Talk NpcID="10007" Face="生气" Msg="库拉，我们不会让你得逞的！公主有我们大家，有庄园里所有小摩尔的关心，会一直活泼开朗，幸福的生活着。" Option="库拉，你休想！" />
+				<Talk NpcID="10000" Face="生气" Msg="库拉！我们走着瞧！我现在就去号召大家一起，为么么公主寻找幸福，我就不信正义的力量会被邪恶战胜！" Option="一起为么么公主寻找幸福回忆！" />
+				<Talk NpcID="10009" Face="生气" Msg="乐乐说的对，我们现在就去为公主寻找幸福，让她记起曾经的美好快乐的回忆。只要大家一起努力，用我们真挚善良的心，一定能帮助公主找回记忆的！" Option="\(^o^)/" />
+			</Action>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />	
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />	
+			<Action Cmd="OVER" />
+		</EnterMap>	
+	</Step>		
+</Tasks>

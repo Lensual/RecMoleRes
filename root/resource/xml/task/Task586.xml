@@ -1,0 +1,109 @@
+<Tasks ID="586" Name="浪漫满园" AwardMsg="恭喜你获得10个经验果实！" AwardBean="" >
+
+	<!-- 小木屋  -->
+	<Step ID="1" TarMapID="331">
+		<NPC ID="10192" Option="浪漫满园"  MapID="" ><!--  Layer="depthLevel" Name="阿七" Ex="470" Ey="380" Px="470" Py="400"  Msg="浪漫满园任务开始吧"  -->
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10192" Visible="0" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1" />	
+			
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10192" Face="惊讶" Msg="这……这声音……这不是……" Option=""/>
+				<Talk NpcID="10197" Face="疑惑" Msg="好神奇，居然还会有人回应老爷爷的歌声！爷爷，您知道那是谁吗？" Option=""/>
+				<Talk NpcID="10192" Face="惊讶" Msg="一、一定是她……没错，一定是她……" Option=""/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+			<Action Cmd="GO_MAP" MapID="332" MapType="0" />
+		</NPC>	
+	</Step>
+	
+	
+	<!-- 遗忘田园（任务副本地图）  -->
+	<Step ID="2" TarMapID="332">
+		<EnterMap MapID="332">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+		</EnterMap>
+	</Step>
+	
+	
+	<!-- 遗忘田园 （任务副本地图） -->
+	<Step ID="3" TarMapID="332">
+		<EnterMap MapID="332">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10200" Face="悲伤" Msg="大笨熊，对，对不起……现在的猫猫，已不再是当初的猫猫了……" Option=""/>
+				<Talk NpcID="10192" Face="悲伤" Msg="猫猫，我不明白你在说什么。请你告诉我，究竟发生了什么事……你为什么会变成这样……" Option=""/>
+				<Talk NpcID="10200" Face="悲伤" Msg="大笨熊，你比之前……苍老了。可是，你有没有发现……我，我却还是当初的模样……" Option=""/>
+				<Talk NpcID="10192" Face="悲伤" Msg="……" Option=""/>
+				<Talk NpcID="10200" Face="悲伤" Msg="大笨熊，我知道，其实你已想到了……其实……我已经……" Option=""/>
+				<Talk NpcID="10192" Face="悲伤" Msg="不，不……猫猫，求求你，这不是事实，不是的……" Option=""/>
+				<Talk NpcID="10200" Face="正常" Msg="大笨熊，这是事实——虽然我也希望它不是。我还是得告诉你之前究竟发生了什么，不然你绝不会心安的。" Option=""/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10200" Face="正常" Msg="我被迷雾困了好久，再后来，再后来我发现，周围的一切都变了，也许，我是从迷雾中去到了天堂……" Option=""/>
+				<Talk NpcID="10192" Face="悲伤" Msg="不，猫猫，我求你不要再说下去……猫猫，你一定是在跟我开玩笑对不对？你最调皮了，老是欺负我。猫猫，快告诉我你刚刚是在骗我……你说过会等我回来的……" Option=""/>
+				<Talk NpcID="10200" Face="悲伤" Msg="大笨熊，你不要难过。在天堂的日子里，还好有你的马儿陪着我，看到它，我总会想起属于我们共同的回忆。今天，再次见到了你，我也无憾了……" Option=""/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10200" Face="正常" Msg="亲爱的小摩尔，希望你能帮我个忙。我这里有一些种子，你能帮我种在旁边的花坛里吗？" Option=""/>
+				<Talk NpcID="10197" Face="正常" Msg="嗯！当然可以！" Option=""/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />
+			
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />
+		</EnterMap>
+	</Step>
+	
+	<!-- 遗忘田园 （任务副本地图） -->
+	<Step ID="4" TarMapID="332">
+		<EnterMap MapID="332">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10200" Face="正常" Msg="嘻~这是我送你的最后的礼物。亲爱的大笨熊，你喜欢吗？以后……就让它们代替我来陪伴你了……" Option=""/>
+				<Talk NpcID="10192" Face="悲伤" Msg="不，不，猫猫，我只要你陪着我，其它我什么都不要……" Option=""/>
+				<Talk NpcID="10200" Face="正常" Msg="大笨熊，你说过最怕我生气对不对？你说过要一辈子宠我，我的任何要求，你都会答应我……" Option=""/>
+				<Talk NpcID="10192" Face="悲伤" Msg="我……对……大笨熊今生最大的快乐，就是让猫猫得到幸福……" Option=""/>
+				<Talk NpcID="10200" Face="正常" Msg="所以，我要向你提一个要求——就算我不在你身边，你也一定要快乐——你要是做不到，我就一辈子都不理你了！" Option=""/>
+				<Talk NpcID="10192" Face="悲伤" Msg="猫猫……我……" Option=""/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="104" Name="movie_104" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="DELETE_MOVIE" Param="movie_104" />
+			
+			<Action Cmd="DELETE_MOVIE" Param="movie_7" />
+			
+			<Action Cmd="TASK_SHOW_SELF" Hide="0"/>
+			<Action Cmd="OVER" MapID="330"/>
+		</EnterMap>
+	</Step>
+</Tasks>

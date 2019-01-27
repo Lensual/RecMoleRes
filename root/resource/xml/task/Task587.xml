@@ -1,0 +1,70 @@
+<Tasks ID="587" Name="马戏团来临" AwardMsg="恭喜你获得20个欢乐券、10个经验果实！" AwardBean="" >
+
+	<!-- 城堡大厅  -->
+	<Step ID="1" TarMapID="15">
+		<NPC ID="10047" Option="马戏团来临"  MapID="" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="0"/>
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10047" Face="正常" Msg="{$username}，六一节快乐！" Option=""/>
+				<Talk NpcID="10197" Face="正常" Msg="嘻嘻，洛克行政官，听说公民管理处为大家准备了好玩的六一节目，能给我透露透露吗？" Option=""/>
+				<Talk NpcID="10047" Face="正常" Msg="噢？哈哈~你刚好提醒了我，估计这会儿他们应该也到了。" Option=""/>
+				<Talk NpcID="10197" Face="惊讶" Msg="他们？他们是谁？" Option=""/>
+				<Talk NpcID="10047" Face="正常" Msg="暂时保密！{$username}，你自己去粒粒小广场看看吧！" Option=""/>
+				<Talk NpcID="10197" Face="惊讶" Msg="这么神秘？那好吧，我现在就去粒粒小广场。" Option=""/>
+			</Action>
+			
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+			<Action Cmd="GO_MAP" MapID="333" MapType="0" />
+		</NPC>	
+	</Step>
+	
+	
+	<!-- 粒粒小广场 （任务副本地图） -->
+	<Step ID="2" TarMapID="333">
+		<EnterMap MapID="333">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10202" Face="正常" Msg="亲爱的小摩尔，六一快乐！" Option=""/>
+				<Talk NpcID="10197" Face="开心" Msg="哈哈~竟然是你们，红鼻子马戏团？！简直是太棒了！" Option=""/>
+			</Action>
+			
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+		</EnterMap>
+	</Step>
+	
+	
+	<!-- 粒粒小广场 （任务副本地图） -->
+	<Step ID="3" TarMapID="333">
+		<EnterMap MapID="333">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10202" Face="正常" Msg="这是我们从遥远的国度带来的礼物，冰与火的完美结合——双头龙图格斯！" Option=""/>
+				<Talk NpcID="10197" Face="开心" Msg="实在是太酷啦！" Option=""/>
+				<Talk NpcID="10202" Face="正常" Msg="不仅如此，我们还为大家准备了很多好玩的节目哦！有魔术牌大挑战、摩尔大炮，更有我们的拿手绝活——马戏团疯狂演出哦！" Option=""/>
+				<Talk NpcID="10197" Face="开心" Msg="哇哦，听上去好棒，我都迫不及待了！" Option=""/>
+				<Talk NpcID="10202" Face="正常" Msg="那咱们快召集大家，一起进行六一节狂欢吧！" Option=""/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			
+			<Action Cmd="TASK_SHOW_SELF" Hide="0"/>
+			<Action Cmd="OVER" MapID="47"/>
+		</EnterMap>
+	</Step>
+</Tasks>

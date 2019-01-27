@@ -1,0 +1,86 @@
+<Tasks ID="552" Name="圣诞老人奇遇记" AwardMsg="恭喜你获得1个走兽系天使宝宝、5个经验果实（中）！" AwardBean="" >
+	<!-- 学院教导处 -->
+	<Step ID="1" TarMapID="53">
+		<NPC ID="10007" Option="圣诞老人奇遇记">
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="焦急" Msg="又快到一年一度的圣诞节了，往年这个时候圣诞老人已经在庄园里发礼物了，奇怪，今年怎会没啥动静呢？" Option="是啊，圣诞老人去哪了？" />
+				<Talk NpcID="10000" Face="开心" Msg="昨天圣诞老人给我留了个字条，我念给大家听听吧！" Option="好啊！好啊！" />
+				<Talk NpcID="10000" Face="正常" Msg="“亲爱的小朋友们，圣诞好！我是你们的老朋友，为了庆祝庄园保卫战的胜利，今年给大家过个不一样的圣诞，但是……大家必须先找到我身上的四件宝物，我才会现身哦！”" Option="哇，好期待……" />
+				<Talk NpcID="10007" Face="开心" Msg="不一样的圣诞？四件宝物？去哪里寻找呢？" Option="听说大伙儿都在圣诞庆功派对，一起去看看吧！" />
+			</Action>
+			<Action Cmd="ACT_EVENT" Param="sendData" /><!-- 抛事件 -->
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />	
+			<Action Cmd="GO_MAP" MapID="15" MapType="0" />
+		</NPC>
+	</Step>
+	
+	<!-- 城堡大厅 -->
+	<Step ID="2" TarMapID="15" >
+		<EnterMap MapID="15" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="正常" Msg="欢迎来到圣诞庆功派对，大家一起hi起来，对了圣诞老人的四件宝物圣诞花环、铃铛、圣诞袜和鹿角会不会在这里？快看看周围有没有？" Option="好，我要仔细地找一找！"/>
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="1000" Name="movie_1000"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1000" />
+			<Action Cmd="ALERT" Param="    恭喜你找到了圣诞铃铛！" Face="开心" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="正常" Msg="怎么只有一个，还有三个会在哪里呢？哎呀~我想起来了！听说圣诞老人还会为我们准备圣诞大餐，会不会在美食餐厅呢？" Option="对哦，找美食家奇奇问问吧！"/>
+			</Action>
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+			<Action Cmd="GO_MAP" MapID="203" MapType="0" />	
+		</EnterMap>	
+	</Step>
+	
+	<!-- kfc餐厅 -->
+	<Step ID="3" TarMapID="203" >
+		<NPC ID="10043" Option="圣诞老人奇遇记">
+			<Action Cmd="SAY" >
+				<Talk NpcID="10043" Face="正常" Msg="快乐的小摩尔，欢迎光临我的餐厅！美好的圣诞周，奇奇为你准备了缤纷惊喜噢！" Option="听说圣诞老人委托你帮忙准备圣诞大餐，不知道他是否有东西放在你这里？" />
+				<Talk NpcID="10043" Face="正常" Msg="好吧，聪明的小摩尔，那你就观察一下周围是否有你想要的宝物吧！" Option="耶，谢谢奇奇提示！" />
+			</Action>
+			<Action Cmd="ACT_EVENT" Param="goStop4" /><!-- 抛事件 -->
+		</NPC>
+	</Step>
+	<Step ID="4" TarMapID="203" >
+		<EnterMap MapID="203" >
+			<Action Cmd="PLAY_MOVIE" Param="1001" Name="movie_1001"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1001" />
+			<Action Cmd="ALERT" Param="    恭喜你找到了鹿角！" Face="开心" />
+			<Action Cmd="PLAY_MOVIE" Param="1002" Name="movie_1002"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1002" />
+			<Action Cmd="ALERT" Param="    恭喜你找到了圣诞花环！" Face="开心" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10043" Face="正常" Msg="好聪明的小摩尔，可是你还差一件哦，你可以去附近的房间看看哦。" Option="哦，谢谢奇奇提示！" />
+			</Action>
+			<Action Cmd="SET_BUFFER" Panel="5" Step="5" />
+			<Action Cmd="GO_MAP" MapID="57" MapType="0" />
+		</EnterMap>	
+	</Step>
+	
+	<!-- -->
+	<Step ID="5" TarMapID="57" >
+		<EnterMap MapID="57" >
+			<Action Cmd="PLAY_MOVIE" Param="1003" Name="movie_1003"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1003" />
+			<Action Cmd="ALERT" Param="    恭喜你找到了圣诞袜！" Face="开心" />
+			<Action Cmd="SET_BUFFER" Panel="6" Step="6" />
+			<Action Cmd="GO_MAP" MapID="203" MapType="0" />
+		</EnterMap>	
+	</Step>
+	<Step ID="6" TarMapID="203" >
+		<EnterMap MapID="203" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10158" Face="正常" Msg="亲爱的小摩尔们，你们好聪明啊，为了快乐的圣诞节，我给大家准备了圣诞大餐。" Option="好好哦，谢谢圣诞老人！" />
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10043" Face="正常" Msg="今年真是太开心了，在我的餐厅迎来了圣诞老人。为此我还准备了圣诞大礼给你们。" Option="是什么啊？" />
+				<Talk NpcID="10043" Face="正常" Msg="只要每天下午18：00——20：00来我的餐厅，将会得到我派发的节日彩蛋，记得定时来领取哟！" Option="哦？真的吗？" />
+				<Talk NpcID="10043" Face="正常" Msg="当然喽，这可不是一般的彩蛋，它是最近庄园最流行的天使蛋，你将有机会获得最新的天使哦。" Option="太棒了！谢谢奇奇。" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			<Action Cmd="ACT_EVENT" Param="sendData" /><!-- 抛事件 -->
+			<Action Cmd="OVER" />
+		</EnterMap>	
+	</Step>
+</Tasks>

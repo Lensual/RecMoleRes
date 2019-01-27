@@ -1,0 +1,120 @@
+<Tasks ID="576" Name="梦想五周年" AwardMsg="恭喜你获得20个许愿星、10个黄色水晶！" AwardBean="" >
+
+	<!-- 爱心广场  -->
+	<Step ID="1" TarMapID="2">
+		<EnterMap MapID="2">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10191" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="惊讶" Msg="RK？！他不是走了吗？怎么又跑回来？还带走了梦想守护者，他……他究竟想干什么？" Option="莫非他就是冲着梦想守护者而来？"/>
+				<Talk NpcID="10010" Face="焦急" Msg="RK会不会对梦想守护者不利呀？梦想守护者才帮我们恢复了许愿池，我们都还没来得及报答它……" Option="是呀，都是我们害了它……"/>
+				<Talk NpcID="10009" Face="生气" Msg="不行，绝不可坐视不理！走，我们去把梦想守护者给找回来！" Option="可是，该去哪儿找它呢……"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="惊讶" Msg="咦？地上怎么出现了闪闪发光的东西，像星星一样。是因为许愿池水洒上去的缘故吗？" Option="许愿池水还有这功效？( ⊙ o ⊙ )"/>
+				<Talk NpcID="10009" Face="正常" Msg="光猜顶啥用？是不是许愿池水的原因，试试就知道了呗！我来试！" Option="啊？好……"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10009" Face="开心" Msg="看，出现星光了！可并不是池水洒过之处就会出现星光，会不会……星光并不是由池水产生，池水只是让原本地上就有的东西展现了出来？" Option="莫非……这和梦想守护者有关？"/>
+				<Talk NpcID="10000" Face="焦急" Msg="RK是从这个方向逃走的，刚好又只有这个方向有星光，说不定，只要我们沿着星光的方向前进就能找到梦想守护者呢？" Option="乐乐说得有道理，我们一起试试吧！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+			<Action Cmd="GO_MAP" MapID="1" MapType="0" />
+		</EnterMap>	
+	</Step>
+	
+	
+	<Step ID="2" TarMapID="1">
+		<!-- 摩尔城堡 -->
+		<EnterMap MapID="1">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />
+			<Action Cmd="GO_MAP" MapID="4" MapType="0" />
+		</EnterMap>
+		
+		<!-- 摩尔拉雅山脚 -->
+		<EnterMap MapID="4">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />
+			<Action Cmd="GO_MAP" MapID="5" MapType="0" />
+		</EnterMap>
+		
+		<!-- 	摩尔拉雅滑冰场 -->
+		<EnterMap MapID="5">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_7" />
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+			<Action Cmd="GO_MAP" MapID="37" MapType="0" />
+		</EnterMap>
+	</Step>
+	
+	<!-- 摩尔拉雅山顶-->
+	<Step ID="3" TarMapID="37">
+		<EnterMap MapID="37">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			
+			<Action Cmd="PLAY_MOVIE" Param="8" Name="movie_8" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="生气" Msg="RK，你怎么能这样对梦想守护者！刚才都还好好的，现在变得这么虚弱，你对它做了什么？" Option="好可怜的梦想守护者……"/>
+				<Talk NpcID="10188" Face="正常" Msg="不了解缘由就不要冲动行事，否则你们会后悔的。" Option="你这话是什么意思？"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_8" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="9" Name="movie_9" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10161" Face="正常" Msg="摩乐乐，不要阻止RK。再不拯救这条星空龙的话，它会有危险的。" Option="星空龙？危险？"/>
+				<Talk NpcID="10000" Face="惊讶" Msg="尼尔拉法师，我没明白您的意思，RK他偷走了梦想守护者，还想把它给埋了……" Option="是呀，怎么又成了“拯救”？"/>
+				<Talk NpcID="10161" Face="正常" Msg="缘由稍后再细说，你们先让RK救星空龙吧，时间快来不及了。" Option="好吧，那就先听尼尔拉法师的。"/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_9" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="10" Name="movie_10" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="惊讶" Msg="这……尼尔拉法师，这究竟是怎么回事？梦想守护者……恢复正常了？" Option="看来RK真的是在救它……"/>
+				<Talk NpcID="10161" Face="正常" Msg="梦想守护者，也就是这只星空龙，它因为拯救许愿池，激发了自己的所有灵力，导致体温迅速升高而失去了调节体温的能力，以至于变得越来越虚弱。" Option="天啊，我们一直都没发现……"/>
+				<Talk NpcID="10161" Face="正常" Msg="看来RK在带走梦想守护者的途中发现了这一点，于是想到带梦想守护者来雪山顶，依靠积雪的力量来平衡它的体温。" Option="还好这么做了，不然后果不堪设想啊！"/>
+				<Talk NpcID="10189" Face="正常" Msg="谢谢你们……救了我！" Option="应该是我们谢谢你才对……"/>
+				<Talk NpcID="10189" Face="正常" Msg="这位戴蝴蝶眼镜的小摩尔，是叫RK对吧？我还要特别谢谢你，如果不是你，恐怕我以后都不能再做梦想守护者了……" Option="可RK之前为什么要带走梦想守护者？"/>
+				<Talk NpcID="10188" Face="正常" Msg="不用谢我。其实……我也只是因为想找你帮忙，才碰巧救了你。" Option="找梦想守护者帮忙？"/>
+				<Talk NpcID="10188" Face="悲伤" Msg="梦想守护者，你能帮我守护我的梦想吗？我的梦想，我怕它还未实现就会破碎……我不知道我今生还有没有可能再见到他们……" Option="他们？难道……"/>
+				<Talk NpcID="10189" Face="正常" Msg="身为梦想守护者，守护梦想是我的天职。可是，真正强大的力量之源，你们知道是什么吗？" Option="力量之源？是什么？"/>
+				<Talk NpcID="10189" Face="正常" Msg="力量之源，来自你们心中对于梦想的渴求、来源于坚持不懈的精神，我只是把这些力量集结在一起从而为大家守护梦想。" Option="这么高深( ⊙ o ⊙ )"/>
+				<Talk NpcID="10189" Face="正常" Msg="所以说，戴蝴蝶眼镜的小摩尔，随着你心中所想去做吧，相信奇迹，才能创造奇迹。无论何时都不要放弃，这才是梦想之力的精髓所在。" Option="无论何时，都不要放弃……"/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10011" Face="正常" Msg="呼~呼~你们说，RK的梦想是什么呀？走得那么急，连这么精彩的五周年庆典都不参加。" Option="少少，你说你除了睡觉还知道什么呀？"/>
+				<Talk NpcID="10000" Face="正常" Msg="RK，他当然是要去寻找他的爸爸妈妈呀……哎，不知道我的爸爸妈妈什么时候能回来看我……" Option="相信奇迹，才能创造奇迹，哈哈~"/>
+				<Talk NpcID="10000" Face="正常" Msg="嗯，对！周年庆典即将开始，我们赶紧回去吧！让我们和庄园一起创造奇迹！" Option="嗯！O(∩_∩)O"/>
+				<Talk NpcID="10010" Face="开心" Msg="嘻嘻，听说这次周年庆有很多好玩的节目哦，有音乐会、套圈圈，还有我期待已久的假面舞会，哇哦，好多好多呢……赶紧去瞅瞅！" Option="喂，多多，慢点儿，等等我~"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_10" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="0"/>
+			<Action Cmd="OVER" />
+		</EnterMap>
+	</Step>
+</Tasks>

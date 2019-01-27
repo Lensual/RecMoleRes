@@ -1,0 +1,39 @@
+<Tasks ID="529" Name="神秘占星师到来" AwardMsg="恭喜你获得一个贝壳调味罐、1000摩尔豆！" AwardBean="1000" >
+	<Step ID="1" >
+	
+		<EnterMap MapID="238" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10009" Face="正常" Msg="{$username}，你听说了吗？鸢尾仙堡里来了一位神秘的占星师！还带来了一个神秘星座魔盒和一颗魔法水晶球！" Option="怪不得大伙最近都在讨论星座！" />
+				<Talk NpcID="10009" Face="正常" Msg="哇！好想去看看呀！顺便叫大师帮我算算我未来的星座运势！" Option="丫丽~你居然对星座感兴趣？" />
+				<Talk NpcID="10009" Face="正常" Msg="人家好歹也是女孩子好不好！是女生都超迷星座的！而且，我有着白羊座与生俱来的冒险精神和领袖气质……你难道没看出来？！" Option="呵呵~是哦，典型白羊座的暴力女……" />
+				<Talk NpcID="10009" Face="正常" Msg="本来想叫上大伙儿一起去的，可多多、少少就知道宅在家吃零食看电视，摩乐乐也不知道哪儿去了！{$username}，想跟我一起去吗？" Option="这个……我……" />
+				<Talk NpcID="10009" Face="正常" Msg="这么激动人心的事，你还考虑什么啊？！走，时间还早，我们快去快回！" Option="……等一下，丫丽，你走慢点！" />
+			</Action>
+ 			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+ 			<Action Cmd="GO_MAP" MapID="319" MapType="0" />	
+ 		</EnterMap>	
+	</Step>			
+	
+	<Step ID="2" >
+		<NPC ID="10129" Option="神秘占星师到来" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10129" Face="正常" Msg="这位气质非凡的红衣黑发小摩尔，一定就是大名鼎鼎的丫丽了吧！典型的白羊座，正义直率，坦诚勇敢，但有点暴躁，急性子……" Option="你，你……你怎么知道她？！！！" />
+				<Talk NpcID="10129" Face="正常" Msg="我的魔法水晶球，能预知未来，通晓过去，上知天文下知地理！我早知道你们要来，已在此等候多时了！" Option="真有这么神奇吗？？？" />
+				<Talk NpcID="10129" Face="正常" Msg="你们不相信？我还有一个神秘星座魔盒，里面装的是我从神秘星系带来的12星座魔法时装！我这就打开让你们开开眼界！" Option="快打开！让我们看看！让我们看看！" />
+			</Action>
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" /> 
+			<Action Cmd="OPEN_PANEL" Param="StarSalePanel" /> 
+		</NPC>	
+	</Step>	
+	
+	<Step ID="3" >
+		<SubmitScore ModuleID="10038" MinScore="1" LoseMsg="" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10129" Face="正常" Msg="丫丽,{$username}，这下你们该相信我说的话了吧？现在每天都有好多小摩尔我这儿来占卜、咨询星座！" Option="现在庄园里人人都在讨论星座！" />
+				<Talk NpcID="10129" Face="正常" Msg="你们什么都不用说……我既然知道你要来，也就知道你来的目的是什么了！这个贝壳调味罐就给你们了，把它放在海妖馆里，它会给你们带来好运的！" Option="哇！大师就是大师啊！" />
+				<Talk NpcID="10129" Face="正常" Msg="哇！好精致的调味罐呀！谢谢你大师！{$username}，我们赶快回去拿给其他小摩尔也看看吧！" Option="好嘞！GO GO GO ！" />
+			</Action>
+			<Action Cmd="OVER" />
+		</SubmitScore>			
+	</Step>	
+</Tasks>

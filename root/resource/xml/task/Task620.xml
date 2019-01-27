@@ -1,0 +1,82 @@
+<Tasks ID="620" Name="冰雪美食节" AwardMsg="恭喜你获得2个山葵种子,1个圣诞款沙发 " AwardBean="">
+	<Step ID="1" TarMapID="44">
+		<EnterMap MapID="44">
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10019" Face="疑惑" Msg="老超、肖恩、豆豆，好好交代你们的罪行，坦白从宽！！" Option="嗯嗯！坦白从宽！"/>
+				<Talk NpcID="10244" Face="失望" Msg="警官大人，我们偷走的东西都已经送回来了，孩子们饿得没有办法才会偷东西的呀！" Option="艾尔警官，真的有很多小企鹅饿得好可怜啊！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1"/>
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2"/>
+			<Action Cmd="GO_MAP" MapID="44" MapType="0"/>
+		</EnterMap>
+	</Step>
+	<Step ID="2" TarMapID="44">
+		<EnterMap MapID="44">
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10244" Face="失望" Msg="我们真的很可怜的，不像你们在庄园这样物产丰富的地方住着！积雪镇一直都是一个贫瘠的地方，我老超一直在努力保护着孩子们，想让他们过上不缺吃不缺穿的日子……" Option="不管怎么样，你们也不能做坏事！"/>
+				<Talk NpcID="10247" Face="正常" Msg="老超爷爷，让我来说吧~" Option="小豆豆，你要说实话哦~不能忽悠我们！"/>
+				<Talk NpcID="10247" Face="正常" Msg="事情是这样的……" Option="...."/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2"/>
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100"/>
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3"/>
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3"/>
+			<Action Cmd="GO_MAP" MapID="44" MapType="0"/>
+		</EnterMap>
+	</Step>
+	<Step ID="3" TarMapID="44">
+		<EnterMap MapID="44">
+			<Action Cmd="SAY">
+				<Talk NpcID="10007" Face="悲伤" Msg="小豆豆真是太可怜了！" Option="是呀，从小就那么可怜~"/>
+				<Talk NpcID="10247" Face="悲伤" Msg="摩尔老爷爷，没事哒，我们一直都是这样哒~" Option="小豆豆一直被打，还没有好吃的，怎么能快乐成长呢？"/>
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10002" Face="疑惑" Msg="咦？小企鹅们，你们怎么都在哭啊？是不是绳子绑着太疼了？" Option="公主来了~公主，他们小时候都好可怜啊~"/>
+				<Talk NpcID="10240" Face="正常" Msg="当年还在南极的时候……" Option="...."/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4"/>
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101"/>
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_5"/>
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4"/>
+			<Action Cmd="GO_MAP" MapID="44" MapType="0"/>
+		</EnterMap>
+	</Step>
+	<Step ID="4" TarMapID="44">
+		<EnterMap MapID="44">
+			<Action Cmd="SAY">
+				<Talk NpcID="10002" Face="悲伤" Msg="真是好惨呢！5555555~肖恩太可怜了，么么从小过得那么幸福，都不知道你们从小那么可怜！我一定要做一个好公主，改变这一切！" Option="公主已经是一个非常完美的好公主了！"/>
+				<Talk NpcID="10002" Face="悲伤" Msg="不够不够，么么之前只想着要让所有的摩尔都幸福快乐，没想到还有可怜的企鹅！是么么不好~555555~！" Option="公主加油，我们会帮你的！"/>
+				<Talk NpcID="10019" Face="正常" Msg="咳咳，好像有点跑题了……那个……老超……你还没有交代罪行呐，让孩子们顶罪是不厚道的行为！" Option="老超快点交代~快点快点~"/>
+				<Talk NpcID="10244" Face="失望" Msg="警官大人，我没想逃避，其实积雪镇所有的大小企鹅都是这样度过每一天的……" Option="..."/>
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102"/>
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_6"/>
+			<Action Cmd="SET_BUFFER" Panel="5" Step="5"/>
+			<Action Cmd="GO_MAP" MapID="44" MapType="0"/>
+		</EnterMap>
+	</Step>
+	<Step ID="5" TarMapID="44">
+		<EnterMap MapID="44">
+			<Action Cmd="SAY">
+				<Talk NpcID="10002" Face="开心" Msg="么么想啊，既然企鹅们那么可怜，我们就按大伯说的和他们一块过圣诞节吧~" Option="真的吗？公主威武~"/>
+				<Talk NpcID="10002" Face="开心" Msg="(*^__^*) 嘻嘻……么么想要过一个有企鹅特色的圣诞节，庆祝企鹅和我们摩尔一族成为好朋友~" Option="打算怎么过呢？好期待哦~"/>
+				<Talk NpcID="10002" Face="开心" Msg="那就让么么来安排咯~首先，我们定下来在东部沙滩码头庆祝圣诞节！" Option="嗯嗯！"/>
+				<Talk NpcID="10002" Face="开心" Msg="然后呢~企鹅这边要由老超来负责安排，手把手的教会小摩尔们做你们家乡的特色菜！让企鹅们在庄园也像在家里一样吃到好吃的家乡风味！" Option="嗯嗯！"/>
+				<Talk NpcID="10244" Face="正常" Msg="公主~你真是太好了~我老超想当年也是号称超一刀！菜刀在手，没有什么小鱼小虾能逃出我的刀下！就看我老超给你亮几手！" Option="哦耶！"/>
+				<Talk NpcID="10002" Face="开心" Msg="把今年的圣诞节就定名为“冰雪美食节”！！让我们开开心心的玩起来吧！" Option="O(∩_∩)O~"/>
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_103"/>
+			<Action Cmd="OVER"/>
+		</EnterMap>
+	</Step>
+</Tasks>

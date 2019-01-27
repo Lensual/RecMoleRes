@@ -1,0 +1,77 @@
+<Tasks ID="630" Name="激战！扣扣海贼团" AwardMsg="恭喜你获得1招财猫套装，2个金橘" AwardBean="">
+	<Step ID="1" TarMapID="361">
+		<EnterMap MapID="361">
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10261" Face="正常" Msg="小摩尔们，欢迎你们的到来！" Option="咦？你不是不喜欢摩尔吗？"/>
+				<Talk NpcID="10261" Face="正常" Msg="呵呵，能够找到这里，能够进入这里，说明你们是有胆量，有智慧的生命，所以我欢迎你们！" Option="神说话真好听，我是来找扣扣的！快点把他交出来吧！"/>
+				<Talk NpcID="10262" Face="生气" Msg="愚昧无知的摩尔，不许用这样的口气和神说话！！" Option="..."/>
+				<Talk NpcID="10009" Face="生气" Msg="什么？愚昧无知？你才是愚昧无知的臭企鹅！看丫丽的锤子比你的锤子厉害！丫丽有两个锤子！！！" Option="(⊙o⊙)…丫丽丫丽，别冲动~"/>
+				<Talk NpcID="10263" Face="开心" Msg="让我们交出扣扣？你们是不是太轻松了点呢？扣扣是不是在神殿里，你要不要找找看？" Option="找就找啊，你们不要存心把他藏起来，我们就可以找到他！！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1"/>
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2"/>
+		</EnterMap>
+	</Step>
+	<Step ID="2" TarMapID="361">
+		<EnterMap MapID="361">
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10263" Face="开心" Msg="嘿嘿，扣扣你就别躲咯吧！" Option="对啊，扣扣你不是大海的英雄吗？快点出来！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10009" Face="生气" Msg="不出来没问题，丫丽用锤子把你砸出来！！！" Option="..."/>
+				<Talk NpcID="10262" Face="生气" Msg="神殿圣地，不许使用武器！！果然是愚昧无知的下等民族！" Option="..."/>
+				<Talk NpcID="10009" Face="生气" Msg="下等？？托尔，你不要以为你有个锤子了不起，看丫丽怎么砸碎你的锤子！！" Option="丫丽，好了好了！别跟他们吵，汉青叔叔该担心了！"/>
+				<Talk NpcID="10009" Face="生气" Msg="哼，是他们不好呀，丫丽不是好欺负的！！" Option="...."/>
+				<Talk NpcID="10261" Face="正常" Msg="好了，结束这场闹剧吧！神殿对你的庇护到此为止了，扣扣，请走出来吧！" Option="( ⊙o⊙ )哇，落井下石啊！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3"/>
+		</EnterMap>	
+	</Step>
+	<Step ID="3" TarMapID="361">
+		<EnterMap MapID="361">
+			<Action Cmd="SAY">
+				<Talk NpcID="10254" Face="无聊" Msg="大海的英雄志在四方，顶多我再回到大海的怀抱！离开庄园就是了！" Option="-_-|||某企鹅还是很嘴硬啊~"/>
+				<Talk NpcID="10009" Face="生气" Msg="扣扣，别说废话！快点跟我们去艾尔警官那里，你必须对你自己的行为负责！！" Option="..."/>
+				<Talk NpcID="10254" Face="失望" Msg="四十大盗海贼团瓦解，难道还不算对我的惩罚？！神殿再也不庇护我的，难道不算对我的惩罚？！更不要说，早年的自以为是……" Option="..."/>
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10244" Face="失望" Msg="孩子，爸爸不怪你，那个时候你年轻不懂事……" Option="..."/>
+				<Talk NpcID="10254" Face="失望" Msg="爸爸，大海的英雄能撑得起海上的天空，大海的英雄能够承受得了失败！" Option="..."/>
+				<Talk NpcID="10244" Face="感动" Msg="孩子，你还记得爸爸跟你说的话！！" Option="..."/>
+				<Talk NpcID="10254" Face="无聊" Msg="爸爸，虽然我曾经做过很多错事，但是在大海上的历程，让我懂得了太多太多，爸爸，我长大了！" Option="..."/>
+				<Talk NpcID="10244" Face="感动" Msg="是啊，你长大了！" Option="..."/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_5"/>
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10254" Face="开心" Msg="各位，扣扣要重新出海了，即使我只有一艘小船，即使我要重头来过，也要做大海的英雄！有没有谁要跟随我出海的？" Option="..."/>
+				<Talk NpcID="10009" Face="正常" Msg="我我我！带我出海吧！" Option="丫丽，你别冲动啊！！你爸爸会杀了我的，别去啊~"/>
+				<Talk NpcID="10009" Face="正常" Msg="就是因为爸爸一直不肯带我出海，我才要去看一看。大海到底有怎样的魅力，让爸爸可以一直丢下我，长年在海上飘荡~" Option="..."/>
+				<Talk NpcID="10254" Face="开心" Msg="海就是有这样的魅力，去了，你就会知道！好啦，我现在有了第一个船员，还有没有谁要跟着一起去？" Option="..."/>
+				<Talk NpcID="10261" Face="正常" Msg="闲话就说到这里，扣扣，你会有一条自己的小船，彩虹桥会送你去大海，接下来的探险，就靠你自己了！" Option="..."/>
+				<Talk NpcID="10254" Face="开心" Msg="哈哈哈哈哈哈，和最开始一样，一模一样，没想到我可以第二次听到这段话，好！丫丽，出发！" Option="..."/>
+				<Talk NpcID="10009" Face="开心" Msg="出发！" Option="..."/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_6"/>
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			<Action Cmd="SAY">
+				<Talk NpcID="10000" Face="生气" Msg="喂，奥丁，你把丫丽一个小姑娘丢到海上，你怎么能这样？" Option="..."/>
+				<Talk NpcID="10261" Face="正常" Msg="神，实现众生的愿望；神，要和你们说再见了……" Option="..."/>
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />
+			<Action Cmd="OVER"/>
+		</EnterMap>
+	</Step>
+</Tasks>

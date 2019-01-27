@@ -1,0 +1,15 @@
+<Tasks ID="497" Name="最炫记者风" AwardMsg="" AwardBean="0" >
+	<Step ID="1" >
+		<NPC ID="10015" Option="最炫记者风" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10015" Face="正常" Msg="自从么么公主发起了“最炫回归风”的活动后，我就收到了很多小摩尔的来信，大家都说出了自己心中最美的回忆。{$username}，让我们一起来分享那些经典的回忆吧！" Option="(⊙o⊙)嗯，好期待哦~" />
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1"  IsFullScreen="1" IsStopSound="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />	
+			
+			<Action Cmd="OPEN_PANEL" Param="DazzlePanel" />
+			<Action Cmd="OVER" />
+		</NPC>	
+	</Step>
+</Tasks>

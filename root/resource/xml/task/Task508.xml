@@ -1,0 +1,143 @@
+<!-- 备注：[100,106]都是替换以前的全屏动画 -->
+<!-- 影片5和影片3需要放点击事件么 -->
+<!-- 交互由locus完成，完成后替换即可 -->
+<!-- step中的258改成 58 -->
+<!-- 任务面板的跳转按钮没有配正确 -->
+<Tasks ID="508" Name="海妖宝藏" AwardMsg="恭喜你获得嘟嘟勇士盾牌、2000摩尔豆" AwardBean="2000" >
+	<Step ID="1" >
+		<EnterMap MapID="264" >
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10003" Face="开心" Msg="哈哈哈~天堂有路你们不走，地狱无门却偏要闯进来！既然你们集体送上门，那我也就笑纳了！" Option="前情回顾" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10003" Face="开心" Msg="这下，可就怪不得我啦！让你们见识见识！哈哈哈~" Option="啊？！你想干什么！" />
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />	
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10106" Face="正常" Msg="保罗……我可怜的孩子！你这个人鱼国的妖女，居然让保罗为了你连命都不要！我今天必须要除掉你，让保罗清醒！" Option="这个老家伙怎么就是搞不清状况呢！" />
+				<Talk NpcID="10009" Face="生气" Msg="还说是海妖王呢，如此顽固不化，你还分不清谁好谁坏吗？" Option="他完全被库拉迷惑住了！" />
+				<Talk NpcID="10036" Face="生气" Msg="别跟他多说，我们得阻止他袭击箩丝！" Option="好！咱们上！" />
+			</Action>
+			<!-- 第一个交互  跳转到海妖王263 -->
+			<Action Cmd="GO_MAP" MapID="263" MapType="0" />	
+			
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+		</EnterMap>	
+	</Step>			
+	
+	<Step ID="2" >
+		<EnterMap MapID="264" >
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="正常" Msg="还以为海妖王多厉害呢，原来也不过如此嘛！" Option="对呀，让他三回合他也打不过我们！" />
+				<Talk NpcID="10096" Face="正常" Msg="走，咱们赶紧去它身上搜搜，看能不能找到海妖之心！" Option="好，咱们找找去！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />					
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10098" Face="开心" Msg="哇~是爸爸邀请小摩尔们来做客的吗？爸爸真好，猜到我想念我的朋友们了！爱你~~O(∩_∩)O" Option="什么？小海妖是海妖王的孩子！" />
+				<Talk NpcID="10098" Face="悲伤" Msg="可是……怎么紫色大坏蛋也来了！呜呜，就是他要抢爸爸的魂之魄，我不让，他还弄伤我。多亏小摩尔救我呢，不然我就再也见不到爸爸啦……" Option="原来魂之魄是库拉从小海妖那抢走的！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />			
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10106" Face="正常" Msg="滥用魂之魄力量的人必须受到惩罚，企图伤害我孩子更是罪无可恕！接招吧！" Option="海妖王终于清醒过来了……" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />				
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10036" Face="正常" Msg="库拉失去了魂之魄，是时候了！我们一起来对付库拉！" Option="好，行动吧！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_7" />
+			<!-- 打库拉 263 -->			
+			<!-- 第一个交互  跳转到库拉262 -->
+			<Action Cmd="GO_MAP" MapID="262" MapType="0" />	
+			
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+		</EnterMap>
+	</Step>	
+	
+	<Step ID="3" >
+		<EnterMap MapID="264" >
+			<Action Cmd="PLAY_MOVIE" Param="8" Name="movie_8" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10003" Face="正常" Msg="海妖之心算不了什么，让给你们好了，等我得到黑森林的宝物后，你们都将成为我的手下败将！哈哈哈哈~~~" Option="库拉还真会自我安慰o(╯□╰)o" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_8" />		
+			<Action Cmd="PLAY_MOVIE" Param="9" Name="movie_9"/>
+			<Talk NpcID="10106" Face="正常" Msg="谢谢你们救了我的孩子，之前我还误把你们当敌人……善良的人值得拥有海妖之心……" Option="海妖王终于明白了！" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_9" />			
+			<Action Cmd="PLAY_MOVIE" Param="10" Name="movie_10" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10106" Face="正常" Msg="海妖之心是我们海妖一族的秘宝，但它只能实现一个愿望，你们自己做决定吧。" Option="什么？只能实现一个愿望？！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_10" />			
+			<Action Cmd="PLAY_MOVIE" Param="11" Name="movie_11"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="惊讶" Msg="RK，海妖之心是要用来解救人鱼国和庄园的，你不能抢走它……" Option="对，快还给我们！" />
+				<Talk NpcID="10096" Face="正常" Msg="一边是RK，一边是人鱼国，到底支持谁呢……" Option="其其，你醒醒吧！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_11" />			
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />
+			<Action Cmd="PLAY_MOVIE" Param="12" Name="movie_12"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10009" Face="惊讶" Msg="保罗王子，他，他怎么不动了……他不会是……" Option="啊( ⊙ o ⊙ )~！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_12" />			
+			<Action Cmd="PLAY_MOVIE" Param="13" Name="movie_13"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_13" />
+			<Action Cmd="PLAY_MOVIE" Param="104" Name="movie_104" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_104" />
+			<Action Cmd="PLAY_MOVIE" Param="14" Name="movie_14"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10107" Face="正常" Msg="箩丝，不知道人鱼国的危机是否都解除了呢？我想去看看，你愿意陪我吗？顺便拜访下你的父王，为海妖国之前所犯的错道歉！" Option="我……" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_14" />			
+			<Action Cmd="PLAY_MOVIE" Param="105" Name="movie_105" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_105" />
+			<Action Cmd="PLAY_MOVIE" Param="15" Name="movie_15"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10036" Face="正常" Msg="保罗是个好人，愿意为朋友和爱人舍身相救，相信他会让箩丝幸福的……我永远祝福他们……" Option="捷克王子，你真的没事吗？" />
+				<Talk NpcID="10036" Face="正常" Msg="放心，我没事！摩尔庄园的王子，不会轻易被打垮的！可惜海妖之心只能许一个愿望，庄园的危机还没解除，我们赶紧回去看看！" Option="好的，我们赶去神秘湖看看！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_15" />		
+			<Action Cmd="GO_MAP" MapID="8" MapType="0" />	
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />
+			</EnterMap>
+	</Step>
+	
+	<Step ID="4" >
+		<EnterMap MapID="8" >
+			<Action Cmd="PLAY_MOVIE" Param="16" Name="movie_16"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10029" Face="正常" Msg="捷克王子、么么公主，大事不妙！摩尔拉雅山的积雪离奇融化，神秘湖水位也越来越高，再这样下去，庄园恐怕都会被淹没！" Option="什么？我不会游泳怎么办！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_16" />			
+			<Action Cmd="PLAY_MOVIE" Param="17" Name="movie_17"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10099" Face="正常" Msg="不好了，前哨站发生了怪事，站岗的骑士经常离奇失踪，现在没人敢去站岗了！大家都说，是黑森林又开始异动了！" Option="黑森林？！好恐怖！" />
+				<Talk NpcID="10000" Face="惊讶" Msg="不，不是吧！难道库拉说的都是真的？他又开始去抢黑森林里的什么宝物了？！" Option="真是不得安宁呀！" />
+				<Talk NpcID="10036" Face="焦急" Msg="虽然不能确定是不是库拉在搞鬼，但也宁可信其有！是时候朝着黑森林进军了！我们先组织一个启动仪式，召集勇士，8月3日正式向黑森林出发！" Option="恩，去把作恶的坏蛋统统抓起来！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_17" />			
+			<Action Cmd="PLAY_MOVIE" Param="106" Name="movie_106"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_106" />
+			<Action Cmd="OVER" />
+		</EnterMap>			
+	</Step>	
+</Tasks>
+
+
+

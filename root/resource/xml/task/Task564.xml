@@ -1,0 +1,117 @@
+<Tasks ID="564" Name="谁送的玫瑰花？" AwardMsg="恭喜你获得3个百变灵石，2000摩尔豆！" AwardBean="" >
+	<!-- 城堡露天花园 -->
+	<Step ID="1" TarMapID="109">
+		<EnterMap MapID="109 ">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10002" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10057" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10002" Face="悲伤" Msg="{$username}，你不知道，我现在都不敢出门了。这大过年的，我却只能呆在城堡里，一点都不好玩！" Option="啊？为什么呀？"/>
+				<Talk NpcID="10002" Face="悲伤" Msg="还不是因为那个神秘的送花人！你是不知道，我现在只要一出门，就一大堆变身成喵星人的摩尔追着我跑……" Option="呀~~~有这么夸张么？"/>
+				<Talk NpcID="10015" Face="正常" Msg="起初我们也只是想找到这个摩尔是谁的，却没想到会是现在这样的情况。" Option="这……"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+		</EnterMap>
+	</Step>
+	
+	<!-- 城堡露天花园 -->
+	<Step ID="2" TarMapID="109">
+		<EnterMap MapID="109 ">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10002" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10057" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10015" Face="正常" Msg="现在的情况严重影响到了么么公主的正常出行。唯一的办法就是找出当事人，让冒充者都靠边站吧！" Option="嗯……找出真正的送花人！"/>
+				<Talk NpcID="10015" Face="正常" Msg="可是关于这个神秘的送花人，我们有的证据也只是一张照片，一个模糊的卡片而已。" Option="兔兔主编，这件事你就交给我吧！"/>
+				<Talk NpcID="10015" Face="正常" Msg="关键的一点是，照片上照的还不是神秘人本人，而是变身过后的喵星人的形象……这，怎么查得出他是谁呢？" Option="哈哈，我自有办法！"/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="200" Name="movie_200" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_200" />
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+			<Action Cmd="GO_MAP" MapID="84" MapType="0" />
+		</EnterMap>
+	</Step>
+	
+	<!-- 尼尔拉塔一层 -->
+	<Step ID="3" TarMapID="84">
+		<EnterMap MapID="84 ">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10161" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="magicBox_mc" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1"/>	
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10161" Face="正常" Msg="{$username}，你也想体验变身吗？ 3颗百变灵石你都收集齐了？" Option="呵呵，下次吧！我还没收集齐3颗呢！"/>
+				<Talk NpcID="10161" Face="正常" Msg="那你来找我是有什么事呢？" Option="尼尔拉法师，我是来找人的。"/>
+				<Talk NpcID="10161" Face="正常" Msg="找人？找人不是都应该去警察署问艾尔警官吗？怎么跑到我这里来了。" Option="尼尔拉法师，你可记得最近可都有哪些人在你这里使用了魔法变身？"/>
+				<Talk NpcID="10161" Face="正常" Msg="哪些人？这……我可记不清楚了，有好多、许多、非常多的小摩尔都拿着百变灵石，想要变身成为喵星人。" Option="那你发现了有谁比较特别吗？"/>
+				<Talk NpcID="10161" Face="正常" Msg="特别？没什么特别的啊！大家都是圆脑袋圆鼻子的小摩尔……嚯嚯~~嚯嚯~~" Option="你就真没印象了？有谁比较不一样？"/>
+				<Talk NpcID="10161" Face="正常" Msg="哎哟~~~我真不记得了，不过百变魔盒里会有每个人的变身记录，你可以自己找找，看有没有你要找的人。" Option="真的？百变魔盒还这么多功能啊！"/>
+			</Action>
+			
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />
+		</EnterMap>
+	</Step>
+	
+	<!-- 尼尔拉塔一层 -->
+	<Step ID="4" TarMapID="84">
+		<EnterMap MapID="84 ">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10161" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="magicBox_mc" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			<Action Cmd="OPEN_PANEL" Param="FindRoseMole" ClearMap="0"/> 
+			<Action Cmd="ADD_EVENT" Param="task564FindRoseMole" />
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10161" Face="正常" Msg="{$username}，看来你已经找到你想要找的人了，是吧？" Option="我还不确定，尼尔拉法师，你应该知道他是谁吧？"/>
+				<Talk NpcID="10161" Face="正常" Msg="O(∩_∩)o 哈哈~我可不能随便透漏别人的信息哦！{$username}，你还是自己去确认一下吧！" Option="不说算了，我猜的应该八九不离十了！"/>
+			</Action>
+			<Action Cmd="SET_BUFFER" Panel="5" Step="5" />
+		</EnterMap>
+	</Step>
+	
+	<!-- 摩乐乐家 -->
+	<Step ID="5" TarMapID="84">
+		<EnterMap MapID="84">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="202" Name="movie_202" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_202" />
+			<Action Cmd="GO_MAP" MapID="239" MapType="0" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10000" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="PLAY_MOVIE" Param="203" Name="movie_203" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_203" />
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="焦急" Msg="{$username}，你怎么不经允许，就看别人东西呢？" Option="这纸条是你的吗？上面的字好像在哪儿见过。"/>
+				<Talk NpcID="10000" Face="焦急" Msg="这纸条当然不是我的，是…是…是我捡到的。对，就是我捡到的！" Option="哼~~~此地无银三百两，这就是你写的！"/>
+				<Talk NpcID="10000" Face="正常" Msg="我没事写这个做什么？我又没有送谁玫瑰花，真的是。" Option="哈哈哈~~~这下自己说漏嘴了吧！我都还没说这跟玫瑰花有关。"/>
+				<Talk NpcID="10000" Face="焦急" Msg="信不信由你，这真是我捡到的，跟这束玫瑰花一起捡到的。不信你看，花都还在这儿呢！" Option="？？？"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />
+			
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10000" Visible="1" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="0"/>
+			<Action Cmd="OVER" />
+		</EnterMap>
+	</Step>
+</Tasks>

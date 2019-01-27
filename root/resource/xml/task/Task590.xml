@@ -1,0 +1,140 @@
+<Tasks ID="590" Name="魔术师与黑魔法" AwardMsg="恭喜你获得20个欢乐券、10个经验果实！" AwardBean="" >
+
+	<!-- 马戏团内景  -->
+	<Step ID="1" TarMapID="334">
+		<NPC ID="10202" Option="魔术师与黑魔法"  MapID=""  >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10202" Visible="0" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10202" Face="惊讶" Msg="什么？卢卡斯把你的朋友变成了熊？而且卢卡斯还不见了？" Option=""/>
+				<Talk NpcID="10197" Face="焦急" Msg="是呀，多多少少好可怜，现在还是熊的模样，都不知道怎样才能变回来。" Option=""/>
+				<Talk NpcID="10202" Face="惊讶" Msg="我们团的变形术从来不会这样，即使不主动解除，被变形的人也会在十分钟后自动恢复。现在，恐怕只有找到卢卡斯才能找到解决办法了。" Option=""/>
+				<Talk NpcID="10197" Face="焦急" Msg="嗯！那我们再到处找找看。" Option=""/>
+				<Talk NpcID="10202" Face="正常" Msg="好的。多多和少少就暂时由我来照看，希望你们好运！" Option=""/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+			<Action Cmd="GO_MAP" MapID="47" MapType="0" />
+		</NPC>	
+	</Step>
+	
+	
+	<!-- 粒粒小广场 -->
+	<Step ID="2" TarMapID="47">
+		<EnterMap MapID="47">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			<Action Cmd="GO_MAP" MapID="4" MapType="0" />
+		</EnterMap>
+		
+		<EnterMap MapID="4">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			<Action Cmd="GO_MAP" MapID="1" MapType="0" />
+		</EnterMap>
+		
+		<EnterMap MapID="1">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+			<Action Cmd="GO_MAP" MapID="2" MapType="0" />
+		</EnterMap>
+	</Step>
+	
+	
+	<!-- 爱心广场 -->
+	<Step ID="3" TarMapID="2">
+		<EnterMap MapID="2">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10191" Visible="0" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10009" Face="惊讶" Msg="奇怪，看刚刚那个身影也不像是艾米呀，除了他，还会有谁在这时候去电视墙？那个人去里面究竟干什么？" Option=""/>
+				<Talk NpcID="10197" Face="惊讶" Msg="不会是来偷东西的吧？走，我们去电视墙里检查看看。" Option=""/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="DELETE_MOVIE" Param="movie_7" />
+			
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />
+			<Action Cmd="GO_MAP" MapID="222" MapType="0" />
+		</EnterMap>
+	</Step>
+	
+	<!-- 电视墙 -->
+	<Step ID="4" TarMapID="222">
+		<EnterMap MapID="222">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="lmMC" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="clickBtn" Visible="0" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="8" Name="movie_8" IsBg="1" IsFullScreen="0" />	
+			<Action Cmd="OPEN_PANEL" Param="Task590Panel" ClearMap="0"/>
+			<Action Cmd="ADD_EVENT" Param="task590PanelOver"/>
+			
+			<Action Cmd="DELETE_MOVIE" Param="movie_8" />
+			<Action Cmd="SET_BUFFER" Panel="5" Step="5" />
+		</EnterMap>
+	</Step>
+	
+	<!-- 电视墙 -->
+	<Step ID="5" TarMapID="222">
+		<EnterMap MapID="222">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="lmMC" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="clickBtn" Visible="0" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="9" Name="movie_9" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1" hideBg="1" IsStopSound="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10197" Face="惊讶" Msg="这……这是怎么回事呀？NO.7，这是什么？听起来好像是什么黑暗组织的代号……" Option=""/>
+				<Talk NpcID="10000" Face="惊讶" Msg="而且，原来之前我们看到的卢卡斯并不是真正的卢卡斯……天啊，怎么越听越玄了……" Option=""/>
+				<Talk NpcID="10009" Face="焦急" Msg="刚刚那个人说雪莲花可以帮助多多和少少复原，要不我们先带多多少少去试试吧，其它的再慢慢解决。" Option=""/>
+				<Talk NpcID="10197" Face="焦急" Msg="好，就这么办！" Option=""/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_9" />
+			
+			<Action Cmd="SET_BUFFER" Panel="6" Step="6" />
+			<Action Cmd="GO_MAP" MapID="37" MapType="0" />
+		</EnterMap>
+	</Step>
+	
+	
+	<!-- 摩尔拉雅山顶 -->
+	<Step ID="6" TarMapID="37">
+		<EnterMap MapID="37">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			
+			<Action Cmd="PLAY_MOVIE" Param="10" Name="movie_10" IsBg="1" IsFullScreen="1" />	
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10010" Face="惊讶" Msg="哇~~这不是做梦吧？天啊，我又能开口说话了，我终于不是熊的样子了！" Option=""/>
+				<Talk NpcID="10011" Face="悲伤" Msg="真是太好了，呜呜呜，我以为我要一辈子做熊了，吓死我了！" Option=""/>
+				<Talk NpcID="10197" Face="开心" Msg="还好这个办法有效，多多和少少终于恢复正常了，真是令人开心！" Option=""/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_10" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="11" Name="movie_11" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_11" />
+			
+			<Action Cmd="TASK_SHOW_SELF" Hide="0"/>
+			<Action Cmd="OVER" />
+		</EnterMap>
+	</Step>
+</Tasks>

@@ -1,0 +1,56 @@
+	<Tasks ID="615" Name="别出心裁的礼物" AwardMsg="恭喜你获得了KFC全家桶一个,么么公主纪念章一枚。" AwardBean="" >
+	<Step ID="1" TarMapID="47">
+		<NPC ID="10002" Option="别出心裁的礼物"  MapID="47">
+			<Action Cmd="SAY" >
+				<Talk NpcID="10002" Face="正常" Msg="小摩尔！今天我收到了很多生日礼物，我要从中挑取一个最有意思的。额，会是什么呢？！" Option=""/>
+			</Action>
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10002" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10057" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1"  IsFullScreen="1" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10002" Face="正常" Msg="这条水晶魔法石项链还处于封印状态，只有需要光和爱的能量才能启动它，才能真正的属于么么公主。" Option=""/>
+				<Talk NpcID="10043" Face="正常" Msg="我有个好主意，大家可以去生日飞艇聚会光和爱的能量。" Option=""/>
+				<Talk NpcID="10002" Face="正常" Msg="那太好了！！大家一起去吧。" Option=""/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10002" Visible="1" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10057" Visible="1" />
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+				<Action Cmd="TASK_SHOW_SELF" Hide="0"/>
+			<Action Cmd="OPEN_PANEL" Param="DanDanSkipGame" ClearMap="1"/>
+		</NPC>	
+	</Step>
+	
+	<Step ID="2" TarMapID="47">
+		<SubmitScore ModuleID="10082" MinScore="1" LoseMsg="小摩尔没有成功制作，需要再试一试么" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2"  IsFullScreen="1" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10002" Face="正常" Msg="感谢奇奇想到了这么好的办法，让魔石项链重新恢复了本来样貌。作为奖励，我可以满足奇奇一个愿望。" Option=""/>
+				<Talk NpcID="10043" Face="正常" Msg="我想邀请庄园小伙伴们来KFC餐厅为公主开个盛大的生日派对啊。" Option=""/>
+				<Talk NpcID="10002" Face="正常" Msg="哈哈，原来是这样啊！我很乐意！小摩尔也一起去吧。" Option=""/>
+				<Talk NpcID="10197" Face="正常" Msg="好~~" Option=""/>
+			</Action>
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="0"/>
+			<Action Cmd="GO_MAP" MapID="203" MapType="0" />
+		</SubmitScore>
+	</Step>
+	
+	
+	<Step ID="3" TarMapID="203">
+		<EnterMap MapID="203">
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="npc_10043" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="topLevel" ResName="jiantou_mc" Visible="0" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsFullScreen="1" IsBg="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+				<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="npc_10043" Visible="1" />
+				<Action Cmd="SET_ATTRIBUTE" Level="topLevel" ResName="jiantou_mc" Visible="1" />
+				<Action Cmd="TASK_SHOW_SELF" Hide="0"/>
+			<Action Cmd="OVER"/>
+		</EnterMap>
+	</Step>
+</Tasks>

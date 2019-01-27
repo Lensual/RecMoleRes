@@ -1,0 +1,174 @@
+<Tasks ID="554" Name="天使总动员之恶魔基地" AwardMsg="恭喜你获得1个机甲宝宝、5个经验果实（大）、5颗融合石！" AwardBean="" >
+	<!-- 城堡  -->
+	<Step ID="1" TarMapID="15">
+		<NPC ID="10047" Option="天使总动员之恶魔基地！">	
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10047" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />		
+
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />	
+			<Action Cmd="GO_MAP" MapID="16" MapType="0" />
+		</NPC>	
+	</Step>	
+	
+	<!-- 城堡二楼 -->
+	<Step ID="2" TarMapID="16" >
+		<EnterMap MapID="16" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />	
+			
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />	
+					
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+			<Action Cmd="GO_MAP" MapID="63" MapType="0" />
+		</EnterMap>	
+	</Step>
+	
+	<!-- 骑士要塞塔顶 -->
+	<Step ID="3" TarMapID="63" >
+		<EnterMap MapID="63" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />		
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsShowOthersMole="0" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />	
+	
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_0" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_1" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="book_mc" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1"/>	
+		 	<Action Cmd="SAY" >
+				<Talk NpcID="10154" Face="开心" Msg="O(∩_∩)o 哈哈~笑话，这世上从来就没有我古德摩.零做不成的事情！知道我的名字是怎么来的吗？" Option="怎么来的？你爸妈取的呗！"/>
+				<Talk NpcID="10154" Face="开心" Msg="你！！！算了，算了……跟你们这些无趣的摩尔聊不到一块儿！我还是直接进入正题吧！" Option="(⊙ｏ⊙)竟然说我无趣？？？"/>
+				<Talk NpcID="10154" Face="开心" Msg="菩提老头儿、洛克行政官，还记得你们的尼尔拉法师曾经跟你们交代过什么重要的事情吗？ " Option="那可就多了去了，你想听哪一件？"/>
+				<Talk NpcID="10007" Face="生气" Msg="零，我们可没空陪你猜谜语！快说，你这次来，到底有什么目的？" Option="快说！你这个“无趣”的人，别浪费大家的时间！"/>
+				<Talk NpcID="10047" Face="生气" Msg="上一次你已经败给了皇家骑士团。这一次，你耍再多手段，结果也会是一样，我们不会再上你当了！ " Option="零，你就别再挣扎了！赶快投降吧！"/>
+				<Talk NpcID="10154" Face="开心" Msg="哼~~上一次，你们以为我是真的怕你们了吗？上一次要不是我有更重要的事情，赶着回去复命，我才不会放过你们呢！" Option="解释就是掩饰，你尽管给自己找台阶下吧！"/>
+				<Talk NpcID="10154" Face="开心" Msg="你说你们，怎么一个个都凶巴巴的呢？说了我这次是来跟大家合作的，不是来找麻烦的。 " Option="合作？我们正邪不两立，有什么好合作的？"/>
+				<Talk NpcID="10154" Face="开心" Msg="菩提、洛克，想起来了没有啊？看来我得提醒提醒你们了。你们可还记得庄园里藏着一个上古时期的宝物——水晶琥珀？" Option="他果然知道记载在碑文中的秘密。"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />	
+			
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1"/>			
+		 	<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="焦急" Msg="老洛克啊，看来这个零的确是为了水晶琥珀而来的。 " Option="难道他一开始来到庄园里，就是为了找水晶琥珀？"/>
+				<Talk NpcID="10047" Face="焦急" Msg="零一定是知道了只有我们摩尔皇族的人，才有可能破除结界。如果他不是摩尔皇族，就算有再大的能耐，也不可能消除结界。" Option="皇族的人，就是特权多啊！"/>
+				<Talk NpcID="10007" Face="焦急" Msg="所以他才故意要跟我们合作，想要我们帮他找到消除结界的方法。想都不用想，这绝对不可能！" Option="绝对不可能！"/>
+				<Talk NpcID="10047" Face="焦急" Msg="可如果我们不合作，他就会把消息散布出去。只要消息一传开来，庄园面临的敌人可就不止恶魔岛一个了，到时候…… " Option="到时候，庄园可就永无宁日了！"/>
+				<Talk NpcID="10029" Face="疑惑" Msg="那个……我能插句话吗？" Option="团长，你说！"/>
+				<Talk NpcID="10029" Face="疑惑" Msg="这个“水晶琥珀”……究竟是什么？" Option="@_@……"/>
+			</Action>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />	
+		</EnterMap>	
+	</Step>
+	
+	<!--  骑士要塞塔顶 -->
+	<Step ID="4" TarMapID="63" >
+		<EnterMap MapID="63" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_0" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_1" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="book_mc" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1" IsFullScreen="1"/>
+
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10029" Face="惊讶" Msg="庄园里竟然还埋藏着一个这样的秘密！！！" Option="这可是闻所未闻的传说啊！"/>
+				<Talk NpcID="10029" Face="惊讶" Msg="水…水晶…水晶琥珀真的有这么厉害吗？" Option="不可思议吧？我当时听到也惊讶了！"/>
+				<Talk NpcID="10007" Face="正常" Msg="水晶琥珀能给庄园带来希望，也可能会给庄园带来灾难。因此，这个秘密越少人知道越好，所以我们才一直隐瞒着大家。" Option="⊙﹏⊙既是福也是祸啊！"/>
+				<Talk NpcID="10047" Face="正常" Msg="弗兰克，身为皇家骑士团的团长，保护庄园是你的职责！现在你也知道了这个秘密，一定要保护好水晶琥珀，不能让它落入坏人之手！" Option="对！水晶琥珀一定不能落入坏人之手！"/>
+				<Talk NpcID="10007" Face="焦急" Msg="目前最重要的，还是怎么对付这个零。看来他这次是有备而来，还在前哨站外安营扎寨。看这架势，是要准备跟我们打持久战了。" Option="o_O~还打持久战啊！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />
+			<!-- 面板 -->
+			
+			<Action Cmd="PLAY_MOVIE" Param="104" Name="movie_104" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_104" />	
+			
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="生气" Msg="对！突袭恶魔基地！趁它们的基地还没有建造完成，打他们一个措手不及。" Option="\(^o^)/看他们还敢不敢嚣张。"/>
+				<Talk NpcID="10047" Face="疑惑" Msg="可是这个古德摩.零也不是吃素的，他肯定早有防备，我们还得从长计议啊！" Option="他早有防备，我们也早有应对措施！"/>
+				<Talk NpcID="10007" Face="生气" Msg="从长计议？等我们计划完，他们的恶魔基地早就已经建好了。况且，零来庄园的目的是为了抢夺水晶琥珀，此事事关重大，我们必须抢夺先机。" Option="我们之前已经总结了经验教训，这次一定要回敬他们一个下马威。"/>
+				<Talk NpcID="10007" Face="生气" Msg="他是很聪明，但也很自负！竟然还敢这样明目张胆的在前哨站搭建恶魔基地，简直就是欺人太甚！" Option="总有一天，他会聪明反被聪明误！"/>
+				<Talk NpcID="10029" Face="正常" Msg="洛克行政官，您放心！前哨站的骑士们已经做好了战斗的准备，随时候命！" Option="为了庄园！我们时刻准备着！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_7" />
+			<Action Cmd="SET_BUFFER" Panel="5" Step="5" />	
+		</EnterMap>	
+	</Step>
+	<!--  骑士要塞塔顶 -->
+	<Step ID="5" TarMapID="63" >
+		<EnterMap MapID="63" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_0" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_1" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="book_mc" Visible="0" />
+			<!--  打开游戏 -->	
+			<Action Cmd="OPEN_PANEL" Param="TaskMazeGame" ClearMap="1"/> 
+			<Action Cmd="ADD_EVENT" Param="task554Maze" />	
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_BUFFER" Panel="6" Step="6" />	
+		</EnterMap>	
+	</Step>
+	
+	<!--  骑士要塞塔顶 -->
+	<Step ID="6" TarMapID="63" >
+		<EnterMap MapID="63" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_0" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_1" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="book_mc" Visible="0" />
+						
+			<Action Cmd="PLAY_MOVIE" Param="11" Name="movie_11" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10029" Face="正常" Msg="一条最佳的路径已经找到，皇家骑士团的骑士们也整装待发，就等菩提大伯和洛克行政官一声令下了。" Option="大伯、洛克行政官，就等你们的命令了！"/>
+				<Talk NpcID="10007" Face="焦急" Msg="这次突袭，任务艰巨！大家务必要小心！安全第一！而且突袭的小分队的人数一定要尽量少，以免被敌人发现。" Option="大伯！我也要去！"/>
+				<Talk NpcID="10047" Face="焦急" Msg="{$username}，这可不是闹着玩儿的，你就不要去添乱了。" Option="@_@我怎么会是去添乱的？？？"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_11" />
+			<Action Cmd="PLAY_MOVIE" Param="8" Name="movie_8" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="正常" Msg="{$username}，你确实是勇气可嘉，这次的行动就让你也参与吧！可千万要记住了，一定要听弗兰克团长的指挥，不能擅自行动！" Option="\(^o^)/一定服从组织安排。"/>
+				<Talk NpcID="10047" Face="正常" Msg="大家赶快准备吧，等到时机成熟，突袭小分队马上行动。" Option="嗯嗯嗯！！！"/>
+				<Talk NpcID="10029" Face="正常" Msg="{$username}，在行动之前，有个非常重要的任务交给你。" Option="哇~重要任务？是什么？是什么？"/>
+				<Talk NpcID="10029" Face="正常" Msg="先去检查一下大家突袭要用的装备是否准备齐全了。记住了，一定要一件一件仔细检查哦！不得有遗漏！" Option="是！一定仔细检查！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_8" />
+								
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />
+			
+			<Action Cmd="SET_BUFFER" Panel="7" Step="7" />	
+			<Action Cmd="GO_MAP" MapID="61" MapType="0" />
+		</EnterMap>	
+	</Step>
+	
+		<!--  骑士要塞塔顶 -->
+	<Step ID="7" TarMapID="61" >
+		<EnterMap MapID="61" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="9" Name="movie_9" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10029" Face="正常" Msg="刚刚真是太危险了！{$username}，你可知道刚刚大家都为你捏了一把汗？！" Option="⊙﹏⊙我……"/>
+				<Talk NpcID="10007" Face="生气" Msg="大家不让你去，就是担心你的安危！你怎么能就这样横冲直撞跑去恶魔基地呢？还差点破坏整个计划！" Option="大伯，我也是想帮忙而已嘛。"/>
+				<Talk NpcID="10047" Face="正常" Msg="不过好在大家都平安回来了，这次突袭，也还算是成功了。" Option="可这次的突袭，并没有把恶魔基地全部摧毁。"/>
+				<Talk NpcID="10007" Face="焦急" Msg="这一次制造的混乱，也只能延迟恶魔基地建成的时间。" Option="能拖延一点时间也是好的。"/>
+				<Talk NpcID="10007" Face="正常" Msg="要想打赢这场持久战，我们的主力军也该出场了。" Option="主力军？皇家骑士团不是在这里吗？"/>
+				<Talk NpcID="10007" Face="正常" Msg="{$username}，皇家骑士团固然重要，可天使园里的天使，才是这场持久战的主力军啊！" Option="期待下周——天使战斗新篇章吧！"/>
+				
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_9" />
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="0"/>
+			<Action Cmd="OVER" />
+		</EnterMap>	
+	</Step>
+</Tasks>

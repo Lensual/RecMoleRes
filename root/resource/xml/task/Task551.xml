@@ -1,0 +1,155 @@
+<Tasks ID="551" Name="礼物篇之一封匿名信" AwardMsg="恭喜你获得1只走兽系天使宝宝、5个经验果实（大）、5颗融合石！" AwardBean="" >
+	<!-- 城堡露台 -->
+	<Step ID="1" TarMapID="33">
+		<EnterMap MapID="33" >		
+			 <Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1"/>		
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />	
+			 <Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsShowOthersMole="0" IsFullScreen="1"/>				
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="开心" Msg="时间过的真快，一年一度的圣诞节又到了！在这个欢乐温馨的节日里，我们还有一件更加值得庆祝的事情。" Option="哇！又有圣诞礼物可以收啦！" />
+				<Talk NpcID="10047" Face="开心" Msg="相信大家都知道，之前暗黑军团对前哨站进行了突袭。可在危难关头，我们的小摩尔们都表现得非常之英勇。在这里，我代表摩尔皇家骑士团，向大家表示深深的敬意！" Option="O(∩_∩)o " />
+				<Talk NpcID="10007" Face="开心" Msg="特别是{$username}，要不是你及时想到破解结界的办法，找来援兵，前哨站一役的成败就难料了呀！" Option="保卫庄园，是每个小摩尔应该做的。" />
+				<Talk NpcID="10047" Face="正常" Msg="对！这一次{$username}可真是功不可没，值得嘉奖！下面就让么么公主为我们的小英雄戴上象征荣誉的花环吧！" Option="哎哟，也没多大事儿，弄得我都不好意思了。" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsShowOthersMole="1" IsFullScreen="1"/>			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10002" Face="正常" Msg="{$username}，我代表庄园所有的小摩尔向你说一声“谢谢”！希望以后不管遇到什么困难，我们都能勇敢地去面对，齐心协力，众志成城！" Option="哇\(^o^)/~~~甜到心坎儿里去了都！" />
+				<Talk NpcID="10002" Face="正常" Msg="多亏了你想到通过时空机器来与洛克行政官取得联系，并带着援兵及时赶到了前哨站，给那个高傲自大的零一个下马威！" Option="公主，那都是皇家骑士团的功劳啦！ " />
+				<Talk NpcID="10002" Face="正常" Msg="皇家骑士团这一次也表现的相当出色，成功守住了前哨站，保卫了庄园，更充分体现了皇家骑士团英勇顽强、誓死保卫家园的伟大精神！" Option="誓死保卫家园，做一个英勇的小摩尔！" />
+				<Talk NpcID="10002" Face="正常" Msg="接下来，大家就一起带上我们各自准备的礼物。一起去慰问还在守卫前线的骑士们吧！" Option="呃~还以为礼物是独一无二，只有我有的呢！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />	
+			<Action Cmd="GO_MAP" MapID="62" MapType="0" />
+		</EnterMap>	
+	</Step>	
+	
+	<!-- 骑士训练场 -->
+	<Step ID="2" TarMapID="62" >
+		<EnterMap MapID="62" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />	
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="npc_10029" Visible="0" />	
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsShowOthersMole="0" IsFullScreen="1"/>		
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="开心" Msg="想当年，我菩提也有这英姿飒爽的时候啊！穿着盔甲，在训练场上练兵。那帅气的身影……哎哟，跟你们现在差不多的哦！哈哈哈哈o(∩_∩)o …………" Option="大伯，好汉不提当年勇哦！"/>
+				<Talk NpcID="10007" Face="开心" Msg="上一次的保卫战的胜利，皇家骑士团功不可没！今天大家特意为你们带来了精心准备的圣诞礼物，希望你们在前哨站也能过个温馨快乐的圣诞节！" Option="哇~快看看都是些什么礼物呢？"/>
+				<Talk NpcID="10002" Face="正常" Msg="这些礼物可都是小摩尔们亲手准备的哦！希望大家喜欢！" Option="⊙﹏⊙我怎么觉得这些礼物全都比我的精致呢？"/>
+				<Talk NpcID="10029" Face="正常" Msg="保卫庄园，是我们的职责！不论发生什么样的状况，确保庄园里小摩尔们的安全，始终是放在第一位的！" Option="我也要当骑士！保卫庄园！"/>
+				<Talk NpcID="10029" Face="正常" Msg="虽然圣诞夜也要在这里站岗，但我们仍能感受到庄园里那热闹温馨的圣诞气氛，心里也觉得暖暖的。" Option="哇~圣诞夜都不能放假呀？那我还是再考虑考虑吧！"/>
+				<Talk NpcID="10029" Face="正常" Msg="其实这次暗黑军团突袭前哨站，功劳最大的还是……还是库拉！要不是他及时赶到的话，后果就不堪设想了……" Option="库拉……骰子……"/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="104" Name="movie_104" IsBg="1" IsFullScreen="1" IsStopSound="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_104" />	
+				
+			<Action Cmd="SAY" >
+				<Talk NpcID="10002" Face="焦急" Msg="后来呢？后来又发生了什么？ …………" Option="后来……后来库拉没事，可骰子……"/>
+				<Talk NpcID="10029" Face="正常" Msg="后来不知道骰子从哪里冒出来的，当时情况紧急，也来不及看清楚是怎么一回事……只觉得眼前一黑……" Option="一心只为主人着想的骰子……"/>
+				<Talk NpcID="10002" Face="正常" Msg="然后呢？然后呢？" Option="然后就木有然后啦！"/>
+				<Talk NpcID="10029" Face="正常" Msg="然后……等大家反应过来的时候，黑色的龙已经瘫倒在地了，同时倒下的——还有库拉的骰子。" Option="小小的骰子，怎么能敌得过那条龙呢？"/>
+			</Action>
+				
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />	
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="正常" Msg="最后援兵终于到了。再然后的事，大家也都知道了。不过在那之后，就再也没人见过库拉了。而骰子是怎样打败那条龙的，也无人看清，无从知晓。 " Option="小小骰子也有大大能量！"/>
+				<Talk NpcID="10029" Face="焦急" Msg="骰子……骰子又变回了6只拉姆，那……那岂不是等于库拉就失去了他一直以都引以为傲的魔法拉姆了⊙﹏⊙……" Option="我怎么有种自己失去拉姆的感觉呢？"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsShowOthersMole="0" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />			
+			<Action Cmd="PLAY_MOVIE" Param="201" Name="movie_201" IsBg="1" IsFullScreen="1"/>		
+			<Action Cmd="DELETE_MOVIE" Param="movie_201" />		
+			
+			<Action Cmd="PLAY_MOVIE" Param="41" Name="movie_41" IsBg="1" IsShowOthersMole="0" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="惊讶" Msg="这是库拉写的贺卡！我认得库拉的笔迹！而且，庄园里，也没几个人会这么没礼貌的，敢叫我菩提老头儿。这个库拉，还真是的！ " Option="啊！不会吧，这个贺卡跟我收到的简直一模一样！"/>
+				<Talk NpcID="10002" Face="疑惑" Msg="从我记事起，库拉就跟二叔是死对头，更别说库拉会送二叔什么礼物了，这……不科学的呀！" Option="么么公主，你要对菩提大伯的人格魅力有信心啊！"/>
+				<Talk NpcID="10007" Face="正常" Msg="这个库拉……居然还记得当年的事请……" Option="(⊙ｏ⊙)呃……好汉不提当年勇哦！"/>
+			</Action>	
+			<Action Cmd="PLAY_MOVIE" Param="105" Name="movie_105" IsBg="1" IsFullScreen="1" IsStopSound="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_105" />		
+			 
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="正常" Msg="真是时光荏苒啊！这样一算起来，我跟库拉斗来斗去也都大半辈子了。他这个老顽固，就是脾气倔，一根筋！ " Option="看来，大伯对库拉很是了解的嘛！"/>
+				<Talk NpcID="10009" Face="惊讶" Msg="库拉竟然会送菩提大伯圣诞贺卡？？？两个人加起来都一百多岁了，也流行送卡片的哦！" Option="o_O还是这种小清新风格的贺卡……"/>
+				<Talk NpcID="10009" Face="正常" Msg="看来库拉对庄园还是有感情的啊！菩提大伯，你还记得当年的事吗？" Option="就大伯这记性……估计早忘了吧！"/>
+				<Talk NpcID="10007" Face="正常" Msg="哼~我当然记得啦！想当年我跟库拉一起出生入死的时候，你们都还没出生呢！" Option="⊙﹏⊙又开始遥想当年了……"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_41" />	
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+			<!--<Action Cmd="GO_MAP" MapID="62" MapType="0" />	-->
+		</EnterMap>	
+	</Step>
+	
+	<!-- 骑士训练场 -->
+	<Step ID="3" TarMapID="62" >
+		<EnterMap MapID="62" >
+			<!--  <Action Cmd="TASK_SHOW_SELF" Hide="1" IsFullScreen="0"/>-->
+			<Action Cmd="TASK_SHOW_SELF" Hide="0"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="npc_10029" Visible="0" />	
+			<Action Cmd="OPEN_PANEL" Param="jigsawPuzzlPanel" IsShowOthersMole="0"/> 
+			<Action Cmd="ADD_EVENT" Param="task551Go" />	
+			
+			<!--  交互 -->
+			<Action Cmd="PLAY_MOVIE" Param="41" Name="movie_41" IsBg="1" IsFullScreen="1"/>
+		 	<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="悲伤" Msg="现在回想起来，当年的事情还都历历在目。也不知道库拉现在怎么样了，失去骰子的他，现在一定很难过吧。 " Option="快看看卡片上库拉还写了什么东西。"/>
+				<Talk NpcID="10002" Face="疑惑" Msg="等等~~~卡片下面好像还写了什么，二叔快看看！" Option="看看库拉还说了什么。"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_41" />	
+		 	<Action Cmd="PLAY_MOVIE" Param="202" Name="movie_202" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_202" />	
+			
+		 	<!--  面板动画 -->
+		 	<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1" IsShowOthersMole="0" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />	
+				
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />	
+			<Action Cmd="GO_MAP" MapID="61" MapType="0" />
+		</EnterMap>	
+	</Step>
+	
+	<!-- 前哨站 -->
+	<Step ID="4" TarMapID="61" >
+		<EnterMap MapID="61" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<!--  
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1" IsShowOthersMole="0"/>								
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="正常" Msg="大家别担心，这是真正的圣诞老人，不是库拉！" Option="咦？大伯你怎么这么肯定呀？"/>
+				<Talk NpcID="10007" Face="正常" Msg="难道我菩提还不了解库拉吗？以他的性格，说走肯定就会走的！" Option="@_@……"/>
+				<Talk NpcID="10007" Face="正常" Msg="圣诞老人，你来的真是时候，我正希望你帮我捎个信儿给我的一个老朋友呢！" Option="\(^o^)/圣诞老人一定会把祝福送到的！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />	
+	 
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" IsBg="1" IsShowOthersMole="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_7" />	
+			-->
+			<Action Cmd="PLAY_MOVIE" Param="203" Name="movie_203" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_203" />	
+			
+			
+			<Action Cmd="ACT_EVENT" Param="showChrisBox" />
+			<Action Cmd="ADD_EVENT" Param="task551getGiftGo" />
+			<Action Cmd="PLAY_MOVIE" Param="8" Name="movie_8" IsBg="1" IsShowOthersMole="0" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="悲伤" Msg="本是同根生，相煎何太急！庄园里的小摩尔都是一家人，好好的不行吗？" Option="只是……道不同不相为谋啊！"/>
+				<Talk NpcID="10007" Face="悲伤" Msg="我知道失去骰子对你来说相当于失去了左右手，更相当于失去了一位至亲，出去散散心也好，只希望你能醒悟过来。" Option="我也有点想念我可爱的小拉姆了……"/>
+				<Talk NpcID="10007" Face="悲伤" Msg="事已至此，老朋友，珍重！庄园终归还是你的家！" Option="其实……大伯从来就没真正记恨过库拉吧？"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_8" />	
+			
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsBg="1" IsFullScreen="1" />		
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="0"/>
+			<Action Cmd="OVER" />
+		</EnterMap>	
+	</Step>
+</Tasks>

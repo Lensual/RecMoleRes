@@ -1,0 +1,75 @@
+<Tasks ID="558" Name="新年爱礼盒" AwardMsg="恭喜你获得了七色花种子、经验果实（小）!" AwardBean="" >
+	<!-- 学院教导处 -->
+	<Step ID="1" TarMapID="203" >
+		<NPC ID="10043" Option="新年爱礼盒">
+			<Action Cmd="SAY" >
+				<Talk NpcID="10043" Face="正常" Msg="亲爱的小摩尔，欢迎光临我的餐厅。新年就要到了，今年奇奇给大家准备了丰盛的礼物呢！" Option="是神马？是神马？好期待啊" />
+				<Talk NpcID="10043" Face="正常" Msg="先别着急！前段时间庄园里发生了好多事情，大家都累坏了，不如趁这个机会让大家开心下吧！" Option="嗯，可是有什么好办法让大家都开心呢" />
+				<Talk NpcID="10043" Face="正常" Msg="这下你可问对人了，我为大家准备了好多新年礼物，不如就由你来派发给大家吧" Option="太好了，我很乐意呢！" />
+			</Action>
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+			<Action Cmd="OPEN_TASK_PANEL" />/>
+		</NPC>
+	</Step>
+	
+	<Step ID="2">
+		<NPC ID="10000" Option="新年爱礼盒" Bit="1" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="正常" Msg="你好，我是摩乐乐，欢迎来到我的家。找我有什么事么？" Option="摩乐乐，你好，我来给你送新年礼物了" />
+				<Talk NpcID="10000" Face="正常" Msg="太感动了，谢谢你亲爱的小摩尔，有你的支持我们一定会越来越好的！" Option="加油！我要回去送更多的礼物咯！" />
+			</Action>
+			<Action Cmd="SET_BIT" Param="1" />
+			<Action Cmd="OPEN_TASK_PANEL" />/>
+		</NPC>
+		<NPC ID="10010" Option="新年爱礼盒" Bit="2" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10010" Face="正常" Msg="你好，有好吃的一定要告诉我布多多哦，对了，你来我家有事么？" Option="新年好，我来送好吃的啦！" />
+				<Talk NpcID="10010" Face="正常" Msg="真的么？布少少快醒醒，有人来送新年礼物啦！可爱的小摩尔，新年快乐，真是太感谢你了。" Option="这没什么啦，大家开心最重要" />
+				<Talk NpcID="10010" Face="正常" Msg="太好了，为了感激慷慨大方的小摩尔，我要送你颗“七色花种子”，让爱在庄园里绽放开吧！" Option="哇，太惊喜了！谢谢" />
+			</Action>
+			<Action Cmd="SET_BIT" Param="2" />
+			<Action Cmd="OPEN_TASK_PANEL" />/>
+		</NPC>
+		<NPC ID="10007" Option="新年爱礼盒" Bit="3" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="正常" Msg="快转眼又快过年了，今年发生了好多事情，不知该为大家准备点什么好呢？" Option="大伯， 我来给你送新年礼物了！" />
+				<Talk NpcID="10007" Face="正常" Msg="的么？我的小摩尔果然长大了，真是太谢谢你了，我很感动！" Option="这是应该的，大伯新年快乐喔！" />
+			</Action>
+			<Action Cmd="SET_BIT" Param="3" />
+		</NPC>
+		<Test Bits="1,2,3" >
+			<In>
+				<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+				<Action Cmd="ALERT" Param="    听说奇奇还准备了一份特殊的新年礼物，快回KFC餐厅问问吧！" Face="开心" />
+				<Action Cmd="GO_MAP" MapID="203" MapType="0" />	
+			</In>
+			<Out>
+				<Action Cmd="OPEN_TASK_PANEL" />
+			</Out>
+		</Test>
+	</Step>
+	<!-- kfc餐厅 -->
+	<Step ID="3" TarMapID="203" >
+		<NPC ID="10043" Option="新年爱礼盒">
+			<Action Cmd="SAY" >
+				<Talk NpcID="10043" Face="正常" Msg="亲爱的小摩尔，还差一个神秘人哟~猜猜还有谁没有收到礼物呢？" Option="这个神秘人会是谁呢？" />
+				<Talk NpcID="10043" Face="正常" Msg="除了好朋友之外，是不是想想你的“死对头”，因为新年大家都应该得到礼物呢！" Option="对哦，怎么把“可恶的库拉”给忘了" />
+				<Talk NpcID="10043" Face="正常" Msg="虽然他已经离开了庄园，但说不定在新年里又会偷偷回来“看望大家”喔！" Option="好吧，这就给库拉送礼去！" />
+			</Action>
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />
+			<Action Cmd="GO_MAP" MapID="326" MapType="0" />	
+		</NPC>
+	</Step>
+	<Step ID="4" TarMapID="326" >
+		<EnterMap MapID="326" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="0" />
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsFullScreen="1" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			<Action Cmd="ALERT" Param="    恭喜你获得了钥匙。集齐两把钥匙即可找奇奇开启爱的礼盒！" Face="开心" />
+			<Action Cmd="OVER" />
+		</EnterMap>
+	</Step>
+</Tasks>

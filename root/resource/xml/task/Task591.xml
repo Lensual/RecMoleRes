@@ -1,0 +1,110 @@
+<Tasks ID="591" Name="黑魔法学院" AwardMsg="恭喜你获得20个欢乐券、10个经验果实！" AwardBean="" >
+
+	<!-- 摩乐乐家  -->
+	<Step ID="1" TarMapID="239">
+		<NPC ID="10000" Option="黑魔法学院"  MapID=""  >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10000" Visible="0" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="焦急" Msg="{$username}，你说，好端端的，怎么会突然出现这种紫光？真是太奇怪了！" Option=""/>
+				<Talk NpcID="10197" Face="焦急" Msg="是呀，感觉好诡异，就像要发生什么不好的事情……" Option=""/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10009" Face="惊讶" Msg="{$username}，原来你也在！告诉你们，卢卡斯回来啦——噢，不是之前的那个假冒的，这回是真正的卢卡斯——零零团长反复验证过后确定的。" Option=""/>
+				<Talk NpcID="10197" Face="惊讶" Msg="真的吗？太好了！我们赶紧看看去吧！" Option=""/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+			<Action Cmd="GO_MAP" MapID="334" MapType="0" />
+		</NPC>	
+	</Step>
+	
+	
+	<!-- 马戏团内景 -->
+	<Step ID="2" TarMapID="334">
+		<NPC ID="10202" Option="黑魔法学院"  MapID=""  >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10202" Visible="0" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10202" Face="正常" Msg="卢卡斯终于回来了。之前听你们说他被掉了包，我实在很担心。不过好在他平安无事回来了。" Option=""/>
+				<Talk NpcID="10197" Face="焦急" Msg="卢卡斯，之前发生了什么事？你怎么会被调包的？你究竟去了哪儿？" Option=""/>
+				<Talk NpcID="10203" Face="焦急" Msg="我……我只记得那天我正准备魔术道具，忽然有人从背后袭击我。再后来……啊，实在抱歉，再后来的事真是完全没印象了……" Option=""/>
+				<Talk NpcID="10197" Face="焦急" Msg=" 可怜的卢卡斯……没关系，只要你没事就好。" Option=""/>
+				<Talk NpcID="10203" Face="焦急" Msg="不知道过了多久，忽然有巨大的响动把我惊醒了，刚好也震开了围困我的机关。于是我不顾一切地跑啊跑，终于回到了马戏团。途中到处都看到诡异的紫光……" Option=""/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+			<Action Cmd="GO_MAP" MapID="47" MapType="0" />
+		</NPC>
+	</Step>
+	
+	
+	<!-- 粒粒小广场 -->
+	<Step ID="3" TarMapID="47">
+		<EnterMap MapID="47">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1" IsFullScreen="1" />	
+				<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10202" Face="惊讶" Msg="可怜的卢卡斯……究竟发生了什么事？快，快送他进去休息休息……" Option=""/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />
+			
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />
+			<Action Cmd="GO_MAP" MapID="334" MapType="0" />
+		</EnterMap>
+	</Step>
+	
+	<!-- 马戏团内景 -->
+	<Step ID="4" TarMapID="334">
+		<EnterMap MapID="334">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10202" Visible="0" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10197" Face="开心" Msg="太好了，卢卡斯，你终于醒了！你刚刚忽然晕倒，真是吓死我们了！" Option=""/>
+				<Talk NpcID="10203" Face="焦急" Msg="啊……头还是有点晕……刚刚，我好像做了一个梦，又好像不是梦……似乎是什么时候我亲眼看到的……阴谋，他们的阴谋！" Option=""/>
+				<Talk NpcID="10197" Face="惊讶" Msg="卢卡斯，你在说什么？什么他们？什么阴谋？你究竟看到过什么？" Option=""/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10203" Face="焦急" Msg="我不知道他们想干什么，但我敢肯定，一定是有可怕的阴谋……啊，我的头，又开始痛了……" Option=""/>
+				<Talk NpcID="10197" Face="焦急" Msg="卢卡斯，你先好好休息，暂时不要去想那件事情了。" Option=""/>
+				<Talk NpcID="10000" Face="焦急" Msg="嗯！不管是什么阴谋，我们都要努力地制止他们。" Option=""/>
+				<Talk NpcID="10203" Face="焦急" Msg="嗯，希望如此呀……让这段可怕的回忆，早些成为过去吧……" Option=""/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsBg="1" IsFullScreen="1" />	
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_7" />
+			
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10202" Visible="1" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="0"/>
+			<Action Cmd="OVER" />
+		</EnterMap>
+	</Step>
+</Tasks>

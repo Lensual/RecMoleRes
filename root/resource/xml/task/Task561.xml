@@ -1,0 +1,129 @@
+<Tasks ID="561" Name="魔法随心变！" AwardMsg="恭喜你获得祥蛇翅膀，9个百变灵石！" AwardBean="" >
+	<!-- 么么的卧室 -->
+	<Step ID="1" TarMapID="110">
+		<EnterMap MapID="110 ">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10010" Face="正常" Msg="我跟少少是在汤米的建设署找到的。" Option="建设署？"/>
+				<Talk NpcID="10011" Face="正常" Msg="汤米说前几天，他在粒粒小广场附近捡到了一个很特别的木匣子，木匣子里装满了闪亮亮的“金子”。" Option="哇~~~发财啦！"/>
+				<Talk NpcID="10011" Face="正常" Msg="可是当汤米把“金子”从木匣子里拿出来的时候，“金子”却成了石头，再放进去又变成了闪亮亮的“金子”，拿出来一看，仍旧只是石头……" Option="还有这样奇怪的木匣子？"/>
+				<Talk NpcID="10010" Face="正常" Msg="之后，汤米把这个奇怪的木匣子交到了失物招领处。但他始终想不明白为什么石头放在木匣子里会变成闪亮亮的“金子”。" Option="继续"/>
+				<Talk NpcID="10010" Face="正常" Msg="他决定试着做一两个来仔细研究研究。这不，刚做了两个一模一样的，正准备实验一下，嘿嘿~~就被我们拿回来了。" Option="哇~~~这下我们可要发财啦！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+<!-- 			<Action Cmd="GO_MAP" MapID="110" MapType="0" /> -->
+		</EnterMap>
+	</Step>
+	
+	<Step ID="2" TarMapID="110">
+		<EnterMap MapID="110 ">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10002" Face="焦急" Msg="哎呀，你们别传来传去啦！我都分不清楚哪个箱子是{$username}找回来的了。丫丽，你看清楚了吗？" Option="丫丽现在眼睛也花了……"/>
+				<Talk NpcID="10009" Face="生气" Msg="多多少少，你们怎么就不动动脑子呢？你们拿回来的只是汤米自己做的，真的百变魔盒，肯定是汤米交到警察署的那一个啊！！！" Option="用脚趾头想都能想到！"/>
+				<Talk NpcID="10009" Face="生气" Msg="带回来就算了，再还回去就好了！现在可好，你们三个换来换去，我都搞不清楚哪个是哪个了！！！" Option="丫丽很生气，后果很严重……"/>
+				<Talk NpcID="10161" Face="正常" Msg="嚯嚯嚯……丫丽，生气容易长皱纹的哦！刚刚听了大家说的，现在我能肯定百变魔盒已经找回来了，而且就在这3个木匣子当中。" Option="可到底是哪一个呢？"/>
+				<Talk NpcID="10161" Face="正常" Msg="汤米虽然是庄园里出色的建筑师，了解各种木材、石材，精通所有木工艺，但他也不可能造出一个真正的百变魔盒！" Option="百变魔盒有什么独特的地方呢？"/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="200" Name="movie_200" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_200" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10161" Face="正常" Msg="多多、少少、{$username}帮我把3个木匣子都搬到尼尔拉塔去吧！接下来就是见证奇迹的时刻！" Option="我已经迫不及待了！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+			<Action Cmd="GO_MAP" MapID="80" MapType="0" />
+		</EnterMap>
+	</Step>
+	
+	<!-- 尼尔拉塔 -->
+	<Step ID="3" TarMapID="80">
+		<EnterMap MapID="80">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />
+<!-- 			<Action Cmd="GO_MAP" MapID="80" MapType="0" /> -->
+		</EnterMap>
+	</Step>
+	
+	<!-- 尼尔拉塔 -->
+	<Step ID="4" TarMapID="80">
+		<EnterMap MapID="80">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="OPEN_PANEL" Param="CheckOutMagicBox" ClearMap="0"/> 
+			<Action Cmd="ADD_EVENT" Param="task561CheckMagicBox" />	
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />
+			<Action Cmd="SET_BUFFER" Panel="5" Step="5" />
+			<Action Cmd="GO_MAP" MapID="84" MapType="0" />
+		</EnterMap>
+	</Step>
+	
+	<!-- 尼尔拉塔第一层 -->
+	<Step ID="5" TarMapID="84">
+		<EnterMap MapID="84">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10161" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="magicBox_mc" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10161" Face="正常" Msg="你们居然说那只猫是我Cosplay出来的。现在就让你们见证这一历史性的奇迹时刻，千万别眨眼！" Option="眼睛已经瞪得像铜铃一样大了！"/>
+				<Talk NpcID="10161" Face="正常" Msg="{$username}，你愿意配合我一下吗？待会儿发生的事情，可能会有点“惊悚”，你会害怕吗？" Option="在我人生的字典里，就从来没有“害怕”两个字。"/>
+				<Talk NpcID="10161" Face="正常" Msg="很好！那请你现在场景中找3颗形状像猫的头一样的石头。" Option="形状像猫的石头……"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="PLAY_MOVIE" Param="203" Name="movie_203" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_203" />
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10161" Face="正常" Msg="简单的说也就是：要完成一次变身，需要把3颗百变灵石放在百变魔盒里，再念出变身魔法咒语——奇迹就在一瞬间。" Option="如果是这种像猫一样的百变灵石，是不是就能变成猫的外形？"/>
+				<Talk NpcID="10161" Face="正常" Msg="{$username}，把你手上的这3颗百变灵石放进百变魔盒里，然后慢慢闭上眼睛！" Option="啊？闭上眼睛更害怕了……"/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10002" Face="开心" Msg="哇~~~迫不及待地想看看我的新造型了，百变公主就是我！ 看我72变！哈哈……" Option="百变公主——么么！"/>
+				<Talk NpcID="10009" Face="开心" Msg="百变摩尔，我变~我变~我变变变！" Option="丫丽也疯狂啊！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_7" />
+			
+			<Action Cmd="SET_BUFFER" Panel="6" Step="6" />
+			<Action Cmd="GO_MAP" MapID="143" MapType="0" />
+		</EnterMap>
+	</Step>
+	
+	<!-- 建设署 -->
+	<Step ID="6" TarMapID="143">
+		<EnterMap MapID="143">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="gr_mc" Visible="0" />
+<!-- 			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="tommy2" Visible="0" /> -->
+			<Action Cmd="PLAY_MOVIE" Param="8" Name="movie_8" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="104" Name="movie_104" IsBg="1" IsFullScreen="1"/>		
+			<Action Cmd="DELETE_MOVIE" Param="movie_104" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_8" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="gr_mc" Visible="1" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="tommy2" Visible="1" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="0"/>
+			<Action Cmd="OVER"  MapID="84" MapType="0" />	
+		</EnterMap>
+	</Step>
+</Tasks>

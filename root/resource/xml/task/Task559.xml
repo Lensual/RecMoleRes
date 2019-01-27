@@ -1,0 +1,155 @@
+<Tasks ID="559" Name=" 冲锋誓言" AwardMsg="恭喜你获得祥蛇皇冠装,5个经验果实" AwardBean="" >
+	<!-- 前哨站  -->
+	<Step ID="1" TarMapID="61">
+		<EnterMap MapID="61" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_0" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_1" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_2" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_3" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_4" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_5" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_6" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="bgLevel" ResName="knight_0" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="bgLevel" ResName="knight_3" Visible="0" />						
+			<Action Cmd="PLAY_MOVIE" Param="105" Name="movie_105" IsBg="1" IsShowOthersMole="0" IsFullScreen="1" IsStopSound="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_105" />				
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsShowOthersMole="0" IsFullScreen="1"/>						
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />		
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />	
+			<Action Cmd="GO_MAP" MapID="63" MapType="0" />	
+		</EnterMap>	
+	</Step>	
+	
+	<!-- 骑士要塞塔顶 -->	
+	<Step ID="2" TarMapID="63">
+		<EnterMap MapID="63" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_0" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_1" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="book_mc" Visible="0" />		
+		
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsShowOthersMole="0" IsFullScreen="1"/>		
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="惊讶" Msg="大家有谁看到{$username}了吗？" Option="继续" />
+				<Talk NpcID="10000" Face="焦急" Msg="刚刚好多黑暗天使和小恶魔围朝菩提大伯围过来，{$username}和我都在一旁保护。他不是应该跟我们在一起的吗？" Option="继续" />
+				<Talk NpcID="10002" Face="焦急" Msg="不会是被恶魔岛的人抓走了吧？" Option="继续" />
+			</Action>	
+	
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />			
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1"/>		
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10160" Face="正常" Msg="小摩尔，你给我消停一点，这里是可是恶魔地牢，不是你想来就能随便来的地方。" Option="是我想来的吗？你们自己抓我来的好吧！" />
+				<Talk NpcID="10160" Face="正常" Msg="老老实实地给我呆着，我们团长大人已经在赶回来的路上了。可怜的摩尔，就等着被处置吧！" Option="我还就在这里等着你们团长大人回来！" />
+				<Talk NpcID="10160" Face="正常" Msg="这地牢里机关重重，你也别想着逃走了，周围方圆几里也都有我们的人看守。" Option="我没听错？这里是地牢！地牢！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />	
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />	
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />				
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />			
+		</EnterMap>	
+	</Step>	
+
+	<!-- 骑士要塞塔顶 -->
+	<Step ID="3" TarMapID="63">
+		<EnterMap MapID="63" >
+			<Action Cmd="OPEN_PANEL" Param="MinesGamePanel" ClearMap = "1"/> 
+			<Action Cmd="ADD_EVENT" Param="task559game" />			
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_0" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_1" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="book_mc" Visible="0" />					
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10002" Face="焦急" Msg="{$username}，怎么了？可把大家都担心坏了。" Option="呜呜呜~我以为再也见不到大家了。" />
+				<Talk NpcID="10000" Face="悲伤" Msg="还好我带着导航地雷，不然也不可能这么快就找到你。" Option="谢谢你，摩乐乐……" />
+				<Talk NpcID="10007" Face="焦急" Msg="安全回来就好！{$username}、摩乐乐、么么、现在你们谁也不准乱跑了，只能呆在这骑士要塞塔顶。" Option="菩提大伯，你呢？" />
+				<Talk NpcID="10007" Face="正常" Msg="接下来的事，就交给大伯我来处理！" Option="菩提大伯，你可要小心啊！" />
+			</Action>					
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />
+			<Action Cmd="GO_MAP" MapID="61" MapType="0" />	
+		</EnterMap>	
+	</Step>	
+				
+	<!-- 前哨站  -->
+	<Step ID="4" TarMapID="61">
+		<EnterMap MapID="61" >	
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />	
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_0" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_1" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_2" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_3" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_4" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_5" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_6" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="bgLevel" ResName="knight_0" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="bgLevel" ResName="knight_3" Visible="0" />	
+					
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsShowOthersMole="0" IsFullScreen="1"/>	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10029" Face="正常" Msg="菩提大伯，导航地雷在寻找{$username}的时候，还收集到了不少有效的情报信息。" Option="什么情报？" />
+				<Talk NpcID="10029" Face="正常" Msg="原来恶魔基地的势力范围远不止前哨站外围这一块，在前哨站外的藤蔓沼泽、狂风丘陵等地方，都有他们的人看守。" Option="黑暗势力真是无处不在！" />
+				<Talk NpcID="10007" Face="焦急" Msg="藤蔓沼泽、狂风丘陵……这都是险要地带，只要占据了有利位置，绝对是易守难攻。" Option="险要地带都有他们的人看守着。" />				
+				<Talk NpcID="10007" Face="焦急" Msg="零抢占了先机，我们现在已经处于被动状态了。" Option="那现在怎么办呢？" />
+				<Talk NpcID="10007" Face="正常" Msg="现在只有兵分两路。弗兰克，你带领骑士团死守前哨站，拖住零的黑暗军团。" Option="天使战队呢？" />	
+				<Talk NpcID="10007" Face="正常" Msg="我带领天使战队，赶去藤蔓沼泽，击退看守在那里的小恶魔，夺回我们的领土。" Option="夺回我们的领土！" />				
+				<Talk NpcID="10007" Face="正常" Msg="这是扭转全局的一战，我们一定要打的漂亮！" Option="转被动为主动的关键一战！" />											
+			</Action>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />	
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1" IsFullScreen="1"/>			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10154" Face="正常" Msg="哼~~~不用召唤结界，也一样能把你们这群小摩尔给解决掉！" Option="口气倒是不小。" />
+				<Talk NpcID="10029" Face="正常" Msg="谁解决谁，现在还不知道呢！" Option="弗兰克团长，别跟他废话。" />
+				<Talk NpcID="10007" Face="正常" Msg="皇家骑士们，前哨站就交给你们了。天使战队马上跟我去藤蔓沼泽。" Option="天使战队，冲锋吧！" />				
+				<Talk NpcID="10007" Face="正常" Msg="一起去跟这些小恶魔们痛快的大战一场吧！" Option="冲锋誓言一出，恶魔必当认输！" />																
+			</Action>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />																			
+			<Action Cmd="SET_BUFFER" Panel="5" Step="5" />
+		</EnterMap>	
+	</Step>
+		
+	<!-- 前哨站 玩天使战斗 -->
+	<Step ID="5" TarMapID="61">
+		<EnterMap MapID="61" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />
+			<Action Cmd="ACT_EVENT" Param="Task556_angelPK" />
+			<Action Cmd="ADD_EVENT" Param="task556_getGiftOver" />																											
+			<Action Cmd="SET_BUFFER" Panel="6" Step="6" />
+		</EnterMap>	
+	</Step>	
+	
+	<!-- 前哨站  -->
+	<Step ID="6" TarMapID="61">
+		<EnterMap MapID="61" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />	
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_0" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_1" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_2" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_3" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_4" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_5" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="knight_6" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="bgLevel" ResName="knight_0" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="bgLevel" ResName="knight_3" Visible="0" />					
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1" IsShowOthersMole="0" IsFullScreen="1"/>				
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="正常" Msg="零，今天你休想再逃走了！" Option="你们已经被包围了。" />
+				<Talk NpcID="10007" Face="正常" Msg="你安排在藤蔓沼泽的据点，已经被我们全部摧毁了。赶快交代出你在狂风丘陵所有的埋伏地点！" Option="坦白从宽，抗拒从严！" />
+				<Talk NpcID="10154" Face="正常" Msg="哼~~~有本事你们自己去狂风丘陵试试不就知道了啊！" Option="你……" />				
+			</Action>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />	
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" IsBg="1" IsShowOthersMole="0" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_7" />										
+			<Action Cmd="PLAY_MOVIE" Param="104" Name="movie_104" IsBg="1" IsShowOthersMole="0" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_104" />	
+			<Action Cmd="TASK_SHOW_SELF" Hide="0" />																	
+			<Action Cmd="OVER" />
+		</EnterMap>	
+	</Step>		
+</Tasks>

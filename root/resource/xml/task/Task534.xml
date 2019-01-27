@@ -1,0 +1,165 @@
+<Tasks ID="534" Name="骰子的哭泣" AwardMsg="恭喜你获得兔萝卜裙、2000摩尔豆！" AwardBean="2000" >
+	<Step ID="1" >
+	
+		<EnterMap MapID="28" >
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="正常" Msg="看来我真的是很久没带拉仔出来玩了，看它跟其他小拉姆玩的好开心！" Option="\(^o^)/！！！" />
+				<Talk NpcID="10007" Face="正常" Msg="整天宅在家里，肯定会被闷坏的！就是应该多出来走动走动，呼吸新鲜空气，亲近大自然！" Option="还要多与朋友玩耍、交流哦！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1"/>
+			<Action Cmd="SAY" >
+				<!-- NPCDialogManager.as中，感觉美术应该会不上传这个菩提大伯的表情哦 -->
+				<Talk NpcID="10007" Face="疑惑" Msg="骰子？！你怎么一个人躲在这里哭泣呢？难道你的主人库拉真的不要你了？" Option="(⊙_⊙)啊！" />
+				<Talk NpcID="10000" Face="正常" Msg="库拉毁了天使园，你肯定也脱不了干系。而且，库拉怎么可能不要你呢？这一定又是你们主仆二人的什么诡计吧！" Option="哇，乐乐什么时候变侦探了呀？" />
+				<Talk NpcID="10004" Face="悲伤" Msg="我真的不知道主人这一次会带着黑暗天使来摧毁天使园，自从主人说要独自一人去寻找恶魔岛的踪迹后，我就再也没见过他了……" Option="库拉还真是，居然舍得抛下你！" />
+				<Talk NpcID="10007" Face="正常" Msg="又是恶魔岛，看来库拉真的是被欲望冲昏头了！居然想要利用恶魔岛上的邪恶力量来使自己变得强大！" Option="恶魔岛究竟在哪儿啊？这么神秘~~~" />
+				<Talk NpcID="10007" Face="正常" Msg="说起这恶魔岛啊……" Option="？？？……" />
+			</Action>			
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />	
+			<!-- 这里要用上movie2的最后一帧吧 -->
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="惊讶" Msg="恶魔岛，这么神秘？还有那个什么暗夜之王……真有那么可怕吗？" Option="传说中的大BOSS都很厉害的吧！" />
+				<Talk NpcID="10007" Face="正常" Msg="传说是这样的，恶魔岛到底有多可怕，谁也不知道……现在，库拉找到了传说中的恶魔岛，他肯定会为了得到强大的黑暗力量而不择手段的！" Option="对！他这个贪心的黑魔法师！" />
+				<Talk NpcID="10000" Face="正常" Msg="库拉已经毁了天使园了，不能让他再对庄园造成威胁了！我们得赶紧去阻止他。骰子，跟我们一起去吧！" Option="不能再让库拉破坏庄园了！" />
+				<Talk NpcID="10004" Face="正常" Msg="嗯~~~好的！" Option="出发吧！" />
+			</Action>		
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+			<Action Cmd="GO_MAP" MapID="240" MapType="0" />	
+		</EnterMap>	
+	</Step>		
+		
+	<Step ID="2" >	
+		<EnterMap MapID="240" >
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />	
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+			<!-- 这里打开我做的那个小游戏 -->
+			<Action Cmd="OPEN_PANEL" Param="EscapeGame" /> 
+		</EnterMap>	
+	</Step>	
+	
+	<Step ID="3" >
+		<SubmitScore ModuleID="10045" MinScore="1" LoseMsg="  小摩尔没有成功逃脱，要再试一次吗！" >
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />
+			<Action Cmd="GO_MAP" MapID="28" MapType="0" />	
+		</SubmitScore>			
+	</Step>	
+	
+	<Step ID="4" >
+		<EnterMap MapID="28" >
+			<!-- 场景中没人了 -->
+			<Action Cmd="SAY" >
+				<Talk NpcID="10004" Face="正常" Msg="现在你们该相信我了吧！" Option="骰子，这次多亏你了~~~" />
+				<Talk NpcID="10000" Face="正常" Msg="哇！真是太惊险了！骰子，⊙﹏⊙真不好意思，刚刚真是谢谢你了……" Option="刚刚真是太惊险了啊！" />
+				<Talk NpcID="10007" Face="正常" Msg="骰子，刚刚真是多亏了你。看来你的主人是真的跟恶魔岛的黑暗天使联手了，他们一定又在密谋什么诡计！" Option="这个大坏蛋库拉！" />
+				<Talk NpcID="10007" Face="正常" Msg="天使园已经被他们烧毁了，不能让他们再毁了天使之树！" Option="天使之树？？？" />
+			</Action>	
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="正常" Msg="库拉知道天使之树的秘密，他一定会想办法摧毁天使之树的，我们一定要早做好防范！不能让他诡计得逞！" Option="对！一定要保护天使之树！" />
+				<Talk NpcID="10000" Face="正常" Msg="这个恶法师，摧毁了天使园，休想再破坏我们的天使之树了！" Option="赶快想个对策吧！" />
+				<Talk NpcID="10004" Face="悲伤" Msg="BIBO~BIBO~主人也是一时被强大的力量所迷惑，主人其实没有这么坏的……呜呜呜……" Option="可怜的骰子……" />
+				<Talk NpcID="10007" Face="正常" Msg="库拉接下来的计划肯定不是好的。我们必须马上行动起来，保护好天使之树！骰子，你愿意一起来帮忙吗？" Option="骰子，一起帮忙吧！" />
+				<Talk NpcID="10004" Face="正常" Msg="嗯，好的！菩提大伯，需要我做些什么呢？" Option="骰子好样的！" />
+				<Talk NpcID="10007" Face="正常" Msg="我们需要收集齐金、木、水、火、土五系的特殊元素，而这五种特殊的元素分别交由五个摩尔保管的。只要找到这五种元素，天使之树就有救了！赶快行动吧！" Option="GO! GO! GO!" />
+			</Action>	
+			<Action Cmd="SET_BUFFER" Panel="5" Step="5" />	
+			<Action Cmd="OPEN_TASK_PANEL" />	
+		</EnterMap>	
+	</Step>	
+	
+	
+	<Step ID="5" >
+		<!-- 汤米10063  建设署143 -->
+		<NPC ID="10063" Option="骰子的哭泣" Bit="1" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10063" Face="正常" Msg="{$username}，这就是你要找的南方之木！现在我就把它交给你，一定要保护好我们的天使之树！" Option="嗯，你就放心吧！" />
+			</Action>
+			<Action Cmd="ALERT" Param="南方之木已拿到，赶快去找其他的元素吧！" Face="开心" />
+			<Action Cmd="SET_BIT" Param="1" />
+		</NPC>
+		
+		<!-- 克劳10026  爱心教堂内18 -->
+		<NPC ID="10026" Option="骰子的哭泣" Bit="2" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10026" Face="正常" Msg="{$username}，我早已等你多时了。现在，我就把这孕育万物的生命之水交由给你了，希望你能用它拯救天使之树！" Option="神父请放心！我一定完成任务！" />
+			</Action>
+			<Action Cmd="ALERT" Param="  生命之水已拿到，赶快去找其他的元素吧！" Face="开心" />
+			<Action Cmd="SET_BIT" Param="2" />
+		</NPC>
+		
+		<!-- 洛克10047  城堡大厅15-->
+		<NPC ID="10047" Option="骰子的哭泣" Bit="3" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10047" Face="正常" Msg="真金不怕熊熊烈火，正义不惧歪风邪魔。这就是赤炼之金。这可是汇集了一切正义的能量，经过千锤百炼才炼成的！相信它一定可以驱走庄园里的邪恶势力！" Option="邪恶永远战胜不了正义！" />
+			</Action>
+			<Action Cmd="ALERT" Param="  赤炼之金已拿到，赶快去找其他的元素吧！" Face="开心" />
+			<Action Cmd="SET_BIT" Param="3" />
+		</NPC>
+		
+		<!-- 库洛10039 消防署75-->
+		<NPC ID="10039" Option="骰子的哭泣" Bit="4" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10039" Face="正常" Msg="只要希望还在，成功就离我们不远！{$username}，这就是传说中的希望之火！它是黎明前胜利曙光的象征！一定不能让它熄灭！" Option="哇！这就是传说中希望的火种！" />
+			</Action>
+			<Action Cmd="ALERT" Param="  希望之火已拿到，赶快去找其他的元素吧！" Face="开心" />
+			<Action Cmd="SET_BIT" Param="4" />
+		</NPC>
+		
+		<!-- 梅森10041 梅森小屋56-->
+		<NPC ID="10041" Option="骰子的哭泣" Bit="5" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10041" Face="正常" Msg="{$username}，别小看了这一撮泥土，这可是世间最纯洁无垢的西方净土！只要使用得当，它还可以净化一切的邪恶的力量，消除黑暗！" Option="泥土也可以这么神奇！" />
+			</Action>
+			<Action Cmd="ALERT" Param="  西方净土已拿到，赶快去找其他元素吧！" Face="开心" />
+			<Action Cmd="SET_BIT" Param="5" />
+		</NPC>		
+		
+		<Test Bits="1,2,3,4,5" >
+			<In>
+				<Action Cmd="SET_BUFFER" Panel="6" Step="6" />
+			</In>
+			<Out>
+				<Action Cmd="OPEN_TASK_PANEL" />
+			</Out>
+		</Test>
+	</Step>
+	
+	<Step ID="6" >
+		<NowTrigger>
+			<Action Cmd="ALERT" Param="收集完成了，现在可以去拉姆学院找菩提大伯了！" Face="开心" />
+			<!-- 点击收集完成按钮，跳到拉姆学院 -->
+			<Action Cmd="SET_BUFFER" Panel="7" Step="7" />
+			<Action Cmd="GO_MAP" MapID="28" MapType="0" />
+		</NowTrigger>
+	</Step>
+	
+	<Step ID="7" >
+		<EnterMap MapID="28" >
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />	
+			<!-- 亲，场景中没人 -->
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="正常" Msg="天使之树暂时安全了！只是……" Option="只是什么？" />
+				<Talk NpcID="10007" Face="正常" Msg="只是天使之树是所有正能量的源泉，要想它不遭到邪恶的入侵，还需要再注入新的正能量！" Option="这要怎么做呢？" />
+				<Talk NpcID="10007" Face="正常" Msg="这就需要庄园里的所有小摩尔一起来努力啦！{$username}你也不例外哦！" Option="义不容辞！" />
+				<Talk NpcID="10007" Face="正常" Msg="那就赶快打开“天使之树”看看吧！还有惊喜大礼包可以获得哦！" Option="好的！我这就去！" />
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />	
+			
+			
+			<Action Cmd="PLAY_MOVIE" Param="104" Name="movie_104" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_104" />	
+			
+			<Action Cmd="OVER" />
+		</EnterMap>
+	</Step>
+</Tasks>

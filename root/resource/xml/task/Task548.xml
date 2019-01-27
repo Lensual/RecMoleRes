@@ -1,0 +1,206 @@
+<Tasks ID="548" Name="圣诞奇遇记之冒险篇" AwardMsg="恭喜你获得10个经验果实、5个融合石、2000摩尔豆！" AwardBean="2000" >
+	<Step ID="1" TarMapID="240">
+		<EnterMap MapID="240" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10148" Face="生气" Msg="哎哟~可疼死我了。{$username}，好好的你撞我干嘛呀？" Option="呜呜~明明是你不看路，撞着我了。" />
+				<Talk NpcID="10148" Face="生气" Msg="明明就是你先撞我的，冒冒失失的，就是你啦！还狡辩……" Option="不知道谁才是一副很着急的样子啊~~~" />
+				<Talk NpcID="10148" Face="正常" Msg="啊！差点忘了刚刚的事情。{$username}，我还有很重要的事，就不跟你计较了。" Option="什么重要的事？跟我也说说吧。" />
+				<Talk NpcID="10148" Face="正常" Msg="事关重大，无可奉告！" Option="说说呗，说不定我还可以帮上忙呢？" />
+				<Talk NpcID="10148" Face="正常" Msg="这个嘛……看你还算靠谱。好吧，先跟我去个地方，我边走边跟你说。" Option="到底是什么事啊？还神神秘秘的。" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />	
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />	
+			<Action Cmd="GO_MAP" MapID="326" MapType="0" />	
+		</EnterMap>	
+	</Step>	
+	
+	<Step ID="2" TarMapID="326" >
+		<EnterMap MapID="326" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1"/>		
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />		
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1"/>		
+			<Action Cmd="SAY" >
+				<Talk NpcID="10154" Face="正常" Msg="看来BOSS上次交给你的任务，你并没有完成嘛！当初不是还那么信誓旦旦，自信满满的样子吗？" Option="这不是公主她们见到的那个摩尔吗？"/>
+				<Talk NpcID="10154" Face="正常" Msg=" 怎么现在不说话了呢？" Option="他怎么会在这里？还敢这样质问库拉！"/>
+				<Talk NpcID="10003" Face="生气" Msg=" 我……BOSS当初交给我的任务就是摧毁天使园，黑化所有的天使，一切本来都进行的很顺利，可谁知……" Option="还好意思说！都是你干的好事！"/>
+				<Talk NpcID="10003" Face="生气" Msg=" 谁知他们竟然利用我制造出来的骰子，把黑色焰火扑灭了……我见天使园也已经烧毁得差不多了，就……就……" Option="库拉也有吞吞吐吐的时候？？？"/>
+				<Talk NpcID="10154" Face="正常" Msg="  就三十六计，走为上计了？早就提醒过你把那只碍事的拉姆给处理掉，会有更好的黑暗天使做你的左右手！现在好啦，还要我来给你收拾烂摊子！" Option="好大的口气！看来来头不小啊~~~"/>
+				<Talk NpcID="10003" Face="生气" Msg=" 你别太嚣张，我堂堂库拉大魔法师，还轮不到你一个毛头小子来教训！" Option="......"/>
+				<Talk NpcID="10003" Face="生气" Msg=" 骰子是我辛辛苦苦制造出来的，我相信得到了黑暗力量，再加上我天才的黑魔法，它一定会实力大增的！" Option="黑暗力量就那么吸引你么？库拉童鞋。"/>
+				<Talk NpcID="10154" Face="正常" Msg="哼~~亏你还记得你跟恶魔岛的约定，想要得到黑暗力量，那就赶紧想办法补救！现在，这群摩尔居然在如此短的时间里，就建好了新的天使园，还好我有备而来。" Option="这个零~难道是从恶魔岛上来的？"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />	
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />	
+	
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10148" Face="正常" Msg=" 这就是我听到的事情的经过，我正要去把这件重要的事情告诉菩提大伯的，结果就撞上你了。" Option="原来如此，怪不得你那么着急的样子。"/>
+				<Talk NpcID="10148" Face="正常" Msg=" 真不知道他们葫芦里卖的什么药，我们还是去告诉菩提大伯吧！他是庄园里的元老了，一定会有办法的。" Option="嗯，学院教导处就快到了。"/>
+			</Action>
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+			<Action Cmd="GO_MAP" MapID="53" MapType="0" />	
+		</EnterMap>	
+	</Step>
+	
+	<Step ID="3" TarMapID="53" >
+		<EnterMap MapID="53" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10007" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1"/>
+					 	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10148" Face="焦急" Msg="事情的经过就是这样子的，大伯你说现在应该怎么办呢？" Option="我怀疑……大伯没听懂我们在讲什么。"/>
+				<Talk NpcID="10007" Face="生气" Msg="这个库拉，真是不可理喻！一次还不够，居然还想毁灭天使园第二次！我绝对不允许这样的事情发生！！！" Option="大伯，你已经有对策了？"/>
+				<Talk NpcID="10007" Face="生气" Msg="对策……我暂时还没想到。而且你们所说的那个陌生摩尔，我好像之前就听说过。" Option="囧……"/>
+				<Talk NpcID="10007" Face="疑惑" Msg="想起来了，好像就是么么在幻境里见到的那个小摩尔，那条独特的白色狐狸围脖。不会错，你们见到的一定是同一个人。" Option="那位公主眼中的高贵王子？？？"/>
+				<Talk NpcID="10148" Face="焦急" Msg="而且从这个摩尔身上，我还感知一股强大的黑暗力量，像极了之前入侵么么公主体内的邪恶之气。" Option="我怎么觉得他就一自恋的暴发户呢！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+		
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1"/>	 	 
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="正常" Msg="根据现在的情况，还不清楚这个来路不明的摩尔到底是谁，他来庄园的目的是什么，我们还是先观察观察再说。" Option="遇事从容淡定，我喜欢！"/>
+				<Talk NpcID="10007" Face="正常" Msg="静观其变也并不是什么都不做。不管他们的计划是什么，我们还是要提早做好防备。" Option="大伯现在有对策了？"/>
+				<Talk NpcID="10007" Face="正常" Msg="此事不宜招摇，不能打草惊蛇。{$username}，你跟雪精灵先去尼尔拉塔附近和力量之泉这些地方，看看有什么发现……" Option="嗯，好！下一步呢？"/>
+				<Talk NpcID="10007" Face="正常" Msg="下一步，我就去找洛克行政官商量具体对策！记住，千万要保密，不要让其他摩尔知道，还不能被库拉和那个古德摩.零发现。" Option="呃……原来还是没有实质性的对策啊~"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />		
+		 	<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10007" Visible="1" />
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />	
+			<Action Cmd="OPEN_PANEL" Param="OperPlanPanel" Data="1"	/> 
+		</EnterMap>	
+	</Step>
+	
+	<Step ID="4" TarMapID="53" >
+		<EnterMap MapID="53" >		
+			<Action Cmd="OPEN_PANEL" Param="OperPlanPanel" Data="1"	/> 
+		</EnterMap>	
+	</Step>
+	
+	<!-- 跳转到尼尔拉塔第一层相关场景 -->
+	<Step ID="5" TarMapID="84" >
+		<EnterMap MapID="84" >	
+			<!--<Action Cmd="ACT_EVENT" Param="openPickFruit" /> 抛事件 -->
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsFullScreen="1"/>	
+			<!-- <Action Cmd="ACT_EVENT" Param="Task548_Open" />抛事件 -->
+			<Action Cmd="ADD_EVENT" Param="task548Go" /> <!--交互游戏-->
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />		
+			<Action Cmd="SET_BUFFER" Panel="6" Step="6" />
+			<Action Cmd="OPEN_PANEL" Param="OperPlanPanel" Data="2"	/> 
+		</EnterMap>	
+	</Step>
+	
+	<Step ID="6" TarMapID="84" >
+		<EnterMap MapID="84" >		
+			<Action Cmd="OPEN_PANEL" Param="OperPlanPanel" Data="2"	/> 
+		</EnterMap>	
+	</Step>
+	
+	<Step ID="7" TarMapID="42" >
+		<EnterMap MapID="42" >
+			<!-- <Action Cmd="TASK_SHOW_SELF" Hide="1" />-->
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1" IsFullScreen="1"/>		
+			<Action Cmd="SAY" >
+				<Talk NpcID="10148" Face="焦急" Msg="石像周围散发出来的黑色光环，跟侵入公主体内的黑暗力量所散发出来的光简直一模一样！{$username}，你怎么看？" Option="果然事有蹊跷！"/>
+				<Talk NpcID="10148" Face="焦急" Msg="趁还没人，赶紧去力量之泉探探情况！{$username}，小心点哦，别被人发现了。" Option="OK！我知道去力量之泉的机关，跟我来。"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_7" />
+			
+			<Action Cmd="ACT_EVENT" Param="Task548_OpenWater" /><!-- 抛事件 -->
+			
+			<Action Cmd="SET_BUFFER" Panel="8" Step="8" />
+			<!-- 
+				<Action Cmd="ADD_EVENT" Param="Task548_OverWater" /> 				
+				<Action Cmd="SET_BUFFER" Panel="8" Step="8" />
+				<Action Cmd="GO_MAP" MapID="43" MapType="0" />
+			-->
+		</EnterMap>	
+	</Step>
+	
+	<Step ID="8" TarMapID="43" >
+		<EnterMap MapID="43" >
+			<!-- <Action Cmd="TASK_SHOW_SELF" Hide="1" />-->
+			<Action Cmd="PLAY_MOVIE" Param="8" Name="movie_8" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10148" Face="焦急" Msg="怎么黑色浆果藤蔓也散发着黑色的光环呢？还说着那句奇怪的话……" Option="四处找找，看能不能找到什么线索。"/>
+				<Talk NpcID="10148" Face="焦急" Msg="{$username}，快看，对面那个黑色的圈好奇怪。像极了一个魔法阵，该不会……" Option="别靠太近啊，有危险！"/>
+				<Talk NpcID="10148" Face="焦急" Msg="别担心，我们已经破解了黑魔法阵的结界了，应该不会有事的，可中间隔着一条河，这可从哪儿过去呢？" Option="四处找找，一定有机关的！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_8" />
+			<!-- 交互 -->	
+			 <Action Cmd="ADD_EVENT" Param="task548Go" />			 
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />
+				
+			<Action Cmd="PLAY_MOVIE" Param="9" Name="movie_9" IsBg="1" IsFullScreen="1" />		
+			<Action Cmd="SAY" >
+				<Talk NpcID="10148" Face="正常" Msg="这个黑暗种子……不就是我亲耳听见零说的吗？哼哼~~~他肯定想不到我们居然破坏了他的计划" Option="看来这果然是真的……"/>
+				<Talk NpcID="10148" Face="焦急" Msg="啊~对对对！还有他的作战计划我们还没拿到。照现在的情况来看，我听到的计划都应该是真的。" Option="嗯，八九不离十了。"/>
+				<Talk NpcID="10148" Face="焦急" Msg="可是黑暗种子随时可能释放黑暗力量，我必须把它拿回雪山顶，用纯洁之冰把它封印起来。" Option="可找零的作战计划书时间紧迫啊！"/>
+				<Talk NpcID="10148" Face="正常" Msg="	这样吧，我去封印黑暗种子，找作战计划书的事就交给你了。{$username}好吗？" Option="OK！没问题！"/>		
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_9" />	
+			<Action Cmd="SET_BUFFER" Panel="9" Step="9" />
+			<Action Cmd="OPEN_PANEL" Param="OperPlanPanel" Data="3"	/> 
+		</EnterMap>	
+	</Step>
+	
+	<Step ID="9" TarMapID="43" >
+		<EnterMap MapID="43" >		
+			<!-- <Action Cmd="SET_BUFFER" Panel="10" Step="10" /> -->
+			<Action Cmd="OPEN_PANEL" Param="OperPlanPanel" Data="3"	/> 
+		</EnterMap>	
+	</Step>
+	
+	<!-- 地下城岗哨 -->
+	<Step ID="10" TarMapID="189" >
+		<EnterMap MapID="189" >
+			<Action Cmd="ADD_EVENT" Param="task548Plan" />			
+			<Action Cmd="PLAY_MOVIE" Param="105" Name="movie_105" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_105" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />				
+			<Action Cmd="PLAY_MOVIE" Param="10" Name="movie_10" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_10" />
+			<Action Cmd="SET_BUFFER" Panel="11" Step="11" />	
+			<Action Cmd="GO_MAP" MapID="15" MapType="0" />
+		</EnterMap>	
+	</Step>
+	
+	<Step ID="11" TarMapID="15" >
+		<EnterMap MapID="15" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />
+			<Action Cmd="PLAY_MOVIE" Param="11" Name="movie_11" IsBg="1" IsFullScreen="1"/>
+			
+			<Action Cmd="PLAY_MOVIE" Param="104" Name="movie_104" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_104" />	
+			
+			<Action Cmd="SAY" >
+			<Talk NpcID="10007" Face="生气" Msg="又是恶魔岛！难道这个古德摩.零也是恶魔岛的人吗？可是，传说恶魔岛上全都是黑暗天使……怎么现在又来了个零呢？" Option="大伯，你也说那是传说而已。"/>
+			<Talk NpcID="10047" Face="生气" Msg="看来恶魔岛并不是我们想象中的那么简单。如今，对手是个什么来头，我们是一点都不知，事情变得越来越棘手了。" Option="我在明，敌在暗啊。"/>
+			<Talk NpcID="10007" Face="生气" Msg="照目前的形势看，不管这份埋伏计划是不是真的，先做好防备措施总是不会错的，但是切记不能打草惊蛇，越少人知道越好。" Option="嗯，大伯放心吧，我一定会保密的。"/>
+			<Talk NpcID="10047" Face="生气" Msg="真正的较量，现在才刚刚开始。新天使园的重建一定要加快步伐了！！！" Option="恶魔与天使的较量才刚刚开始……"/>
+			<Talk NpcID="10148" Face="焦急" Msg="不好了，我把黑暗种子封印好之后，还发现庄园其他地方还有散落的黑暗种子。" Option="啊？？？不是只有一颗的吗？"/>
+			<Talk NpcID="10148" Face="焦急" Msg="如果不及时把黑暗种子封印起来，它一旦生根发芽，就会释放黑暗力量，到时候……" Option="到时候就一发不可收拾啦！"/>
+		</Action>
+		<Action Cmd="DELETE_MOVIE" Param="movie_11" />	
+		<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsBg="1" IsFullScreen="1"/>
+		<Action Cmd="DELETE_MOVIE" Param="movie_103" />	
+		<Action Cmd="TASK_SHOW_SELF" Hide="0" />
+		<Action Cmd="OVER" />
+		<!--  
+		<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsBg="1" IsFullScreen="1"/>
+		<Action Cmd="DELETE_MOVIE" Param="movie_103" />	
+		<Action Cmd="OVER" />
+		-->		
+		</EnterMap>	
+	</Step>
+</Tasks>

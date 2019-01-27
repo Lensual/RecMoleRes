@@ -1,0 +1,117 @@
+<Tasks ID="560" Name="失传的魔法秘术！" AwardMsg="恭喜你获得10经验果实，5个融合石！" AwardBean="" >
+	<!-- 么么的卧室 -->
+	<Step ID="1" TarMapID="110">
+		<EnterMap MapID="110 ">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1"/>	
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10161" Face="正常" Msg="这是什么香水，真是呛死人了。" Option="这可是公主才能用的高级香水。"/>
+				<Talk NpcID="10161" Face="正常" Msg="{$username}，你哪只眼睛看出来我想要伤害么么公主了？" Option="你怎么知道我名字的？"/>
+				<Talk NpcID="10009" Face="生气" Msg="你这个老头，居然还假扮成流浪猫，骗取我跟么么公主的同情心，简直太过分了！" Option="丫丽很生气，后果很严重。"/>
+				<Talk NpcID="10161" Face="正常" Msg="难道你们大家真的没有一个人记得我是谁了吗？{$username}，我们才见过不久的！" Option="你是……"/>
+				<Talk NpcID="10161" Face="正常" Msg="唉，枉我千里迢迢地赶回摩尔庄园，却没想到大家早已经不记得我这个糟老头子了。" Option="庄园里有比菩提大伯还年长的摩尔吗？"/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+<!-- 			<Action Cmd="GO_MAP" MapID="110" MapType="0" /> -->
+		</EnterMap>
+	</Step>
+	
+	<Step ID="2" TarMapID="110">
+		<EnterMap MapID="110 ">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />	
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1"/>	
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10161" Face="正常" Msg="终于想起我了？很久没回庄园了，么么公主和丫丽都长高了，庄园的所有地方也都焕然一新。" Option="(￣︶￣)我也长高了不少哦！"/>
+				<Talk NpcID="10002" Face="开心" Msg="尼尔拉大法师，庄园里的小摩尔们可都盼着你回来！刚刚真是不好意思，呵呵~~~弄得您满脸都是女生用的粉扑和香水。" Option="⊙﹏⊙"/>
+				<Talk NpcID="10009" Face="开心" Msg="尼尔拉大法师，您也真是的，怎么想到要装扮成小猫来糊弄我们？我还差点真把您当成是坏人了呢！" Option="丫丽最冲动了，脾气又火爆，说话还凶！"/>
+				<Talk NpcID="10161" Face="正常" Msg="哈哈~~~丫丽啊，你们口中的“喵星人”可不是我Cosplay的！刚刚的我是一个真正的喵星人！" Option="不是Cosplay的，那是怎么变成喵星人的呢？"/>
+				<Talk NpcID="10161" Face="正常" Msg="这是我无意之间发现的一个秘密——失传已久的关于变身的魔法秘术！" Option="魔法秘术？是黑魔法？？？"/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="200" Name="movie_200" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_200" />
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10002" Face="惊讶" Msg="竟然还真的有变身魔法秘术的存在？我也只是看到童话书里有这样写过，邪恶的巫师总是用魔法把英俊的王子变成动物！" Option="比如青蛙王子。"/>
+				<Talk NpcID="10009" Face="疑惑" Msg="尼尔拉法师，你发现的这个魔法秘术……不会就是什么邪恶的黑暗魔法吧？" Option="猫……也算是一种小动物吧！"/>
+				<Talk NpcID="10010" Face="正常" Msg="啊！我不要被变成动物，我不要被变成动物！" Option="多多，小猪这种动物可是最爱吃的哦！"/>
+				<Talk NpcID="10161" Face="正常" Msg="大家都不用担心！这个变身魔法秘术不是什么邪恶的黑魔法。只要你心里想要变回原来的样子，或者当受到外界刺激的时候，魔法会自动消失的。" Option="哇！那岂不是想变就变？"/>
+				<Talk NpcID="10161" Face="正常" Msg="而且使用这个魔法，不会对自身造成任何的损失。相反，还可以让你体验另一种不同的生活方式。" Option="听起来好像很不错的样子哦！"/>
+			</Action>
+			
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+<!-- 			<Action Cmd="GO_MAP" MapID="110" MapType="0" /> -->
+		</EnterMap>
+	</Step>
+	
+	<Step ID="3" TarMapID="110">
+		<EnterMap MapID="110 ">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />	
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1"/>
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10161" Face="正常" Msg="糟糕！哎哟，真是人老了，记性也不好了！百变魔盒……百变魔盒……百变魔盒被我弄丢了！" Option="什么？"/>
+				<Talk NpcID="10161" Face="正常" Msg="我那天在粒粒小广场就是在找这个百变魔盒的！没想到遇到了么么公主她们，很久没见到大家了。我一高兴，就给忘了。" Option="这么重要的事情，怎么能忘记呢？？？"/>
+				<Talk NpcID="10161" Face="正常" Msg="然后就跟着大家一起回到了摩尔城堡里了。没了百变魔盒，我又不能马上变回摩尔的形象，所以只能等着魔法自动失效后，才能变回原来的样子。" Option="(⊙ｏ⊙)"/>
+				<Talk NpcID="10161" Face="正常" Msg="{$username}你现在这么一说，我又想起来了！" Option="现在才想起来……"/>
+				<Talk NpcID="10010" Face="正常" Msg="那现在怎么办呢？庄园这么大，怎么找呢？" Option="在庄园里找一个小盒子，简直大海捞针啊！"/>
+				<Talk NpcID="10009" Face="正常" Msg="不怕，咱们人多力量大！分头去找，找到了在这里集合！" Option="好的，这就出发！"/>
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="201" Name="movie_201" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_201" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />
+			<Action Cmd="GO_MAP" MapID="44" MapType="0" />
+		</EnterMap>
+	</Step>
+	
+	<!-- 摩尔庄园警署 -->
+	<Step  ID="4" TarMapID="44">
+		<EnterMap MapID="44 ">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />	
+			<Action Cmd="SET_ATTRIBUTE" Level="buttonLevel" ResName="npc_10019" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="40" Name="movie_40" IsBg="1" IsFullScreen="1"/>
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10019" Face="正常" Msg="{$username}，今天怎么有空来警察署，是有什么事情需要我帮忙吗？" Option="艾尔警官，我在找一个小木匣子。"/>
+				<Talk NpcID="10019" Face="正常" Msg="原来是来失物招领的啊！警察署最近的确是收到了不少遗失的小物件，可不知道有没有你要找的东西。我先拿出来，你找找吧！" Option="谢谢你，艾尔警官。"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_40" />
+
+			<Action Cmd="OPEN_PANEL" Param="FindRectangleBox" ClearMap="1"/> 
+			<Action Cmd="ADD_EVENT" Param="task560FindBox" />	
+			<Action Cmd="SET_BUFFER" Panel="5" Step="5" />
+			<Action Cmd="GO_MAP" MapID="110" MapType="0" />
+		</EnterMap>
+	</Step>
+
+	<!-- 么么的卧室 -->
+	<Step ID="5"TarMapID="110">
+		<EnterMap MapID="110 ">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1" />	
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="0"/>
+			<Action Cmd="OVER" />
+		</EnterMap>
+	</Step>
+</Tasks>

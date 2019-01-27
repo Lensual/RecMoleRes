@@ -1,0 +1,87 @@
+<Tasks ID="647" Name="他不是快乐王子" AwardMsg="恭喜你获得1个爱心漂流瓶,1个万宝螺，10000摩尔豆" AwardBean="10000">
+	<Step ID="1" TarMapID="110">
+		<EnterMap MapID="110">
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10000" Face="焦急" Msg="怎么办？公主还是没有醒过来！！" Option="还在继续变化吗？"/>
+				<Talk NpcID="10000" Face="焦急" Msg="是啊，感觉身体负担好大，一直在发烧……" Option="这可怎么办？真担心公主撑不住。"/>
+				<Talk NpcID="10000" Face="焦急" Msg="无论如何，我一定会救公主的！" Option="恩，我们都不会放弃公主的！可是接下来该怎么办啊？"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1"/>
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10222" Face="灵感" Msg="不知道该怎么办？要不要我告诉你办法？" Option="坏人，你已经把公主害成这样了，你走开。"/>
+				<Talk NpcID="10222" Face="灵感" Msg="别这么说嘛，我可是为了庄园更加美好，为了公主更加幸福啊……" Option="公主都昏睡不醒了，还幸福？瞎说什么呢？"/>
+				<Talk NpcID="10222" Face="开心" Msg="你不知道有了王子的吻睡美人就会醒来？" Option="王子？哪有王子，我只能看到一群大坏蛋！！！"/>
+				<Talk NpcID="10000" Face="焦急" Msg="捷克王子吗？我去叫他！！" Option="对哦，庄园还有一个王子在~"/>
+				<Talk NpcID="10222" Face="灵感" Msg="慢着慢着，我说的是蒙斯特王子哟~" Option="公主出事了，连他的人影都没看到，还能救公主？我才不信。"/>
+				<Talk NpcID="10000" Face="焦急" Msg="不管是谁，只要现在能救公主！告诉我该怎么做！！" Option="乐乐，别冲动啊~"/>
+				<Talk NpcID="10222" Face="开心" Msg="拿起棋盘，加入游戏吧！" Option="还加入游戏呢？是不是所有摩尔都加入游戏了，就可以让你们为所欲为了？"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2"/>
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2"/>
+		</EnterMap>
+	</Step>
+	<Step ID="2" TarMapID="110">
+		<EnterMap MapID="110">
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10000" Face="焦急" Msg="公主不知道要去哪里，快去跟着，我去找王子！！！" Option="恩，乐乐当心呀，不要被棋局控制了"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3"/>
+			<Action Cmd="JUMP_TASK_UI" Param="   公主跑到哪里去了？快点追上她，这可是我们大家最最重要的么么公主呀，希望她平平安安的！"/>
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3"/>
+			<Action Cmd="GO_MAP" MapID="337" MapType="0"/>
+		</EnterMap>
+	</Step>
+	<Step ID="3" TarMapID="337">
+		<EnterMap MapID="337">
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10283" Face="正常" Msg="小摩尔你来找小萌吗？你有什么要实现的愿望吗？要不要试试小萌咕嘟咕嘟炖出来的好滋味？" Option="我来找公主的，哼，都怪你给公主喝了毒药！！"/>
+				<Talk NpcID="10283" Face="正常" Msg="哎哟哟，可别这么说，小萌没有强迫公主呀~可爱的公主跟我说她想要小小的脸蛋、尖尖的耳朵、细细的腰身、大大的眼睛~现在是不是都有了？" Option="可是公主一点都不快乐，还失魂落魄的，你说，你说公主去哪了？"/>
+				<Talk NpcID="10283" Face="正常" Msg="你问我呀？给我100万颗金灿灿的摩尔豆，我就告诉你哟！是不是很便宜？" Option="你……抢摩尔豆啊你……"/>
+				<Talk NpcID="10283" Face="正常" Msg="黑哟哟的黑森林呀，公主到处在找她的王子呀~还有公主的追随者们~大家当心呀~不知道会有什么样的怪兽跑出来哟~" Option="╭(╯^╰)╮ 我会找到公主的！！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			<Action Cmd="JUMP_TASK_UI" Param="   小萌说了一堆乱七八糟的，还是没有说清楚到底公主去了哪里，不行，继续找公主，不能让她遇到危险"/>
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4"/>
+			<Action Cmd="GO_MAP" MapID="151" MapType="0"/>
+		</EnterMap>	
+	</Step>
+	<Step ID="4" TarMapID="151">
+		<EnterMap MapID="151">
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />
+			<Action Cmd="JUMP_TASK_UI" Param="   王子突然对公主好冷淡，这是怎么了？乐乐说有好东西给公主看，我们也去看看吧！"/>
+			<Action Cmd="SET_BUFFER" Panel="5" Step="5"/>
+			<Action Cmd="GO_MAP" MapID="120" MapType="0"/>
+		</EnterMap>	
+	</Step>
+	<Step ID="5" TarMapID="120">
+		<EnterMap MapID="120">
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10000" Face="生气" Msg="你怎么又冒出来了！？" Option="还想来欺负公主吗？"/>
+				<Talk NpcID="10282" Face="开心" Msg="怎么会呢？我只是想让公主更加开心！" Option="别装了，我看出来了，你是坏人！！"/>
+				<Talk NpcID="10000" Face="生气" Msg="现在还装什么好人啊？╭(╯^╰)╮" Option="就是就是！"/>
+				<Talk NpcID="10284" Face="焦急" Msg="……" Option="公主……"/>
+				<Talk NpcID="10284" Face="焦急" Msg="不要……" Option="哎~"/>
+				<Talk NpcID="10282" Face="开心" Msg="现在棋局就差我一个人了，我也来掷一下骰子吧……" Option="……"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_7" />
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />
+			<Action Cmd="OVER"/>
+		</EnterMap>	
+	</Step>
+</Tasks>
+

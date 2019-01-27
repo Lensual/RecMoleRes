@@ -1,0 +1,99 @@
+<Tasks ID="498" Name="采访湖水变红事件" AwardMsg="恭喜你获得SMC小记者徽章！" AwardBean="0" >
+	<Step ID="1" >
+		<NPC ID="10021" Option="采访湖水变红事件" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10021" Face="正常" Msg="{$username}, 最近神秘湖水离奇变红，我担心居民生活因此而遭受影响。{$username}，你帮忙去采访下大家好吗？" Option="好的，没问题！" />
+			</Action>
+			
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+			<Action Cmd="OPEN_TASK_PANEL" />
+		</NPC>	
+	</Step>
+	
+	<Step ID="2" >
+		<NPC ID="10013" Option="采访湖水变红事件" Bit="1" >
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="npc_10013" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" />		
+			<Action Cmd="SAY" >
+				<Talk NpcID="10013" Face="悲伤" Msg="{$username}，你告诉我，我不就是长得稍微好看了点吗？老天爷为什么要这么对我呀……" Option="花婶你怎么了？" />
+				<Talk NpcID="10013" Face="悲伤" Msg="哎，这还得从神秘湖说起了……" Option="果然和神秘湖有牵连……" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsFullScreen="1"/>		
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="npc_10013" Visible="1" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10013" Face="悲伤" Msg="你说，这可叫我怎么办嘛？都是被神秘湖的湖水给害的，我真是命苦哦……" Option="神秘湖水果然有问题！" />
+				<Talk NpcID="10013" Face="悲伤" Msg="那可不是啊！不行，我得走了，我得赶紧去治治，要是毁容了这日子可真没法过了……" Option="我可以先给你拍张照吗？" />
+				<Talk NpcID="10013" Face="悲伤" Msg="好吧，也算是给别人提个醒！不过，先让我把我的脸遮一遮……{$username}，你可要把我拍得漂亮些哦！" Option="嗯，没问题！" />
+			</Action>	
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsFullScreen="1"/>		
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />					
+			<Action Cmd="SET_BIT" Param="1" />
+		</NPC>
+		
+		<NPC ID="10050" Option="采访湖水变红事件" Bit="2" >
+		
+			<Action Cmd="SET_DYNAMIC_NPC" NPCID="1"  Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10050" Face="焦急" Msg="{$username}，太奇怪了，我的小鸭子们都变成了红色……昨天都还好好的呀！" Option="红色……怎么和神秘湖一样了？" />
+				<Talk NpcID="10050" Face="焦急" Msg="你这么一说，我倒是想起来了，它们好像就是喝了湖水才变样的……不会是湖水出了问题吧？" Option="湖水是有点问题，我专门采访此事呢！" />
+				<Talk NpcID="10050" Face="惊讶" Msg="啊……这可怎么办呀！神秘湖可是我们的水源啊！" Option="我会把此事上报，会得到妥善解决的！" />
+				<Talk NpcID="10050" Face="焦急" Msg="{$username}，那就拜托你咯！不喝水可不行，我还能忍忍，可不能让小动物受委屈……" Option="好的！我给你和小鸭子拍个照行吗？" />
+			</Action>
+			
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsFullScreen="1"/>		
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />				
+			<Action Cmd="SET_BIT" Param="2" />
+				
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />	
+			<Action Cmd="SET_DYNAMIC_NPC" NPCID="1"  Visible="1" />
+		</NPC>
+		
+		<NPC ID="10042" Option="采访湖水变红事件" Bit="3" >
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="npc_10042" Visible="0" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" />
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10042" Face="焦急" Msg="{$username}，如果你是来餐厅吃饭的，我只能告诉你，最近餐厅都没法营业了……" Option="没法营业了？为什么呀？" />
+				<Talk NpcID="10042" Face="焦急" Msg="我也不想呀，这两天有客人在我这吃出了问题，可是，明明我们的食物，从选材、水质、到加工过程，都有严格卫生标准的啊……" Option="你们用的，不会是神秘湖的水吧？" />
+				<Talk NpcID="10042" Face="焦急" Msg="就是神秘湖的水呀！长久以来，我们都用的神秘湖水，从来没出过什么差错……" Option="这就对了！神秘湖的水最近出了问题！" />
+				<Talk NpcID="10042" Face="焦急" Msg="啊？！出了问题？怪不得……那要什么时候才会好呀！湖水不变好，我这生意也没法做呀！" Option="问题会妥善解决的！我先给你拍个照吧！" />
+				<Talk NpcID="10042" Face="焦急" Msg="啊……好！等等~我要端着我的招牌菜拍照！希望湖水早日恢复正常，我餐厅的生意也早日好起来啊！" Option="嗯，一定会的！" />
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" IsFullScreen="1"/>		
+			<Action Cmd="DELETE_MOVIE" Param="movie_7" />
+			<Action Cmd="SET_BIT" Param="3" />
+			
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="npc_10042" Visible="1" />
+		</NPC>
+		
+		<Test Bits="1,2,3" >
+			<In>
+				<Action Cmd="SET_BUFFER" Panel="2" Step="4" />
+				<Action Cmd="ALERT" Param="快把采访到的信息告诉洛克行政官去吧！" Face="开心" />
+				<Action Cmd="GO_MAP" MapID="15" MapType="0" />
+			</In>
+			<Out>
+				<Action Cmd="OPEN_TASK_PANEL" />
+			</Out>
+		</Test>
+	</Step>
+	
+	<Step ID="4" >
+		<NPC ID="10047" Option="采访湖水变红事件" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10047" Face="正常" Msg="{$username}，真是辛苦你了，采集了这些照片。看来，神秘湖水变红一事，已经严重影响到了庄园居民的生活……" Option="是呀，得赶紧想办法才行！" />
+				<Talk NpcID="10047" Face="正常" Msg="嗯！我先安排下另取水源的事情，同时会派骑士把此事及时告知么么公主，一同来寻求解决办法。" Option="希望能早日解决！" />
+				<Talk NpcID="10047" Face="正常" Msg="一定会的！{$username}，也麻烦你转告庄园的其它小摩尔，叫大家千万要谨慎接触神秘湖水！" Option="嗯，我会的！" />
+			</Action>
+
+			<Action Cmd="OVER" />
+		</NPC>	
+	</Step>
+</Tasks>

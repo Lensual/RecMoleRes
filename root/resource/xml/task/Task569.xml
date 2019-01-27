@@ -1,0 +1,195 @@
+<Tasks ID="569" Name="谁是冠军？" AwardMsg="恭喜你获得30个拉姆火炬，10个经验果实！" AwardBean="" >
+
+	<!-- 拉姆运动场  -->
+	<Step ID="1" TarMapID="68">
+		<EnterMap MapID="68">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="fireShoot_mc" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10002" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			
+			<Action Cmd="SAY" >
+				<Talk NpcID="10174" Face="正常" Msg="所有的拉姆都倒下了，没有小拉姆参加比赛，没有小拉姆获奖，这下还怎么收集正能量啊！！！" Option="o_O没有比赛就没有正能量……"/>
+				<Talk NpcID="10173" Face="正常" Msg="可恶！！！就四只小恶魔也胆敢破坏我的计划，我库拉绝对饶不了你们！！！" Option="别以为库拉穿了可爱小粉裙，就没有爷们儿的脾气了！"/>
+				<Talk NpcID="10002" Face="焦急" Msg="大家不要慌，所有的小拉姆都晕倒了，这比赛没有办法进行下去了！！！" Option="公主，你是主办方，要你拿主意啊！"/>
+				<Talk NpcID="10002" Face="焦急" Msg="我觉得应该让小拉姆们先好好休息，恢复体力，比赛可以明天重新来过。" Option="嗯，这才是当务之急。"/>
+				<Talk NpcID="10007" Face="正常" Msg="对！小恶魔捣乱破坏了拉姆运动会，但是我们的体育精神不能丢，虽然部分摩尔受到恶魔欺骗为了获胜喝了神秘药水，但是我们能够及时改正错误，这种精神才是真正的体育健儿。" Option="呜呜呜~~~我当时有内心挣扎过的……"/>
+				<Talk NpcID="10007" Face="正常" Msg="我宣布，这次的比赛作废，明天重新比过！" Option="明天重新比过？"/>
+				<Talk NpcID="10038" Face="正常" Msg="赞同！今天就让大家好好休息，恢复体力，明天一定要拿出真本事，赛出风格，赛出实力！" Option="期待ing！！！"/>
+			</Action>
+			
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+		</EnterMap>	
+	</Step>
+	
+	<!-- 拉姆运动场  -->
+	<Step ID="2" TarMapID="68">
+		<EnterMap MapID="68">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="fireShoot_mc" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10002" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			<Action Cmd="PLAY_MOVIE" Param="200" Name="movie_200" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_200" />
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+			<Action Cmd="GO_MAP" MapID="70" MapType="0" />
+		</EnterMap>
+	</Step>
+	
+	<!-- 爱心救治室-->
+	<Step ID="3" TarMapID="70">
+		<EnterMap MapID="70">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="npc_10020" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10020" Face="正常" Msg="{$username}，别着急。神秘药水事件我已经听说了，所有小拉姆都因为喝了神秘药水才昏迷不醒的。" Option="安迪，那你有什么办法可以让我的小拉姆醒过来吗？"/>
+				<Talk NpcID="10020" Face="正常" Msg="菩提大伯已经把神秘药水的样本给到我了，我刚刚才把它的成份研究出来。" Option="真的吗？那你肯定知道怎么治好晕倒的小拉姆了！"/>
+				<Talk NpcID="10020" Face="正常" Msg="神秘药水的成份相当复杂，万能药水已经不起作用了！我需要一种新的药丸。" Option="什么药丸？哪里有？"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10020" Face="正常" Msg="{$username}，新药丸的配方你都记好了吗？" Option="什么？我什么关键词都没听到啊！！！"/>
+				<Talk NpcID="10020" Face="正常" Msg="算了，我还是给你写下来吧！只有找到了配方上的所有材料，我才能制作出新药丸。" Option="那我的小拉姆先暂时交给你了，我这就去找！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />
+		</EnterMap>
+	</Step>
+	
+	<!-- 爱心救治室-->
+	<Step ID="4" TarMapID="70">
+		<EnterMap MapID="70">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="OPEN_PANEL" Param="Task569InvitationPanel" />
+		</EnterMap>
+		
+		<!-- 浆果丛林 红枣 -->
+		<EnterMap MapID="41" Bit="1" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="0"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="activMC" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="redBtn" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="201_1" Name="movie_201_1" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_201_1" />	
+			<Action Cmd="ALERT" Param="恭喜你，成功找到了需要的材料！" />
+			<Action Cmd="PLAY_MOVIE" Param="201_2" Name="movie_201_2" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_201_2" />	
+			<Action Cmd="ALERT" Param="恭喜你，成功找到了需要的材料！" />
+			<Action Cmd="SET_BIT" Param="1" />
+			<Action Cmd="GO_MAP" MapID="70" MapType="0" />
+		</EnterMap>
+		
+		<!-- 浆果丛林 红色浆果 -->
+<!-- 		<EnterMap MapID="41" Bit="2" > -->
+<!-- 			<Action Cmd="TASK_SHOW_SELF" Hide="1"/> -->
+<!-- 			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="activMC" Visible="0" /> -->
+<!-- 			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="redBtn" Visible="0" /> -->
+<!-- 			<Action Cmd="PLAY_MOVIE" Param="201_2" Name="movie_201_2" IsBg="1" IsFullScreen="1"/> -->
+<!-- 			<Action Cmd="DELETE_MOVIE" Param="movie_201_2" />	 -->
+<!-- 			<Action Cmd="ALERT" Param="恭喜你，成功找到了需要的材料！" /> -->
+<!-- 			<Action Cmd="SET_BIT" Param="2" /> -->
+<!-- 			<Action Cmd="GO_MAP" MapID="70" MapType="0" /> -->
+<!-- 		</EnterMap> -->
+		
+		<!-- 彩虹瀑布  萤火草-->
+		<EnterMap MapID="42" Bit="2" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="0"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="dao" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="201_3" Name="movie_201_3" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_201_3" />
+			<Action Cmd="ALERT" Param="恭喜你，成功找到了需要的材料！" />
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="dao" Visible="1" />
+			<Action Cmd="SET_BIT" Param="2" />
+			<Action Cmd="GO_MAP" MapID="70" MapType="0" />
+		</EnterMap>
+		
+		<!-- 前哨站 蘑涟花 -->
+		<EnterMap MapID="61" Bit="3" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="0"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="activMC" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="201_4" Name="movie_201_4" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_201_4" />
+			<Action Cmd="ALERT" Param="恭喜你，成功找到了需要的材料！" />
+			<Action Cmd="SET_BIT" Param="3" />
+			<Action Cmd="GO_MAP" MapID="70" MapType="0" />
+		</EnterMap>
+		
+		<!-- 宠物店 巧克力豆 -->
+		<EnterMap MapID="141" Bit="4" >
+			<Action Cmd="TASK_SHOW_SELF" Hide="0"/>
+			<Action Cmd="PLAY_MOVIE" Param="201_5" Name="movie_201_5" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10052" Face="正常" Msg="{$username}，是不是安迪让你来找我的？" Option="是的，安迪说彩虹姐姐你这里有研制新药丸的重要材料——巧克力豆！"/>
+				<Talk NpcID="10052" Face="正常" Msg="巧克力豆我已经为你准备好了，快拿去吧！你的小拉姆一定没事的，期待明天比赛时，它的精彩表现哦！" Option="真是太好了，谢谢你彩虹姐姐。"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_201_5" />
+			<Action Cmd="ALERT" Param="恭喜你，成功找到了需要的材料！" />
+			<Action Cmd="SET_BIT" Param="4" />
+			<Action Cmd="GO_MAP" MapID="70" MapType="0" />
+		</EnterMap>
+	</Step>
+	
+	<!-- 爱心救治室-->
+	<Step ID="5" TarMapID="70">
+		<EnterMap MapID="70">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="npc_10020" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			<Action Cmd="SET_BUFFER" Panel="6" Step="6" />
+			<Action Cmd="GO_MAP" MapID="68" MapType="0" />
+		</EnterMap>
+	</Step>
+	
+	<!-- 拉姆运动场  -->
+	<Step ID="6" TarMapID="68">
+		<EnterMap MapID="68">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="fireShoot_mc" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10002" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10015" Face="正常" Msg="{$username}，比赛马上就要开始了，你的拉姆也站在了起跑线上，你有什么想对它说的吗？" Option="我会一直在它身边为它助威呐喊！它在我心中永远是第一名！"/>
+				<Talk NpcID="10015" Face="正常" Msg="有了你的鼓励和加油，你的小拉姆一定会全力以赴的！我们一起来期待它的精彩表现吧！" Option="好紧张，好紧张~~比赛马上就开始了！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_103" />
+			<Action Cmd="SET_BUFFER" Panel="7" Step="7" />
+		</EnterMap>
+	</Step>
+	
+	<!-- 拉姆运动场  -->
+	<Step ID="7" TarMapID="68">
+		<EnterMap MapID="68">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="fireShoot_mc" Visible="0" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10002" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="104" Name="movie_104" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_104" />
+			
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10002" Face="惊讶" Msg="为什么所有奖杯上都有一个黑手印呢？？？" Option="黑手印？？？"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_7" />
+			<Action Cmd="PLAY_MOVIE" Param="105" Name="movie_105" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="fireShoot_mc" Visible="1" />
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10002" Visible="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_105" />
+			
+			<Action Cmd="TASK_SHOW_SELF" Hide="0"/>
+			<Action Cmd="OVER" />
+		</EnterMap>
+	</Step>
+</Tasks>

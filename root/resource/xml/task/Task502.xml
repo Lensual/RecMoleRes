@@ -1,0 +1,34 @@
+<Tasks ID="502" Name="第一轮除菌保卫战" AwardMsg="恭喜你获得蝙蝠侠美美猪、1000摩尔豆" AwardBean="2000" >
+	<Step ID="1" >
+		<EnterMap MapID="176" >
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10093" Face="正常" Msg="{$username}，你终于来啦！不单是库拉，我还找到了几个被敌菌侵害的摩尔，当然，他们都暂时安全了。" Option="果然…！" />
+				<Talk NpcID="10004" Face="悲伤" Msg="主人虽然已无大碍，但还是一副不舒服的样子…" Option="( ⊙ o ⊙ )那怎么办呀？!" />
+				<Talk NpcID="10093" Face="正常" Msg="我已经找到对付这些隐藏在衣物上的顽固细菌的办法啦！你能不能帮帮我呢？" Option="那当然，我来帮忙！" />
+				<Talk NpcID="10093" Face="正常" Msg="并不止是你的帮忙哦！相信你的妈妈她一定能和我一起彻底消灭这些隐藏在衣物上的可恶细菌！" Option="消灭细菌，找妈妈来帮忙！" />
+			</Action>
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+			<Action Cmd="OPEN_PANEL" Param="TaiziGame" />	
+		
+		</EnterMap>	
+	</Step>			
+	
+	<Step ID="2" >
+		<SubmitScore ModuleID="10019" MinScore="1" LoseMsg="很遗憾你没有消灭所有的细菌哦，和妈妈一起再努力一次吧！" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10093" Face="正常" Msg="库拉这下应该没有问题了！谢谢你的帮忙，不然我还正愁没有办法呢！" Option="胜利了！！！…." />
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10093" Face="正常" Msg="啊呀！这可恶的细菌怎么开溜了！这下肯定又有许多小摩尔要受害了，细菌的繁殖能力可是非常厉害的！" Option="那我们该怎么办？" />
+				<Talk NpcID="10093" Face="正常" Msg="对付这种顽固细菌必须要充分的准备，小摩尔下周来找我吧，我想一定能找到对付他们的方法！" Option="我一定来…" />
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />	
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			<Action Cmd="OVER" />			
+		</SubmitScore>
+	</Step>					
+</Tasks>

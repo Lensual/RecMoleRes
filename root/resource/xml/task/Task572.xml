@@ -1,0 +1,184 @@
+<Tasks ID="572" Name="捣蛋鬼覆灭记" AwardMsg="恭喜你获得20个许愿星、10个经验果实（大）！" AwardBean="" >
+
+	<!-- 开心农场  -->
+	<Step ID="1" TarMapID="10">
+		<EnterMap MapID="10">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="fmw_btn" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+			<Action Cmd="GO_MAP" MapID="27" MapType="0" />
+		</EnterMap>	
+	</Step>
+	
+	<!-- 农场发明屋 -->
+	<Step ID="2" TarMapID="27">
+		<EnterMap MapID="27">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10016" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="SAY" >
+				<Talk NpcID="10016" Face="正常" Msg="嘿~{$username}，好久不见！" Option="大卫，你又在发明什么东西？"/>
+				<Talk NpcID="10016" Face="正常" Msg="啊哈~这个药水很神奇的哦！不过，我还差最后一步才能成功。{$username}，等我弄好了再慢慢跟你解释！" Option="咦，搞得这么神秘……"/>
+				<Talk NpcID="10016" Face="正常" Msg="嗯……各个配方的比例控制非常严格，一不小心就会出错，我得仔细又仔细。{$username}，我先专心工作了！" Option="噢……好吧！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1"/>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+<!-- 			<Action Cmd="GO_MAP" MapID="27" MapType="0" /> -->
+		</EnterMap>
+	</Step>
+	
+	<!-- 农场发明屋-->
+	<Step ID="3" TarMapID="27">
+		<EnterMap MapID="27">
+			<Action Cmd="OPEN_PANEL" Param="Task572Panel" ClearMap="1"/>
+			<Action Cmd="ADD_EVENT" Param="task572PanelOver"/>
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10016" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10016" Face="开心" Msg="{$username}，我终于成功啦！配这个药水真是不容易啊！" Option="啊，恭喜，恭喜~嘿嘿~"/>
+				<Talk NpcID="10016" Face="开心" Msg="对了，{$username}，请你帮我个忙好吗？帮我把药水给菩提大伯送过去，我这还有些收尾工作得做。" Option="给大伯送去？药水是给大伯用的吗？"/>
+				<Talk NpcID="10016" Face="开心" Msg="去了你就知道了。快去吧，大伯看到药水一定会很开心的！" Option="啊……噢……这个……好吧……"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />
+			<Action Cmd="GO_MAP" MapID="28" MapType="0" />
+		</EnterMap>
+	</Step>
+	
+	<!-- 拉姆学院 -->
+	<Step ID="4" TarMapID="28">
+		<EnterMap MapID="28">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="正常" Msg="咦，{$username}，你怎么在这？鬼鬼祟祟的，是不是干什么坏事啦？" Option="才不是呢，大卫叫我帮忙送药水过来。"/>
+				<Talk NpcID="10007" Face="正常" Msg="哦嚯嚯嚯，我还正准备去找大卫看看他进展怎样了呢，这家伙效率还真高！" Option="大伯能告诉我这药水是做啥用的吗？"/>
+				<Talk NpcID="10007" Face="正常" Msg="噢，前些天，大卫说准备研制生发剂，于是我就叫他拿我来试验试验好了，如果成功，说不定大伯还能变得和年轻时候一样帅！" Option="啊？生发剂？这药水是大伯使用的？"/>
+				<Talk NpcID="10007" Face="正常" Msg="是呀！好了，{$username}，赶紧把药水给大伯试试吧！" Option="Oh，NO！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="惊讶" Msg="{$username}，你，你怎么了？你背后……" Option="大伯，我背后怎么啦？"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="焦急" Msg="大卫研制的生发剂，应该只是生发才对呀，怎么药效会变得这么猛烈……" Option="怎么会这样？这尾巴哪儿来的？呜呜~"/>
+				<Talk NpcID="10007" Face="焦急" Msg="走，大伯带你去找大卫，让他想想办法！" Option="呜呜，大伯，我不想要这个大尾巴！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_7" />
+			<Action Cmd="SET_BUFFER" Panel="5" Step="5" />
+			<Action Cmd="GO_MAP" MapID="27" MapType="0" />
+		</EnterMap>
+	</Step>
+	
+	<!-- 农场发明屋 -->
+	<Step ID="5" TarMapID="27">
+		<EnterMap MapID="27">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10016" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="8" Name="movie_8" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="焦急" Msg="大卫，你发明的不是生发药水么？怎么让{$username}变成这样了？" Option="呜呜，我不想要大尾巴……"/>
+				<Talk NpcID="10016" Face="惊讶" Msg="咦？不可能呀~配方我计算得相当准确，除了生发，药水不会产生其它作用的。奇怪……" Option="对不起，对不起，其实都怪我……"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_8" />
+			<Action Cmd="PLAY_MOVIE" Param="9" Name="movie_9" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10016" Face="惊讶" Msg="怪不得，我就说你刚才怎么鬼鬼祟祟的。这下尝到苦头了吧？" Option="呜呜，我以后再也不敢了！"/>
+				<Talk NpcID="10007" Face="焦急" Msg="哎，{$username}也知道错了，大卫你就帮他想想办法吧！" Option="是呀是呀，长个大尾巴多难看呀！"/>
+				<Talk NpcID="10016" Face="正常" Msg="哈哈，办法倒也不是没有，就怕{$username}不愿意做呢。不过，其实这个大尾巴也挺可爱的嘛！" Option="不，不，让我做什么我都愿意！"/>
+				<Talk NpcID="10016" Face="正常" Msg="那好吧。想恢复正常的话，需要你去餐厅找尼克，并为他跳一支舞，还要去阳光草舍找尤尤，并为她唱一首歌。怎么样，愿意吗？" Option="跳舞？唱歌？这能有效果吗？"/>
+				<Talk NpcID="10016" Face="正常" Msg="当然有效啦！办完后，你再回来找我，到时候一定能恢复正常！" Option="啊？！哎……好吧！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_9" />
+			<Action Cmd="SET_BUFFER" Panel="6" Step="6" />
+			<Action Cmd="OPEN_TASK_PANEL" />
+<!-- 			<Action Cmd="GO_MAP" MapID="17" MapType="0" /> -->
+		</EnterMap>
+	</Step>
+	
+	<!-- 摩尔餐厅 -->
+	<Step ID="6" TarMapID="17">
+		<EnterMap MapID="17" Bit="1">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10042" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="10" Name="movie_10" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10042" Face="正常" Msg="嗨，{$username}，什么风把你吹来啦？" Option="尼，尼克，我……"/>
+				<Talk NpcID="10042" Face="正常" Msg="你怎么啦？呀，你背后怎么……" Option="这样打扮好看吗？不如给你跳个舞吧！"/>
+				<Talk NpcID="10042" Face="正常" Msg="啊？跳舞？！噢，哈哈，好啊~我还从来没看过这样的大尾巴舞蹈……" Option="哎……那我开始啦！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_10" />
+			<Action Cmd="PLAY_MOVIE" Param="11" Name="movie_11" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10042" Face="正常" Msg="噢~{$username}，谢谢你为我表演。我这会儿还要研究下餐厅的新菜单，回头再来和你聊天哦！" Option="嗯，好的o(╯□╰)o"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_11" />
+			<Action Cmd="SET_BIT" Param="1" />
+		</EnterMap>
+		
+		<EnterMap MapID="79" Bit="2">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="PLAY_MOVIE" Param="12" Name="movie_12" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10050" Face="正常" Msg="{$username}，快来看，我的小鸭子又长大了一些呢，多么可爱呀，对吧？" Option="对呀，小鸭子真的好可爱呢！"/>
+				<Talk NpcID="10050" Face="正常" Msg="等小鸭子再长大一些，到时候我送你一只！" Option="好呀，不如我给你和小鸭子唱首歌吧！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_12" />
+			<Action Cmd="PLAY_MOVIE" Param="13" Name="movie_13" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10050" Face="正常" Msg="{$username}，我得打扫打扫草舍了，下次给你送小鸭子哦！" Option="嗯，好的o(╯□╰)o"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_13" />
+			<Action Cmd="SET_BIT" Param="2" />
+		</EnterMap>
+		
+		<Test Bits="1,2" >
+			<In>
+				<Action Cmd="SET_BUFFER" Panel="7" Step="7" />
+				<Action Cmd="ALERT" Param="完成了大卫交代的事情，快回农场发明屋找大卫吧！" Face="开心" />
+				<Action Cmd="GO_MAP" MapID="27" MapType="0" />
+			</In>
+			<Out>
+				<Action Cmd="OPEN_TASK_PANEL" />
+			</Out>
+		</Test>
+	</Step>
+	
+	<!-- 发明屋 -->
+	<Step ID="7" TarMapID="27">
+		<EnterMap MapID="27">
+			<Action Cmd="TASK_SHOW_SELF" Hide="1"/>
+			<Action Cmd="SET_ATTRIBUTE" Level="depthLevel" ResName="npc_10016" Visible="0" />
+			<Action Cmd="PLAY_MOVIE" Param="14" Name="movie_14" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10016" Face="正常" Msg="怎么样，{$username}，我交代的事情都办完了吗？" Option="办完了，你能帮我恢复正常了吗？"/>
+				<Talk NpcID="10016" Face="正常" Msg="恢复正常？现在不就是很正常的吗？还要怎么恢复呢？" Option="呜呜，别开玩笑了，我不想要大尾巴！"/>
+				<Talk NpcID="10007" Face="开心" Msg="哦嚯嚯嚯，{$username}，你再看看自己背后呢！" Option="啊？！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_14" />
+			<Action Cmd="PLAY_MOVIE" Param="15" Name="movie_15" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10007" Face="开心" Msg="怎么样，大卫没骗你吧！" Option="好奇怪，唱歌跳舞就让我恢复正常了？"/>
+				<Talk NpcID="10016" Face="开心" Msg="嘿嘿~其实啦，我这个药水只是试验药水，药效只有十分钟，就算你不按我说的做，时间到了也会自动恢复正常的！" Option="啊？！！！！( ⊙ o ⊙ )"/>
+				<Talk NpcID="10007" Face="开心" Msg="大卫让你去唱歌跳舞，其实是想给你留个教训，以后可不许这么捣蛋咯，要是真的变不回来，那可怎么办。" Option="啊……呜呜，好吧……"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_15" />
+			<Action Cmd="PLAY_MOVIE" Param="16" Name="movie_16" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_16" />
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			<Action Cmd="TASK_SHOW_SELF" Hide="0"/>
+			<Action Cmd="OVER" />
+		</EnterMap>
+	</Step>
+</Tasks>

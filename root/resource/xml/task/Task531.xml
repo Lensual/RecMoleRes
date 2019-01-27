@@ -1,0 +1,22 @@
+<Tasks ID="531" Name="酒店管理结课" AwardMsg="恭喜你获得香蕉蕉、1000摩尔豆！" AwardBean="1000" >
+	<Step ID="1" >
+	
+		<NPC ID="10127" Option="酒店管理结课" Bit="1" >
+			<Action Cmd="SAY" >
+				<Talk NpcID="10127" Face="正常" Msg="嗨，{$username}，我要告诉你一个好消息！" Option="炸花校长，是什么好消息呢？" />
+				<Talk NpcID="10127" Face="正常" Msg="经过和庄园的协调，大家特意为我们的酒店管理课程开设了一个SMC职业，叫做“酒店管理师”。{$username}，你也可以去试试哦！" Option="哇，我可以吗？" />
+				<Talk NpcID="10127" Face="正常" Msg="当然啦！一定没问题的！我们的酒店管理课程也差不多该结业了，后面就要靠你自己钻研咯！赶快去入职吧！" Option="嗯，好呀！" />
+				<Talk NpcID="10127" Face="正常" Msg="加油哦，{$username}！我最近先筹备筹备，等过些日子我们开设了酒店，就是该你表演的时候咯！" Option="我一定努力！^_^" />
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />							
+			<Action Cmd="OVER" />																																		
+		</NPC>
+	</Step>				
+</Tasks>
+
+		<!-- 奖励提示框，确定后，需要打开SMC酒店管理师的那一页面板<Action Cmd="OPEN_PANEL" Param="SMCPanel" />  -->
+
+
+
+

@@ -1,0 +1,22 @@
+<Tasks ID="649" Name="序曲" AwardMsg="恭喜你获得1条海妖馆的夏威夷宝石小鱼，1只牧场动物燕子和10000摩尔豆。" AwardBean="">
+	<Step ID="1" TarMapID="80">
+		<EnterMap MapID="80">
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10000" Face="正常" Msg="{$username}，你也来锻炼身体吗？" Option="乐乐，你有没有听到奇怪的音乐声？"/>
+				<Talk NpcID="10000" Face="疑惑" Msg="音乐？没有呀~哪里？" Option="你仔细听~"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1"/>
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10000" Face="开心" Msg="( ⊙o⊙ )哇，真的有音乐哎，好好听~" Option="是啊，可是哪里来的音乐呢？我找了一大圈都没有找到啊……"/>
+				<Talk NpcID="10000" Face="疑惑" Msg="没找到？怎么会呢？我们去虫虫谷找，肯定是那个方向飘过来的~" Option="可是我刚从虫虫谷过来啊，好奇怪哟！"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2"/>
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100"/>
+			<Action Cmd="OVER"/>
+		</EnterMap>	
+	</Step>			
+</Tasks>
+

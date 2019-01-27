@@ -1,0 +1,137 @@
+<Tasks ID="493" Name="时空之门" AwardMsg="恭喜你获得10个海洋之星、50个铜锭、2000摩尔豆。" AwardBean="2000" >
+	<Step ID="1" >
+		<EnterMap MapID="252" >
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="spaceWork_btn" Visible="0" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10036" Face="正常" Msg="{$username}，好消息，时空门终于造好了！" Option="前情回顾" />
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1"  IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10036" Face="正常" Msg="走吧，我们赶紧去海妖国，救出箩丝，千万不能被保罗抢先了！我不能输给保罗！" Option="好~为了捷克王子的幸福，咱们走！" />
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10036" Face="惊讶" Msg="啊？这三个奇怪的家伙从哪儿冒出来的？他们怎么知道我们要通过时空门？{$username}，不会是你透露的消息吧？" Option="哪里哪里，才没有呢！" />
+				<Talk NpcID="10036" Face="正常" Msg="逗你呢~我倒是要看看，箱子里的家伙究竟是谁！" Option="不会是坏人吧？"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2" />
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10036" Face="惊讶" Msg="么么~乐乐~丫丽~是你们？！你们怎么也跑来了！" Option="我没给他们说过的呀~" />
+				<Talk NpcID="10002" Face="生气" Msg="坏哥哥，这么重要的事都不告诉么么！还好乐乐无意间从{$username}那儿得知了！我们也要一起去海妖国！" Option="啊？还真是我泄密的？躺着都中枪~" />
+				<Talk NpcID="10036" Face="正常" Msg="么么，哥哥不告诉你是为你好！听话，快带乐乐和丫丽回去！" Option="（捷克王子是不想让妹妹知道自己的感情问题吧？）" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3" />
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4"  IsFullScreen="1" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_4" />
+			<Action Cmd="SAY" >		
+				<Talk NpcID="10036" Face="正常" Msg="哎……好吧，真拿你们没办法！那就大家一起去，可你们得答应我，一定要小心行事！" Option="看我们一起把海妖打跑，救出公主！" />
+			</Action>
+			<Action Cmd="PLAY_MOVIE" Param="5" Name="movie_5"/>
+			<Action Cmd="SAY" >
+				<Talk NpcID="10002" Face="惊讶" Msg="这……这……这又是谁呀？" Option="不是吧？又来了一个！" />
+				<Talk NpcID="10000" Face="惊讶" Msg="啊？？我明明只买了三个箱子呀！哪儿又冒出来一个？还比我们大，比我们霸气……" Option="箱子兄请问你是何方神圣？" />
+				<Talk NpcID="10094" Face="正常" Msg="啊哈~想知道我是谁吗？你真的想知道我是谁吗？那我就……还是不告诉你好了！" Option="切~我才不想知道呢！" />
+				<Talk NpcID="10094" Face="正常" Msg="嘿嘿~别生气，只要带我一起去海妖国，我就告诉你们我是谁！一路上我还可以给你们解解闷呢，刚学的新歌，“切克闹，药药药……”" Option="我们忙着呢，没空开玩笑，拜拜！" />
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_5" />						
+			<Action Cmd="PLAY_MOVIE" Param="6" Name="movie_6" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_6" />
+			<Action Cmd="PLAY_MOVIE" Param="7" Name="movie_7" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_7" />
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2" />
+			<Action Cmd="GO_MAP" MapID="240" MapType="0" />						
+		</EnterMap>	
+	</Step>
+
+	
+	<Step ID="2" >
+		<EnterMap MapID="240" >
+			<Action Cmd="PLAY_MOVIE" Param="8" Name="movie_8" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10036" Face="惊讶" Msg="啥情况？我们不是该到海妖国的吗？怎么会跑到这里？库……库拉城堡，不是吧！" Option="时空门被大卫附体了？！" />
+			</Action>			
+			<Action Cmd="DELETE_MOVIE" Param="movie_8" />
+			<Action Cmd="PLAY_MOVIE" Param="9" Name="movie_9" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_9" />
+			<Action Cmd="PLAY_MOVIE" Param="10" Name="movie_10" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_10" />
+			<Action Cmd="PLAY_MOVIE" Param="11" Name="movie_11" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_11" />	
+			<Action Cmd="PLAY_MOVIE" Param="12" Name="movie_12" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_12" />
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3" />
+			<Action Cmd="GO_MAP" MapID="252" MapType="0" />											
+		</EnterMap>	
+	</Step>
+	
+	<Step ID="3" >
+		<EnterMap MapID="252" >
+			<Action Cmd="SET_ATTRIBUTE" Level="controlLevel" ResName="spaceWork_btn" Visible="0" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10036" Face="焦急" Msg="真是没想到，辛辛苦苦建好的时空门竟然带我们去了库拉城堡，这么近的地方我们走路都能到o(╯□╰)o" Option="再试试！（建时空门的时候我没偷懒啊）" />
+			</Action>			
+			<Action Cmd="PLAY_MOVIE" Param="13" Name="movie_13" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10094" Face="正常" Msg="都说了，要去海妖国，得把我带上才行，不然是不会成功的！" Option="你说带就带~那不是很没面子！" />
+				<Talk NpcID="10094" Face="正常" Msg="不过，话说回来，这时空门还真是不咋滴，随便折腾下就得出问题……啊，糟糕，不小心提醒了你们！" Option="什么意思？莫非你……" />
+				<Talk NpcID="10094" Face="正常" Msg="嘿嘿~就是怕你们不带我，我给时空门做了点手脚，所以你们才无法到达海妖国！如果你们肯带我，我马上把时空门修好！" Option="额……被你打败了，成交！" />
+				<Talk NpcID="10094" Face="正常" Msg="哈哈，早该答应的嘛！不过我也得看看你们是不是有勇又有谋，看你们能不能解答出我的题目再说！" Option="好吧~你真麻烦！O(╯□╰)o" />			
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_13" />
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4" />
+			<Action Cmd="OPEN_PANEL" Param="TimeGateTwoUi" />	
+											
+		</EnterMap>	
+	</Step>	
+	
+	<Step ID="4" >
+		<SubmitScore ModuleID="10011" MinScore="1" LoseMsg="不回答出大箱子的问题，他就不把时空门复原。要重新试试吗？" >
+			<Action Cmd="PLAY_MOVIE" Param="14" Name="movie_14" />			
+			<Action Cmd="DELETE_MOVIE" Param="movie_14" />
+			<Action Cmd="PLAY_MOVIE" Param="15" Name="movie_15" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_15" />
+			<Action Cmd="SET_BUFFER" Panel="5" Step="5" />
+			<Action Cmd="GO_MAP" MapID="3" MapType="0" />											
+		</SubmitScore>		
+	</Step>
+	
+	<Step ID="5" >
+		<EnterMap MapID="3" >
+			<Action Cmd="PLAY_MOVIE" Param="16" Name="movie_16" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10009" Face="生气" Msg="是谁说的呀~说带上他就能让我们顺利到达海妖国！这就是传说中的海妖国吗？" Option="好吧，其实是海妖国穿越了！" />
+				<Talk NpcID="10094" Face="正常" Msg="额……这……我得再研究研究！天才也会有失误的时候嘛！" Option="时间不等人啊，兄弟O(╯□╰)o" />
+			</Action>	
+			<Action Cmd="DELETE_MOVIE" Param="movie_16" />
+			<Action Cmd="PLAY_MOVIE" Param="17" Name="movie_17" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_17" />
+			<Action Cmd="PLAY_MOVIE" Param="18" Name="movie_18" IsFullScreen="1" IsStopSound="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_18" />
+			<Action Cmd="PLAY_MOVIE" Param="19" Name="movie_19" />
+			<Action Cmd="SAY" >
+				<Talk NpcID="10000" Face="惊讶" Msg="其其！竟然是你？回来也不说一声，还这样捉弄我们！" Option="连其其也出现了，事情更加有趣了！" />
+				<Talk NpcID="10096" Face="正常" Msg="嘻嘻~就别怪我啦，现在还是去海妖国要紧，等把事情办完了，我再好好向你们赔罪哦！" Option="让我想想到时候怎么敲诈其其，嘿~" />
+			</Action>				
+			<Action Cmd="DELETE_MOVIE" Param="movie_19" />			
+			<Action Cmd="PLAY_MOVIE" Param="20" Name="movie_20" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_20" />
+			<Action Cmd="PLAY_MOVIE" Param="21" Name="movie_21" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_21" />						
+			<Action Cmd="SET_BUFFER" Panel="5" Step="6" />
+			<Action Cmd="GO_MAP" MapID="254" MapType="0" />											
+		</EnterMap>	
+	</Step>		
+
+	<Step ID="6" >
+		<EnterMap MapID="254" >
+			<Action Cmd="PLAY_MOVIE" Param="22" Name="movie_22" />
+			<Action Cmd="DELETE_MOVIE" Param="movie_22" />
+			<Action Cmd="PLAY_MOVIE" Param="23" Name="movie_23" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_23" />	
+			<Action Cmd="OVER" />									
+		</EnterMap>	
+	</Step>	
+	
+</Tasks>

@@ -1,0 +1,83 @@
+
+<Tasks ID="641" Name="奇异之星" AwardMsg="恭喜你获得1个家园装饰月神秋千和1万摩尔豆。" AwardBean="">
+	<Step ID="1" TarMapID="372">
+		<EnterMap MapID="372">
+			<Action Cmd="PLAY_MOVIE" Param="100" Name="movie_100" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_100" />
+			<Action Cmd="PLAY_MOVIE" Param="101" Name="movie_101" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_101" />
+			<Action Cmd="PLAY_MOVIE" Param="102" Name="movie_102" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_102" />
+			<Action Cmd="SET_BUFFER" Panel="2" Step="2"/>
+		</EnterMap>
+	</Step>
+	<Step ID="2" TarMapID="372">
+		<EnterMap MapID="372">
+			<Action Cmd="PLAY_MOVIE" Param="1" Name="movie_1" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10280" Face="正常" Msg="好了，把书给我吧~" Option="都说了不能给你~！我要带着它去找时空缝隙！！！"/>
+				<Talk NpcID="10280" Face="正常" Msg="你浮在太空中的时候你的宝贝女神来救你了吗？" Option="那也不能给你！你是坏人！！"/>
+				<Talk NpcID="10280" Face="正常" Msg="我拭目以待……" Option="...."/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_1"/>
+			<Action Cmd="PLAY_MOVIE" Param="2" Name="movie_2" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="SAY">
+				<Talk NpcID="10273" Face="正常" Msg="恩，顺利到达这里了，很好！" Option="不好~女神大大~我差点死掉哎~"/>
+				<Talk NpcID="10273" Face="正常" Msg="偶然就是必然……" Option="停~说重点~"/>
+				<Talk NpcID="10273" Face="正常" Msg="这个奇异的星球上居住了草、水、火、地、沙、冰、飞7大氏族，找齐他们的信物，就可以在【目灵祭台】召出时空缝隙" Option="要找这么多？我要到什么时候才可以回家啊？"/>
+			</Action>
+			<Action Cmd="DELETE_MOVIE" Param="movie_2"/>
+			<Action Cmd="SET_BUFFER" Panel="3" Step="3"/>
+		</EnterMap>	
+	</Step>
+	<Step ID="3" TarMapID="372">
+		<EnterMap MapID="372">
+			<Action Cmd="OPEN_PANEL" Param="Task641GameOnePanel" ClearMap="1" Data = "0"/>
+			<Action Cmd="ADD_EVENT" Param="Task641GameOneOver"/>
+			<Action Cmd="SET_BUFFER" Panel="4" Step="4"/>
+		</EnterMap>
+	</Step>
+	<Step ID="4" TarMapID="372">
+		<EnterMap MapID="372">
+			<Action Cmd="PLAY_MOVIE" Param="107" Name="movie_107" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_107"/>
+			<Action Cmd="JUMP_TASK_UI" Param="   经历漫长的过程，总算是找到了各个氏族的信物，真是不容易，现在，让我们去开启那个什么时空缝隙吧！"/>
+			<Action Cmd="SET_BUFFER" Panel="5" Step="5"/>
+			<Action Cmd="GO_MAP" MapID="380" MapType="0"/>
+		</EnterMap>	
+	</Step>
+	<Step ID="5" TarMapID="380">
+		<EnterMap MapID="380">
+			<Action Cmd="SAY">
+				<Talk NpcID="10273" Face="正常" Msg="现在，将找齐的信物放入祭台的对应位置。" Option="王子万一有危险呢？"/>
+			</Action>
+			<Action Cmd="SET_BUFFER" Panel="6" Step="6"/>
+		</EnterMap>
+	</Step>
+	<Step ID="6" TarMapID="380">
+		<EnterMap MapID="380">
+			<Action Cmd="OPEN_PANEL" Param="Task641GameTwoPanel" ClearMap="1" Data = "0"/>
+			<Action Cmd="ADD_EVENT" Param="Task641GameTwoOver"/>
+			<Action Cmd="SET_BUFFER" Panel="7" Step="7"/>
+		</EnterMap>	
+	</Step>
+		<Step ID="7" TarMapID="380">
+		<EnterMap MapID="380">
+			<Action Cmd="PLAY_MOVIE" Param="3" Name="movie_3" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_3"/>
+			<Action Cmd="PLAY_MOVIE" Param="103" Name="movie_103" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_103"/>
+			<Action Cmd="PLAY_MOVIE" Param="4" Name="movie_4" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_4"/>
+			<Action Cmd="PLAY_MOVIE" Param="104" Name="movie_104" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_104"/>
+			<Action Cmd="PLAY_MOVIE" Param="105" Name="movie_105" IsBg="1" IsFullScreen="1" IsStopSound="0"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_105"/>
+			<Action Cmd="PLAY_MOVIE" Param="106" Name="movie_106" IsBg="1" IsFullScreen="1"/>
+			<Action Cmd="DELETE_MOVIE" Param="movie_106"/>
+			<Action Cmd="OVER"/>
+		</EnterMap>
+	</Step>	
+</Tasks>
+
+
